@@ -2,14 +2,23 @@
 Class: Funcionario
 Author: Arnaldo Barbosa    
 */
-#ifndef _FUNCIONARIO_
-#define _FUNCIONARIO_
-    class A
-    {
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
+
+#include<string>
+
+class Funcionario{
+
+    private:
+        int m_id;
+        std::string _nome;
+        std::string _cpf;
+        short m_idade;
+        short m_tipo_sanguineo;
+        char m_fator_rh;
+        std::string m_especialidade;
+    
     public:
-    void f (int i);
-    void g (int j = 0);
-    };
-    inline void A::f (int i) { ... }
-    bool operator == (A const & a1, A const & a2);
+};
+    
 #endif
