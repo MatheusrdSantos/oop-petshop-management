@@ -9,7 +9,7 @@ Author: Arnaldo Barbosa
 
 class Funcionario{
 
-    private:
+    protected:
         int m_id;
         std::string _nome;
         std::string _cpf;
