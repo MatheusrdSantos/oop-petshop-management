@@ -10,7 +10,7 @@ class Anfibio{
 
     protected:
         int m_total_de_mudas;
-        Data m_classe;
+        Data m_ultima_muda;
     public:
         Anfibio();
         ~Anfibio(){};
