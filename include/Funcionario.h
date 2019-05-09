@@ -2,8 +2,8 @@
 Class: Funcionario
 Author: Arnaldo Barbosa    
 */
-#ifndef FUNCIONARIO_H
-#define FUNCIONARIO_H
+#ifndef _FUNCIONARIO_H_
+#define _FUNCIONARIO_H_
 
 #include<string>
 
@@ -19,6 +19,8 @@ class Funcionario{
         std::string m_especialidade;
     
     public:
+        Funcionario();
+        ~Funcionario();
 };
     
 #endif
