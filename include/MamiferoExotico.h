@@ -2,8 +2,9 @@
 #define _MAMIFERO_EXOTICO_H_
 
 #include <iostream>
+#include "AnimalExotico.h"
 
-class MamiferoExotico{
+class MamiferoExotico : public AnimalExotico{
     private:
 
     protected:

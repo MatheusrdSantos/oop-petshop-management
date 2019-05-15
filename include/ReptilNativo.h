@@ -2,8 +2,9 @@
 #define _REPTIL_NATIVO_H_
 
 #include <iostream>
+#include "AnimalNativo.h"
 
-class ReptilNativo{
+class ReptilNativo : public AnimalNativo{
     private:
 
     protected:

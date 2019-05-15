@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "AnimalSilvestre.h"
 
-class AnimalNativo{
+class AnimalNativo : public AnimalSilvestre{
     private:
 
     protected:

@@ -2,8 +2,9 @@
 #define _AVE_NATIVO_H_
 
 #include <iostream>
+#include "AnimalNativo.h"
 
-class AveNativo{
+class AveNativo : public AnimalNativo{
     private:
 
     protected:

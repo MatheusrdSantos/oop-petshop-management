@@ -2,8 +2,9 @@
 #define _AVE_EXOTICO_H_
 
 #include <iostream>
+#include "AnimalExotico.h"
 
-class AveExotico{
+class AveExotico : public AnimalExotico{
     private:
 
     protected:
