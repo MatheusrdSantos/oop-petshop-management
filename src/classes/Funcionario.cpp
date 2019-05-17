@@ -1,9 +1,7 @@
 #include "Funcionario.h"
 
 std::string Funcionario::filePath = "../../storage/funcionarios.csv";
-Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, short 
-
-tipo_sanguineo, char fator_rh, std::string especialidade){
+Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade){
     m_id = id;
     m_nome = nome;
     m_cpf = cpf;
