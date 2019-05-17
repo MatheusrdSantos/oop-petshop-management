@@ -1,6 +1,17 @@
 #include "Funcionario.h"
 
 std::string Funcionario::filePath = "../../storage/funcionarios.csv";
+Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, short 
+
+tipo_sanguineo, char fator_rh, std::string especialidade){
+    m_id = id;
+    m_nome = nome;
+    m_cpf = cpf;
+    m_idade = idade;
+    m_tipo_sanguineo = tipo_sanguineo;
+    m_fator_rh = fator_rh;
+    m_especialidade = especialidade;
+}
 
 std::multimap<std::string,Funcionario*> Funcionario::all(){
     csv::Parser file = ModelDAO::readTable(Funcionario::filePath);
