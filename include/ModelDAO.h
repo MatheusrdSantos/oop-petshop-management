@@ -2,19 +2,20 @@
 Class: ModelDAO
 Author: Arnaldo Barbosa    
 */
-#ifndef _FUNCIONARIO_H_
-#define _FUNCIONARIO_H_
+#ifndef _MODELDAO_H_
+#define _MODELDAO_H_
 
 #include<string>
 #include<list>
 
 #include"CRUD.h"
+#include "CSVparser.hpp"
 
 template<class T>
 class ModelDAO : public CRUD{
 
+
     protected:
-        std::string filePath;
     
     public:
         ModelDAO();
@@ -29,8 +30,8 @@ class ModelDAO : public CRUD{
         *   Read
         */
         ModelDAO find(int id);
-        std::list<ModelDAO> all(); 
         std::list<ModelDAO> where(std::string expression); 
+        static csv::Parser readTable(std::string filePath);
 
         /*
         *   Update
@@ -41,8 +42,17 @@ class ModelDAO : public CRUD{
         *   Delete
         */
        bool remove(std::string expression);
-
-
 };
-    
+
+csv::Parser ModelDAO<T>::readTable(std::string filePath){
+    try
+    {
+        csv::Parser file = csv::Parser(filePath);
+        return file;
+    }
+    catch (csv::Error &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+}  
 #endif

@@ -16,6 +16,7 @@ class Veterinario : public Funcionario{
     public:
         Veterinario();
         ~Veterinario();
+        void setCrmv(std::string m_crmv);
 };
     
 #endif
