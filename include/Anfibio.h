@@ -4,8 +4,9 @@
 
 #include <iostream>
 #include <string>
+#include "Animal.h"
 
-class Anfibio{
+class Anfibio : public Animal{
     private:
 
     protected:
