@@ -12,6 +12,14 @@ pip install foobar
 
 ## Usage
 
+Comando para compilar os arquivos do projeto
+```
+g++ -std=c++11 -g -I include/ -Wall -O0 -o exec src/main.cpp src/classes/CSVparser.cpp src/classes/Funcionario.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp
+
+```
+
+
+
 ```python
 import foobar
 

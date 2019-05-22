@@ -12,26 +12,34 @@ Author: Arnaldo Barbosa
 #include "CSVparser.hpp"
 
 template<class T>
-class ModelDAO : public CRUD{
+class ModelDAO{
 
 
     protected:
     
     public:
-        ModelDAO();
-        ~ModelDAO();
-        
         /*
         *   Create
         */
-        virtual bool save();
+        bool save();
 
         /*
         *   Read
         */
         ModelDAO find(int id);
         std::list<ModelDAO> where(std::string expression); 
-        static csv::Parser readTable(std::string filePath);
+        static csv::Parser readTable(){
+            /* try
+            { */
+                csv::Parser file = csv::Parser(T::filePath);
+                return file;
+            /* }
+            catch (csv::Error &e)
+            {
+                std::cerr << e.what() << std::endl;
+                return;
+            } */
+        };
 
         /*
         *   Update
@@ -43,16 +51,4 @@ class ModelDAO : public CRUD{
         */
        bool remove(std::string expression);
 };
-
-csv::Parser ModelDAO<T>::readTable(std::string filePath){
-    try
-    {
-        csv::Parser file = csv::Parser(filePath);
-        return file;
-    }
-    catch (csv::Error &e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-}  
 #endif

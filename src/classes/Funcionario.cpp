@@ -1,6 +1,9 @@
 #include "Funcionario.h"
+#include "Tratador.h"
+#include "Veterinario.h"
+#include "CSVparser.hpp"
 
-std::string Funcionario::filePath = "../../storage/funcionarios.csv";
+std::string Funcionario::filePath = "./storage/funcionarios.csv";
 Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade){
     m_id = id;
     m_nome = nome;
@@ -12,10 +15,10 @@ Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade,
 }
 
 std::multimap<std::string,Funcionario*> Funcionario::all(){
-    csv::Parser file = ModelDAO::readTable(Funcionario::filePath);
+    csv::Parser file = ModelDAO<Funcionario>::readTable();
     std::multimap<std::string,Funcionario*> funcionarios;
     int n_rows = file.rowCount();
-    int n_columns = file.columnCount();
+    //int n_columns = file.columnCount();
 
     for(int i = 0; i<n_rows; i++){
         

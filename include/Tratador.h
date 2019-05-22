@@ -18,7 +18,7 @@ class Tratador : public Funcionario{
     public:
         Tratador();
         Tratador(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
-        ~Tratador();
+        ~Tratador(){};
         void setNivelDeSeguranca(int nivel_de_seguranca);
         int getNivelDeSeguranca();
         bool save();

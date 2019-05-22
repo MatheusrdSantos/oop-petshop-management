@@ -1,1 +1,2 @@
-id;nome;cpf;idade;tipo_sangue;fator_rh;funcao;especialidade;codigo_crmv;nivel_seguranca
+id;nome;cpf;idade;tipo_sangue;fator_rh;funcao;especialidade;codigo_crmv;nivel_seguranca1;
+1;Tratador;Joao;701;30;2;O;cuidar;;2

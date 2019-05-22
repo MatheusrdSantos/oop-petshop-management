@@ -9,8 +9,6 @@ Author: Arnaldo Barbosa
 #include<string>
 #include <map>
 #include "ModelDAO.h"
-#include "Tratador.h"
-#include "Veterinario.h"
 
 class Funcionario : public ModelDAO<Funcionario>{
 
@@ -24,9 +22,9 @@ class Funcionario : public ModelDAO<Funcionario>{
         std::string m_especialidade;
     
     public:
-        Funcionario();
+        Funcionario(){};
         Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade);
-        ~Funcionario();
+        ~Funcionario(){};
         static std::string filePath;
         static std::multimap<std::string,Funcionario*> all();
 };
