@@ -1,5 +1,17 @@
 #include "Tratador.h"
 
+Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
+    m_id = id;
+    m_nome = nome;
+    m_cpf = cpf;
+    m_idade = idade;
+    m_tipo_sanguineo = tipo_sanguineo;
+    m_fator_rh = fator_rh;
+    m_especialidade = especialidade;
+    m_nivel_de_seguranca = nivel_de_seguranca;
+
+}
+
 void Tratador::setNivelDeSeguranca(int nivel_de_seguranca){
     m_nivel_de_seguranca = nivel_de_seguranca;
 }

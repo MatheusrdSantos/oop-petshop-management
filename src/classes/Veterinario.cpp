@@ -1,5 +1,16 @@
 #include "Veterinario.h"
 
+Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string crmv){
+    m_id = id;
+    m_nome = nome;
+    m_cpf = cpf;
+    m_idade = idade;
+    m_tipo_sanguineo = tipo_sanguineo;
+    m_fator_rh = fator_rh;
+    m_especialidade = especialidade;
+    m_crmv = crmv;
+}
+
 void Veterinario::setCrmv(std::string crmv){
     m_crmv = crmv;
 }
