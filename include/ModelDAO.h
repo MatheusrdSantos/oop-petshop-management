@@ -24,7 +24,7 @@ class ModelDAO : public CRUD{
         /*
         *   Create
         */
-        bool insert(T model);
+        virtual bool save();
 
         /*
         *   Read

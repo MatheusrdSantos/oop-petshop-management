@@ -7,6 +7,8 @@ Author: Arnaldo Barbosa
 
 #include"Funcionario.h"
 #include<string>
+#include<iostream>
+#include<fstream>
 
 class Tratador : public Funcionario{
 
@@ -16,7 +18,9 @@ class Tratador : public Funcionario{
     public:
         Tratador();
         ~Tratador();
-        void setNivelDeSeguranca(std::string nivel_de_seguranca);
+        void setNivelDeSeguranca(int nivel_de_seguranca);
+        int getNivelDeSeguranca();
+        bool save();
 };
     
 #endif
