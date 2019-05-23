@@ -31,9 +31,9 @@ class ModelDAO{
         static csv::Parser readTable(){
             /* try
             { */
-                csv::Parser file = csv::Parser(T::filePath);
+                csv::Parser file = csv::Parser(T::filePath, csv::DataType(0), ';');
                 return file;
-            /* }
+            /* }s
             catch (csv::Error &e)
             {
                 std::cerr << e.what() << std::endl;

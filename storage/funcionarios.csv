@@ -1,2 +1,5 @@
-id;nome;cpf;idade;tipo_sangue;fator_rh;funcao;especialidade;codigo_crmv;nivel_seguranca1;
-1;Tratador;Joao;701;30;2;O;cuidar;;2
+id;funcao;nome;cpf;idade;tipo_sangue;fator_rh;especialidade;codigo_crmv;nivel_seguranca
+1;Tratador;Joao;701;30;2;O;cuidar;1;2
+2;Tratador;Jose;7033;32;2;H;limpar;1;1
+3;Tratador;Matheus;7012;19;2;O;cuidar;1;2
+4;Tratador;Maria;70111;22;2;H;comida;1;0

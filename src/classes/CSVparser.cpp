@@ -2,6 +2,7 @@
 #include <sstream>
 #include <iomanip>
 #include "CSVparser.hpp"
+#include <iostream>
 
 namespace csv {
 
@@ -82,7 +83,7 @@ namespace csv {
          {
               if (it->at(i) == '"')
                   quoted = ((quoted) ? (false) : (true));
-              else if (it->at(i) == ',' && !quoted)
+              else if (it->at(i) == _sep && !quoted)
               {
                   row->push(it->substr(tokenStart, i - tokenStart));
                   tokenStart = i + 1;
@@ -93,8 +94,9 @@ namespace csv {
          row->push(it->substr(tokenStart, it->length() - tokenStart));
 
          // if value(s) missing
-         if (row->size() != _header.size())
+         if (row->size() != _header.size()){
           throw Error("corrupted data !");
+         }
          _content.push_back(row);
      }
   }
