@@ -10,6 +10,7 @@ class AnimalExotico : public AnimalSilvestre{
 
     protected:
         std::string m_pais_origem;
+        std::string m_cidade_origem;
         
     public:
         AnimalExotico();

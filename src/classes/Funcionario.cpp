@@ -34,29 +34,35 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
         char fator_rh = file[i][6][0];
         std::string especialidade = file[i][7];
         /* Estancia dinamicamente um novo funcionario */
-        Funcionario* funcionario = new Funcionario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade);
+        
         
         /* faz o downcasting para tratador ou veterinario */
         if(file[i][1] == "Tratador"){
             // so funciona se funcionario tiver um metodo virtual
             //Tratador* tratador = dynamic_cast<Tratador*>(func);
-            Tratador* tratador = static_cast<Tratador*>(funcionario); 
-            tratador->setNivelDeSeguranca(stoi(file[i][9]));
-            
+            Funcionario* funcionario;
+            Tratador* tratador = new Tratador(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, stoi(file[i][9]));
+            //Tratador* tratador = static_cast<Tratador*>(funcionario); 
+            //tratador->setNivelDeSeguranca();
+            funcionario = tratador;
             // faz o upcasting de volta para funcionario
-            funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", tratador));
-        }else{
+            funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", funcionario));
+        }else if(file[i][1] == "Veterinario"){
             std::cout<<file[i][8]<<std::endl;
             std::string crmv = file[i][8];
             std::cout<<"chamou"<<std::endl;
             // so funciona se funcionario tiver um metodo virtual
-            //Veterinario* veterinario = dynamic_cast<Veterinario*>(func);
-
-            Veterinario* veterinario = static_cast<Veterinario*>(funcionario);
-            veterinario->setCrmv(crmv);
+            //Veterinario* veterinario = dynamic_cast<Veterinario*>(funcionario);
+            Funcionario* funcionario;
+            Veterinario* veterinario = new Veterinario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, file[i][8]);
+            // Veterinario* veterinario = static_cast<Veterinario*>(funcionario);
+            //Veterinario* veterinario = (Veterinario*) funcionario;
+            //veterinario->setCrmv(crmv);
+            funcionario = veterinario;
+            //std::cout<<"Vet getCrmv: "<<veterinario->getCrmv()<<std::endl;
 
             // faz o upcasting de volta para funcionario
-            funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", veterinario));
+            funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", funcionario));
         }     
 
     }
