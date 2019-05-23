@@ -37,8 +37,6 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
         Funcionario* funcionario = new Funcionario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade);
         
         /* faz o downcasting para tratador ou veterinario */
-        
-        std::cout<<"chamou"<<std::endl;
         if(file[i][1] == "Tratador"){
             // so funciona se funcionario tiver um metodo virtual
             //Tratador* tratador = dynamic_cast<Tratador*>(func);
@@ -48,11 +46,14 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
             // faz o upcasting de volta para funcionario
             funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", tratador));
         }else{
+            std::cout<<file[i][8]<<std::endl;
+            std::string crmv = file[i][8];
+            std::cout<<"chamou"<<std::endl;
             // so funciona se funcionario tiver um metodo virtual
             //Veterinario* veterinario = dynamic_cast<Veterinario*>(func);
 
             Veterinario* veterinario = static_cast<Veterinario*>(funcionario);
-            veterinario->setCrmv(file[i][7]);
+            veterinario->setCrmv(crmv);
 
             // faz o upcasting de volta para funcionario
             funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", veterinario));

@@ -6,7 +6,8 @@ Author: Arnaldo Barbosa
 #define _VETERINARIO_H_
 
 #include "Funcionario.h"
-#include<string>
+#include <iostream>
+#include <string>
 #include <fstream>
 
 class Veterinario : public Funcionario{
@@ -18,7 +19,7 @@ class Veterinario : public Funcionario{
         Veterinario();
         Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string crmv);
         ~Veterinario(){};
-        void setCrmv(std::string m_crmv);
+        void setCrmv(std::string crmv);
         std::string getCrmv();
         bool save();
 };
