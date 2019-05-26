@@ -1,6 +1,6 @@
 #include "Veterinario.h"
 
-Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string crmv){
+Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv){
     m_id = id;
     m_nome = nome;
     m_cpf = cpf;
@@ -8,15 +8,15 @@ Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade,
     m_tipo_sanguineo = tipo_sanguineo;
     m_fator_rh = fator_rh;
     m_especialidade = especialidade;
-    m_crmv = crmv;
+    m_cnmv = cnmv;
 }
 
-void Veterinario::setCrmv(std::string crmv){
-    m_crmv = crmv;
+void Veterinario::setCnmv(std::string cnmv){
+    m_cnmv = cnmv;
 }
 
-std::string Veterinario::getCrmv(){
-    return m_crmv;
+std::string Veterinario::getCnmv(){
+    return m_cnmv;
 }
 
 bool Veterinario::save(){
@@ -25,7 +25,7 @@ bool Veterinario::save(){
 
     if(file.is_open()){
         std::cout<<"Saving..."<<std::endl;
-        file<<m_id<<';'<<"Veterinario"<<';'<<m_nome<<';'<<m_cpf<<';'<<m_idade<<';'<<m_tipo_sanguineo<<';'<<m_fator_rh<<';'<<m_especialidade<<";"<<m_crmv<<";"<<std::endl;
+        file<<m_id<<';'<<"Veterinario"<<';'<<m_nome<<';'<<m_cpf<<';'<<m_idade<<';'<<m_tipo_sanguineo<<';'<<m_fator_rh<<';'<<m_especialidade<<";"<<m_cnmv<<";"<<std::endl;
     }else{
         std::cerr<<"Couldn't open the file!"<<std::endl;
     }
