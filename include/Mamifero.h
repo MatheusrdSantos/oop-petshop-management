@@ -9,7 +9,7 @@ class Mamifero : public Animal{
     private:
 
     protected:
-        std::string m_cor_pelo;
+        std::string m_cor_do_pelo;
     public:
         Mamifero();
         ~Mamifero(){};
