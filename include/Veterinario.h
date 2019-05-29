@@ -13,14 +13,14 @@ Author: Arnaldo Barbosa
 class Veterinario : public Funcionario{
 
     private:
-        std::string m_crmv;
+        std::string m_cnmv;
     
     public:
         Veterinario();
-        Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string crmv);
+        Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
         ~Veterinario(){};
-        void setCrmv(std::string crmv);
-        std::string getCrmv();
+        void setCnmv(std::string cnmv);
+        std::string getCnmv();
         bool save();
 };
     
