@@ -18,6 +18,7 @@ class Veterinario : public Funcionario{
     public:
         Veterinario();
         Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
+        Veterinario(std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
         ~Veterinario(){};
         void setCnmv(std::string cnmv);
         std::string getCnmv();
