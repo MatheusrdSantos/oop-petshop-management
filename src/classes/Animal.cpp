@@ -7,7 +7,7 @@
 #include "CSVparser.hpp"
 
 std::string Animal::filePath = "./storage/animals.csv";
-Animal::Animal(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade){
+Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario &veterinario, const Tratador &tratador, std::string nome_batismo){
     m_id = id;
     m_classe = classe ;
     m_nome_cientifico = nome_cientifico;
@@ -37,6 +37,6 @@ std::multimap<std::string,Animal*> Animal::all(){
     return Animals;
 }
 
-std::string Animal::getNome(){
-    return m_nome;
+std::string Animal::getNomeBatismo(){
+    return m_nome_batismo;
 }
