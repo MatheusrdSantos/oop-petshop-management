@@ -26,6 +26,7 @@ class Funcionario : public ModelDAO<Funcionario>{
         Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade);
         ~Funcionario(){};
         static std::string filePath;
+        static std::string tableName;
         static std::multimap<std::string,Funcionario*> all();
         std::string getNome();
 };

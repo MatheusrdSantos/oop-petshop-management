@@ -4,6 +4,7 @@
 #include "CSVparser.hpp"
 
 std::string Funcionario::filePath = "./storage/funcionarios.csv";
+std::string Funcionario::tableName = "funcionarios";
 Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade){
     m_id = id;
     m_nome = nome;
@@ -18,9 +19,9 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
     csv::Parser file = ModelDAO<Funcionario>::readTable();
     std::multimap<std::string,Funcionario*> funcionarios;
     int n_rows = file.rowCount();
-    std::cout<<"N_rows: "<<n_rows<<std::endl;
-    int n_columns = file.columnCount();
-    std::cout<<"N_columns: "<<n_columns<<std::endl;
+    //std::cout<<"N_rows: "<<n_rows<<std::endl;
+    //int n_columns = file.columnCount();
+    //std::cout<<"N_columns: "<<n_columns<<std::endl;
 
 
     for(int i = 0; i<n_rows; i++){
