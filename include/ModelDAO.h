@@ -29,16 +29,15 @@ class ModelDAO{
         ModelDAO find(int id);
         std::list<ModelDAO> where(std::string expression); 
         static csv::Parser readTable(){
-            /* try
-            { */
+            try{
                 csv::Parser file = csv::Parser(T::filePath, csv::DataType(0), ';');
                 return file;
-            /* }s
-            catch (csv::Error &e)
-            {
+            }catch (csv::Error &e){
                 std::cerr << e.what() << std::endl;
                 return;
-            } */
+            }catch (...){
+                std::cerr << "Erro desconhecido na leitura."<<std::endl;
+            }
         };
 
         /*

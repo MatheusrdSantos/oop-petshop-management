@@ -38,30 +38,24 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
         
         /* faz o downcasting para tratador ou veterinario */
         if(file[i][1] == "Tratador"){
-            // so funciona se funcionario tiver um metodo virtual
-            //Tratador* tratador = dynamic_cast<Tratador*>(func);
+
+            //Método construtor de tratador + upcasting para funcionário
             Funcionario* funcionario;
             Tratador* tratador = new Tratador(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, stoi(file[i][9]));
-            //Tratador* tratador = static_cast<Tratador*>(funcionario); 
-            //tratador->setNivelDeSeguranca();
             funcionario = tratador;
-            // faz o upcasting de volta para funcionario
+
             funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", funcionario));
+
         }else if(file[i][1] == "Veterinario"){
-            std::cout<<file[i][8]<<std::endl;
+            // Oitava coluna representa o código cnmv
             std::string cnmv = file[i][8];
-            std::cout<<"chamou"<<std::endl;
-            // so funciona se funcionario tiver um metodo virtual
-            //Veterinario* veterinario = dynamic_cast<Veterinario*>(funcionario);
+
+
+            //Método construtor de veterinário + upcasting para funcionário
             Funcionario* funcionario;
             Veterinario* veterinario = new Veterinario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, file[i][8]);
-            // Veterinario* veterinario = static_cast<Veterinario*>(funcionario);
-            //Veterinario* veterinario = (Veterinario*) funcionario;
-            //veterinario->setCnmv(cnmv);
             funcionario = veterinario;
-            //std::cout<<"Vet getCnmv: "<<veterinario->getCnmv()<<std::endl;
 
-            // faz o upcasting de volta para funcionario
             funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", funcionario));
         }     
 
