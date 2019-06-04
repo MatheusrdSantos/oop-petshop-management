@@ -24,5 +24,8 @@ int main(int argc, char const *argv[])
     for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
         std::cout << (*it).first << " => " << (*it).second->getNome() << '\n';
     }
+
+    Funcionario* func =  Funcionario::find(3);
+    std::cout<<"id -> 3;"<<std::endl<<func->getNome()<<std::endl;
     return 0;
 }

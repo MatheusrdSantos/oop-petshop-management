@@ -65,6 +65,57 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
     return funcionarios;
 }
 
+Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
+    int id = std::stoi((*file)[0]);
+    std::string nome = (*file)[2];
+    std::string cpf = (*file)[3];
+    short idade = std::stoi((*file)[4]);
+    short tipo_sanguineo = std::stoi((*file)[5]);
+    char fator_rh = (*file)[6][0];
+    std::string especialidade = (*file)[7];
+    /* Estancia dinamicamente um novo funcionario */
+    
+    
+    /* faz o downcasting para tratador ou veterinario */
+    if((*file)[1] == "Tratador"){
+
+        //Método construtor de tratador + upcasting para funcionário
+        Funcionario* funcionario;
+        Tratador* tratador = new Tratador(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, stoi((*file)[9]));
+        funcionario = tratador;
+        return funcionario;
+
+    }else if((*file)[1] == "Veterinario"){
+        // Oitava coluna representa o código cnmv
+        std::string cnmv = (*file)[8];
+
+
+        //Método construtor de veterinário + upcasting para funcionário
+        Funcionario* funcionario;
+        Veterinario* veterinario = new Veterinario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, (*file)[8]);
+        funcionario = veterinario;
+
+        return funcionario;
+    }
+    Funcionario* f = NULL;
+    return f;
+}
+
+// procura por id
+Funcionario* Funcionario::find(int id){
+    csv::Parser file = ModelDAO<Funcionario>::readTable();
+    int n_rows = file.rowCount();
+    for (int i = 0; i < n_rows; i++)
+    {
+        if(id == std::stoi(file[i][0])){
+            /* Recupera os campos do arquivo csv*/
+            return buildFuncionarioFromFile(&file[i]);
+        }
+    }
+    Funcionario* f = NULL;
+    return f;
+}
+
 std::string Funcionario::getNome(){
     return m_nome;
 }

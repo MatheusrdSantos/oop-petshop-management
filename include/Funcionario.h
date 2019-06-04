@@ -11,7 +11,8 @@ Author: Arnaldo Barbosa
 #include "ModelDAO.h"
 
 class Funcionario : public ModelDAO<Funcionario>{
-
+    private:
+        static Funcionario* buildFuncionarioFromFile(csv::Row* file);
     protected:
         int m_id;
         std::string m_nome;
@@ -28,6 +29,7 @@ class Funcionario : public ModelDAO<Funcionario>{
         static std::string filePath;
         static std::string tableName;
         static std::multimap<std::string,Funcionario*> all();
+        static Funcionario* find(int id);
         std::string getNome();
 };
     
