@@ -23,40 +23,16 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
     //int n_columns = file.columnCount();
     //std::cout<<"N_columns: "<<n_columns<<std::endl;
 
-
     for(int i = 0; i<n_rows; i++){
-        
-        /* Recupera os campos do arquivo csv*/
-        int id = std::stoi(file[i][0]);
-        std::string nome = file[i][2];
-        std::string cpf = file[i][3];
-        short idade = std::stoi(file[i][4]);
-        short tipo_sanguineo = std::stoi(file[i][5]);
-        char fator_rh = file[i][6][0];
-        std::string especialidade = file[i][7];
         /* Estancia dinamicamente um novo funcionario */
-        
-        
+        Funcionario* funcionario;
+        funcionario = buildFuncionarioFromFile(&file[i]);
+
         /* faz o downcasting para tratador ou veterinario */
         if(file[i][1] == "Tratador"){
-
-            //Método construtor de tratador + upcasting para funcionário
-            Funcionario* funcionario;
-            Tratador* tratador = new Tratador(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, stoi(file[i][9]));
-            funcionario = tratador;
-
             funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", funcionario));
 
         }else if(file[i][1] == "Veterinario"){
-            // Oitava coluna representa o código cnmv
-            std::string cnmv = file[i][8];
-
-
-            //Método construtor de veterinário + upcasting para funcionário
-            Funcionario* funcionario;
-            Veterinario* veterinario = new Veterinario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, file[i][8]);
-            funcionario = veterinario;
-
             funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", funcionario));
         }     
 
@@ -74,8 +50,7 @@ Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
     char fator_rh = (*file)[6][0];
     std::string especialidade = (*file)[7];
     /* Estancia dinamicamente um novo funcionario */
-    
-    
+
     /* faz o downcasting para tratador ou veterinario */
     if((*file)[1] == "Tratador"){
 
@@ -87,7 +62,7 @@ Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
 
     }else if((*file)[1] == "Veterinario"){
         // Oitava coluna representa o código cnmv
-        std::string cnmv = (*file)[8];
+        //std::string cnmv = (*file)[8];
 
 
         //Método construtor de veterinário + upcasting para funcionário
