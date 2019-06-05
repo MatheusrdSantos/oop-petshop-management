@@ -91,6 +91,7 @@ Funcionario* Funcionario::find(int id){
     return f;
 }
 
+//Todo: sobrecarga de operador de igual
 bool Funcionario::compare(std::string* value1, std::string* value2, std::string* symbol){
     if((*symbol) == "=="){
         if((*value1) == (*value2)){
