@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "AnimalNativo.h"
-#include "Reptil.h"
+#include "Mamifero.h"
 
 class MamiferoNativo : public Mamifero, public AnimalNativo{
     private:
