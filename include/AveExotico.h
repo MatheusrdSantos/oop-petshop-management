@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "AnimalExotico.h"
+#include "Ave.h"
 
 class AveExotico : public Ave, public AnimalExotico{
     private:
