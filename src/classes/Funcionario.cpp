@@ -91,6 +91,42 @@ Funcionario* Funcionario::find(int id){
     return f;
 }
 
+bool Funcionario::compare(std::string* value1, std::string* value2, std::string* symbol){
+    if((*symbol) == "=="){
+        if((*value1) == (*value2)){
+            return true;
+        }
+    }else if((*symbol) == "!="){
+        if((*value1) != (*value2)){
+            return true;
+        }
+    }
+    return false;
+}
+
+std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column, std::string* symbol, std::string* value){
+    csv::Parser file = ModelDAO<Funcionario>::readTable();
+    std::multimap<std::string,Funcionario*> funcionarios;
+    int n_rows = file.rowCount();
+    std::vector<std::string> header = file.getHeader();
+    int columnIndex = ModelDAO<Funcionario>::getColumnIndex(&header, column);
+    for (int i = 0; i < n_rows; i++)
+    {
+        std::string val = file[i][columnIndex];
+        if(Funcionario::compare(&val, value, symbol)){
+            Funcionario* funcionario = Funcionario::buildFuncionarioFromFile(&file[i]);
+            /* faz o downcasting para tratador ou veterinario */
+            if(file[i][1] == "Tratador"){
+                funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", funcionario));
+
+            }else if(file[i][1] == "Veterinario"){
+                funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", funcionario));
+            }  
+        }
+    }
+    return funcionarios;
+}
+
 std::string Funcionario::getNome(){
     return m_nome;
 }

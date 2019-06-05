@@ -13,6 +13,9 @@ Author: Arnaldo Barbosa
 class Funcionario : public ModelDAO<Funcionario>{
     private:
         static Funcionario* buildFuncionarioFromFile(csv::Row* file);
+        // esse método deve ser movido para uma classe utils
+        // também deve ser sobrescrito para diferentes tipos de parametros
+        static bool compare(std::string* value1, std::string* value2, std::string* symbol);
     protected:
         int m_id;
         std::string m_nome;
@@ -30,6 +33,9 @@ class Funcionario : public ModelDAO<Funcionario>{
         static std::string tableName;
         static std::multimap<std::string,Funcionario*> all();
         static Funcionario* find(int id);
+        // esse método será sobrescrito para diferentes tipos de valores
+        // int - string - double - char
+        static std::multimap<std::string, Funcionario*> where(std::string* column, std::string* separator, std::string* value);
         std::string getNome();
 };
     

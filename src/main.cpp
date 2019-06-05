@@ -27,5 +27,20 @@ int main(int argc, char const *argv[])
 
     Funcionario* func =  Funcionario::find(3);
     std::cout<<"id -> 3;"<<std::endl<<func->getNome()<<std::endl;
+
+    std::string columnName = "nome";
+    std::string symbol = "==";
+    std::string value = "Matheus";
+
+    /* std::string columnName = "funcao";
+    std::string symbol = "==";
+    std::string value = "Tratador"; */
+
+    std::multimap<std::string,Funcionario*> funcionarios_where = Funcionario::where(&columnName, &symbol, &value);
+    
+    std::cout << "select where contains:\n";
+    for (auto it=funcionarios_where.begin(); it!=funcionarios_where.end(); ++it){
+        std::cout << (*it).first << " => " << (*it).second->getNome() << '\n';
+    }
     return 0;
 }

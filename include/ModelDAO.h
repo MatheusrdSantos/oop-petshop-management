@@ -35,6 +35,16 @@ class ModelDAO{
             return file;
         };
 
+
+        static int getColumnIndex(std::vector<std::string>* columns, std::string* columnName){
+            for (unsigned i = 0; i < columns->size(); i++)
+            {
+                if(columns->at(i) == (*columnName)){
+                    return i;
+                }
+            }
+            return -1;
+        }    
         /*
         *   Update
         */
