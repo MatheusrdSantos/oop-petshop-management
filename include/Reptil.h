@@ -14,6 +14,13 @@ class Reptil : public Animal{
     public:
         Reptil();
         ~Reptil(){};
+
+        bool isVenenoso();
+        void setVenenoso(bool venenoso);
+
+        std::string getTipoVeneno();
+        void setTipoVeneno(std::string tipo_veneno);
+
 };
 
 #endif

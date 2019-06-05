@@ -10,10 +10,17 @@ class AnimalNativo : public AnimalSilvestre{
 
     protected:
         std::string m_uf_origem;
+        std::string m_cidade_origem;
         
     public:
         AnimalNativo();
         ~AnimalNativo(){};
+
+        std::string getUfOrigem();
+        void setUfOrigem(std::string uf_origem);
+
+        std::string getCidadeOrigem();
+        void setCidadeOrigem(std::string cidade_origem);
 };
 
 #endif

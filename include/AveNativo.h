@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "AnimalNativo.h"
+#include "Ave.h"
 
-class AveNativo : public AnimalNativo{
+class AveNativo : public Ave, public AnimalNativo{
     private:
 
     protected:
@@ -12,6 +13,8 @@ class AveNativo : public AnimalNativo{
     public:
         AveNativo();
         ~AveNativo(){};
+
+        AveNativo(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario &veterinario, const Tratador &tratador, std::string nome_batismo, double tamanho_do_bico_cm, double envergadura_das_asas, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama);
 };
 
 #endif

@@ -13,6 +13,9 @@ class Mamifero : public Animal{
     public:
         Mamifero();
         ~Mamifero(){};
+
+        std::string getCorDoPelo();
+        void setCorDoPelo(std::string cor_do_pelo);
 };
 
 #endif
