@@ -33,7 +33,30 @@ class Animal : public ModelDAO<Animal>{
         
         static Funcionario* find(int id);
 
+        std::string getDieta();
+        void setDieta(std::string dieta);
+        
         std::string getNomeBatismo();
+        void setNomeBatismo(std::string nome_batismo);
+
+        std::string getClasse();
+        void setClasse(std::string classe);
+
+        std::string getNomeCientifico();
+        void setNomeCientifico(std::string nome_cientifico);
+
+        char getSexo();
+        void setSexo(char sexo);
+
+        double getTamanho();
+        void setTamanho(double tamanho);
+
+        Veterinario* getVeterinario();
+        void setVeterinario(Veterinario* veterinario);
+
+        Tratador* getTratador();
+        void setTratador(Tratador* tratador);
+
 };
 
 #endif
