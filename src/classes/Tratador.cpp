@@ -22,14 +22,7 @@ Tratador::Tratador(std::string nome, std::string cpf, short idade, short tipo_sa
 
 }
 
-void Tratador::setNivelDeSeguranca(int nivel_de_seguranca){
-    m_nivel_de_seguranca = nivel_de_seguranca;
-}
-
-int Tratador::getNivelDeSeguranca(){
-    return m_nivel_de_seguranca;
-}
-
+//DAO
 bool Tratador::save(){
     int id = getTableIncrementId(Funcionario::tableName);
     if(id<0){
@@ -49,4 +42,14 @@ bool Tratador::save(){
 
     file.close();
     return true;
+}
+
+//getters
+int Tratador::getNivelDeSeguranca(){
+    return m_nivel_de_seguranca;
+}
+
+//setters
+void Tratador::setNivelDeSeguranca(int nivel_de_seguranca){
+    m_nivel_de_seguranca = nivel_de_seguranca;
 }

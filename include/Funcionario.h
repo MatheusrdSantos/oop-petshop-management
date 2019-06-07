@@ -31,6 +31,8 @@ class Funcionario : public ModelDAO<Funcionario>{
         ~Funcionario(){};
         static std::string filePath;
         static std::string tableName;
+
+        //DAO
         static std::multimap<std::string,Funcionario*> all();
         static Funcionario* find(int id);
         // esse método será sobrescrito para diferentes tipos de valores

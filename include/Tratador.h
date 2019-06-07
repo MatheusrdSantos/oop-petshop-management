@@ -19,9 +19,15 @@ class Tratador : public Funcionario{
         Tratador(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
         Tratador(std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
         ~Tratador(){};
-        void setNivelDeSeguranca(int nivel_de_seguranca);
-        int getNivelDeSeguranca();
+        
+        //DAO
         bool save();
+        
+        //getters
+        int getNivelDeSeguranca();
+        
+        //setters
+        void setNivelDeSeguranca(int nivel_de_seguranca);
 };
     
 #endif

@@ -20,13 +20,7 @@ Veterinario::Veterinario(std::string nome, std::string cpf, short idade, short t
     m_cnmv = cnmv;
 }
 
-void Veterinario::setCnmv(std::string cnmv){
-    m_cnmv = cnmv;
-}
-
-std::string Veterinario::getCnmv(){
-    return m_cnmv;
-}
+// DAO
 
 bool Veterinario::save(){
     int id = getTableIncrementId(Funcionario::tableName);
@@ -47,4 +41,14 @@ bool Veterinario::save(){
 
     file.close();
     return true;
+}
+
+//getters
+std::string Veterinario::getCnmv(){
+    return m_cnmv;
+}
+
+// setters
+void Veterinario::setCnmv(std::string cnmv){
+    m_cnmv = cnmv;
 }

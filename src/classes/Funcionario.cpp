@@ -15,6 +15,7 @@ Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade,
     m_especialidade = especialidade;
 }
 
+// DAO
 std::multimap<std::string,Funcionario*> Funcionario::all(){
     csv::Parser file = ModelDAO<Funcionario>::readTable();
     std::multimap<std::string,Funcionario*> funcionarios;
