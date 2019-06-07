@@ -13,13 +13,13 @@ bool AveExotico::save(){
 
     if(file.is_open()){
         std::cout<<"Saving..."<<std::endl;
-        file<<id<<';'<<m_classe<<';'<<m_nome_batismo<<';'<<m_nome_batismo<<';'<<m_sexo<<';'<<m_tamanho<<';'<<m_dieta<<';'<<std::endl;
+        file<<id<<';'<<m_classe<<';'<<m_nome<<';'<<m_nome_batismo<<';'<<m_sexo<<';'<<m_tamanho<<';'<<m_dieta<<';'<<m_veterinario.getId()<<';'<<m_tratador.getId()<<';'<<m_nome_batismo<<";;"<<m_cidade_origem<<";"<<m_pais_origem<<";"<<m_autorizacao_ibama<<";;"<<";;"<<";;"<<";;"<<";;"<<m_tamanho_do_bico_cm<<";"<<m_envergadura_das_asas<<std::endl;
         m_id = id;
         updateAutoIncrement(Animal::tableName);
     }else{
-        std::cerr<<"Couldn't open the file!"<<std::endl;
+        std::cerr<<"Couldn't save the file!"<<std::endl;
     }
-
     file.close();
+
     return true;
 }
