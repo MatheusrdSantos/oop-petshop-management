@@ -13,7 +13,7 @@ bool AveExotico::save(){
 
     if(file.is_open()){
         std::cout<<"Saving..."<<std::endl;
-        file<<id<<';'<<"Tratador"<<';'<<m_nome<<';'<<m_cpf<<';'<<m_idade<<';'<<m_tipo_sanguineo<<';'<<m_fator_rh<<';'<<m_especialidade<<';'<<';'<<m_nivel_de_seguranca<<std::endl;
+        file<<id<<';'<<m_classe<<';'<<m_nome_batismo<<';'<<m_nome_batismo<<';'<<m_sexo<<';'<<m_tamanho<<';'<<m_dieta<<';'<<std::endl;
         m_id = id;
         updateAutoIncrement(Animal::tableName);
     }else{
