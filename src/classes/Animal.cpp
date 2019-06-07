@@ -7,6 +7,8 @@
 #include "CSVparser.hpp"
 
 std::string Animal::filePath = "./storage/animals.csv";
+std::string Animal::tableName = "animais";
+
 Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario &veterinario, const Tratador &tratador, std::string nome_batismo){
     m_id = id;
     m_classe = classe ;
@@ -30,7 +32,6 @@ std::multimap<std::string,Animal*> Animal::all(){
 
 
     for(int i = 0; i<n_rows; i++){
-        
 
     }
 
