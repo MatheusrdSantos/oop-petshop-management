@@ -128,6 +128,62 @@ std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column,
     return funcionarios;
 }
 
+
+// getters
+int Funcionario::getId(){
+    return m_id;
+}
+
 std::string Funcionario::getNome(){
     return m_nome;
+}
+
+std::string Funcionario::getCpf(){
+    return m_cpf;
+}
+
+short Funcionario::getIdade(){
+    return m_idade;
+}
+
+short Funcionario::getTipoSanguineo(){
+    return m_tipo_sanguineo;
+}
+
+char Funcionario::getFatorRh(){
+    return m_fator_rh;
+}
+
+std::string Funcionario::getEspecialidade(){
+    return m_especialidade;
+}
+
+//setters
+
+void Funcionario::setId(int id){
+    m_id = id;
+}
+
+void Funcionario::setNome(std::string nome){
+    m_nome = nome;
+}
+
+void Funcionario::setCpf(std::string cpf){
+    m_cpf = cpf;
+}
+
+void Funcionario::setIdade(short idade){
+    m_idade = idade;
+}
+
+void Funcionario::setTipoSanguineo(short tipo){
+    m_tipo_sanguineo = tipo;
+}
+
+void Funcionario::setFatorRh(char fator){
+    m_fator_rh = fator;
+}
+
+void Funcionario::setEspecialidade(std::string especialidade){
+    m_especialidade = especialidade;
 }

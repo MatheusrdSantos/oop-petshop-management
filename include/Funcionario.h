@@ -36,7 +36,25 @@ class Funcionario : public ModelDAO<Funcionario>{
         // esse método será sobrescrito para diferentes tipos de valores
         // int - string - double - char
         static std::multimap<std::string, Funcionario*> where(std::string* column, std::string* separator, std::string* value);
+        
+        // getters
+        int getId();
         std::string getNome();
+        std::string getCpf();
+        short getIdade();
+        short getTipoSanguineo();
+        char getFatorRh();
+        std::string getEspecialidade();
+
+        //setters
+
+        void setId(int id);
+        void setNome(std::string nome);
+        void setCpf(std::string cpf);
+        void setIdade(short idade);
+        void setTipoSanguineo(short tipo);
+        void setFatorRh(char fator);
+        void setEspecialidade(std::string especialidade);
 };
     
 #endif
