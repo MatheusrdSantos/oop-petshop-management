@@ -12,6 +12,7 @@ class Animal : public ModelDAO<Animal>{
     protected:
         int m_id;
         std::string m_classe;
+        std::string m_nome;
         std::string m_nome_cientifico;
         char m_sexo;
         double m_tamanho;

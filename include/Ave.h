@@ -15,6 +15,8 @@ class Ave : public Animal{
         Ave();
         ~Ave(){};
 
+        
+
 };
 
 #endif
