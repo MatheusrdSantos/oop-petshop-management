@@ -7,9 +7,3 @@ std::string AnfibioExotico::printInFile(int id){
     std::string s = ss.str();
     return s;
 }
-
-/*
-
-
-
-*/

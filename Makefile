@@ -1,7 +1,7 @@
-OBJS	= main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Data.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o
+OBJS	= main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o
 ANIMALS_OBJS = main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o 
-SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Data.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp
-HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Data.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h
+SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp
+HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h
 OUT	= exec
 CC	 = g++
 FLAGS	 = -g3 -c -Wall
@@ -54,8 +54,8 @@ AveNativo.o: src/classes/AveNativo.cpp
 CSVparser.o: src/classes/CSVparser.cpp
 	$(CC) $(FLAGS) src/classes/CSVparser.cpp -std=c++11
 
-Data.o: src/classes/Data.cpp
-	$(CC) $(FLAGS) src/classes/Data.cpp -std=c++11
+Date.o: src/classes/Date.cpp
+	$(CC) $(FLAGS) src/classes/Date.cpp -std=c++11
 
 Funcionario.o: src/classes/Funcionario.cpp
 	$(CC) $(FLAGS) src/classes/Funcionario.cpp CSVparser.o -std=c++11
