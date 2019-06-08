@@ -14,7 +14,7 @@ class AnfibioNativo : public Anfibio, public AnimalNativo{
         AnfibioNativo();
         ~AnfibioNativo(){};
 
-        std::string printInFile(int id) = 0;
+        std::string printInFile(int id);
 };
 
 #endif
