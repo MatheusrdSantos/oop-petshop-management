@@ -15,6 +15,13 @@ class AnimalExotico : public AnimalSilvestre{
     public:
         AnimalExotico();
         ~AnimalExotico(){};
+
+        std::string getPaisOrigem();
+        void setPaisOrigem(std::string pais_origem);
+
+        std::string getCidadeOrigem();
+        void setCidadeOrigem(std::string cidade_origem);
+
 };
 
 #endif

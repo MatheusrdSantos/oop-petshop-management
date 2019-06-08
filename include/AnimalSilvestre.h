@@ -13,6 +13,10 @@ class AnimalSilvestre{
     public:
         AnimalSilvestre();
         ~AnimalSilvestre(){};
+
+        std::string getAutorizacaoIbama();
+        void getAutorizacaoIbama(std::string autorizacao_ibama);
+
 };
 
 #endif
