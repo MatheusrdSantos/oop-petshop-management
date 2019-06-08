@@ -13,6 +13,9 @@ class ReptilNativo : public Reptil, public AnimalNativo{
     public:
         ReptilNativo();
         ~ReptilNativo(){};
+
+
+        std::string printInFile(int id);
 };
 
 #endif
