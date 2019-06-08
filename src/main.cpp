@@ -1,6 +1,6 @@
-//#include "Funcionario.h"
-//#include "Tratador.h"
-//#include "Veterinario.h"
+#include "Funcionario.h"
+#include "Tratador.h"
+#include "Veterinario.h"
 #include "Interacao.h"
 #include <iostream>
 #include <map>
