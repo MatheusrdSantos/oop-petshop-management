@@ -9,8 +9,9 @@ void menu(int &escolha){
     std::cout << std::endl;
     
     std::cout << "Escolha uma opção e divirta-se: " << std::endl;
-    std::cout << "    1 -> Fazer x " << std::endl;
-    std::cout << "    2 -> Fazer Y " << std::endl;
+    std::cout << "    1 -> Adicionar Funcionário " << std::endl;
+    std::cout << "    2 -> Listar Funcionários " << std::endl;
+    std::cout << "    3 -> Adicionar Animal " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 

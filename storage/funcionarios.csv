@@ -1,6 +1,1 @@
 id;funcao;nome;cpf;idade;tipo_sangue;fator_rh;especialidade;codigo_cnmv;nivel_seguranca
-1;Tratador;Jose;7033;32;2;H;limpar;;1
-2;Tratador;Matheus;7012;19;2;O;cuidar;;2
-3;Tratador;Maria;70111;22;2;H;comida;;0
-4;Veterinario;Arnaldo;7013411;21;2;H;cura;zz;
-5;Veterinario;Davis;7011111;19;2;H;cura;bb;
