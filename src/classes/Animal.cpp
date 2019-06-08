@@ -41,3 +41,24 @@ std::multimap<std::string,Animal*> Animal::all(){
 std::string Animal::getNomeBatismo(){
     return m_nome_batismo;
 }
+
+bool Animal::save(){
+    int id = getTableIncrementId(Animal::tableName);
+    if(id<0){
+        return false;
+    }
+    std::ofstream file;
+    file.open(Animal::filePath, std::ios::app); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(file.is_open()){
+        file<<printInFile(id);
+        m_id = id;
+        updateAutoIncrement(Animal::tableName);
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
+    }
+
+    file.close();
+    return true;
+}

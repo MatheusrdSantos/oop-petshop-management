@@ -62,6 +62,7 @@ class Animal : public ModelDAO<Animal>{
         bool save();
         bool update();
         bool remove();
+        
         virtual std::string printInFile(int id) = 0;
 };
 
