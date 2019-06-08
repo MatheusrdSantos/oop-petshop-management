@@ -14,7 +14,7 @@ Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sex
     m_classe = classe ;
     m_nome_cientifico = nome_cientifico;
     m_sexo = sexo ;
-    m_tamanho = tamanho ;
+    m_tamanho = tamanho ;ex
     m_dieta = dieta ;
     m_veterinario = veterinario ;
     m_tratador = tratador ;
