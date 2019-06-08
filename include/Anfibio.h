@@ -15,6 +15,8 @@ class Anfibio : public Animal{
     public:
         Anfibio();
         ~Anfibio(){};
+    
+        virtual std::string printInFile(int id) = 0;
 };
 
 #endif

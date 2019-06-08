@@ -58,6 +58,11 @@ class Animal : public ModelDAO<Animal>{
         Tratador* getTratador();
         void setTratador(Tratador* tratador);
 
+
+        bool save();
+        bool update();
+        bool remove();
+        virtual std::string printInFile(int id) = 0;
 };
 
 #endif
