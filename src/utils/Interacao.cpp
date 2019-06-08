@@ -1,5 +1,4 @@
 #include "Interacao.h"
-#include "bprinter/table_printer.h"
 
 void menu(int &escolha){
     std::cout << std::endl;
@@ -22,7 +21,7 @@ void menu(int &escolha){
             std::cout << "Tchau! Volte sempre" << std::endl;
             break;
         case 1:
-            std::cout << "Escolheu a opção 1, congrats" << std::endl;
+            add_Funcionario();
             break;
         case 2:
             listAll_Funcionarios();
@@ -72,4 +71,34 @@ void listAll_Funcionarios(){
 
         tp.PrintFooter();
     }
+}
+
+void add_Funcionario(){
+    char cargo;
+    std::cout << "O funcionário é um tratador ou um veterinário (t/v)?" << std::endl;
+    std::cin >> cargo;
+
+    switch (cargo)
+    {
+    case 't':
+        std::cout << "Você escolheu um tratador" << std::endl;
+        break;
+    case 'v':
+        std::cout << "Você escolheu um veterinário" << std::endl;
+        break;
+    case 's':
+        std::cout << "Tchau!" << std::endl;
+        break;
+    
+    default:
+        std::cout << "Há apenas duas opções: 't' caso queira adicionar um funcionário ou 'v' para adicionar um veterinário. Para sair escolha 's'." << std::endl;
+        add_Funcionario();
+        break;
+    }
+
+    /*Tratador trat("Jose", "7033", 32, 2, 'H', "limpar", 1);
+    trat.save();    
+    Veterinario vet("Davis", "7011111", 19, 2, 'H', "cura", "bb");
+    vet.save();*/
+
 }
