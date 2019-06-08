@@ -58,6 +58,7 @@ class Funcionario : public ModelDAO<Funcionario>{
 
         bool save();
         bool update();
+        bool remove();
         virtual std::string printInFile(int id) = 0;
 };
     

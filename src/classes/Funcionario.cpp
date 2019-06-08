@@ -227,3 +227,32 @@ bool Funcionario::update(){
     write_file.close();
     return true;
 }
+
+bool Funcionario::remove(){
+    // recupera os dados do csv
+    csv::Parser file = csv::Parser(Funcionario::filePath, csv::DataType(0), ';');
+    unsigned n_rows = file.rowCount();
+    
+    // cria um stream de escrita no arquivo
+    std::ofstream write_file;
+    write_file.open(Funcionario::filePath, std::ios::out); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(write_file.is_open()){
+        // escreve o header no arquivo a partir de um vector contendo o nome das colunas
+        std::vector<std::string> header = file.getHeader(); 
+        write_file<<buildHeaderString(&header);
+
+        // reescreve os dados na tabela
+        for(unsigned i = 0; i<n_rows; i++){
+            if(std::stoi(file[i]["id"]) != m_id){
+                write_file<<buildRowString(&(file[i]));
+            }
+        }
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
+    }
+
+    write_file.close();
+    return true;
+}

@@ -47,5 +47,8 @@ int main(int argc, char const *argv[])
     func->setNome("Ronaldo");
     func->setIdade(30);
     func->update();
+
+    func = Funcionario::find(4);
+    func->remove();
     return 0;
 }
