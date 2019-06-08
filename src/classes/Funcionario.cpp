@@ -92,20 +92,6 @@ Funcionario* Funcionario::find(int id){
     return f;
 }
 
-//Todo: sobrecarga de operador de igual
-bool Funcionario::compare(std::string* value1, std::string* value2, std::string* symbol){
-    if((*symbol) == "=="){
-        if((*value1) == (*value2)){
-            return true;
-        }
-    }else if((*symbol) == "!="){
-        if((*value1) != (*value2)){
-            return true;
-        }
-    }
-    return false;
-}
-
 std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column, std::string* symbol, std::string* value){
     csv::Parser file = ModelDAO<Funcionario>::readTable();
     std::multimap<std::string,Funcionario*> funcionarios;
@@ -115,7 +101,7 @@ std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column,
     for (int i = 0; i < n_rows; i++)
     {
         std::string val = file[i][(*column)];
-        if(Funcionario::compare(&val, value, symbol)){
+        if(compare(&val, value, symbol)){
             Funcionario* funcionario = Funcionario::buildFuncionarioFromFile(&file[i]);
             /* faz o downcasting para tratador ou veterinario */
             if(file[i]["funcao"] == "Tratador"){
