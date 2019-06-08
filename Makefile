@@ -1,16 +1,25 @@
-OBJS	= main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Data.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o
-SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Data.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp
+OBJS	= main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Data.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o
+ANIMALS_OBJS = main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o 
+SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Data.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp
 HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Data.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h
-OUT	= myproject1
+OUT	= exec
 CC	 = g++
 FLAGS	 = -g3 -c -Wall
 LFLAGS	 = 
 
 all: $(OBJS)
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+	make clean
+
+animals: $(ANIMALS_OBJS)
+	$(CC) -g $(ANIMALS_OBJS) -o $(OUT) $(LFLAGS)
+	make clean
 
 main.o: src/main.cpp
 	$(CC) $(FLAGS) src/main.cpp -std=c++11
+
+utils.o: src/utils/utils.cpp
+	$(CC) $(FLAGS) src/utils/utils.cpp -std=c++11
 
 Anfibio.o: src/classes/Anfibio.cpp
 	$(CC) $(FLAGS) src/classes/Anfibio.cpp -std=c++11
@@ -49,7 +58,7 @@ Data.o: src/classes/Data.cpp
 	$(CC) $(FLAGS) src/classes/Data.cpp -std=c++11
 
 Funcionario.o: src/classes/Funcionario.cpp
-	$(CC) $(FLAGS) src/classes/Funcionario.cpp -std=c++11
+	$(CC) $(FLAGS) src/classes/Funcionario.cpp CSVparser.o -std=c++11
 
 Mamifero.o: src/classes/Mamifero.cpp
 	$(CC) $(FLAGS) src/classes/Mamifero.cpp -std=c++11
@@ -80,7 +89,7 @@ Veterinario.o: src/classes/Veterinario.cpp
 
 
 clean:
-	rm -f $(OBJS) $(OUT)
+	rm -f $(OBJS)
 
 debug: $(OUT)
 	valgrind $(OUT)

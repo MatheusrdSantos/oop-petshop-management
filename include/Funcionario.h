@@ -10,6 +10,7 @@ Author: Arnaldo Barbosa
 #include <map>
 #include "ModelDAO.h"
 #include "utils.h"
+#include "CSVparser.hpp"
 
 class Funcionario : public ModelDAO<Funcionario>{
     private:

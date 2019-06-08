@@ -5,14 +5,15 @@
 
 int main(int argc, char const *argv[])
 {
-    int escolha = 0;
-    menu(escolha);
+    //int escolha = 0;
+    //menu(escolha);
 
     //Loop para o menu sempre permanecer na tela até que o input seja 0
+    /*
     while(escolha > 0){ 
         menu(escolha);
     }
-
+    */
     return 0;
 }
 
