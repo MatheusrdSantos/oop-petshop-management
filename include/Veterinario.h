@@ -22,13 +22,14 @@ class Veterinario : public Funcionario{
         ~Veterinario(){};
         
         //DAO
-        bool save();
+        std::string printInFile(int id);
 
         //getters
         std::string getCnmv();
         
         //setters
         void setCnmv(std::string cnmv);
+
 };
     
 #endif

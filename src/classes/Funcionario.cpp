@@ -188,3 +188,24 @@ void Funcionario::setFatorRh(char fator){
 void Funcionario::setEspecialidade(std::string especialidade){
     m_especialidade = especialidade;
 }
+
+bool Funcionario::save(){
+    int id = getTableIncrementId(Funcionario::tableName);
+    if(id<0){
+        return false;
+    }
+    std::ofstream file;
+    file.open(Funcionario::filePath, std::ios::app); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(file.is_open()){
+        std::cout<<"Saving..."<<std::endl;
+        file<<printInFile(id);
+        m_id = id;
+        updateAutoIncrement(Funcionario::tableName);
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+    }
+
+    file.close();
+    return true;
+}

@@ -21,7 +21,7 @@ class Tratador : public Funcionario{
         ~Tratador(){};
         
         //DAO
-        bool save();
+        std::string printInFile(int id);
         
         //getters
         int getNivelDeSeguranca();

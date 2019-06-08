@@ -57,6 +57,10 @@ class Funcionario : public ModelDAO<Funcionario>{
         void setTipoSanguineo(short tipo);
         void setFatorRh(char fator);
         void setEspecialidade(std::string especialidade);
+
+        bool save();
+
+        virtual std::string printInFile(int id) = 0;
 };
     
 #endif

@@ -23,7 +23,6 @@ class ModelDAO{
         /*
         *   Create
         */
-        bool save();
 
         /*
         *   Read
