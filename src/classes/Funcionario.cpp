@@ -1,7 +1,7 @@
-#include "Funcionario.h"
-#include "Tratador.h"
-#include "Veterinario.h"
-#include "CSVparser.hpp"
+#include "../../include/Funcionario.h"
+#include "../../include/Tratador.h"
+#include "../../include/Veterinario.h"
+#include "../../include/CSVparser.hpp"
 
 std::string Funcionario::filePath = "./storage/funcionarios.csv";
 std::string Funcionario::tableName = "funcionarios";
