@@ -43,13 +43,13 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
 }
 
 Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
-    int id = std::stoi((*file)[0]);
-    std::string nome = (*file)[2];
-    std::string cpf = (*file)[3];
-    short idade = std::stoi((*file)[4]);
-    short tipo_sanguineo = std::stoi((*file)[5]);
-    char fator_rh = (*file)[6][0];
-    std::string especialidade = (*file)[7];
+    int id = std::stoi((*file)["id"]);
+    std::string nome = (*file)["nome"];
+    std::string cpf = (*file)["cpf"];
+    short idade = std::stoi((*file)["idade"]);
+    short tipo_sanguineo = std::stoi((*file)["tipo_sangue"]);
+    char fator_rh = (*file)["fator_rh"][0];
+    std::string especialidade = (*file)["especialidade"];
     /* Estancia dinamicamente um novo funcionario */
 
     /* faz o downcasting para tratador ou veterinario */
@@ -57,7 +57,7 @@ Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
 
         //Método construtor de tratador + upcasting para funcionário
         Funcionario* funcionario;
-        Tratador* tratador = new Tratador(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, stoi((*file)[9]));
+        Tratador* tratador = new Tratador(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, stoi((*file)["nivel_seguranca"]));
         funcionario = tratador;
         return funcionario;
 
@@ -68,7 +68,7 @@ Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
 
         //Método construtor de veterinário + upcasting para funcionário
         Funcionario* funcionario;
-        Veterinario* veterinario = new Veterinario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, (*file)[8]);
+        Veterinario* veterinario = new Veterinario(id, nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, (*file)["codigo_cnmv"]);
         funcionario = veterinario;
 
         return funcionario;
@@ -197,17 +197,23 @@ bool Funcionario::save(){
 }
 
 bool Funcionario::update(){
+    // recupera os dados do csv
     csv::Parser file = csv::Parser(Funcionario::filePath, csv::DataType(0), ';');
     unsigned n_rows = file.rowCount();
     
+    // cria um stream de escrita no arquivo
     std::ofstream write_file;
     write_file.open(Funcionario::filePath, std::ios::out); //app significa Append, ou seja, escrita no fim do arquivo
 
     if(write_file.is_open()){
+        // escreve o header no arquivo a partir de um vector contendo o nome das colunas
         std::vector<std::string> header = file.getHeader(); 
         write_file<<buildHeaderString(&header);
+
+        // reescreve os dados na tabela
         for(unsigned i = 0; i<n_rows; i++){
             if(std::stoi(file[i]["id"]) == m_id){
+                // reescreve o objeto moduficado com as atualizações
                 write_file<<printInFile(m_id);
             }else{
                 write_file<<buildRowString(&(file[i]));
