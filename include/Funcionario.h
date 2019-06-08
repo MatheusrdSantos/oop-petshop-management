@@ -9,6 +9,7 @@ Author: Arnaldo Barbosa
 #include<string>
 #include <map>
 #include "ModelDAO.h"
+#include "utils.h"
 
 class Funcionario : public ModelDAO<Funcionario>{
     private:
@@ -59,7 +60,7 @@ class Funcionario : public ModelDAO<Funcionario>{
         void setEspecialidade(std::string especialidade);
 
         bool save();
-
+        bool update();
         virtual std::string printInFile(int id) = 0;
 };
     

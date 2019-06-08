@@ -83,7 +83,7 @@ Funcionario* Funcionario::find(int id){
     int n_rows = file.rowCount();
     for (int i = 0; i < n_rows; i++)
     {
-        if(id == std::stoi(file[i][0])){
+        if(id == std::stoi(file[i]["id"])){
             /* Recupera os campos do arquivo csv*/
             return buildFuncionarioFromFile(&file[i]);
         }
@@ -111,17 +111,17 @@ std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column,
     std::multimap<std::string,Funcionario*> funcionarios;
     int n_rows = file.rowCount();
     std::vector<std::string> header = file.getHeader();
-    int columnIndex = ModelDAO<Funcionario>::getColumnIndex(&header, column);
+    /* int columnIndex = ModelDAO<Funcionario>::getColumnIndex(&header, column); */
     for (int i = 0; i < n_rows; i++)
     {
-        std::string val = file[i][columnIndex];
+        std::string val = file[i][(*column)];
         if(Funcionario::compare(&val, value, symbol)){
             Funcionario* funcionario = Funcionario::buildFuncionarioFromFile(&file[i]);
             /* faz o downcasting para tratador ou veterinario */
-            if(file[i][1] == "Tratador"){
+            if(file[i]["funcao"] == "Tratador"){
                 funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", funcionario));
 
-            }else if(file[i][1] == "Veterinario"){
+            }else if(file[i]["funcao"] == "Veterinario"){
                 funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", funcionario));
             }  
         }
@@ -198,14 +198,40 @@ bool Funcionario::save(){
     file.open(Funcionario::filePath, std::ios::app); //app significa Append, ou seja, escrita no fim do arquivo
 
     if(file.is_open()){
-        std::cout<<"Saving..."<<std::endl;
         file<<printInFile(id);
         m_id = id;
         updateAutoIncrement(Funcionario::tableName);
     }else{
         std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
     }
 
     file.close();
+    return true;
+}
+
+bool Funcionario::update(){
+    csv::Parser file = csv::Parser(Funcionario::filePath, csv::DataType(0), ';');
+    unsigned n_rows = file.rowCount();
+    
+    std::ofstream write_file;
+    write_file.open(Funcionario::filePath, std::ios::out); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(write_file.is_open()){
+        std::vector<std::string> header = file.getHeader(); 
+        write_file<<buildHeaderString(&header);
+        for(unsigned i = 0; i<n_rows; i++){
+            if(std::stoi(file[i]["id"]) == m_id){
+                write_file<<printInFile(m_id);
+            }else{
+                write_file<<buildRowString(&(file[i]));
+            }
+        }
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
+    }
+
+    write_file.close();
     return true;
 }

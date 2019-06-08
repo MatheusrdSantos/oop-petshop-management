@@ -4,6 +4,7 @@
 #include <iostream>
 #include <map>
 
+
 int main(int argc, char const *argv[])
 {
     Tratador t1("Jose", "7033", 32, 2, 'H', "limpar", 1);
@@ -42,5 +43,9 @@ int main(int argc, char const *argv[])
     for (auto it=funcionarios_where.begin(); it!=funcionarios_where.end(); ++it){
         std::cout << (*it).first << " => " << (*it).second->getNome() << '\n';
     }
+    func =  Funcionario::find(3);
+    func->setNome("Ronaldo");
+    func->setIdade(30);
+    func->update();
     return 0;
 }
