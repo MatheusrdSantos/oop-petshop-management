@@ -78,27 +78,63 @@ void add_Funcionario(){
     std::cout << "O funcionário é um tratador ou um veterinário (t/v)?" << std::endl;
     std::cin >> cargo;
 
-    switch (cargo)
-    {
-    case 't':
-        std::cout << "Você escolheu um tratador" << std::endl;
-        break;
-    case 'v':
-        std::cout << "Você escolheu um veterinário" << std::endl;
-        break;
-    case 's':
-        std::cout << "Tchau!" << std::endl;
-        break;
-    
-    default:
-        std::cout << "Há apenas duas opções: 't' caso queira adicionar um funcionário ou 'v' para adicionar um veterinário. Para sair escolha 's'." << std::endl;
-        add_Funcionario();
-        break;
+    std::string nome;
+    std::string cpf;
+    short idade;
+    short tipo_sanguineo;
+    char fator_rh;
+    std::string especialidade;
+
+    if (cargo == 't'){
+        
+    }else if(cargo == 'v'){
+        
     }
 
-    /*Tratador trat("Jose", "7033", 32, 2, 'H', "limpar", 1);
-    trat.save();    
-    Veterinario vet("Davis", "7011111", 19, 2, 'H', "cura", "bb");
-    vet.save();*/
+    if(cargo == 's'){
+        return;
+    }else if(cargo != 't' && cargo != 'v'){
+        std::cout << "Há apenas duas opções: 't' caso queira adicionar um funcionário ou 'v' para adicionar um veterinário. Para voltar escolha 's'." << std::endl;
+        add_Funcionario();
+    }else{
+        std::cout << "======= Dados do(a) "<< (cargo == 't' ? "Tratador(a)" : "Veterinário(a)") <<"======="<< std::endl;
+        std::cout << "Nome: ";
+        std::cin >> nome;
+        
+        std::cout << "CPF: ";
+        std::cin >> cpf;
 
+        std::cout << "Idade: ";
+        std::cin >> idade;
+
+        std::cout << "Tipo Sanguínio: ";
+        std::cin >> tipo_sanguineo;
+
+        std::cout << "Fator RH: ";
+        std::cin >> fator_rh;
+
+        std::cout << "Especialidade: ";
+        std::cin >> especialidade;
+
+        if(cargo == 't'){
+            int nivel_de_seguranca;
+
+            std::cout << "Nível de Segurança: ";
+            std::cin >> nivel_de_seguranca;
+
+            Tratador trat(nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, nivel_de_seguranca);
+            trat.save(); 
+
+            std::cout << "Tratador adicionado!" << std::endl;        
+        }else if(cargo == 'v'){
+            std::string cnmv;
+            std::cout << "Nível de Segurança: ";
+            std::cin >> cnmv;
+
+            Veterinario vet(nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, cnmv);
+            vet.save();
+
+            std::cout << "Veterinário adicionado!" << std::endl;
+        }
+    }
 }
