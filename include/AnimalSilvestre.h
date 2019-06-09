@@ -11,7 +11,7 @@ class AnimalSilvestre{
         std::string m_autorizacao_ibama;
         
     public:
-        AnimalSilvestre();
+        AnimalSilvestre(){};
         ~AnimalSilvestre(){};
 
         std::string getAutorizacaoIbama();

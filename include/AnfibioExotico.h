@@ -15,7 +15,7 @@ class AnfibioExotico : public Anfibio, public AnimalExotico{
         
     public:
         AnfibioExotico();
-        AnfibioExotico(std::string classe, std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
+        AnfibioExotico(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
         
         ~AnfibioExotico(){};
 

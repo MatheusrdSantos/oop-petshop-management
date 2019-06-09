@@ -12,7 +12,7 @@ class Anfibio : public Animal{
 
     protected:
         int m_total_de_mudas;
-        Date m_ultima_muda;
+        Date* m_ultima_muda;
     public:
         Anfibio();
         ~Anfibio(){};

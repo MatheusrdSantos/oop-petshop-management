@@ -3,7 +3,7 @@
 #include "../../include/Veterinario.h"
 #include "../../include/CSVparser.hpp"
 
-std::string Animal::filePath = "./storage/animals.csv";
+std::string Animal::filePath = "./storage/animais.csv";
 std::string Animal::tableName = "animais";
 
 /*
@@ -19,7 +19,7 @@ Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sex
     m_nome_batismo = nome_batismo;
 }
 */
-
+/*
 std::multimap<std::string,Animal*> Animal::all(){
 
     csv::Parser file = ModelDAO<Animal>::readTable();
@@ -36,7 +36,7 @@ std::multimap<std::string,Animal*> Animal::all(){
 
     return Animals;
 }
-
+*/
 std::string Animal::getNomeBatismo(){
     return m_nome_batismo;
 }
