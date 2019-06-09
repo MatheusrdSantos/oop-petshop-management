@@ -8,6 +8,9 @@
 #include "Tratador.h"
 #include "Veterinario.h"
 
+//Inicia o programa
+void run();
+
 //Mostra o menu encaminhando o usuário para as funções do programa
 void menu(int &escolha);
 

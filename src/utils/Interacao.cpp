@@ -1,5 +1,15 @@
 #include "Interacao.h"
 
+void run(){
+    int escolha = 0;
+    menu(escolha);
+
+    //Loop para o menu sempre permanecer na tela até que o input seja 0
+    while(escolha > 0){ 
+        menu(escolha);
+    }
+}
+
 void menu(int &escolha){
     std::cout << std::endl;
     
