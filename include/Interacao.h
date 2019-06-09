@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "Funcionario.h"
 #include "bprinter/table_printer.h"
+#include "Funcionario.h"
 #include "Tratador.h"
 #include "Veterinario.h"
 

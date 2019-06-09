@@ -4,3 +4,5 @@ id;funcao;nome;cpf;idade;tipo_sangue;fator_rh;especialidade;codigo_cnmv;nivel_se
 3;Tratador;Maria;70111;22;2;H;comida;;0
 4;Veterinario;Arnaldo;7013411;21;2;H;cura;zz;
 5;Veterinario;Davis;7011111;19;2;H;cura;bb;
+0;Tratador;Joaquim;3434;32;2;H;limpar;;1
+1;Veterinario;Manoel;383822;47;4;O;cuidar;2;

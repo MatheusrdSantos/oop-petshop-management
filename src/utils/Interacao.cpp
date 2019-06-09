@@ -1,4 +1,4 @@
-#include "Interacao.h"
+#include "../../include/Interacao.h"
 
 void run(){
     int escolha = 0;
@@ -94,12 +94,6 @@ void add_Funcionario(){
     short tipo_sanguineo;
     char fator_rh;
     std::string especialidade;
-
-    if (cargo == 't'){
-        
-    }else if(cargo == 'v'){
-        
-    }
 
     if(cargo == 's'){
         return;
