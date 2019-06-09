@@ -12,6 +12,34 @@ bool compare(std::string* value1, std::string* value2, std::string* symbol){
     }
     return false;
 }
+bool compare(int value1, int value2, std::string* symbol){
+    if((*symbol) == "=="){
+        if(value1 == value2){
+            return true;
+        }
+    }else if((*symbol) == "!="){
+        if(value1 != value2){
+            return true;
+        }
+    }else if((*symbol) == ">"){
+        if(value1>value2){
+            return true;
+        }
+    }else if((*symbol) == "<"){
+        if(value1<value2){
+            return true;
+        }
+    }else if((*symbol) == "<="){
+        if(value1<=value2){
+            return true;
+        }
+    }else if((*symbol) == ">="){
+        if(value1>=value2){
+            return true;
+        }
+    }
+    return false;
+}
 
 std::string buildHeaderString(std::vector<std::string>* header){
     std::stringstream ss;

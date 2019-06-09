@@ -96,12 +96,32 @@ std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column,
     csv::Parser file = ModelDAO<Funcionario>::readTable();
     std::multimap<std::string,Funcionario*> funcionarios;
     int n_rows = file.rowCount();
-    std::vector<std::string> header = file.getHeader();
-    /* int columnIndex = ModelDAO<Funcionario>::getColumnIndex(&header, column); */
     for (int i = 0; i < n_rows; i++)
     {
         std::string val = file[i][(*column)];
         if(compare(&val, value, symbol)){
+            Funcionario* funcionario = Funcionario::buildFuncionarioFromFile(&file[i]);
+            /* faz o downcasting para tratador ou veterinario */
+            if(file[i]["funcao"] == "Tratador"){
+                funcionarios.insert(std::pair<std::string, Funcionario*>("tratador", funcionario));
+
+            }else if(file[i]["funcao"] == "Veterinario"){
+                funcionarios.insert(std::pair<std::string, Funcionario*>("veterinario", funcionario));
+            }  
+        }
+    }
+    return funcionarios;
+}
+
+std::multimap<std::string, Funcionario*> Funcionario::where(std::string* column, std::string* symbol, int value){
+    csv::Parser file = ModelDAO<Funcionario>::readTable();
+    std::multimap<std::string,Funcionario*> funcionarios;
+    int n_rows = file.rowCount();
+    std::vector<std::string> header = file.getHeader();
+    for (int i = 0; i < n_rows; i++)
+    {
+        int val = std::stoi(file[i][(*column)]);
+        if(compare(val, value, symbol)){
             Funcionario* funcionario = Funcionario::buildFuncionarioFromFile(&file[i]);
             /* faz o downcasting para tratador ou veterinario */
             if(file[i]["funcao"] == "Tratador"){
