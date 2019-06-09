@@ -12,7 +12,7 @@ pip install foobar
 
 ## Usage
 
-Na pasta raiz execute os segintes comandos:
+Na pasta raiz execute os seguintes comandos:
 
 Compilar
 ```
