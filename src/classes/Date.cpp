@@ -24,6 +24,13 @@ Date::Date(){
     day_   = 0;
 }
 
+Date::Date(std::string date, std::string separator){
+    std::vector<int>* dates = splitStringDate(date, separator);
+    day_ = dates->at(0);
+    month_ = dates->at(1);
+    year_ = dates->at(2);
+}
+
 
 int Date::day() const {
     return day_;

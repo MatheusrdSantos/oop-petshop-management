@@ -65,7 +65,7 @@ Date.o: src/classes/Date.cpp
 	$(CC) $(FLAGS) src/classes/Date.cpp -std=c++11
 
 Funcionario.o: src/classes/Funcionario.cpp
-	$(CC) $(FLAGS) src/classes/Funcionario.cpp CSVparser.o -std=c++11
+	$(CC) $(FLAGS) src/classes/Funcionario.cpp -std=c++11
 
 Mamifero.o: src/classes/Mamifero.cpp
 	$(CC) $(FLAGS) src/classes/Mamifero.cpp -std=c++11
@@ -97,7 +97,8 @@ Veterinario.o: src/classes/Veterinario.cpp
 
 clean:
 	rm -f $(OBJS)
-
+run:
+	./exec.o
 debug: $(OUT)
 	valgrind $(OUT)
 

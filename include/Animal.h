@@ -22,7 +22,7 @@ class Animal : public ModelDAO<Animal>{
         std::string m_nome_batismo;
     public:
         Animal(){};
-        Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario* veterinario, const Tratador* &tratador, std::string nome_batismo);
+        Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
         ~Animal(){};
 
 
@@ -30,9 +30,13 @@ class Animal : public ModelDAO<Animal>{
         static std::string filePath;
         static std::string tableName;
 
-        static std::multimap<std::string,Animal*> all();
-        
+        static std::multimap<std::string, Animal*> all();
+        static Animal* buildAnimalFromFile(csv::Row* file);
+
         static Funcionario* find(int id);
+
+        int getId();
+        void setId(int id);
 
         std::string getDieta();
         void setDieta(std::string dieta);

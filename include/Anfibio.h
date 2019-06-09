@@ -1,7 +1,6 @@
 #ifndef _ANFIBIO_H
 #define _ANFIBIO_H
 #include "Date.h"
-#include "Animal.h"
 
 #include <iostream>
 #include <string>
