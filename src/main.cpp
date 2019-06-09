@@ -1,5 +1,12 @@
 #include "../include/Interacao.h"
 #include "../include/AnfibioExotico.h"
+#include "../include/AnfibioNativo.h"
+#include "../include/MamiferoExotico.h"
+#include "../include/MamiferoNativo.h"
+#include "../include/ReptilExotico.h"
+#include "../include/ReptilNativo.h"
+#include "../include/AveExotico.h"
+#include "../include/AveNativo.h"
 #include <string>
 #include <iostream>
 #include <map>
@@ -13,12 +20,48 @@ int main(int argc, char const *argv[])
     Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, 2, 'H', "cura", "aa");
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
     AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
+
+
+
+    AnfibioNativo anfibioNativo("Sapo", "Amphibia Nautilus", 'M', 10.5, "Onívoro", v1, t1, "Sapo Frog", 2, new Date(12,12,2018), "RN", "Natal", "1054512-51");
+    anfibioNativo.save();
+
+    AnfibioExotico anfibioExotico("Sapo Rinoceronte", "Amphibia Sapus Rinocerontis", 'F', 15.3, "Herbívoro", v1, t1, "Rhino",1000, new Date(10,10,2015), "1511244-89", "Africa do Sul", "Kantilius");
+    anfibioExotico.save();
+
+    MamiferoNativo mamiferoNativo("Leão", "Mammalia Leoncius", 'M', 2000.6, "Carnivoro", v1, t1,"Samba", "Escamuças castanhas", "AC", "Brasileia", "152421-41");
+    mamiferoNativo.save();
+
+    MamiferoExotico mamiferoExotico("Onça Gigante", "Mammalia Oncea Gigantus", 'F', 10000.2, "Carnivoro", v1, t1, "Onça Braba", "Preto", "China", "Xiung Piang", "234151-31");
+    mamiferoExotico.save();
+
+    ReptilNativo reptilNativo("Lagarto", "Reptilia Lagartus", 'M', 10.5, "Herbívoro", v1, t1, "Cecil", true, "Ceplusplus", "AM", "João Bandeirante", "154121514-5");
+    reptilNativo.save();
+
+    ReptilExotico reptilExotico("Camaleão do Faroeste Caboclo", "Reptilia Camaleoncius", 'M', 15.6, "Herbivoro", v1, NULL, "Ringo", false, "", "Estados Unidos da Ámerica", "Seattle", "1215121-87");
+    reptilExotico.save();
+
+    AveNativo aveNativo("Arara azul", "Aves Azulis", 'M', 25.2, "Herbívoro", v1, t1, "Carlos", 2.34, 12.5, "AM", "Efeême", "152451-451");
+    aveNativo.save();
+
+    AveExotico aveExotico("Pintinho Piu", "Aves Pìuzis", 'F',11.2, "Herbívoro", v1, t1, "Piu-piu", 0.4, 5.2, "Estados Unidos da América", "North Dakota", "12451-9");
+    aveExotico.save();
+
+
+
+
+
+    /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");
     AnfibioExotico a4("Sapo do gogó", "Amphibia Geologis Sapus", 'M', 10.61, "Onívoro", v1, NULL, "Gente Boa", 10, new Date(10,05,2019), "15242-51", "Itália", "Veneza");
+
     a1.save();
     a2.save();
     a3.save();
     a4.save();
+    */
+    
+    
     //Loop para o menu sempre permanecer na tela até que o input seja 0
     /*
     while(escolha > 0){ 

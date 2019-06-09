@@ -14,6 +14,7 @@ class AnimalNativo : public AnimalSilvestre{
         
     public:
         AnimalNativo();
+        AnimalNativo(std::string uf_origem, std::string cidade_origem);
         ~AnimalNativo(){};
 
         std::string getUfOrigem();
