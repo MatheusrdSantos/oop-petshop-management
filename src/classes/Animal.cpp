@@ -2,12 +2,19 @@
 #include "../../include/Tratador.h"
 #include "../../include/Veterinario.h"
 #include "../../include/CSVparser.hpp"
+#include "../../include/AnfibioExotico.h"
+#include "../../include/AnfibioNativo.h"
+#include "../../include/MamiferoExotico.h"
+#include "../../include/MamiferoNativo.h"
+#include "../../include/ReptilExotico.h"
+#include "../../include/ReptilNativo.h"
+#include "../../include/AveExotico.h"
+#include "../../include/AveNativo.h"
 
 std::string Animal::filePath = "./storage/animais.csv";
 std::string Animal::tableName = "animais";
 
-/*
-Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario &veterinario, const Tratador &tratador, std::string nome_batismo){
+Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo){
     m_id = id;
     m_classe = classe ;
     m_nome_cientifico = nome_cientifico;
@@ -18,12 +25,27 @@ Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sex
     m_tratador = tratador ;
     m_nome_batismo = nome_batismo;
 }
-*/
-/*
-std::multimap<std::string,Animal*> Animal::all(){
+
+std::string Animal::getNomeBatismo(){
+    return m_nome_batismo;
+}
+
+void Animal::setNomeBatismo(std::string nome_batismo){
+    m_nome_batismo = nome_batismo;
+}
+
+int Animal::getId(){
+    return m_id;
+}
+
+void Animal::setId(int id){
+    m_id = id;
+}
+
+std::multimap<std::string, Animal*> Animal::all(){
 
     csv::Parser file = ModelDAO<Animal>::readTable();
-    std::multimap<std::string,Animal*> Animals;
+    std::multimap<std::string,Animal*> animals;
     int n_rows = file.rowCount();
     std::cout<<"N_rows: "<<n_rows<<std::endl;
     int n_columns = file.columnCount();
@@ -31,14 +53,106 @@ std::multimap<std::string,Animal*> Animal::all(){
 
 
     for(int i = 0; i<n_rows; i++){
+        /* Estancia dinamicamente um novo funcionario */
+        Animal* animal;
+        animal = buildAnimalFromFile(&file[i]);
 
+        /* faz o downcasting para tratador ou veterinario */
+        animals.insert(std::pair<std::string, Animal*>(animal->m_classe, animal));  
     }
 
-    return Animals;
+    return animals;
 }
-*/
-std::string Animal::getNomeBatismo(){
-    return m_nome_batismo;
+
+Animal* Animal::buildAnimalFromFile(csv::Row* file){
+    Animal* animal = NULL;
+    int id = std::stoi((*file)["id"]);
+    std::string classe = (*file)["classe"];
+    std::string nome = (*file)["nome"];
+    std::string nome_cientifico = (*file)["nome_cientifico"];
+    char sexo = (*file)["sexo"][0];
+    double tamanho = std::stod((*file)["tamanho"]);
+    std::string dieta = (*file)["dieta"];
+    std::string nome_batismo = (*file)["nome_batismo"];
+    Veterinario* veterinario = NULL;
+    Tratador* tratador = NULL;
+    std::string autorizacao_ibama = (*file)["autorizacao_ibama"];
+    std::string uf_origem = (*file)["uf_origem"];
+    std::string cidade_origem = (*file)["cidade_origem"];
+    std::string pais_origem = (*file)["pais_origem"];
+
+    if(!(*file)["veterinario_id"].empty()){
+        int veterinario_id = std::stoi((*file)["veterinario_id"]);
+        veterinario = (Veterinario*) Funcionario::find(veterinario_id);
+    }
+
+    if(!(*file)["tratador_id"].empty()){
+        int tratador_id = std::stoi((*file)["tratador_id"]);
+        tratador = (Tratador*) Funcionario::find(tratador_id);
+    }
+    
+    /* Estancia dinamicamente um novo funcionario */
+
+    /* faz o downcasting para tratador ou veterinario */
+    
+    if(classe == "Amphibia"){
+        Date* ultima_muda = new Date((*file)["ultima_muda"], "/"); 
+        int total_de_mudas = std::stoi((*file)["total_de_mudas"]);
+        
+        if(uf_origem.empty()){
+            AnfibioExotico* anfibioExotico = new AnfibioExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, total_de_mudas, ultima_muda, autorizacao_ibama, pais_origem, cidade_origem);
+            anfibioExotico->setId(id);
+            animal = anfibioExotico;
+            return animal;
+        }else{
+            AnfibioNativo* anfibioNativo = new AnfibioNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, total_de_mudas, ultima_muda, uf_origem, cidade_origem, autorizacao_ibama);
+            anfibioNativo->setId(id);
+            animal = anfibioNativo;
+            return animal;
+        }
+    }else if(classe == "Mammalia"){
+        std::string cor_do_pelo = (*file)["cor_do_pelo"];
+        if(uf_origem.empty()){
+            MamiferoExotico* mamiferoExotico = new MamiferoExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, cor_do_pelo, pais_origem, cidade_origem, autorizacao_ibama);
+            mamiferoExotico->setId(id);
+            animal = mamiferoExotico;
+            return animal;
+        }else{
+            MamiferoNativo* mamiferoNativo = new MamiferoNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, cor_do_pelo, uf_origem, cidade_origem, autorizacao_ibama);
+            mamiferoNativo->setId(id);
+            animal = mamiferoNativo;
+            return animal;
+        }
+    }else if(classe == "Reptilia"){
+        bool venenoso = std::stoi((*file)["venenoso"]);
+        std::string tipo_veneno = (*file)["tipo_veneno"];
+        if(uf_origem.empty()){
+            ReptilExotico* reptilExotico = new ReptilExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, venenoso, tipo_veneno, pais_origem, cidade_origem, autorizacao_ibama);
+            reptilExotico->setId(id);
+            animal = reptilExotico;
+            return animal;
+        }else{
+            ReptilNativo* reptilNativo = new ReptilNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, venenoso, tipo_veneno, uf_origem, cidade_origem, autorizacao_ibama);
+            reptilNativo->setId(id);
+            animal = reptilNativo;
+            return animal;
+        }
+    }else if(classe == "Aves"){
+        double tamanho_do_bico_cm = std::stod((*file)["tamanho_do_bico_cm"]);
+        double envergadura_das_asas = std::stod((*file)["envergadura_das_asas"]);
+        if(uf_origem.empty()){
+            AveExotico* aveExotico = new AveExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, pais_origem, cidade_origem, autorizacao_ibama);
+            aveExotico->setId(id);
+            animal = aveExotico;
+            return animal;
+        }else{
+            AveNativo* aveNativo = new AveNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, uf_origem, cidade_origem, autorizacao_ibama);
+            aveNativo->setId(id);
+            animal = aveNativo;
+            return animal;
+        } 
+    }
+    return animal;
 }
 
 bool Animal::save(){

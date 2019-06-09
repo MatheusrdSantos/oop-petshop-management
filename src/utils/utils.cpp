@@ -1,5 +1,4 @@
 #include "../../include/utils.h"
-
 bool compare(std::string* value1, std::string* value2, std::string* symbol){
     if((*symbol) == "=="){
         if((*value1) == (*value2)){
@@ -69,4 +68,24 @@ std::string buildRowString(csv::Row* row){
     }
     std::string s = ss.str();
     return s; 
+}
+
+std::vector<int>* splitStringDate(std::string date, std::string separator){
+    std::vector<int>* dates = new std::vector<int>();
+    
+    int pos = date.find(separator);
+    int day = std::stoi(date.substr(0, pos));
+    date.erase(0, pos+separator.length());
+
+    pos = date.find(separator);
+    int month = std::stoi(date.substr(0, pos));
+    date.erase(0, pos+separator.length());
+
+    int year = std::stoi(date);
+
+    dates->push_back(day);
+    dates->push_back(month);
+    dates->push_back(year);
+
+    return dates;
 }

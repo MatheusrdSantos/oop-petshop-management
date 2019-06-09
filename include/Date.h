@@ -7,6 +7,7 @@
 #include <fstream>
 #include <string>
 #include <ctime>
+#include "utils.h"
 
 
 class Date{
@@ -18,6 +19,7 @@ class Date{
         Date();
         Date(Date& date);
         Date(const int& d, const int& m, const int& y);
+        Date(std::string date, std::string separator);
 
         bool valid(void) const;
 

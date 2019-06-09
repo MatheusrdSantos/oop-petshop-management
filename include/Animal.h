@@ -47,9 +47,13 @@ class Animal : public ModelDAO<Animal>{
         static std::string filePath;
         static std::string tableName;
 
-        static std::multimap<std::string,Animal*> all();
-        
+        static std::multimap<std::string, Animal*> all();
+        static Animal* buildAnimalFromFile(csv::Row* file);
+
         static Funcionario* find(int id);
+
+        int getId();
+        void setId(int id);
 
         std::string getDieta();
         void setDieta(std::string dieta);

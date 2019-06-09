@@ -8,3 +8,4 @@ bool compare(std::string* value1, std::string* value2, std::string* symbol);
 bool compare(int value1, int value2, std::string* symbol);
 std::string buildHeaderString(std::vector<std::string>* header);
 std::string buildRowString(csv::Row* row);
+std::vector<int>* splitStringDate(std::string date, std::string separator);
