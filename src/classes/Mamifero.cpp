@@ -1,6 +1,11 @@
 #include "../../include/Mamifero.h"
 #include<string>
 
+Mamifero::Mamifero(){
+    m_classe="Mammalia";
+    m_cor_do_pelo="";
+}
+
 Mamifero::Mamifero(int id, std::string classe, std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, std::string cor_do_pelo){
     m_id=id;
     m_classe=classe;
