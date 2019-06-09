@@ -21,6 +21,8 @@ int main(int argc, char const *argv[])
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
     AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
 
+
+
     AnfibioNativo anfibioNativo("Sapo", "Amphibia Nautilus", 'M', 10.5, "Onívoro", v1, t1, "Sapo Frog", 2, new Date(12,12,2018), "RN", "Natal", "1054512-51");
     anfibioNativo.save();
 
@@ -39,18 +41,27 @@ int main(int argc, char const *argv[])
     ReptilExotico reptilExotico("Camaleão do Faroeste Caboclo", "Reptilia Camaleoncius", 'M', 15.6, "Herbivoro", v1, NULL, "Ringo", false, "", "Estados Unidos da Ámerica", "Seattle", "1215121-87");
     reptilExotico.save();
 
-    
+    AveNativo aveNativo("Arara azul", "Aves Azulis", 'M', 25.2, "Herbívoro", v1, t1, "Carlos", 2.34, 12.5, "AM", "Efeême", "152451-451");
+    aveNativo.save();
+
+    AveExotico aveExotico("Pintinho Piu", "Aves Pìuzis", 'F',11.2, "Herbívoro", v1, t1, "Piu-piu", 0.4, 5.2, "Estados Unidos da América", "North Dakota", "12451-9");
+    aveExotico.save();
+
+
+
+
 
     /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");
     AnfibioExotico a4("Sapo do gogó", "Amphibia Geologis Sapus", 'M', 10.61, "Onívoro", v1, NULL, "Gente Boa", 10, new Date(10,05,2019), "15242-51", "Itália", "Veneza");
-    */
-    
-    
+
     a1.save();
     a2.save();
     a3.save();
     a4.save();
+    */
+    
+    
     //Loop para o menu sempre permanecer na tela até que o input seja 0
     /*
     while(escolha > 0){ 

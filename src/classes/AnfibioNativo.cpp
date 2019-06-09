@@ -2,6 +2,24 @@
 #include<string>
 
 
+AnfibioNativo::AnfibioNativo(int id, std::string classe, std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, int total_de_mudas, Date* ultima_muda, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
+    m_id=id;
+    m_classe=classe;
+    m_nome=nome;
+    m_nome_cientifico=nome_cientifico;
+    m_sexo=sexo;
+    m_tamanho=tamanho;
+    m_dieta=dieta;
+    m_veterinario=veterinario;
+    m_tratador=tratador;
+    m_nome_batismo=nome_batismo;
+    m_total_de_mudas=total_de_mudas;
+    m_ultima_muda=ultima_muda;
+    m_uf_origem=uf_origem;
+    m_cidade_origem=cidade_origem;
+    m_autorizacao_ibama=autorizacao_ibama;
+}
+
 AnfibioNativo::AnfibioNativo(std::string classe, std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, int total_de_mudas, Date* ultima_muda, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
     m_classe=classe;
     m_nome=nome;
@@ -20,9 +38,8 @@ AnfibioNativo::AnfibioNativo(std::string classe, std::string nome, std::string n
 }
 
 
-AnfibioNativo::AnfibioNativo(int id, std::string classe, std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, int total_de_mudas, Date* ultima_muda, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
-    m_id=id;
-    m_classe=classe;
+AnfibioNativo::AnfibioNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, int total_de_mudas, Date* ultima_muda, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
+    m_classe="Amphibia";
     m_nome=nome;
     m_nome_cientifico=nome_cientifico;
     m_sexo=sexo;
@@ -37,6 +54,7 @@ AnfibioNativo::AnfibioNativo(int id, std::string classe, std::string nome, std::
     m_cidade_origem=cidade_origem;
     m_autorizacao_ibama=autorizacao_ibama;
 }
+
 
 
 std::string AnfibioNativo::printInFile(int id){
