@@ -9,13 +9,12 @@ Author: Arnaldo Barbosa
 #include<string>
 #include <map>
 #include "ModelDAO.h"
+#include "utils.h"
+#include "CSVparser.hpp"
 
 class Funcionario : public ModelDAO<Funcionario>{
     private:
         static Funcionario* buildFuncionarioFromFile(csv::Row* file);
-        // esse método deve ser movido para uma classe utils
-        // também deve ser sobrescrito para diferentes tipos de parametros
-        static bool compare(std::string* value1, std::string* value2, std::string* symbol);
     protected:
         int m_id;
         std::string m_nome;
@@ -38,6 +37,7 @@ class Funcionario : public ModelDAO<Funcionario>{
         // esse método será sobrescrito para diferentes tipos de valores
         // int - string - double - char
         static std::multimap<std::string, Funcionario*> where(std::string* column, std::string* separator, std::string* value);
+        static std::multimap<std::string, Funcionario*> where(std::string* column, std::string* separator, int value);
         
         // getters
         int getId();
@@ -59,7 +59,8 @@ class Funcionario : public ModelDAO<Funcionario>{
         void setEspecialidade(std::string especialidade);
 
         bool save();
-
+        bool update();
+        bool remove();
         virtual std::string printInFile(int id) = 0;
 };
     

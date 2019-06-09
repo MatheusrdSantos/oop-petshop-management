@@ -14,6 +14,7 @@ class Ave : public Animal{
     public:
         Ave();
         ~Ave(){};
+        virtual std::string printInFile(int id) = 0;
 
         
 

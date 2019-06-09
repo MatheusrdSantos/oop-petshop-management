@@ -1,4 +1,4 @@
-#include "Veterinario.h"
+#include "../../include/Veterinario.h"
 
 Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv){
     m_id = id;
