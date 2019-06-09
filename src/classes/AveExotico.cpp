@@ -1,8 +1,8 @@
-#include "Animal.h"
-#include "Ave.h"
-#include "Ave.h"
-#include "AveExotico.h"
+#include "../../include/Animal.h"
+#include "../../include/Ave.h"
+#include "../../include/AveExotico.h"
 
+/*
 bool AveExotico::save(){
     int id = getTableIncrementId(Animal::tableName);
     if(id<0){
@@ -23,3 +23,4 @@ bool AveExotico::save(){
 
     return true;
 }
+*/

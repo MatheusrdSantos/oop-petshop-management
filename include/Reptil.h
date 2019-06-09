@@ -21,6 +21,8 @@ class Reptil : public Animal{
         std::string getTipoVeneno();
         void setTipoVeneno(std::string tipo_veneno);
 
+        virtual std::string printInFile(int id) = 0;
+
 };
 
 #endif

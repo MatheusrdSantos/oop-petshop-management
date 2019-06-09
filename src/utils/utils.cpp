@@ -1,4 +1,4 @@
-#include "utils.h"
+#include "../../include/utils.h"
 
 bool compare(std::string* value1, std::string* value2, std::string* symbol){
     if((*symbol) == "=="){

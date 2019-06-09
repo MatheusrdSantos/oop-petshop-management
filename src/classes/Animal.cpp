@@ -1,14 +1,12 @@
-#include "Animal.h"
-#include "CSVparser.hpp"
+#include "../../include/Animal.h"
+#include "../../include/Tratador.h"
+#include "../../include/Veterinario.h"
+#include "../../include/CSVparser.hpp"
 
-#include "Animal.h"
-#include "Tratador.h"
-#include "Veterinario.h"
-#include "CSVparser.hpp"
-
-std::string Animal::filePath = "./storage/animals.csv";
+std::string Animal::filePath = "./storage/animais.csv";
 std::string Animal::tableName = "animais";
 
+/*
 Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario &veterinario, const Tratador &tratador, std::string nome_batismo){
     m_id = id;
     m_classe = classe ;
@@ -20,7 +18,8 @@ Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sex
     m_tratador = tratador ;
     m_nome_batismo = nome_batismo;
 }
-
+*/
+/*
 std::multimap<std::string,Animal*> Animal::all(){
 
     csv::Parser file = ModelDAO<Animal>::readTable();
@@ -37,7 +36,28 @@ std::multimap<std::string,Animal*> Animal::all(){
 
     return Animals;
 }
-
+*/
 std::string Animal::getNomeBatismo(){
     return m_nome_batismo;
+}
+
+bool Animal::save(){
+    int id = getTableIncrementId(Animal::tableName);
+    if(id<0){
+        return false;
+    }
+    std::ofstream file;
+    file.open(Animal::filePath, std::ios::app); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(file.is_open()){
+        file<<printInFile(id);
+        m_id = id;
+        updateAutoIncrement(Animal::tableName);
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
+    }
+
+    file.close();
+    return true;
 }

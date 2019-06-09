@@ -1,4 +1,4 @@
-#include "Tratador.h"
+#include "../../include/Tratador.h"
 
 Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
     m_id = id;

@@ -1,6 +1,7 @@
 #ifndef _ANFIBIO_H
 #define _ANFIBIO_H
-#include "Data.h"
+#include "Date.h"
+#include "Animal.h"
 
 #include <iostream>
 #include <string>
@@ -11,10 +12,12 @@ class Anfibio : public Animal{
 
     protected:
         int m_total_de_mudas;
-        Data m_ultima_muda;
+        Date* m_ultima_muda;
     public:
         Anfibio();
         ~Anfibio(){};
+    
+        virtual std::string printInFile(int id) = 0;
 };
 
 #endif

@@ -13,6 +13,8 @@ class ReptilExotico : public Reptil, public AnimalExotico{
     public:
         ReptilExotico();
         ~ReptilExotico(){};
+
+        std::string printInFile(int id);
 };
 
 #endif

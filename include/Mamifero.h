@@ -16,6 +16,8 @@ class Mamifero : public Animal{
 
         std::string getCorDoPelo();
         void setCorDoPelo(std::string cor_do_pelo);
+
+        virtual std::string printInFile(int id) = 0;
 };
 
 #endif

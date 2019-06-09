@@ -20,6 +20,8 @@ class AveExotico : public Ave, public AnimalExotico{
         AveExotico(std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, const Veterinario &veterinario, const Tratador &tratador, std::string nome_batismo, double tamanho_do_bico_cm, double envergadura_das_asas, std::string pais_origem, std::string cidade_origem, std::string autorizacao_ibama);
 
         bool save();
+
+        std::string printInFile(int id);
 };
 
 #endif
