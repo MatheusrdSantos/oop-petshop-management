@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
     //int escolha = 0;
     //menu(escolha);
     
-    /* Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
+    Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
     Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, 2, 'H', "cura", "aa");
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
     AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
     aveNativo.save();
 
     AveExotico aveExotico("Pintinho Piu", "Aves Pìuzis", 'F',11.2, "Herbívoro", v1, t1, "Piu-piu", 0.4, 5.2, "Estados Unidos da América", "North Dakota", "12451-9");
-    aveExotico.save(); */
+    aveExotico.save(); 
 
     
     std::multimap<std::string,Animal*> animals_all = Animal::all();
@@ -56,7 +56,7 @@ int main(int argc, char const *argv[])
         std::cout << (*it).first << " => " << (*it).second->getNomeBatismo() << '\n';
     }
 
-    run();
+    //run();
 
     /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");
