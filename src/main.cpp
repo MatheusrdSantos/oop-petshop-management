@@ -12,7 +12,13 @@ int main(int argc, char const *argv[])
     Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
     Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, 2, 'H', "cura", "aa");
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
+    AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
+    AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");
+    AnfibioExotico a4("Sapo do gogó", "Amphibia Geologis Sapus", 'M', 10.61, "Onívoro", v1, NULL, "Gente Boa", 10, new Date(10,05,2019), "15242-51", "Itália", "Veneza");
     a1.save();
+    a2.save();
+    a3.save();
+    a4.save();
     //Loop para o menu sempre permanecer na tela até que o input seja 0
     /*
     while(escolha > 0){ 
