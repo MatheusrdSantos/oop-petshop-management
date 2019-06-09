@@ -1,5 +1,6 @@
 #include "../include/Interacao.h"
 #include "../include/AnfibioExotico.h"
+#include "../include/AnfibioNativo.h"
 #include <string>
 #include <iostream>
 #include <map>
@@ -15,6 +16,8 @@ int main(int argc, char const *argv[])
     AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");
     AnfibioExotico a4("Sapo do gogó", "Amphibia Geologis Sapus", 'M', 10.61, "Onívoro", v1, NULL, "Gente Boa", 10, new Date(10,05,2019), "15242-51", "Itália", "Veneza");
+    
+    
     a1.save();
     a2.save();
     a3.save();
