@@ -20,9 +20,6 @@ std::multimap<std::string,Funcionario*> Funcionario::all(){
     csv::Parser file = ModelDAO<Funcionario>::readTable();
     std::multimap<std::string,Funcionario*> funcionarios;
     int n_rows = file.rowCount();
-    //std::cout<<"N_rows: "<<n_rows<<std::endl;
-    //int n_columns = file.columnCount();
-    //std::cout<<"N_columns: "<<n_columns<<std::endl;
 
     for(int i = 0; i<n_rows; i++){
         /* Estancia dinamicamente um novo funcionario */

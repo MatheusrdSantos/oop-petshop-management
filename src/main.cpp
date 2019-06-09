@@ -1,4 +1,5 @@
 #include "../include/Interacao.h"
+#include "../include/Animal.h"
 #include "../include/AnfibioExotico.h"
 #include "../include/AnfibioNativo.h"
 #include "../include/MamiferoExotico.h"
@@ -16,7 +17,7 @@ int main(int argc, char const *argv[])
     //int escolha = 0;
     //menu(escolha);
     
-    Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
+    /* Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
     Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, 2, 'H', "cura", "aa");
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
     AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
@@ -38,17 +39,22 @@ int main(int argc, char const *argv[])
     ReptilNativo reptilNativo("Lagarto", "Reptilia Lagartus", 'M', 10.5, "Herbívoro", v1, t1, "Cecil", true, "Ceplusplus", "AM", "João Bandeirante", "154121514-5");
     reptilNativo.save();
 
-    ReptilExotico reptilExotico("Camaleão do Faroeste Caboclo", "Reptilia Camaleoncius", 'M', 15.6, "Herbivoro", v1, NULL, "Ringo", false, "", "Estados Unidos da Ámerica", "Seattle", "1215121-87");
+    ReptilExotico reptilExotico("Camaleão do Faroeste Caboclo", "Reptilia Camaleoncius", 'M', 15.6, "Herbivoro", v1, t1, "Ringo", false, "", "Estados Unidos da Ámerica", "Seattle", "1215121-87");
     reptilExotico.save();
 
     AveNativo aveNativo("Arara azul", "Aves Azulis", 'M', 25.2, "Herbívoro", v1, t1, "Carlos", 2.34, 12.5, "AM", "Efeême", "152451-451");
     aveNativo.save();
 
     AveExotico aveExotico("Pintinho Piu", "Aves Pìuzis", 'F',11.2, "Herbívoro", v1, t1, "Piu-piu", 0.4, 5.2, "Estados Unidos da América", "North Dakota", "12451-9");
-    aveExotico.save();
+    aveExotico.save(); */
 
-
-
+    
+    std::multimap<std::string,Animal*> animals_all = Animal::all();
+    
+    std::cout << "select where contains:\n";
+    for (auto it=animals_all.begin(); it!=animals_all.end(); ++it){
+        std::cout << (*it).first << " => " << (*it).second->getNomeBatismo() << '\n';
+    }
 
 
     /*
