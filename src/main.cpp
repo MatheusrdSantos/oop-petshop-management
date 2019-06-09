@@ -43,12 +43,7 @@ int main(int argc, char const *argv[])
     v2.save();
     std::multimap<std::string,Funcionario*> funcionarios = Funcionario::all();
 
-    // showing contents:
-    std::cout << "mymultimap contains:\n";
-    for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
-        std::cout << (*it).first << " => " << (*it).second->getNome() << '\n';
-    }
-    */
+
 
     Funcionario* func =  Funcionario::find(3);
     std::cout<<"id -> 3;"<<std::endl<<func->getNome()<<std::endl;
@@ -57,9 +52,7 @@ int main(int argc, char const *argv[])
     std::string symbol = "==";
     std::string value = "Matheus";
 
-    /* std::string columnName = "funcao";
-    std::string symbol = "==";
-    std::string value = "Tratador"; */
+
 
     std::multimap<std::string,Funcionario*> funcionarios_where = Funcionario::where(&columnName, &symbol, &value);
     
@@ -88,3 +81,4 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+*/
