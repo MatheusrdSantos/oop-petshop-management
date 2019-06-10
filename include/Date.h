@@ -1,3 +1,11 @@
+/**
+* @file Date.h
+* @brief Classe em C++ para definição de Datas.
+* @author Bernt A Oedegaard
+* @date Atualizado por Arnaldo Souza em 07/06/2019
+* @sa http://finance.bi.no/~bernt/gcc_prog/doc_date.pdf
+*/
+
 // File: Date.h
 // author: Bernt A Oedegaard.
 #ifndef _DATE_H_
