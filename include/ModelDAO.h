@@ -16,7 +16,7 @@ template<class T>
 class ModelDAO{
 
     private:
-        std::string autoincrement_table_path = "./storage/autoincrement.csv";
+        std::string autoincrement_table_path = "./storage/autoincrement.csv"; /*< Define a tabela de Auto incremento, que armazena o próximo id do objeto que será armazenado no banco.*/
     protected:
 
     public:
@@ -28,6 +28,13 @@ class ModelDAO{
         *   Read
         */
         ModelDAO find(int id);
+
+        /**
+         * @brief Retorna uma lista dos objetos de uma tabela.
+         * 
+         * @param expression 
+         * @return std::list<ModelDAO> 
+         */
         std::list<ModelDAO> where(std::string expression); 
         static csv::Parser readTable(){
             csv::Parser file = csv::Parser(T::filePath, csv::DataType(0), ';');
@@ -44,6 +51,12 @@ class ModelDAO{
         */
        bool remove(std::string expression);
 
+       /**
+        * @brief Retorna o id de incremento dada um nome de tabela por parâmetro.
+        * 
+        * @param table_name 
+        * @return int 
+        */
        int getTableIncrementId(std::string table_name){
            csv::Parser file = csv::Parser(autoincrement_table_path, csv::DataType(0), ';');
            int n_rows = file.rowCount();
@@ -54,6 +67,14 @@ class ModelDAO{
            }
            return -1;
        };
+       
+       /**
+        * @brief Incrementa e atualiza o id na tabela de auto incremento.
+        * 
+        * @param table_name 
+        * @return true 
+        * @return false 
+        */
        bool updateAutoIncrement(std::string table_name){
            csv::Parser file = csv::Parser(autoincrement_table_path, csv::DataType(0), ';');
            int n_rows = file.rowCount();

@@ -3,11 +3,48 @@
 
 #include <iostream>
 #include <string>
+#include "Funcionario.h"
+#include "bprinter/table_printer.h"
+#include "Tratador.h"
+#include "Veterinario.h"
 
-//Mostra o menu encaminhando o usuário para as funções do programa
+/**
+ * @brief Inicia o programa
+ * 
+ */
+void run();
+
+/**
+ * @brief Mostra o menu encaminhando o usuário para as funções do programa
+ * 
+ * @param escolha 
+ */
 void menu(int &escolha);
 
-//Modificadores de cor de texto
-void textColor_vermelhoBold(std::string texto);
+/**
+ * @brief Modificadores da cor do texto para vermelho
+ * 
+ * @param texto 
+ */
+void textColor_red(std::string texto);
+
+/**
+ * @brief Modificadores da cor do texto para amarelo
+ * 
+ * @param texto 
+ */
+void textColor_yellow(std::string texto);
+
+/**
+ * @brief Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
+ * 
+ */
+void listAll_Funcionarios();
+
+/**
+ * @brief Adiciona um novo funcionário no banco de dados
+ * 
+ */
+void add_Funcionario();
 
 #endif

@@ -1,0 +1,85 @@
+\hypertarget{classbprinter_1_1TablePrinter}{}\section{Referência da Classe bprinter\+:\+:Table\+Printer}
+\label{classbprinter_1_1TablePrinter}\index{bprinter\+::\+Table\+Printer@{bprinter\+::\+Table\+Printer}}
+
+
+{\ttfamily \#include $<$table\+\_\+printer.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a1c0f1a6852f008b51f5894badc9bcd0d}\label{classbprinter_1_1TablePrinter_a1c0f1a6852f008b51f5894badc9bcd0d}} 
+{\bfseries Table\+Printer} (std\+::ostream $\ast$output, const std\+::string \&separator=\char`\"{}$\vert$\char`\"{})
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a45e8fb4a910a159e2acba9835b4528b8}\label{classbprinter_1_1TablePrinter_a45e8fb4a910a159e2acba9835b4528b8}} 
+int {\bfseries get\+\_\+num\+\_\+columns} () const
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a19e57b08aab4afe1131ba5d409b9b035}\label{classbprinter_1_1TablePrinter_a19e57b08aab4afe1131ba5d409b9b035}} 
+int {\bfseries get\+\_\+table\+\_\+width} () const
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_addf91935927992b78c5f93c598561f20}\label{classbprinter_1_1TablePrinter_addf91935927992b78c5f93c598561f20}} 
+void {\bfseries set\+\_\+separator} (const std\+::string \&separator)
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_ad5375fd1ba9880895073c42e43df2c48}\label{classbprinter_1_1TablePrinter_ad5375fd1ba9880895073c42e43df2c48}} 
+void {\bfseries set\+\_\+flush\+\_\+left} ()
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a7a7f06022ff96a3ef3e93c58feef4511}\label{classbprinter_1_1TablePrinter_a7a7f06022ff96a3ef3e93c58feef4511}} 
+void {\bfseries set\+\_\+flush\+\_\+right} ()
+\item 
+void \hyperlink{classbprinter_1_1TablePrinter_a271d4d46ec64e34f3b00093d0971101d}{Add\+Column} (const std\+::string \&header\+\_\+name, int column\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Add a column to our table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a4022eb59d90fec098cda994b147ce9b3}\label{classbprinter_1_1TablePrinter_a4022eb59d90fec098cda994b147ce9b3}} 
+void {\bfseries Print\+Header} ()
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a65a6732835a36a34017ac41b708510ad}\label{classbprinter_1_1TablePrinter_a65a6732835a36a34017ac41b708510ad}} 
+void {\bfseries Print\+Footer} ()
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_aba31c6d82844098a610f69bed00290f1}\label{classbprinter_1_1TablePrinter_aba31c6d82844098a610f69bed00290f1}} 
+\hyperlink{classbprinter_1_1TablePrinter}{Table\+Printer} \& {\bfseries operator$<$$<$} (\hyperlink{classbprinter_1_1endl}{endl} input)
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a98cce99fc0d86a564e1496575b40066e}\label{classbprinter_1_1TablePrinter_a98cce99fc0d86a564e1496575b40066e}} 
+\hyperlink{classbprinter_1_1TablePrinter}{Table\+Printer} \& {\bfseries operator$<$$<$} (float input)
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a67571453e0af25730bc04e65e6844625}\label{classbprinter_1_1TablePrinter_a67571453e0af25730bc04e65e6844625}} 
+\hyperlink{classbprinter_1_1TablePrinter}{Table\+Printer} \& {\bfseries operator$<$$<$} (double input)
+\item 
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_ab988c02400fd35c0eb6b41159eea637b}\label{classbprinter_1_1TablePrinter_ab988c02400fd35c0eb6b41159eea637b}} 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classbprinter_1_1TablePrinter}{Table\+Printer} \& {\bfseries operator$<$$<$} (T input)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Print a pretty table into your output of choice.
+
+Usage\+: \hyperlink{classbprinter_1_1TablePrinter}{Table\+Printer} tp(\&std\+::cout); tp.\+Add\+Column(\char`\"{}\+Name\char`\"{}, 25); tp.\+Add\+Column(\char`\"{}\+Age\char`\"{}, 3); tp.\+Add\+Column(\char`\"{}\+Position\char`\"{}, 30);
+
+tp.\+Print\+Header(); tp $<$$<$ \char`\"{}\+Dat Chu\char`\"{} $<$$<$ 25 $<$$<$ \char`\"{}\+Research Assistant\char`\"{}; tp $<$$<$ \char`\"{}\+John Doe\char`\"{} $<$$<$ 26 $<$$<$ \char`\"{}\+Professional Anonymity\char`\"{}; tp $<$$<$ \char`\"{}\+Jane Doe\char`\"{} $<$$<$ tp.\+Skip\+To\+Next\+Line(); tp $<$$<$ \char`\"{}\+Tom Doe\char`\"{} $<$$<$ 7 $<$$<$ \char`\"{}\+Student\char`\"{}; tp.\+Print\+Footer();
+
+\begin{DoxyRefDesc}{Futuras Atividades}
+\item[\hyperlink{todo__todo000001}{Futuras Atividades}]Add support for padding in each table cell \end{DoxyRefDesc}
+
+
+\subsection{Métodos}
+\mbox{\Hypertarget{classbprinter_1_1TablePrinter_a271d4d46ec64e34f3b00093d0971101d}\label{classbprinter_1_1TablePrinter_a271d4d46ec64e34f3b00093d0971101d}} 
+\index{bprinter\+::\+Table\+Printer@{bprinter\+::\+Table\+Printer}!Add\+Column@{Add\+Column}}
+\index{Add\+Column@{Add\+Column}!bprinter\+::\+Table\+Printer@{bprinter\+::\+Table\+Printer}}
+\subsubsection{\texorpdfstring{Add\+Column()}{AddColumn()}}
+{\footnotesize\ttfamily void bprinter\+::\+Table\+Printer\+::\+Add\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{header\+\_\+name,  }\item[{int}]{column\+\_\+width }\end{DoxyParamCaption})}
+
+
+
+Add a column to our table. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em header\+\_\+name} & Name to be print for the header \\
+\hline
+{\em column\+\_\+width} & the width of the column (has to be $>$=5) \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/bprinter/table\+\_\+printer.\+h\item 
+include/bprinter/impl/table\+\_\+printer.\+tpp.\+h\item 
+src/utils/table\+\_\+printer.\+cpp\end{DoxyCompactItemize}

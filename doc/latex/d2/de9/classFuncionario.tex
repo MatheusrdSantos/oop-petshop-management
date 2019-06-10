@@ -1,0 +1,482 @@
+\hypertarget{classFuncionario}{}\section{Referência da Classe Funcionario}
+\label{classFuncionario}\index{Funcionario@{Funcionario}}
+
+
+Diagrama de Hierarquia para Funcionario\+:
+% FIG 0
+
+
+Diagrama de colaboração para Funcionario\+:
+% FIG 1
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}\label{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}} 
+\hyperlink{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}{Funcionario} ()
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+\hyperlink{classFuncionario_a28e5fd647179d37e3b93e50b7c03401a}{Funcionario} (int id, std\+::string nome, std\+::string cpf, short idade, short tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade)
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFuncionario_a800273bd909dc88f821a414abebc442c}\label{classFuncionario_a800273bd909dc88f821a414abebc442c}} 
+\hyperlink{classFuncionario_a800273bd909dc88f821a414abebc442c}{$\sim$\+Funcionario} ()
+\begin{DoxyCompactList}\small\item\em Destrói o \hyperlink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
+int \hyperlink{classFuncionario_a0288286a907e587b7ab75d6c23354a06}{get\+Id} ()
+\begin{DoxyCompactList}\small\item\em Retorna o Id do Funcionário. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classFuncionario_a35376709ae5c7357e79ca612a74e7f15}{get\+Nome} ()
+\begin{DoxyCompactList}\small\item\em Retorna o Nome do Funcionário. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classFuncionario_aad99a1c5373c00bf5ad161aad1b18a4f}{get\+Cpf} ()
+\begin{DoxyCompactList}\small\item\em Retorna o Cpf do Funcionário. \end{DoxyCompactList}\item 
+short \hyperlink{classFuncionario_ac8b1947b4cb1c1216291c4750670fba2}{get\+Idade} ()
+\begin{DoxyCompactList}\small\item\em Retorna a Idade do Funcionário. \end{DoxyCompactList}\item 
+short \hyperlink{classFuncionario_aa25f7aa3d2da9cda7081f262793ecad7}{get\+Tipo\+Sanguineo} ()
+\begin{DoxyCompactList}\small\item\em Retorna o Tipo Sanguineo do Funcionário. \end{DoxyCompactList}\item 
+char \hyperlink{classFuncionario_a87dc4304683c4a4492a5ecd516d29f44}{get\+Fator\+Rh} ()
+\begin{DoxyCompactList}\small\item\em Retorna o Fator Rh do Funcionário. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classFuncionario_a98b261893ff916049db28530d3ba1160}{get\+Especialidade} ()
+\begin{DoxyCompactList}\small\item\em Retorna a Especialidade do Funcionário. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_acc0b430d08b2c459682d7bb01c0ab1c4}{set\+Id} (int id)
+\begin{DoxyCompactList}\small\item\em Define o membro Id. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_a32e01bd23e422ab7598cd04dac51eb82}{set\+Nome} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Define o membro Nome. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_a4fd103578189cdce84cd0f76f6c668fd}{set\+Cpf} (std\+::string cpf)
+\begin{DoxyCompactList}\small\item\em Define o membro Cpf. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_af85eeb2e2b606d60da800c7084f23769}{set\+Idade} (short idade)
+\begin{DoxyCompactList}\small\item\em Define o membro Idade. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_a3e690d80c156f121598a28fb41de7aa1}{set\+Tipo\+Sanguineo} (short tipo)
+\begin{DoxyCompactList}\small\item\em Define o membro Tipo Sanguineo. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_aa8a9bab437eb41578fe514f26c16e5d2}{set\+Fator\+Rh} (char fator)
+\begin{DoxyCompactList}\small\item\em Define o membro Fator Rh. \end{DoxyCompactList}\item 
+void \hyperlink{classFuncionario_ae412312aaaaceaca6dd132e8397b283f}{set\+Especialidade} (std\+::string especialidade)
+\begin{DoxyCompactList}\small\item\em Define o membro Especialidade. \end{DoxyCompactList}\item 
+bool \hyperlink{classFuncionario_acb246ecc22f9135f2adad51a131ea45c}{save} ()
+\item 
+bool \hyperlink{classFuncionario_a72916b5b2b096630ebc93e4301ee7437}{update} ()
+\item 
+bool \hyperlink{classFuncionario_a0ea198bfb72865e5e0bf913c62020275}{remove} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::multimap$<$ std\+::string, \hyperlink{classFuncionario}{Funcionario} $\ast$ $>$ \hyperlink{classFuncionario_abf4016b1493566cd89da6c65c035ef9f}{all} ()
+\begin{DoxyCompactList}\small\item\em Retorna todos os funcionários armazenados no banco. \end{DoxyCompactList}\item 
+static \hyperlink{classFuncionario}{Funcionario} $\ast$ \hyperlink{classFuncionario_ad08fef8edac1497d827d39e081f1e7bb}{find} (int id)
+\begin{DoxyCompactList}\small\item\em Retorna o funcionário do id passsado por parametro. \end{DoxyCompactList}\item 
+static std\+::multimap$<$ std\+::string, \hyperlink{classFuncionario}{Funcionario} $\ast$ $>$ \hyperlink{classFuncionario_ae77b29774b71f1c1e336bcb649765488}{where} (std\+::string $\ast$column, std\+::string $\ast$separator, std\+::string $\ast$value)
+\begin{DoxyCompactList}\small\item\em Faz uma query para a seleção de um ou mais funcionários passado uma coluna, um método de comparação e um valor. Ex\+: idade == 34. Retorna um multimap cuja key é \hyperlink{classTratador}{Tratador} ou Veterinário e o valor o Funcionário. \end{DoxyCompactList}\item 
+static std\+::multimap$<$ std\+::string, \hyperlink{classFuncionario}{Funcionario} $\ast$ $>$ \hyperlink{classFuncionario_a3969bd1819507ef29896e371a94d7c01}{where} (std\+::string $\ast$column, std\+::string $\ast$separator, int value)
+\begin{DoxyCompactList}\small\item\em Faz uma query para a seleção de um ou mais funcionários passado uma coluna, um método de comparação e um valor inteiro. Ex\+: idade == 34. Retorna um multimap cuja key é \hyperlink{classTratador}{Tratador} ou Veterinário e o valor o Funcionário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classFuncionario_a15c3f1c0a9cefad48a036666c2352b60}{file\+Path} = \char`\"{}./storage/funcionarios.\+csv\char`\"{}
+\item 
+static std\+::string \hyperlink{classFuncionario_a6c10ac916f8b0435bea51c240ca0df34}{table\+Name} = \char`\"{}funcionarios\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \hyperlink{classFuncionario_a696332cf5ccde3a31f84e5af687e7ec2}{print\+In\+File} (int id)=0
+\begin{DoxyCompactList}\small\item\em Define a forma como o texto do funcionário será armazenada no banco, se altera dependendo da classe derivada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFuncionario_a123c4af00e4e6eea5d4d9366a8bfefed}\label{classFuncionario_a123c4af00e4e6eea5d4d9366a8bfefed}} 
+int {\bfseries m\+\_\+id}
+\item 
+\mbox{\Hypertarget{classFuncionario_a6d5228656aa32b0f36f02e08c51cd1e4}\label{classFuncionario_a6d5228656aa32b0f36f02e08c51cd1e4}} 
+std\+::string {\bfseries m\+\_\+nome}
+\item 
+\mbox{\Hypertarget{classFuncionario_a74bd5f4c71bfb42219f0cce2a72eeb47}\label{classFuncionario_a74bd5f4c71bfb42219f0cce2a72eeb47}} 
+std\+::string {\bfseries m\+\_\+cpf}
+\item 
+\mbox{\Hypertarget{classFuncionario_a2bc5a68aebcf1a792812430ce5c8bdca}\label{classFuncionario_a2bc5a68aebcf1a792812430ce5c8bdca}} 
+short {\bfseries m\+\_\+idade}
+\item 
+\mbox{\Hypertarget{classFuncionario_aecf4c525d6ac81601db0e7a034c82321}\label{classFuncionario_aecf4c525d6ac81601db0e7a034c82321}} 
+short {\bfseries m\+\_\+tipo\+\_\+sanguineo}
+\item 
+\mbox{\Hypertarget{classFuncionario_ab8b1fa2c4d830ea6a03c5d1db8ee1002}\label{classFuncionario_ab8b1fa2c4d830ea6a03c5d1db8ee1002}} 
+char {\bfseries m\+\_\+fator\+\_\+rh}
+\item 
+\mbox{\Hypertarget{classFuncionario_ac9ccf61efca75f4130e79ef06b7278a2}\label{classFuncionario_ac9ccf61efca75f4130e79ef06b7278a2}} 
+std\+::string {\bfseries m\+\_\+especialidade}
+\end{DoxyCompactItemize}
+
+
+\subsection{Construtores \& Destrutores}
+\mbox{\Hypertarget{classFuncionario_a28e5fd647179d37e3b93e50b7c03401a}\label{classFuncionario_a28e5fd647179d37e3b93e50b7c03401a}} 
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{Funcionario()}{Funcionario()}}
+{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{short}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade }\end{DoxyParamCaption})}
+
+
+
+Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & \\
+\hline
+{\em nome} & \\
+\hline
+{\em cpf} & \\
+\hline
+{\em idade} & \\
+\hline
+{\em tipo\+\_\+sanguineo} & \\
+\hline
+{\em fator\+\_\+rh} & \\
+\hline
+{\em especialidade} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Métodos}
+\mbox{\Hypertarget{classFuncionario_abf4016b1493566cd89da6c65c035ef9f}\label{classFuncionario_abf4016b1493566cd89da6c65c035ef9f}} 
+\index{Funcionario@{Funcionario}!all@{all}}
+\index{all@{all}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \hyperlink{classFuncionario}{Funcionario} $\ast$ $>$ Funcionario\+::all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retorna todos os funcionários armazenados no banco. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::multimap$<$std\+::string,\+Funcionario$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_ad08fef8edac1497d827d39e081f1e7bb}\label{classFuncionario_ad08fef8edac1497d827d39e081f1e7bb}} 
+\index{Funcionario@{Funcionario}!find@{find}}
+\index{find@{find}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \hyperlink{classFuncionario}{Funcionario} $\ast$ Funcionario\+::find (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retorna o funcionário do id passsado por parametro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Funcionario$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_aad99a1c5373c00bf5ad161aad1b18a4f}\label{classFuncionario_aad99a1c5373c00bf5ad161aad1b18a4f}} 
+\index{Funcionario@{Funcionario}!get\+Cpf@{get\+Cpf}}
+\index{get\+Cpf@{get\+Cpf}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Cpf()}{getCpf()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Cpf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o Cpf do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a98b261893ff916049db28530d3ba1160}\label{classFuncionario_a98b261893ff916049db28530d3ba1160}} 
+\index{Funcionario@{Funcionario}!get\+Especialidade@{get\+Especialidade}}
+\index{get\+Especialidade@{get\+Especialidade}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Especialidade()}{getEspecialidade()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Especialidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a Especialidade do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a87dc4304683c4a4492a5ecd516d29f44}\label{classFuncionario_a87dc4304683c4a4492a5ecd516d29f44}} 
+\index{Funcionario@{Funcionario}!get\+Fator\+Rh@{get\+Fator\+Rh}}
+\index{get\+Fator\+Rh@{get\+Fator\+Rh}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Fator\+Rh()}{getFatorRh()}}
+{\footnotesize\ttfamily char Funcionario\+::get\+Fator\+Rh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o Fator Rh do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a0288286a907e587b7ab75d6c23354a06}\label{classFuncionario_a0288286a907e587b7ab75d6c23354a06}} 
+\index{Funcionario@{Funcionario}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily int Funcionario\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o Id do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_ac8b1947b4cb1c1216291c4750670fba2}\label{classFuncionario_ac8b1947b4cb1c1216291c4750670fba2}} 
+\index{Funcionario@{Funcionario}!get\+Idade@{get\+Idade}}
+\index{get\+Idade@{get\+Idade}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Idade()}{getIdade()}}
+{\footnotesize\ttfamily short Funcionario\+::get\+Idade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a Idade do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+short 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a35376709ae5c7357e79ca612a74e7f15}\label{classFuncionario_a35376709ae5c7357e79ca612a74e7f15}} 
+\index{Funcionario@{Funcionario}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o Nome do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_aa25f7aa3d2da9cda7081f262793ecad7}\label{classFuncionario_aa25f7aa3d2da9cda7081f262793ecad7}} 
+\index{Funcionario@{Funcionario}!get\+Tipo\+Sanguineo@{get\+Tipo\+Sanguineo}}
+\index{get\+Tipo\+Sanguineo@{get\+Tipo\+Sanguineo}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{get\+Tipo\+Sanguineo()}{getTipoSanguineo()}}
+{\footnotesize\ttfamily short Funcionario\+::get\+Tipo\+Sanguineo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o Tipo Sanguineo do Funcionário. 
+
+\begin{DoxyReturn}{Retorna}
+short 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a696332cf5ccde3a31f84e5af687e7ec2}\label{classFuncionario_a696332cf5ccde3a31f84e5af687e7ec2}} 
+\index{Funcionario@{Funcionario}!print\+In\+File@{print\+In\+File}}
+\index{print\+In\+File@{print\+In\+File}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{print\+In\+File()}{printInFile()}}
+{\footnotesize\ttfamily virtual std\+::string Funcionario\+::print\+In\+File (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Define a forma como o texto do funcionário será armazenada no banco, se altera dependendo da classe derivada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Id do objeto (utilizará o do auto incremento no momento de sua chamada). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string String formatada de como o objeto será armazenado no banco.. 
+\end{DoxyReturn}
+
+
+Implementado por \hyperlink{classTratador_af2efc58696c20320f51741d01a958ef7}{Tratador} e \hyperlink{classVeterinario_a9c922980caf0113e0e9048ea3528e88d}{Veterinario}.
+
+\mbox{\Hypertarget{classFuncionario_a0ea198bfb72865e5e0bf913c62020275}\label{classFuncionario_a0ea198bfb72865e5e0bf913c62020275}} 
+\index{Funcionario@{Funcionario}!remove@{remove}}
+\index{remove@{remove}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Funcionario\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_acb246ecc22f9135f2adad51a131ea45c}\label{classFuncionario_acb246ecc22f9135f2adad51a131ea45c}} 
+\index{Funcionario@{Funcionario}!save@{save}}
+\index{save@{save}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily bool Funcionario\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a4fd103578189cdce84cd0f76f6c668fd}\label{classFuncionario_a4fd103578189cdce84cd0f76f6c668fd}} 
+\index{Funcionario@{Funcionario}!set\+Cpf@{set\+Cpf}}
+\index{set\+Cpf@{set\+Cpf}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Cpf()}{setCpf()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Cpf (\begin{DoxyParamCaption}\item[{std\+::string}]{cpf }\end{DoxyParamCaption})}
+
+
+
+Define o membro Cpf. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cpf} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_ae412312aaaaceaca6dd132e8397b283f}\label{classFuncionario_ae412312aaaaceaca6dd132e8397b283f}} 
+\index{Funcionario@{Funcionario}!set\+Especialidade@{set\+Especialidade}}
+\index{set\+Especialidade@{set\+Especialidade}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Especialidade()}{setEspecialidade()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Especialidade (\begin{DoxyParamCaption}\item[{std\+::string}]{especialidade }\end{DoxyParamCaption})}
+
+
+
+Define o membro Especialidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em especialidade} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_aa8a9bab437eb41578fe514f26c16e5d2}\label{classFuncionario_aa8a9bab437eb41578fe514f26c16e5d2}} 
+\index{Funcionario@{Funcionario}!set\+Fator\+Rh@{set\+Fator\+Rh}}
+\index{set\+Fator\+Rh@{set\+Fator\+Rh}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Fator\+Rh()}{setFatorRh()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Fator\+Rh (\begin{DoxyParamCaption}\item[{char}]{fator }\end{DoxyParamCaption})}
+
+
+
+Define o membro Fator Rh. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fator} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_acc0b430d08b2c459682d7bb01c0ab1c4}\label{classFuncionario_acc0b430d08b2c459682d7bb01c0ab1c4}} 
+\index{Funcionario@{Funcionario}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Define o membro Id. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_af85eeb2e2b606d60da800c7084f23769}\label{classFuncionario_af85eeb2e2b606d60da800c7084f23769}} 
+\index{Funcionario@{Funcionario}!set\+Idade@{set\+Idade}}
+\index{set\+Idade@{set\+Idade}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Idade()}{setIdade()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Idade (\begin{DoxyParamCaption}\item[{short}]{idade }\end{DoxyParamCaption})}
+
+
+
+Define o membro Idade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em idade} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_a32e01bd23e422ab7598cd04dac51eb82}\label{classFuncionario_a32e01bd23e422ab7598cd04dac51eb82}} 
+\index{Funcionario@{Funcionario}!set\+Nome@{set\+Nome}}
+\index{set\+Nome@{set\+Nome}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Nome()}{setNome()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Define o membro Nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_a3e690d80c156f121598a28fb41de7aa1}\label{classFuncionario_a3e690d80c156f121598a28fb41de7aa1}} 
+\index{Funcionario@{Funcionario}!set\+Tipo\+Sanguineo@{set\+Tipo\+Sanguineo}}
+\index{set\+Tipo\+Sanguineo@{set\+Tipo\+Sanguineo}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{set\+Tipo\+Sanguineo()}{setTipoSanguineo()}}
+{\footnotesize\ttfamily void Funcionario\+::set\+Tipo\+Sanguineo (\begin{DoxyParamCaption}\item[{short}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Define o membro Tipo Sanguineo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tipo} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_a72916b5b2b096630ebc93e4301ee7437}\label{classFuncionario_a72916b5b2b096630ebc93e4301ee7437}} 
+\index{Funcionario@{Funcionario}!update@{update}}
+\index{update@{update}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool Funcionario\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_ae77b29774b71f1c1e336bcb649765488}\label{classFuncionario_ae77b29774b71f1c1e336bcb649765488}} 
+\index{Funcionario@{Funcionario}!where@{where}}
+\index{where@{where}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{where()}{where()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \hyperlink{classFuncionario}{Funcionario} $\ast$ $>$ Funcionario\+::where (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{column,  }\item[{std\+::string $\ast$}]{separator,  }\item[{std\+::string $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Faz uma query para a seleção de um ou mais funcionários passado uma coluna, um método de comparação e um valor. Ex\+: idade == 34. Retorna um multimap cuja key é \hyperlink{classTratador}{Tratador} ou Veterinário e o valor o Funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column} & \\
+\hline
+{\em separator} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::multimap$<$std\+::string, Funcionario$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_a3969bd1819507ef29896e371a94d7c01}\label{classFuncionario_a3969bd1819507ef29896e371a94d7c01}} 
+\index{Funcionario@{Funcionario}!where@{where}}
+\index{where@{where}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{where()}{where()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \hyperlink{classFuncionario}{Funcionario} $\ast$ $>$ Funcionario\+::where (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{column,  }\item[{std\+::string $\ast$}]{separator,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Faz uma query para a seleção de um ou mais funcionários passado uma coluna, um método de comparação e um valor inteiro. Ex\+: idade == 34. Retorna um multimap cuja key é \hyperlink{classTratador}{Tratador} ou Veterinário e o valor o Funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column} & \\
+\hline
+{\em separator} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::multimap$<$std\+::string, Funcionario$\ast$$>$ 
+\end{DoxyReturn}
+
+
+\subsection{Atributos}
+\mbox{\Hypertarget{classFuncionario_a15c3f1c0a9cefad48a036666c2352b60}\label{classFuncionario_a15c3f1c0a9cefad48a036666c2352b60}} 
+\index{Funcionario@{Funcionario}!file\+Path@{file\+Path}}
+\index{file\+Path@{file\+Path}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{file\+Path}{filePath}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::file\+Path = \char`\"{}./storage/funcionarios.\+csv\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Define o caminho para a tabela que armazenará os Animais. \mbox{\Hypertarget{classFuncionario_a6c10ac916f8b0435bea51c240ca0df34}\label{classFuncionario_a6c10ac916f8b0435bea51c240ca0df34}} 
+\index{Funcionario@{Funcionario}!table\+Name@{table\+Name}}
+\index{table\+Name@{table\+Name}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{table\+Name}{tableName}}
+{\footnotesize\ttfamily std\+::string Funcionario\+::table\+Name = \char`\"{}funcionarios\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Define o nome para a tabela que armazenará os Animais, tal valor é utilizado para os ids de autoincremento. 
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/Funcionario.\+h\item 
+src/classes/Funcionario.\+cpp\end{DoxyCompactItemize}
