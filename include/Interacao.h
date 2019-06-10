@@ -7,6 +7,7 @@
 #include "Funcionario.h"
 #include "Tratador.h"
 #include "Veterinario.h"
+#include "Animal.h"
 
 //Inicia o programa
 void run();
@@ -20,6 +21,9 @@ void textColor_yellow(std::string texto);
 
 //Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
 void listAll_Funcionarios();
+
+//Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
+void listAll_Animais();
 
 //Adiciona um novo funcionário no banco de dados
 void add_Funcionario();

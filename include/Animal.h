@@ -25,8 +25,6 @@ class Animal : public ModelDAO<Animal>{
         Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
         ~Animal(){};
 
-
-
         static std::string filePath;
         static std::string tableName;
 

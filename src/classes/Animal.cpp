@@ -16,18 +16,46 @@ std::string Animal::tableName = "animais";
 
 Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo){
     m_id = id;
-    m_classe = classe ;
+    m_classe = classe;
     m_nome_cientifico = nome_cientifico;
-    m_sexo = sexo ;
-    m_tamanho = tamanho ;
-    m_dieta = dieta ;
-    m_veterinario = veterinario ;
-    m_tratador = tratador ;
+    m_sexo = sexo;
+    m_tamanho = tamanho;
+    m_dieta = dieta;
+    m_veterinario = veterinario;
+    m_tratador = tratador;
     m_nome_batismo = nome_batismo;
 }
 
 std::string Animal::getNomeBatismo(){
     return m_nome_batismo;
+}
+
+std::string Animal::getClasse(){
+    return m_classe;
+}
+
+std::string Animal::getNomeCientifico(){
+    return m_nome_cientifico;
+}
+
+char Animal::getSexo(){
+    return m_sexo;
+}
+
+double Animal::getTamanho(){
+    return m_tamanho;
+}
+
+std::string Animal::getDieta(){
+    return m_dieta;
+}
+
+Veterinario* Animal::getVeterinario(){
+    return m_veterinario;
+}
+
+Tratador* Animal::getTratador(){
+    return m_tratador;
 }
 
 void Animal::setNomeBatismo(std::string nome_batismo){
@@ -47,9 +75,9 @@ std::multimap<std::string, Animal*> Animal::all(){
     csv::Parser file = ModelDAO<Animal>::readTable();
     std::multimap<std::string,Animal*> animals;
     int n_rows = file.rowCount();
-    std::cout<<"N_rows: "<<n_rows<<std::endl;
-    int n_columns = file.columnCount();
-    std::cout<<"N_columns: "<<n_columns<<std::endl;
+    //std::cout<<"N_rows: "<<n_rows<<std::endl;
+    //int n_columns = file.columnCount();
+    //std::cout<<"N_columns: "<<n_columns<<std::endl;
 
 
     for(int i = 0; i<n_rows; i++){

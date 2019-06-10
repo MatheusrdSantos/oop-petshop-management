@@ -18,17 +18,17 @@ void menu(int &escolha){
     textColor_red("============================================");
     std::cout << std::endl;
     
-    std::cout << "Escolha uma opção e divirta-se: " << std::endl;
-    std::cout << "    1 -> Adicionar Funcionário " << std::endl;
-    std::cout << "    2 -> Listar Funcionários " << std::endl;
-    //std::cout << "    3 -> Adicionar Animal " << std::endl;
+    std::cout << "# Menu #" << std::endl;
+    std::cout << "    1 -> Adicionar funcionário " << std::endl;
+    std::cout << "    2 -> Listar todos funcionários " << std::endl;
+    std::cout << "    3 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 
     switch (escolha)
     {
         case 0:
-            std::cout << "Tchau! Volte sempre" << std::endl;
+            std::cout << "========== Tchau! PetFera 2019.1  ==========" << std::endl;
             break;
         case 1:
             add_Funcionario();
@@ -36,7 +36,10 @@ void menu(int &escolha){
         case 2:
             listAll_Funcionarios();
             break;
-        
+        case 3:
+            listAll_Animais();
+            break;
+
         default:
             std::cout << "Essa opção não existe, man" << std::endl;
             break;
@@ -65,7 +68,7 @@ void listAll_Funcionarios(){
         tp.AddColumn("Nome", 30);
         tp.AddColumn("CPF", 15);
         tp.AddColumn("Tipo Sanguineo", 15);
-        tp.AddColumn("Fator RH", 5);
+        tp.AddColumn("Fator RH", 10);
         tp.AddColumn("Especialidade", 15);
 
         tp.PrintHeader();
@@ -140,5 +143,41 @@ void add_Funcionario(){
 
             std::cout << "Veterinário adicionado!" << std::endl;
         }
+    }
+}
+
+void listAll_Animais(){
+    std::multimap<std::string,Animal*> animais = Animal::all();
+    
+    std::cout<<std::endl;
+    if(animais.size() == 0){
+        textColor_yellow("Não há animais cadastrados no sistema!"); 
+        std::cout<<std::endl;
+    }else{
+        bprinter::TablePrinter tp(&std::cout);
+        tp.AddColumn("Tipo", 10);
+        tp.AddColumn("Classe", 10);
+        tp.AddColumn("Nome", 15);
+        tp.AddColumn("Nome Cientifico", 30);
+        tp.AddColumn("Dieta", 15);
+        tp.AddColumn("Sexo", 5);
+        tp.AddColumn("Tamanho", 15);
+        tp.AddColumn("Tratador", 15);
+        tp.AddColumn("Veterinario", 15);
+
+        tp.PrintHeader();
+        for (auto it=animais.begin(); it!=animais.end(); ++it){
+            tp << (*it).first 
+               << (*it).second->getClasse()
+               << (*it).second->getNomeBatismo()
+               << (*it).second->getNomeCientifico()
+               << (*it).second->getDieta()
+               << (*it).second->getSexo()
+               << boost::format("%.2f") % (*it).second->getTamanho()
+               << (*it).second->getTratador()->getNome()
+               << (*it).second->getVeterinario()->getNome();
+        }
+
+        tp.PrintFooter();
     }
 }
