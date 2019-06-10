@@ -25,7 +25,7 @@ class MamiferoExotico : public Mamifero, public AnimalExotico{
         MamiferoExotico();
 
         /**
-         * @brief Destroy the Mamifero Exotico object
+         * @brief Destroi um objeto do tipo Animal Exotico.
          * 
          */
         ~MamiferoExotico(){};
