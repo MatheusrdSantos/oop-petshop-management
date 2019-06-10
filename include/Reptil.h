@@ -113,8 +113,6 @@ class Reptil : public Animal{
          */
         void setTipoVeneno(std::string tipo_veneno);
 
-
-
 };
 
 #endif
