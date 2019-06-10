@@ -71,123 +71,123 @@ class Animal : public ModelDAO<Animal>{
         static Funcionario* find(int id);
 
         /**
-         * @brief Get the Id object
+         * @brief Retorna Id do Animal
          * 
          * @return int 
          */
         int getId();
 
         /**
-         * @brief Set the Id object
+         * @brief Define um(a) novo(a) Id para o Animal
          * 
          * @param id 
          */
         void setId(int id);
 
         /**
-         * @brief Get the Dieta object
+         * @brief Retorna Dieta do Animal
          * 
          * @return std::string 
          */
         std::string getDieta();
         /**
-         * @brief Set the Dieta object
+         * @brief Define um(a) novo(a) Dieta para o Animal
          * 
          * @param dieta 
          */
         void setDieta(std::string dieta);
         
         /**
-         * @brief Get the Nome Batismo object
+         * @brief Retorna Nome Batismo do Animal
          * 
          * @return std::string 
          */
         std::string getNomeBatismo();
 
         /**
-         * @brief Set the Nome Batismo object
+         * @brief Define um(a) novo(a) Nome para atismo do Animal
          * 
          * @param nome_batismo 
          */
         void setNomeBatismo(std::string nome_batismo);
         /**
-         * @brief Get the Classe object
+         * @brief Retorna Classe do Animal
          * 
          * @return std::string 
          */
         std::string getClasse();
         /**
-         * @brief Set the Classe object
+         * @brief Define um(a) novo(a) Classe para o Animal
          * 
          * @param classe 
          */
         void setClasse(std::string classe);
 
         /**
-         * @brief Get the Nome Cientifico object
+         * @brief Retorna Nome Cientifico do Animal
          * 
          * @return std::string 
          */
         std::string getNomeCientifico();
 
         /**
-         * @brief Set the Nome Cientifico object
+         * @brief Define um(a) novo(a) Nome científico para o Animal
          * 
          * @param nome_cientifico 
          */
         void setNomeCientifico(std::string nome_cientifico);
 
         /**
-         * @brief Get the Sexo object
+         * @brief Retorna Sexo do Animal
          * 
          * @return char 
          */
         char getSexo();
 
         /**
-         * @brief Set the Sexo object
+         * @brief Define um(a) novo(a) Sexo para o Animal
          * 
          * @param sexo 
          */
         void setSexo(char sexo);
 
         /**
-         * @brief Get the Tamanho object
+         * @brief Retorna o Tamanho do Animal
          * 
          * @return double 
          */
         double getTamanho();
 
         /**
-         * @brief Set the Tamanho object
+         * @brief Define um(a) novo(a) Tamanho para o Animal
          * 
          * @param tamanho 
          */
         void setTamanho(double tamanho);
 
         /**
-         * @brief Get the Veterinario object
+         * @brief Retorna o Veterinario do Animal
          * 
          * @return Veterinario* 
          */
         Veterinario* getVeterinario();
 
         /**
-         * @brief Set the Veterinario object
+         * @brief Define um(a) novo(a) Veterinario para o Animal
          * 
          * @param veterinario 
          */
         void setVeterinario(Veterinario* veterinario);
 
         /**
-         * @brief Get the Tratador object
+         * @brief Retorna o Tratador do Animal
          * 
          * @return Tratador* 
          */
         Tratador* getTratador();
 
         /**
-         * @brief Set the Tratador object
+         * @brief Define um(a) novo(a) Tratador para o Animal
          * 
          * @param tratador 
          */
