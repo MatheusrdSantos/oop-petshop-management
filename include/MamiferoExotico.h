@@ -13,8 +13,8 @@ class MamiferoExotico : public Mamifero, public AnimalExotico{
         /**
          * @brief Define a forma como o texto do Mamifero Exotico será armazenado no banco. 
          * 
-         * @param id 
-         * @return std::string 
+         * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
+         * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         std::string printInFile(int id);
     public:

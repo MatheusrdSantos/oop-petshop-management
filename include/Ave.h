@@ -15,8 +15,8 @@ class Ave : public Animal{
         /**
          * @brief Define a forma como o texto da Ave será armazenado no banco.
          * 
-         * @param id 
-         * @return std::string 
+         * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
+         * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         virtual std::string printInFile(int id) = 0;
     public:

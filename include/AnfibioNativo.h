@@ -12,8 +12,8 @@ class AnfibioNativo : public Anfibio, public AnimalNativo{
         /**
          * @brief Define a forma como o texto do Anfíbio Nativo será armazenado no banco.
          * 
-         * @param id 
-         * @return std::string 
+         * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
+         * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         std::string printInFile(int id);
     public:

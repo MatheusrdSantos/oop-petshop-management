@@ -16,8 +16,8 @@ class Anfibio : public Animal{
         /**
          * @brief Define a forma como o texto do Anfíbio será armazenada no banco, se altera dependendo da classe derivada.
          * 
-         * @param id 
-         * @return std::string 
+         * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
+         * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         virtual std::string printInFile(int id) = 0;
 
