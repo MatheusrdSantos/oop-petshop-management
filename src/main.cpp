@@ -56,7 +56,17 @@ int main(int argc, char const *argv[])
         std::cout << (*it).first << " => " << (*it).second->getNomeBatismo() << '\n';
     }
     std::cout<<"Find test: "<<std::endl;
-    std::cout<<Animal::find(4)->getNomeBatismo();
+    std::cout<<Animal::find(4)->getNomeBatismo()<<std::endl;
+    
+    /* Animal* animal = Animal::find(4);
+    animal->setNomeBatismo("Jurema");
+    animal->update();
+    
+    std::cout<<"Update test: "<<std::endl;
+    std::cout<<Animal::find(4)->getNomeBatismo()<<std::endl;
+
+    Animal::find(4)->remove(); */
+    
     //run();
 
     /*

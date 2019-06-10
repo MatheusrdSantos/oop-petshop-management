@@ -215,7 +215,7 @@ bool Funcionario::save(){
 
 bool Funcionario::update(){
     // recupera os dados do csv
-    csv::Parser file = csv::Parser(Funcionario::filePath, csv::DataType(0), ';');
+    csv::Parser file = ModelDAO<Funcionario>::readTable();
     unsigned n_rows = file.rowCount();
     
     // cria um stream de escrita no arquivo
@@ -247,7 +247,7 @@ bool Funcionario::update(){
 
 bool Funcionario::remove(){
     // recupera os dados do csv
-    csv::Parser file = csv::Parser(Funcionario::filePath, csv::DataType(0), ';');
+    csv::Parser file = ModelDAO<Funcionario>::readTable();
     unsigned n_rows = file.rowCount();
     
     // cria um stream de escrita no arquivo
