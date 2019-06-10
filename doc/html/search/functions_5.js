@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['isvenenoso',['isVenenoso',['../d4/d70/classReptil.html#a07867a1252f279a1fd5afb576d0a5c9a',1,'Reptil']]]
+  ['getautorizacaoibama',['getAutorizacaoIbama',['../de/d8e/classAnimalSilvestre.html#a040b1391d175d7572d11deddc7b3e8cb',1,'AnimalSilvestre']]],
+  ['getcidadeorigem',['getCidadeOrigem',['../dd/dc7/classAnimalExotico.html#a3b9a4a0366f253bf06befa65754d38a3',1,'AnimalExotico::getCidadeOrigem()'],['../d3/dfa/classAnimalNativo.html#a7f4d471d82fc83b9d76d2bea01127022',1,'AnimalNativo::getCidadeOrigem()']]],
+  ['getclasse',['getClasse',['../d7/dac/classAnimal.html#a22e54ff48117237f9a201f5eca0eea81',1,'Animal']]],
+  ['getcnmv',['getCnmv',['../df/d71/classVeterinario.html#a48fd50544ed6af0b8c454b8f6cb812c0',1,'Veterinario']]],
+  ['getcordopelo',['getCorDoPelo',['../dc/d80/classMamifero.html#a7bf7c25d72549218df4472922ed365de',1,'Mamifero']]],
+  ['getcpf',['getCpf',['../d2/de9/classFuncionario.html#aad99a1c5373c00bf5ad161aad1b18a4f',1,'Funcionario']]],
+  ['getdieta',['getDieta',['../d7/dac/classAnimal.html#a6fcb9a0b8debecb58ca20dbf88bce329',1,'Animal']]],
+  ['getespecialidade',['getEspecialidade',['../d2/de9/classFuncionario.html#a98b261893ff916049db28530d3ba1160',1,'Funcionario']]],
+  ['getfatorrh',['getFatorRh',['../d2/de9/classFuncionario.html#a87dc4304683c4a4492a5ecd516d29f44',1,'Funcionario']]],
+  ['getid',['getId',['../d7/dac/classAnimal.html#a2c27e56355bc2b40d65250da2bb8a102',1,'Animal::getId()'],['../d2/de9/classFuncionario.html#a0288286a907e587b7ab75d6c23354a06',1,'Funcionario::getId()']]],
+  ['getidade',['getIdade',['../d2/de9/classFuncionario.html#ac8b1947b4cb1c1216291c4750670fba2',1,'Funcionario']]],
+  ['getniveldeseguranca',['getNivelDeSeguranca',['../d1/dce/classTratador.html#a22ba37b0fd4b7adbd0b52de0d695c01a',1,'Tratador']]],
+  ['getnome',['getNome',['../d2/de9/classFuncionario.html#a35376709ae5c7357e79ca612a74e7f15',1,'Funcionario']]],
+  ['getnomebatismo',['getNomeBatismo',['../d7/dac/classAnimal.html#aee0219bd596f0af49fa51fcdad29a1a7',1,'Animal']]],
+  ['getnomecientifico',['getNomeCientifico',['../d7/dac/classAnimal.html#a9b316bf80a121cd5dc077158055c162f',1,'Animal']]],
+  ['getpaisorigem',['getPaisOrigem',['../dd/dc7/classAnimalExotico.html#a656238e3c9891fb2f596fe2d022e1abf',1,'AnimalExotico']]],
+  ['getsexo',['getSexo',['../d7/dac/classAnimal.html#a7349027418d900a9cd7cfc32001b6f7d',1,'Animal']]],
+  ['gettableincrementid',['getTableIncrementId',['../df/dd0/classModelDAO.html#a24cf7f88d833dba6424271767403cbda',1,'ModelDAO']]],
+  ['gettamanho',['getTamanho',['../d7/dac/classAnimal.html#a3936ff4ad07fee3173db2a9dff52c706',1,'Animal']]],
+  ['gettiposanguineo',['getTipoSanguineo',['../d2/de9/classFuncionario.html#aa25f7aa3d2da9cda7081f262793ecad7',1,'Funcionario']]],
+  ['gettipoveneno',['getTipoVeneno',['../d4/d70/classReptil.html#aa5e4cd3fa2d94916a3ba5cc20299d3cf',1,'Reptil']]],
+  ['gettratador',['getTratador',['../d7/dac/classAnimal.html#ac238dd4fa3762c7bc97f7baebac2d828',1,'Animal']]],
+  ['getuforigem',['getUfOrigem',['../d3/dfa/classAnimalNativo.html#a4adb947e6542cdb4ac9be98cbe2450d7',1,'AnimalNativo']]],
+  ['getveterinario',['getVeterinario',['../d7/dac/classAnimal.html#a9bdff52128e0ae23bbcac796b68a4d05',1,'Animal']]]
 ];

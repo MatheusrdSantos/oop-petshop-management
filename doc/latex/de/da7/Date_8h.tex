@@ -11,3 +11,155 @@ Classe em C++ para definição de Datas.
 {\ttfamily \#include $<$ctime$>$}\newline
 {\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
 Gráfico de dependência de inclusões para Date.\+h\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+% FIG 1
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDate}{Date}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{Date_8h_ad51822da99f2cc001b6326ac28bd49d6}{operator==} (const \hyperlink{classDate}{Date} \&, const \hyperlink{classDate}{Date} \&)
+\begin{DoxyCompactList}\small\item\em Retorna true se duas datas são iguais. \end{DoxyCompactList}\item 
+bool \hyperlink{Date_8h_a5ac1b43688828377f31de974e061006f}{operator!=} (const \hyperlink{classDate}{Date} \&, const \hyperlink{classDate}{Date} \&)
+\begin{DoxyCompactList}\small\item\em Compara se duas datas são diferentes (true para sim e false para não). \end{DoxyCompactList}\item 
+bool \hyperlink{Date_8h_acbc7a012dc46ebcd65dfd2887e3a3ad4}{operator$<$} (const \hyperlink{classDate}{Date} \&, const \hyperlink{classDate}{Date} \&)
+\begin{DoxyCompactList}\small\item\em Retorna true se uma data vem antes da outra. \end{DoxyCompactList}\item 
+bool \hyperlink{Date_8h_a042bfc86a816127e316415634bb99107}{operator$>$} (const \hyperlink{classDate}{Date} \&, const \hyperlink{classDate}{Date} \&)
+\begin{DoxyCompactList}\small\item\em Retorna true se uma data vem depois da outra. \end{DoxyCompactList}\item 
+bool \hyperlink{Date_8h_aec251fea3c00fa40e6e9e07a90620f78}{operator$<$=} (const \hyperlink{classDate}{Date} \&, const \hyperlink{classDate}{Date} \&)
+\begin{DoxyCompactList}\small\item\em Retorna true se uma data vem antes ou é igual à outra. \end{DoxyCompactList}\item 
+bool \hyperlink{Date_8h_a04118d56c46df4ac9054f0e34d2a6ce2}{operator$>$=} (const \hyperlink{classDate}{Date} \&, const \hyperlink{classDate}{Date} \&)
+\begin{DoxyCompactList}\small\item\em Retorna true se uma data vem depois ou é igual à outra. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{Date_8h_af741165c25ff2b00f24c713dc81ab9b2}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classDate}{Date} \&d)
+\begin{DoxyCompactList}\small\item\em Saída para print da data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe em C++ para definição de Datas. 
+
+\begin{DoxyAuthor}{Autor}
+Bernt A Oedegaard 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Atualizado por Arnaldo Souza em 07/06/2019 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{Veja também}
+\href{http://finance.bi.no/~bernt/gcc_prog/doc_date.pdf}{\tt http\+://finance.\+bi.\+no/$\sim$bernt/gcc\+\_\+prog/doc\+\_\+date.\+pdf} 
+\end{DoxySeeAlso}
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{Date_8h_a5ac1b43688828377f31de974e061006f}\label{Date_8h_a5ac1b43688828377f31de974e061006f}} 
+\index{Date.\+h@{Date.\+h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classDate}{Date} \&}]{,  }\item[{const \hyperlink{classDate}{Date} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Compara se duas datas são diferentes (true para sim e false para não). 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Date_8h_acbc7a012dc46ebcd65dfd2887e3a3ad4}\label{Date_8h_acbc7a012dc46ebcd65dfd2887e3a3ad4}} 
+\index{Date.\+h@{Date.\+h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classDate}{Date} \&}]{,  }\item[{const \hyperlink{classDate}{Date} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Retorna true se uma data vem antes da outra. 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Date_8h_af741165c25ff2b00f24c713dc81ab9b2}\label{Date_8h_af741165c25ff2b00f24c713dc81ab9b2}} 
+\index{Date.\+h@{Date.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classDate}{Date} \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Saída para print da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em os} & \\
+\hline
+{\em d} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::ostream\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Date_8h_aec251fea3c00fa40e6e9e07a90620f78}\label{Date_8h_aec251fea3c00fa40e6e9e07a90620f78}} 
+\index{Date.\+h@{Date.\+h}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classDate}{Date} \&}]{,  }\item[{const \hyperlink{classDate}{Date} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Retorna true se uma data vem antes ou é igual à outra. 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Date_8h_ad51822da99f2cc001b6326ac28bd49d6}\label{Date_8h_ad51822da99f2cc001b6326ac28bd49d6}} 
+\index{Date.\+h@{Date.\+h}!operator==@{operator==}}
+\index{operator==@{operator==}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classDate}{Date} \&}]{,  }\item[{const \hyperlink{classDate}{Date} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Retorna true se duas datas são iguais. 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Date_8h_a042bfc86a816127e316415634bb99107}\label{Date_8h_a042bfc86a816127e316415634bb99107}} 
+\index{Date.\+h@{Date.\+h}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classDate}{Date} \&}]{,  }\item[{const \hyperlink{classDate}{Date} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Retorna true se uma data vem depois da outra. 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Date_8h_a04118d56c46df4ac9054f0e34d2a6ce2}\label{Date_8h_a04118d56c46df4ac9054f0e34d2a6ce2}} 
+\index{Date.\+h@{Date.\+h}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Date.\+h@{Date.\+h}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classDate}{Date} \&}]{,  }\item[{const \hyperlink{classDate}{Date} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Retorna true se uma data vem depois ou é igual à outra. 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}

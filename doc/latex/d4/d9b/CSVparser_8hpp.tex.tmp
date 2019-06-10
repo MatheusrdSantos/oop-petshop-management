@@ -1,0 +1,47 @@
+\hypertarget{CSVparser_8hpp}{}\section{Referência do Arquivo include/\+C\+S\+Vparser.hpp}
+\label{CSVparser_8hpp}\index{include/\+C\+S\+Vparser.\+hpp@{include/\+C\+S\+Vparser.\+hpp}}
+
+
+Classe em C++ para a leitura de arquivos csv.  
+
+
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Gráfico de dependência de inclusões para C\+S\+Vparser.\+hpp\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+% FIG 1
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcsv_1_1Error}{csv\+::\+Error}
+\item 
+class \hyperlink{classcsv_1_1Row}{csv\+::\+Row}
+\item 
+class \hyperlink{classcsv_1_1Parser}{csv\+::\+Parser}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{CSVparser_8hpp_a1a3911f2387412df696be542923ef62d}\label{CSVparser_8hpp_a1a3911f2387412df696be542923ef62d}} 
+enum {\bfseries Data\+Type} \{ {\bfseries e\+F\+I\+LE} = 0, 
+{\bfseries e\+P\+U\+RE} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe em C++ para a leitura de arquivos csv. 
+
+\begin{DoxyAuthor}{Autor}
+Romain Sylvian 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Atualizado por Matheus Santos em 20/05/2019 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{Veja também}
+\href{https://github.com/rsylvian/CSVparser}{\tt https\+://github.\+com/rsylvian/\+C\+S\+Vparser} 
+\end{DoxySeeAlso}

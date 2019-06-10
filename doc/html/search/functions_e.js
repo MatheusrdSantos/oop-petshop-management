@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['where',['where',['../d2/de9/classFuncionario.html#ae77b29774b71f1c1e336bcb649765488',1,'Funcionario::where(std::string *column, std::string *separator, std::string *value)'],['../d2/de9/classFuncionario.html#a3969bd1819507ef29896e371a94d7c01',1,'Funcionario::where(std::string *column, std::string *separator, int value)'],['../df/dd0/classModelDAO.html#a241c58f7a4fcdbd60ded4cc65a77befd',1,'ModelDAO::where()']]]
+  ['valid',['valid',['../de/d4a/classDate.html#a03bd622b075b79a9c4e3a80552f8428e',1,'Date']]],
+  ['veterinario',['Veterinario',['../df/d71/classVeterinario.html#af8dc5f6f77bf8c70dd94d54766764134',1,'Veterinario::Veterinario()'],['../df/d71/classVeterinario.html#aff0d07b973488e857d796c98adf9969a',1,'Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv)'],['../df/d71/classVeterinario.html#a6430b95484d486ed1add63ad0b767463',1,'Veterinario::Veterinario(std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv)']]]
 ];

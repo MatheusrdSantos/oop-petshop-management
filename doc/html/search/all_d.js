@@ -27,5 +27,6 @@ var searchData=
   ['settratador',['setTratador',['../d7/dac/classAnimal.html#aec8cd2eec7a0c833074e303f389c8f9f',1,'Animal']]],
   ['setuforigem',['setUfOrigem',['../d3/dfa/classAnimalNativo.html#a4d91de201fea070524bb0c7524116f0a',1,'AnimalNativo']]],
   ['setvenenoso',['setVenenoso',['../d4/d70/classReptil.html#a9f7ab2a0e2b30040c7c9df48039a266a',1,'Reptil']]],
-  ['setveterinario',['setVeterinario',['../d7/dac/classAnimal.html#ace9b58ea47057261292ce42a4edd2870',1,'Animal']]]
+  ['setveterinario',['setVeterinario',['../d7/dac/classAnimal.html#ace9b58ea47057261292ce42a4edd2870',1,'Animal']]],
+  ['splitstringdate',['splitStringDate',['../d5/d60/utils_8h.html#a5956427178dc1009796eb3a195a808eb',1,'utils.cpp']]]
 ];

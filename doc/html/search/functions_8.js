@@ -1,4 +1,14 @@
 var searchData=
 [
-  ['printinfile',['printInFile',['../d4/d13/classAnfibio.html#ab866ca21fb00c2d4d571aadd271eadec',1,'Anfibio::printInFile()'],['../d9/de6/classAnfibioExotico.html#a08d9debec54258a0f43c8c503dfb23d0',1,'AnfibioExotico::printInFile()'],['../d9/d17/classAnfibioNativo.html#a7926e1af44542ee268e27dd3d862f583',1,'AnfibioNativo::printInFile()'],['../d7/dac/classAnimal.html#ac75406040726a6339932d70164cc7242',1,'Animal::printInFile()'],['../d6/def/classAve.html#ab858405e18c56876e331ad943885ee53',1,'Ave::printInFile()'],['../d6/d8f/classAveExotico.html#a4ba81def12131f047b3800e5f10a983b',1,'AveExotico::printInFile()'],['../d4/df0/classAveNativo.html#ab95679ed20354b2183706db24899d316',1,'AveNativo::printInFile()'],['../d2/de9/classFuncionario.html#a696332cf5ccde3a31f84e5af687e7ec2',1,'Funcionario::printInFile()'],['../dc/d80/classMamifero.html#ae91b67a8f0f508793a801aadcaa18570',1,'Mamifero::printInFile()'],['../dc/d41/classMamiferoExotico.html#a4ee6f5f4a2917cfdf54304525add0c4a',1,'MamiferoExotico::printInFile()'],['../df/d52/classMamiferoNativo.html#ae2f2b00cb6720cea2780ebef78be52ea',1,'MamiferoNativo::printInFile()'],['../d4/d70/classReptil.html#a53fd59f3aed9c2d463722a8e97401406',1,'Reptil::printInFile()'],['../d7/dd5/classReptilExotico.html#a71312f425b92e04d8f29a856abd83f26',1,'ReptilExotico::printInFile()'],['../de/dd6/classReptilNativo.html#ac801a11c87a2847fb4b46488aa6bb789',1,'ReptilNativo::printInFile()'],['../d1/dce/classTratador.html#af2efc58696c20320f51741d01a958ef7',1,'Tratador::printInFile()'],['../df/d71/classVeterinario.html#a9c922980caf0113e0e9048ea3528e88d',1,'Veterinario::printInFile()']]]
+  ['operator_21_3d',['operator!=',['../de/da7/Date_8h.html#a5ac1b43688828377f31de974e061006f',1,'Date.cpp']]],
+  ['operator_2b',['operator+',['../de/d4a/classDate.html#a859a8d7af8cdbee73089732f59ab7492',1,'Date']]],
+  ['operator_2b_2b',['operator++',['../de/d4a/classDate.html#a0c5386da90c6834a3e7a110b02e2abaa',1,'Date::operator++()'],['../de/d4a/classDate.html#a63f7060a7a7997e289e5e885f84557e5',1,'Date::operator++(int)']]],
+  ['operator_2d',['operator-',['../de/d4a/classDate.html#afed6ca708a5c8e9f201e760995002dd1',1,'Date']]],
+  ['operator_2d_2d',['operator--',['../de/d4a/classDate.html#ae7b4f70781bb5775538fddb5f5d8e143',1,'Date::operator--()'],['../de/d4a/classDate.html#ac2237a5f9f832bb521fe8f299a47db95',1,'Date::operator--(int)']]],
+  ['operator_3c',['operator&lt;',['../de/da7/Date_8h.html#acbc7a012dc46ebcd65dfd2887e3a3ad4',1,'Date.cpp']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../de/da7/Date_8h.html#af741165c25ff2b00f24c713dc81ab9b2',1,'Date.cpp']]],
+  ['operator_3c_3d',['operator&lt;=',['../de/da7/Date_8h.html#aec251fea3c00fa40e6e9e07a90620f78',1,'Date.cpp']]],
+  ['operator_3d_3d',['operator==',['../de/da7/Date_8h.html#ad51822da99f2cc001b6326ac28bd49d6',1,'Date.cpp']]],
+  ['operator_3e',['operator&gt;',['../de/da7/Date_8h.html#a042bfc86a816127e316415634bb99107',1,'Date.cpp']]],
+  ['operator_3e_3d',['operator&gt;=',['../de/da7/Date_8h.html#a04118d56c46df4ac9054f0e34d2a6ce2',1,'Date.h']]]
 ];

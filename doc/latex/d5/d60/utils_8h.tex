@@ -1,0 +1,148 @@
+\hypertarget{utils_8h}{}\section{Referência do Arquivo include/utils.h}
+\label{utils_8h}\index{include/utils.\+h@{include/utils.\+h}}
+
+
+Classe em C++ para definição de funções de utilidades variadas, como\+: conversão de tipos, modelagem de dados e efetuação de oparações.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}C\+S\+Vparser.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para utils.\+h\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+% FIG 1
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{utils_8h_a2c7b08c5cbcbcf4574cd2d312c7c1f6c}{compare} (std\+::string $\ast$value1, std\+::string $\ast$value2, std\+::string $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Retorna o resultado da comparação de duas strings passado o símbolo de comparação por parâmetro. \end{DoxyCompactList}\item 
+bool \hyperlink{utils_8h_a07c2edad1efe3f3663ef92f34c5613fe}{compare} (int value1, int value2, std\+::string $\ast$symbol)
+\begin{DoxyCompactList}\small\item\em Retorna o resultado da comparação de dois inteiros passado o símbolo de comparação por parâmetro. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{utils_8h_acc3ec79a1a321cff1bd7e4c1fca79358}{build\+Header\+String} (std\+::vector$<$ std\+::string $>$ $\ast$header)
+\begin{DoxyCompactList}\small\item\em Constroi uma string no padrão csv, com \textquotesingle{};\textquotesingle{} como separados, baseado em um vetor de strings representando as colunas do cabeçalho. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{utils_8h_a6a6a696ea15e694cc01e1d48df5b823d}{build\+Row\+String} (\hyperlink{classcsv_1_1Row}{csv\+::\+Row} $\ast$row)
+\begin{DoxyCompactList}\small\item\em Constroi uma string no padrão csv, com \textquotesingle{};\textquotesingle{} como separados, baseado em uma Row representando os valores contidos em uma linha do csv. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ $\ast$ \hyperlink{utils_8h_a5956427178dc1009796eb3a195a808eb}{split\+String\+Date} (std\+::string date, std\+::string separator)
+\begin{DoxyCompactList}\small\item\em Constroi um vetor de inteiros representando dia, mes e ano, com base em uma string e um separador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe em C++ para definição de funções de utilidades variadas, como\+: conversão de tipos, modelagem de dados e efetuação de oparações. 
+
+\begin{DoxyAuthor}{Autor}
+A\+MD 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Atualizado por Matheus Santos em 07/06/2019 
+\end{DoxyDate}
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{utils_8h_acc3ec79a1a321cff1bd7e4c1fca79358}\label{utils_8h_acc3ec79a1a321cff1bd7e4c1fca79358}} 
+\index{utils.\+h@{utils.\+h}!build\+Header\+String@{build\+Header\+String}}
+\index{build\+Header\+String@{build\+Header\+String}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{build\+Header\+String()}{buildHeaderString()}}
+{\footnotesize\ttfamily std\+::string build\+Header\+String (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ $\ast$}]{header }\end{DoxyParamCaption})}
+
+
+
+Constroi uma string no padrão csv, com \textquotesingle{};\textquotesingle{} como separados, baseado em um vetor de strings representando as colunas do cabeçalho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em header} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a6a6a696ea15e694cc01e1d48df5b823d}\label{utils_8h_a6a6a696ea15e694cc01e1d48df5b823d}} 
+\index{utils.\+h@{utils.\+h}!build\+Row\+String@{build\+Row\+String}}
+\index{build\+Row\+String@{build\+Row\+String}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{build\+Row\+String()}{buildRowString()}}
+{\footnotesize\ttfamily std\+::string build\+Row\+String (\begin{DoxyParamCaption}\item[{\hyperlink{classcsv_1_1Row}{csv\+::\+Row} $\ast$}]{row }\end{DoxyParamCaption})}
+
+
+
+Constroi uma string no padrão csv, com \textquotesingle{};\textquotesingle{} como separados, baseado em uma Row representando os valores contidos em uma linha do csv. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a2c7b08c5cbcbcf4574cd2d312c7c1f6c}\label{utils_8h_a2c7b08c5cbcbcf4574cd2d312c7c1f6c}} 
+\index{utils.\+h@{utils.\+h}!compare@{compare}}
+\index{compare@{compare}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{compare()}{compare()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool compare (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{value1,  }\item[{std\+::string $\ast$}]{value2,  }\item[{std\+::string $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Retorna o resultado da comparação de duas strings passado o símbolo de comparação por parâmetro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value1} & \\
+\hline
+{\em value2} & \\
+\hline
+{\em symbol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a07c2edad1efe3f3663ef92f34c5613fe}\label{utils_8h_a07c2edad1efe3f3663ef92f34c5613fe}} 
+\index{utils.\+h@{utils.\+h}!compare@{compare}}
+\index{compare@{compare}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{compare()}{compare()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool compare (\begin{DoxyParamCaption}\item[{int}]{value1,  }\item[{int}]{value2,  }\item[{std\+::string $\ast$}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Retorna o resultado da comparação de dois inteiros passado o símbolo de comparação por parâmetro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value1} & \\
+\hline
+{\em value2} & \\
+\hline
+{\em symbol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{utils_8h_a5956427178dc1009796eb3a195a808eb}\label{utils_8h_a5956427178dc1009796eb3a195a808eb}} 
+\index{utils.\+h@{utils.\+h}!split\+String\+Date@{split\+String\+Date}}
+\index{split\+String\+Date@{split\+String\+Date}!utils.\+h@{utils.\+h}}
+\subsubsection{\texorpdfstring{split\+String\+Date()}{splitStringDate()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$$\ast$ split\+String\+Date (\begin{DoxyParamCaption}\item[{std\+::string}]{date,  }\item[{std\+::string}]{separator }\end{DoxyParamCaption})}
+
+
+
+Constroi um vetor de inteiros representando dia, mes e ano, com base em uma string e um separador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em date} & \\
+\hline
+{\em separator} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$int$>$$\ast$ 
+\end{DoxyReturn}
