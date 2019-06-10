@@ -20,6 +20,15 @@ class Animal : public ModelDAO<Animal>{
         Veterinario* m_veterinario; /**< Define que veterinário é responsável por cada Animal.*/
         Tratador* m_tratador; /**< Define que tratador é responsável por cada Animal.*/
         std::string m_nome_batismo; /**< Define o nome de batismo de cada Animal. Ex: Simba.*/
+
+        /**
+         * @brief Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada.
+         * 
+         * @param id 
+         * @return std::string 
+         */
+        virtual std::string printInFile(int id) = 0;
+
     public:
         /**
          * @brief Constrói um novo objeto do tipo Animal
@@ -40,6 +49,11 @@ class Animal : public ModelDAO<Animal>{
          * @param nome_batismo 
          */
         Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
+        
+        /**
+         * @brief Destrói o objeto do tipo Animal.
+         * 
+         */
         ~Animal(){};
 
 
@@ -217,13 +231,6 @@ class Animal : public ModelDAO<Animal>{
          */
         bool remove();
         
-        /**
-         * @brief Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada.
-         * 
-         * @param id 
-         * @return std::string 
-         */
-        virtual std::string printInFile(int id) = 0;
 };
 
 #endif

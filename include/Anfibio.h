@@ -10,13 +10,31 @@ class Anfibio : public Animal{
     private:
 
     protected:
-        int m_total_de_mudas;
-        Date* m_ultima_muda;
-    public:
-        Anfibio();
-        ~Anfibio(){};
-    
+        int m_total_de_mudas; /**< Define o total de mudas de cada Anfíbio. O id é único. */
+        Date* m_ultima_muda; /**< Define quando o Anfíbio teve sua última muda. new Date(0,0,0) para nunca (default).*/
+        
+        /**
+         * @brief Define a forma como o texto do Anfíbio será armazenada no banco, se altera dependendo da classe derivada.
+         * 
+         * @param id 
+         * @return std::string 
+         */
         virtual std::string printInFile(int id) = 0;
+
+    public:
+
+        /**
+         * @brief Constrói um novo objeto do tipo Anfíbio.
+         * 
+         */
+        Anfibio();
+
+        /**
+         * @brief Destrói o objeto do tipo Animal.
+         * 
+         */
+        ~Anfibio(){};
+
 };
 
 #endif
