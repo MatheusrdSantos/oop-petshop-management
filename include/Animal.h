@@ -77,12 +77,12 @@ class Animal : public ModelDAO<Animal>{
         static Animal* buildAnimalFromFile(csv::Row* file);
         
         /**
-         * @brief Retorna um funcionário passado o id por parâmetro.
+         * @brief Retorna um animal passado o id por parâmetro.
          * 
          * @param id 
-         * @return Funcionario* 
+         * @return Animal* 
          */
-        static Funcionario* find(int id);
+        static Animal* find(int id);
 
         /**
          * @brief Retorna Id do Animal

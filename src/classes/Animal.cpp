@@ -175,3 +175,17 @@ bool Animal::save(){
     file.close();
     return true;
 }
+
+Animal* Animal::find(int id){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    int n_rows = file.rowCount();
+    for (int i = 0; i < n_rows; i++)
+    {
+        if(id == std::stoi(file[i]["id"])){
+            /* Recupera os campos do arquivo csv*/
+            return buildAnimalFromFile(&file[i]);
+        }
+    }
+    Animal* a = NULL;
+    return a;
+}

@@ -55,7 +55,8 @@ int main(int argc, char const *argv[])
     for (auto it=animals_all.begin(); it!=animals_all.end(); ++it){
         std::cout << (*it).first << " => " << (*it).second->getNomeBatismo() << '\n';
     }
-
+    std::cout<<"Find test: "<<std::endl;
+    std::cout<<Animal::find(4)->getNomeBatismo();
     //run();
 
     /*
