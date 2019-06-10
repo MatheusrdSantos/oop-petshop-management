@@ -173,7 +173,7 @@ void listAll_Animais(){
                << (*it).second->getNomeCientifico()
                << (*it).second->getDieta()
                << (*it).second->getSexo()
-               << boost::format("%.2f") % (*it).second->getTamanho()
+               << (*it).second->getTamanho()
                << (*it).second->getTratador()->getNome()
                << (*it).second->getVeterinario()->getNome();
         }

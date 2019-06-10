@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AMD&#39;s Petfera: Código-Fonte de include/Veterinario.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AMD&#39;s Petfera
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">UmsistemacapazdegerirumPetShopcomseusanimaiseseusfuncionários.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Veterinario.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* </span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Class: Veterinario</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">Author: Arnaldo Barbosa    </span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _VETERINARIO_H_</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _VETERINARIO_H_</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Funcionario.h&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../df/d71/classVeterinario.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/d71/classVeterinario.html">Veterinario</a> : <span class="keyword">public</span> <a class="code" href="../../d2/de9/classFuncionario.html">Funcionario</a>{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::string <a class="code" href="../../df/d71/classVeterinario.html#a9c922980caf0113e0e9048ea3528e88d">printInFile</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::string m_cnmv; <span class="comment">/*&lt; Define o CNMV do veterinario.*/</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="../../df/d71/classVeterinario.html#af8dc5f6f77bf8c70dd94d54766764134">Veterinario</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../df/d71/classVeterinario.html#af8dc5f6f77bf8c70dd94d54766764134">Veterinario</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string nome, std::string cpf, <span class="keywordtype">short</span> idade, <span class="keywordtype">short</span> tipo_sanguineo, <span class="keywordtype">char</span> fator_rh, std::string especialidade, std::string cnmv);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../df/d71/classVeterinario.html#af8dc5f6f77bf8c70dd94d54766764134">Veterinario</a>(std::string nome, std::string cpf, <span class="keywordtype">short</span> idade, <span class="keywordtype">short</span> tipo_sanguineo, <span class="keywordtype">char</span> fator_rh, std::string especialidade, std::string cnmv);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div><div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../df/d71/classVeterinario.html#a0de805e30bc7006d2035458f80c18671">   63</a></span>&#160;        <a class="code" href="../../df/d71/classVeterinario.html#a0de805e30bc7006d2035458f80c18671">~Veterinario</a>(){};</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        std::string <a class="code" href="../../df/d71/classVeterinario.html#a48fd50544ed6af0b8c454b8f6cb812c0">getCnmv</a>();</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../df/d71/classVeterinario.html#a7c1e4210f1f1be4c2c45e0d16afb2e63">setCnmv</a>(std::string cnmv);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classVeterinario_html_a9c922980caf0113e0e9048ea3528e88d"><div class="ttname"><a href="../../df/d71/classVeterinario.html#a9c922980caf0113e0e9048ea3528e88d">Veterinario::printInFile</a></div><div class="ttdeci">std::string printInFile(int id)</div><div class="ttdoc">Define a forma como o texto do Veterinário será armazenado no banco. </div><div class="ttdef"><b>Definition:</b> Veterinario.cpp:25</div></div>
+<div class="ttc" id="classVeterinario_html_a0de805e30bc7006d2035458f80c18671"><div class="ttname"><a href="../../df/d71/classVeterinario.html#a0de805e30bc7006d2035458f80c18671">Veterinario::~Veterinario</a></div><div class="ttdeci">~Veterinario()</div><div class="ttdoc">Destrói o Veterinário. </div><div class="ttdef"><b>Definition:</b> Veterinario.h:63</div></div>
+<div class="ttc" id="classVeterinario_html_a7c1e4210f1f1be4c2c45e0d16afb2e63"><div class="ttname"><a href="../../df/d71/classVeterinario.html#a7c1e4210f1f1be4c2c45e0d16afb2e63">Veterinario::setCnmv</a></div><div class="ttdeci">void setCnmv(std::string cnmv)</div><div class="ttdoc">Define o código Cnmv do veterinário. </div><div class="ttdef"><b>Definition:</b> Veterinario.cpp:39</div></div>
+<div class="ttc" id="classVeterinario_html_a48fd50544ed6af0b8c454b8f6cb812c0"><div class="ttname"><a href="../../df/d71/classVeterinario.html#a48fd50544ed6af0b8c454b8f6cb812c0">Veterinario::getCnmv</a></div><div class="ttdeci">std::string getCnmv()</div><div class="ttdoc">Retorna o código Cnmv do veterinário. </div><div class="ttdef"><b>Definition:</b> Veterinario.cpp:34</div></div>
+<div class="ttc" id="classVeterinario_html"><div class="ttname"><a href="../../df/d71/classVeterinario.html">Veterinario</a></div><div class="ttdef"><b>Definition:</b> Veterinario.h:13</div></div>
+<div class="ttc" id="classVeterinario_html_af8dc5f6f77bf8c70dd94d54766764134"><div class="ttname"><a href="../../df/d71/classVeterinario.html#af8dc5f6f77bf8c70dd94d54766764134">Veterinario::Veterinario</a></div><div class="ttdeci">Veterinario()</div><div class="ttdoc">Constrói um novo objeto do tipo Veterinário. </div></div>
+<div class="ttc" id="classFuncionario_html"><div class="ttname"><a href="../../d2/de9/classFuncionario.html">Funcionario</a></div><div class="ttdef"><b>Definition:</b> Funcionario.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

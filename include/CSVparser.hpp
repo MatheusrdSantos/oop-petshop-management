@@ -1,3 +1,11 @@
+/**
+* @file CSVparser.hpp
+* @brief Classe em C++ para a leitura de arquivos csv.
+* @author Romain Sylvian
+* @date Atualizado por Matheus Santos em 20/05/2019
+* @sa https://github.com/rsylvian/CSVparser
+*/
+
 #ifndef     _CSVPARSER_HPP_
 # define    _CSVPARSER_HPP_
 

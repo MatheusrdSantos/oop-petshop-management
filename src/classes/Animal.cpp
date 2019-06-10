@@ -30,10 +30,6 @@ std::string Animal::getNomeBatismo(){
     return m_nome_batismo;
 }
 
-std::string Animal::getClasse(){
-    return m_classe;
-}
-
 std::string Animal::getNomeCientifico(){
     return m_nome_cientifico;
 }
@@ -68,6 +64,14 @@ int Animal::getId(){
 
 void Animal::setId(int id){
     m_id = id;
+}
+
+std::string Animal::getClasse(){
+    return m_classe;
+}
+
+void Animal::setClasse(std::string classe){
+    m_classe = classe;
 }
 
 std::multimap<std::string, Animal*> Animal::all(){
@@ -202,4 +206,112 @@ bool Animal::save(){
 
     file.close();
     return true;
+}
+
+Animal* Animal::find(int id){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    int n_rows = file.rowCount();
+    for (int i = 0; i < n_rows; i++)
+    {
+        if(id == std::stoi(file[i]["id"])){
+            /* Recupera os campos do arquivo csv*/
+            return buildAnimalFromFile(&file[i]);
+        }
+    }
+    Animal* a = NULL;
+    return a;
+}
+
+bool Animal::update(){
+    // recupera os dados do csv
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    unsigned n_rows = file.rowCount();
+    
+    // cria um stream de escrita no arquivo
+    std::ofstream write_file;
+    write_file.open(Animal::filePath, std::ios::out); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(write_file.is_open()){
+        // escreve o header no arquivo a partir de um vector contendo o nome das colunas
+        std::vector<std::string> header = file.getHeader(); 
+        write_file<<buildHeaderString(&header);
+
+        // reescreve os dados na tabela
+        for(unsigned i = 0; i<n_rows; i++){
+            if(std::stoi(file[i]["id"]) == m_id){
+                // reescreve o objeto moduficado com as atualizações
+                write_file<<printInFile(m_id);
+            }else{
+                write_file<<buildRowString(&(file[i]));
+            }
+        }
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
+    }
+
+    write_file.close();
+    return true;
+}
+
+bool Animal::remove(){
+    // recupera os dados do csv
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    unsigned n_rows = file.rowCount();
+    
+    // cria um stream de escrita no arquivo
+    std::ofstream write_file;
+    write_file.open(Animal::filePath, std::ios::out); //app significa Append, ou seja, escrita no fim do arquivo
+
+    if(write_file.is_open()){
+        // escreve o header no arquivo a partir de um vector contendo o nome das colunas
+        std::vector<std::string> header = file.getHeader(); 
+        write_file<<buildHeaderString(&header);
+
+        // reescreve os dados na tabela
+        for(unsigned i = 0; i<n_rows; i++){
+            if(std::stoi(file[i]["id"]) != m_id){
+                write_file<<buildRowString(&(file[i]));
+            }
+        }
+    }else{
+        std::cerr<<"Couldn't open the file!"<<std::endl;
+        return false;
+    }
+
+    write_file.close();
+    return true;
+}
+
+std::multimap<std::string, Animal*> Animal::where(std::string* column, std::string* symbol, std::string* value){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    std::multimap<std::string,Animal*> animais;
+    int n_rows = file.rowCount();
+    for (int i = 0; i < n_rows; i++)
+    {
+        std::string val = file[i][(*column)];
+        if(compare(&val, value, symbol)){
+            Animal* animal = Animal::buildAnimalFromFile(&file[i]);
+            /* faz o downcasting para tratador ou veterinario */
+            animais.insert(std::pair<std::string, Animal*>(animal->getClasse(), animal));
+        }
+    }
+    return animais;
+}
+
+std::multimap<std::string, Animal*> Animal::where(std::string* column, std::string* symbol, int value){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    std::multimap<std::string,Animal*> animais;
+    int n_rows = file.rowCount();
+    std::vector<std::string> header = file.getHeader();
+    for (int i = 0; i < n_rows; i++)
+    {
+        int val = std::stoi(file[i][(*column)]);
+        if(compare(val, value, symbol)){
+            Animal* animal = Animal::buildAnimalFromFile(&file[i]);
+            /* faz o downcasting para tratador ou veterinario */
+            animais.insert(std::pair<std::string, Animal*>(animal->getClasse(), animal)); 
+        }
+    }
+    return animais;
 }

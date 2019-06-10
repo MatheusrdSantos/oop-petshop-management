@@ -1,0 +1,292 @@
+\hypertarget{classDate}{}\section{Referência da Classe Date}
+\label{classDate}\index{Date@{Date}}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}\label{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\hyperlink{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date} ()
+\begin{DoxyCompactList}\small\item\em Constrói uma nova data. \end{DoxyCompactList}\item 
+\hyperlink{classDate_ad041535fef212285db248a489b7fe4ae}{Date} (\hyperlink{classDate}{Date} \&date)
+\begin{DoxyCompactList}\small\item\em Constrói uma nova data. \end{DoxyCompactList}\item 
+\hyperlink{classDate_af1ef20ba3c9dbcdef09a916f12a8b435}{Date} (const int \&d, const int \&m, const int \&y)
+\begin{DoxyCompactList}\small\item\em Constrói uma nova data. \end{DoxyCompactList}\item 
+\hyperlink{classDate_adb32ff7d8a6ce35ad6fe0642b77853b4}{Date} (std\+::string date, std\+::string separator)
+\begin{DoxyCompactList}\small\item\em Constrói uma nova data. \end{DoxyCompactList}\item 
+bool \hyperlink{classDate_a03bd622b075b79a9c4e3a80552f8428e}{valid} (void) const
+\begin{DoxyCompactList}\small\item\em Retorna true se a data for válida. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_a42aff770b2b450b6b2d83789b9194d56}{day} () const
+\begin{DoxyCompactList}\small\item\em Retorna o dia da data. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_a82f550e37c8ff6a3709a256b2e43b762}{month} () const
+\begin{DoxyCompactList}\small\item\em Retorna o mês da data. \end{DoxyCompactList}\item 
+int \hyperlink{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}{year} () const
+\begin{DoxyCompactList}\small\item\em Retorna o ano da data. \end{DoxyCompactList}\item 
+void \hyperlink{classDate_a7bd9d8f2f53cb54c151aff444fd3b4a6}{set\+\_\+day} (const int \&\hyperlink{classDate_a42aff770b2b450b6b2d83789b9194d56}{day})
+\begin{DoxyCompactList}\small\item\em Define o dia da data. \end{DoxyCompactList}\item 
+void \hyperlink{classDate_ab264919c7dfd3ea017fb5dc08af64796}{set\+\_\+month} (const int \&\hyperlink{classDate_a82f550e37c8ff6a3709a256b2e43b762}{month})
+\begin{DoxyCompactList}\small\item\em Define o mês da data. \end{DoxyCompactList}\item 
+void \hyperlink{classDate_a275c629c60d6f8d29440b1a89273b091}{set\+\_\+year} (const int \&\hyperlink{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}{year})
+\begin{DoxyCompactList}\small\item\em Define o ano da data. \end{DoxyCompactList}\item 
+\hyperlink{classDate}{Date} \hyperlink{classDate_a0c5386da90c6834a3e7a110b02e2abaa}{operator++} ()
+\begin{DoxyCompactList}\small\item\em Adiciona um dia à data. \end{DoxyCompactList}\item 
+\hyperlink{classDate}{Date} \hyperlink{classDate_a63f7060a7a7997e289e5e885f84557e5}{operator++} (int)
+\begin{DoxyCompactList}\small\item\em Adiciona um dia à data. \end{DoxyCompactList}\item 
+\hyperlink{classDate}{Date} \hyperlink{classDate_ae7b4f70781bb5775538fddb5f5d8e143}{operator-\/-\/} ()
+\begin{DoxyCompactList}\small\item\em Remove um dia da data. \end{DoxyCompactList}\item 
+\hyperlink{classDate}{Date} \hyperlink{classDate_ac2237a5f9f832bb521fe8f299a47db95}{operator-\/-\/} (int)
+\begin{DoxyCompactList}\small\item\em Remove um dia da data. \end{DoxyCompactList}\item 
+\hyperlink{classDate}{Date} \hyperlink{classDate_afed6ca708a5c8e9f201e760995002dd1}{operator-\/} (int)
+\begin{DoxyCompactList}\small\item\em Remove x dias da data. \end{DoxyCompactList}\item 
+\hyperlink{classDate}{Date} \hyperlink{classDate_a859a8d7af8cdbee73089732f59ab7492}{operator+} (int)
+\begin{DoxyCompactList}\small\item\em Adiciona x dias à data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDate_a000b73bb5ec170bcb9c55fe504ee1c3c}\label{classDate_a000b73bb5ec170bcb9c55fe504ee1c3c}} 
+int {\bfseries year\+\_\+}
+\item 
+\mbox{\Hypertarget{classDate_ae70a5a5a937ab5ce563cac90e3d8fd4d}\label{classDate_ae70a5a5a937ab5ce563cac90e3d8fd4d}} 
+int {\bfseries month\+\_\+}
+\item 
+\mbox{\Hypertarget{classDate_a041a2fed5be6c658737622fa367af5e4}\label{classDate_a041a2fed5be6c658737622fa367af5e4}} 
+int {\bfseries day\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Construtores \& Destrutores}
+\mbox{\Hypertarget{classDate_ad041535fef212285db248a489b7fe4ae}\label{classDate_ad041535fef212285db248a489b7fe4ae}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{\hyperlink{classDate}{Date} \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Constrói uma nova data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em date} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDate_af1ef20ba3c9dbcdef09a916f12a8b435}\label{classDate_af1ef20ba3c9dbcdef09a916f12a8b435}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{const int \&}]{d,  }\item[{const int \&}]{m,  }\item[{const int \&}]{y }\end{DoxyParamCaption})}
+
+
+
+Constrói uma nova data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & \\
+\hline
+{\em m} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDate_adb32ff7d8a6ce35ad6fe0642b77853b4}\label{classDate_adb32ff7d8a6ce35ad6fe0642b77853b4}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{std\+::string}]{date,  }\item[{std\+::string}]{separator }\end{DoxyParamCaption})}
+
+
+
+Constrói uma nova data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em date} & \\
+\hline
+{\em separator} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Métodos}
+\mbox{\Hypertarget{classDate_a42aff770b2b450b6b2d83789b9194d56}\label{classDate_a42aff770b2b450b6b2d83789b9194d56}} 
+\index{Date@{Date}!day@{day}}
+\index{day@{day}!Date@{Date}}
+\subsubsection{\texorpdfstring{day()}{day()}}
+{\footnotesize\ttfamily int Date\+::day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o dia da data. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_a82f550e37c8ff6a3709a256b2e43b762}\label{classDate_a82f550e37c8ff6a3709a256b2e43b762}} 
+\index{Date@{Date}!month@{month}}
+\index{month@{month}!Date@{Date}}
+\subsubsection{\texorpdfstring{month()}{month()}}
+{\footnotesize\ttfamily int Date\+::month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o mês da data. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_a859a8d7af8cdbee73089732f59ab7492}\label{classDate_a859a8d7af8cdbee73089732f59ab7492}} 
+\index{Date@{Date}!operator+@{operator+}}
+\index{operator+@{operator+}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date} Date\+::operator+ (\begin{DoxyParamCaption}\item[{int}]{days }\end{DoxyParamCaption})}
+
+
+
+Adiciona x dias à data. 
+
+\begin{DoxyReturn}{Retorna}
+\hyperlink{classDate}{Date} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_a0c5386da90c6834a3e7a110b02e2abaa}\label{classDate_a0c5386da90c6834a3e7a110b02e2abaa}} 
+\index{Date@{Date}!operator++@{operator++}}
+\index{operator++@{operator++}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date} Date\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adiciona um dia à data. 
+
+\begin{DoxyReturn}{Retorna}
+\hyperlink{classDate}{Date} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_a63f7060a7a7997e289e5e885f84557e5}\label{classDate_a63f7060a7a7997e289e5e885f84557e5}} 
+\index{Date@{Date}!operator++@{operator++}}
+\index{operator++@{operator++}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date} Date\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Adiciona um dia à data. 
+
+\begin{DoxyReturn}{Retorna}
+\hyperlink{classDate}{Date} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_afed6ca708a5c8e9f201e760995002dd1}\label{classDate_afed6ca708a5c8e9f201e760995002dd1}} 
+\index{Date@{Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date} Date\+::operator-\/ (\begin{DoxyParamCaption}\item[{int}]{days }\end{DoxyParamCaption})}
+
+
+
+Remove x dias da data. 
+
+\begin{DoxyReturn}{Retorna}
+\hyperlink{classDate}{Date} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_ae7b4f70781bb5775538fddb5f5d8e143}\label{classDate_ae7b4f70781bb5775538fddb5f5d8e143}} 
+\index{Date@{Date}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date} Date\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove um dia da data. 
+
+\begin{DoxyReturn}{Retorna}
+\hyperlink{classDate}{Date} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_ac2237a5f9f832bb521fe8f299a47db95}\label{classDate_ac2237a5f9f832bb521fe8f299a47db95}} 
+\index{Date@{Date}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date} Date\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Remove um dia da data. 
+
+\begin{DoxyReturn}{Retorna}
+\hyperlink{classDate}{Date} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_a7bd9d8f2f53cb54c151aff444fd3b4a6}\label{classDate_a7bd9d8f2f53cb54c151aff444fd3b4a6}} 
+\index{Date@{Date}!set\+\_\+day@{set\+\_\+day}}
+\index{set\+\_\+day@{set\+\_\+day}!Date@{Date}}
+\subsubsection{\texorpdfstring{set\+\_\+day()}{set\_day()}}
+{\footnotesize\ttfamily void Date\+::set\+\_\+day (\begin{DoxyParamCaption}\item[{const int \&}]{day }\end{DoxyParamCaption})}
+
+
+
+Define o dia da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em day} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDate_ab264919c7dfd3ea017fb5dc08af64796}\label{classDate_ab264919c7dfd3ea017fb5dc08af64796}} 
+\index{Date@{Date}!set\+\_\+month@{set\+\_\+month}}
+\index{set\+\_\+month@{set\+\_\+month}!Date@{Date}}
+\subsubsection{\texorpdfstring{set\+\_\+month()}{set\_month()}}
+{\footnotesize\ttfamily void Date\+::set\+\_\+month (\begin{DoxyParamCaption}\item[{const int \&}]{month }\end{DoxyParamCaption})}
+
+
+
+Define o mês da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em month} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDate_a275c629c60d6f8d29440b1a89273b091}\label{classDate_a275c629c60d6f8d29440b1a89273b091}} 
+\index{Date@{Date}!set\+\_\+year@{set\+\_\+year}}
+\index{set\+\_\+year@{set\+\_\+year}!Date@{Date}}
+\subsubsection{\texorpdfstring{set\+\_\+year()}{set\_year()}}
+{\footnotesize\ttfamily void Date\+::set\+\_\+year (\begin{DoxyParamCaption}\item[{const int \&}]{year }\end{DoxyParamCaption})}
+
+
+
+Define o ano da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em year} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDate_a03bd622b075b79a9c4e3a80552f8428e}\label{classDate_a03bd622b075b79a9c4e3a80552f8428e}} 
+\index{Date@{Date}!valid@{valid}}
+\index{valid@{valid}!Date@{Date}}
+\subsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool Date\+::valid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna true se a data for válida. 
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}\label{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}} 
+\index{Date@{Date}!year@{year}}
+\index{year@{year}!Date@{Date}}
+\subsubsection{\texorpdfstring{year()}{year()}}
+{\footnotesize\ttfamily int Date\+::year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o ano da data. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Date_8h}{Date.\+h}\item 
+src/classes/Date.\+cpp\end{DoxyCompactItemize}

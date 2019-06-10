@@ -1,0 +1,245 @@
+\hypertarget{classReptil}{}\section{Referência da Classe Reptil}
+\label{classReptil}\index{Reptil@{Reptil}}
+
+
+Diagrama de Hierarquia para Reptil\+:
+% FIG 0
+
+
+Diagrama de colaboração para Reptil\+:
+% FIG 1
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReptil_a8d4e391e335678b7ed64eda95e050553}\label{classReptil_a8d4e391e335678b7ed64eda95e050553}} 
+\hyperlink{classReptil_a8d4e391e335678b7ed64eda95e050553}{Reptil} ()
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo Réptil. \end{DoxyCompactList}\item 
+\hyperlink{classReptil_a5bd50bf15e8ee41022daf6b12d9c880e}{Reptil} (int id, std\+::string classe, std\+::string nome, std\+::string nome\+\_\+cientifico, char sexo, double tamanho, std\+::string dieta, \hyperlink{classVeterinario}{Veterinario} $\ast$veterinario, \hyperlink{classTratador}{Tratador} $\ast$tratador, std\+::string nome\+\_\+batismo, bool venenoso, std\+::string tipo\+\_\+veneno)
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo Réptil. \end{DoxyCompactList}\item 
+\hyperlink{classReptil_a5cf1117f6898fcc0a9e0ce9aed4a446c}{Reptil} (std\+::string classe, std\+::string nome, std\+::string nome\+\_\+cientifico, char sexo, double tamanho, std\+::string dieta, \hyperlink{classVeterinario}{Veterinario} $\ast$veterinario, \hyperlink{classTratador}{Tratador} $\ast$tratador, std\+::string nome\+\_\+batismo, bool venenoso, std\+::string tipo\+\_\+veneno)
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo Réptil. \end{DoxyCompactList}\item 
+\hyperlink{classReptil_a30f237a6e3666277eacd04d9d030e93d}{Reptil} (std\+::string nome, std\+::string nome\+\_\+cientifico, char sexo, double tamanho, std\+::string dieta, \hyperlink{classVeterinario}{Veterinario} $\ast$veterinario, \hyperlink{classTratador}{Tratador} $\ast$tratador, std\+::string nome\+\_\+batismo, bool venenoso, std\+::string tipo\+\_\+veneno)
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo Réptil. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReptil_a826ed679cc45f74fefecef7d4d40b409}\label{classReptil_a826ed679cc45f74fefecef7d4d40b409}} 
+\hyperlink{classReptil_a826ed679cc45f74fefecef7d4d40b409}{$\sim$\+Reptil} ()
+\begin{DoxyCompactList}\small\item\em Destrói o Réptil. \end{DoxyCompactList}\item 
+bool \hyperlink{classReptil_a07867a1252f279a1fd5afb576d0a5c9a}{is\+Venenoso} ()
+\item 
+void \hyperlink{classReptil_a9f7ab2a0e2b30040c7c9df48039a266a}{set\+Venenoso} (bool venenoso)
+\begin{DoxyCompactList}\small\item\em Define se o réptil é ou não venenoso. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classReptil_aa5e4cd3fa2d94916a3ba5cc20299d3cf}{get\+Tipo\+Veneno} ()
+\begin{DoxyCompactList}\small\item\em Retorna o Tipo de Veneno do réptil. \end{DoxyCompactList}\item 
+void \hyperlink{classReptil_a3a91e206459f45bf2f951e914b3bc195}{set\+Tipo\+Veneno} (std\+::string tipo\+\_\+veneno)
+\begin{DoxyCompactList}\small\item\em Define o tipo de veneno do réptil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \hyperlink{classReptil_a53fd59f3aed9c2d463722a8e97401406}{print\+In\+File} (int id)=0
+\begin{DoxyCompactList}\small\item\em Define a forma como o texto do Réptil será armazenado no banco. Será implementado pelas classes derivadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReptil_ac195c1dc9a0fa38bc0551034c609c434}\label{classReptil_ac195c1dc9a0fa38bc0551034c609c434}} 
+bool {\bfseries m\+\_\+venenoso}
+\item 
+\mbox{\Hypertarget{classReptil_a1773bdc4a44d99b03b2f989ae219f1dc}\label{classReptil_a1773bdc4a44d99b03b2f989ae219f1dc}} 
+std\+::string {\bfseries m\+\_\+tipo\+\_\+veneno}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Construtores \& Destrutores}
+\mbox{\Hypertarget{classReptil_a5bd50bf15e8ee41022daf6b12d9c880e}\label{classReptil_a5bd50bf15e8ee41022daf6b12d9c880e}} 
+\index{Reptil@{Reptil}!Reptil@{Reptil}}
+\index{Reptil@{Reptil}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{Reptil()}{Reptil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Reptil\+::\+Reptil (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{classe,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{nome\+\_\+cientifico,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{std\+::string}]{dieta,  }\item[{\hyperlink{classVeterinario}{Veterinario} $\ast$}]{veterinario,  }\item[{\hyperlink{classTratador}{Tratador} $\ast$}]{tratador,  }\item[{std\+::string}]{nome\+\_\+batismo,  }\item[{bool}]{venenoso,  }\item[{std\+::string}]{tipo\+\_\+veneno }\end{DoxyParamCaption})}
+
+
+
+Constrói um novo objeto do tipo Réptil. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & \\
+\hline
+{\em classe} & \\
+\hline
+{\em nome} & \\
+\hline
+{\em nome\+\_\+cientifico} & \\
+\hline
+{\em sexo} & \\
+\hline
+{\em tamanho} & \\
+\hline
+{\em dieta} & \\
+\hline
+{\em veterinario} & \\
+\hline
+{\em tratador} & \\
+\hline
+{\em nome\+\_\+batismo} & \\
+\hline
+{\em venenoso} & \\
+\hline
+{\em tipo\+\_\+veneno} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReptil_a5cf1117f6898fcc0a9e0ce9aed4a446c}\label{classReptil_a5cf1117f6898fcc0a9e0ce9aed4a446c}} 
+\index{Reptil@{Reptil}!Reptil@{Reptil}}
+\index{Reptil@{Reptil}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{Reptil()}{Reptil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Reptil\+::\+Reptil (\begin{DoxyParamCaption}\item[{std\+::string}]{classe,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{nome\+\_\+cientifico,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{std\+::string}]{dieta,  }\item[{\hyperlink{classVeterinario}{Veterinario} $\ast$}]{veterinario,  }\item[{\hyperlink{classTratador}{Tratador} $\ast$}]{tratador,  }\item[{std\+::string}]{nome\+\_\+batismo,  }\item[{bool}]{venenoso,  }\item[{std\+::string}]{tipo\+\_\+veneno }\end{DoxyParamCaption})}
+
+
+
+Constrói um novo objeto do tipo Réptil. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em classe} & \\
+\hline
+{\em nome} & \\
+\hline
+{\em nome\+\_\+cientifico} & \\
+\hline
+{\em sexo} & \\
+\hline
+{\em tamanho} & \\
+\hline
+{\em dieta} & \\
+\hline
+{\em veterinario} & \\
+\hline
+{\em tratador} & \\
+\hline
+{\em nome\+\_\+batismo} & \\
+\hline
+{\em venenoso} & \\
+\hline
+{\em tipo\+\_\+veneno} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReptil_a30f237a6e3666277eacd04d9d030e93d}\label{classReptil_a30f237a6e3666277eacd04d9d030e93d}} 
+\index{Reptil@{Reptil}!Reptil@{Reptil}}
+\index{Reptil@{Reptil}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{Reptil()}{Reptil()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Reptil\+::\+Reptil (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{nome\+\_\+cientifico,  }\item[{char}]{sexo,  }\item[{double}]{tamanho,  }\item[{std\+::string}]{dieta,  }\item[{\hyperlink{classVeterinario}{Veterinario} $\ast$}]{veterinario,  }\item[{\hyperlink{classTratador}{Tratador} $\ast$}]{tratador,  }\item[{std\+::string}]{nome\+\_\+batismo,  }\item[{bool}]{venenoso,  }\item[{std\+::string}]{tipo\+\_\+veneno }\end{DoxyParamCaption})}
+
+
+
+Constrói um novo objeto do tipo Réptil. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+{\em nome\+\_\+cientifico} & \\
+\hline
+{\em sexo} & \\
+\hline
+{\em tamanho} & \\
+\hline
+{\em dieta} & \\
+\hline
+{\em veterinario} & \\
+\hline
+{\em tratador} & \\
+\hline
+{\em nome\+\_\+batismo} & \\
+\hline
+{\em venenoso} & \\
+\hline
+{\em tipo\+\_\+veneno} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Métodos}
+\mbox{\Hypertarget{classReptil_aa5e4cd3fa2d94916a3ba5cc20299d3cf}\label{classReptil_aa5e4cd3fa2d94916a3ba5cc20299d3cf}} 
+\index{Reptil@{Reptil}!get\+Tipo\+Veneno@{get\+Tipo\+Veneno}}
+\index{get\+Tipo\+Veneno@{get\+Tipo\+Veneno}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{get\+Tipo\+Veneno()}{getTipoVeneno()}}
+{\footnotesize\ttfamily std\+::string Reptil\+::get\+Tipo\+Veneno (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o Tipo de Veneno do réptil. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReptil_a07867a1252f279a1fd5afb576d0a5c9a}\label{classReptil_a07867a1252f279a1fd5afb576d0a5c9a}} 
+\index{Reptil@{Reptil}!is\+Venenoso@{is\+Venenoso}}
+\index{is\+Venenoso@{is\+Venenoso}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{is\+Venenoso()}{isVenenoso()}}
+{\footnotesize\ttfamily bool Reptil\+::is\+Venenoso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReptil_a53fd59f3aed9c2d463722a8e97401406}\label{classReptil_a53fd59f3aed9c2d463722a8e97401406}} 
+\index{Reptil@{Reptil}!print\+In\+File@{print\+In\+File}}
+\index{print\+In\+File@{print\+In\+File}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{print\+In\+File()}{printInFile()}}
+{\footnotesize\ttfamily virtual std\+::string Reptil\+::print\+In\+File (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Define a forma como o texto do Réptil será armazenado no banco. Será implementado pelas classes derivadas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Id do objeto (utilizará o do auto incremento no momento de sua chamada). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string String formatada de como o objeto será armazenado no banco.. 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classAnimal_ac75406040726a6339932d70164cc7242}{Animal}.
+
+
+
+Implementado por \hyperlink{classReptilExotico_a71312f425b92e04d8f29a856abd83f26}{Reptil\+Exotico} e \hyperlink{classReptilNativo_ac801a11c87a2847fb4b46488aa6bb789}{Reptil\+Nativo}.
+
+\mbox{\Hypertarget{classReptil_a3a91e206459f45bf2f951e914b3bc195}\label{classReptil_a3a91e206459f45bf2f951e914b3bc195}} 
+\index{Reptil@{Reptil}!set\+Tipo\+Veneno@{set\+Tipo\+Veneno}}
+\index{set\+Tipo\+Veneno@{set\+Tipo\+Veneno}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{set\+Tipo\+Veneno()}{setTipoVeneno()}}
+{\footnotesize\ttfamily void Reptil\+::set\+Tipo\+Veneno (\begin{DoxyParamCaption}\item[{std\+::string}]{tipo\+\_\+veneno }\end{DoxyParamCaption})}
+
+
+
+Define o tipo de veneno do réptil. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tipo\+\_\+veneno} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReptil_a9f7ab2a0e2b30040c7c9df48039a266a}\label{classReptil_a9f7ab2a0e2b30040c7c9df48039a266a}} 
+\index{Reptil@{Reptil}!set\+Venenoso@{set\+Venenoso}}
+\index{set\+Venenoso@{set\+Venenoso}!Reptil@{Reptil}}
+\subsubsection{\texorpdfstring{set\+Venenoso()}{setVenenoso()}}
+{\footnotesize\ttfamily void Reptil\+::set\+Venenoso (\begin{DoxyParamCaption}\item[{bool}]{venenoso }\end{DoxyParamCaption})}
+
+
+
+Define se o réptil é ou não venenoso. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em venenoso} & \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/Reptil.\+h\item 
+src/classes/Reptil.\+cpp\end{DoxyCompactItemize}
