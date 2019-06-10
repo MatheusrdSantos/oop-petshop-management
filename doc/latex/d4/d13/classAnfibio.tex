@@ -1,0 +1,82 @@
+\hypertarget{classAnfibio}{}\section{Referência da Classe Anfibio}
+\label{classAnfibio}\index{Anfibio@{Anfibio}}
+
+
+Diagrama de Hierarquia para Anfibio\+:
+% FIG 0
+
+
+Diagrama de colaboração para Anfibio\+:
+% FIG 1
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAnfibio_a91fd9b91b9124ab41ea9e9c9bb013476}\label{classAnfibio_a91fd9b91b9124ab41ea9e9c9bb013476}} 
+\hyperlink{classAnfibio_a91fd9b91b9124ab41ea9e9c9bb013476}{Anfibio} ()
+\begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo Anfíbio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}\label{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}} 
+\hyperlink{classAnfibio_a53bb71a1ed0e79c5fc41a62a0af9060c}{$\sim$\+Anfibio} ()
+\begin{DoxyCompactList}\small\item\em Destrói o objeto do tipo \hyperlink{classAnimal}{Animal}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \hyperlink{classAnfibio_ab866ca21fb00c2d4d571aadd271eadec}{print\+In\+File} (int id)=0
+\begin{DoxyCompactList}\small\item\em Define a forma como o texto do Anfíbio será armazenada no banco, se altera dependendo da classe derivada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classAnfibio_a994200134b0d314e3db0ac5c781bb7e7}{m\+\_\+total\+\_\+de\+\_\+mudas}
+\item 
+\hyperlink{classDate}{Date} $\ast$ \hyperlink{classAnfibio_abc4969388066028d800dd134d3fc3ae9}{m\+\_\+ultima\+\_\+muda}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Métodos}
+\mbox{\Hypertarget{classAnfibio_ab866ca21fb00c2d4d571aadd271eadec}\label{classAnfibio_ab866ca21fb00c2d4d571aadd271eadec}} 
+\index{Anfibio@{Anfibio}!print\+In\+File@{print\+In\+File}}
+\index{print\+In\+File@{print\+In\+File}!Anfibio@{Anfibio}}
+\subsubsection{\texorpdfstring{print\+In\+File()}{printInFile()}}
+{\footnotesize\ttfamily virtual std\+::string Anfibio\+::print\+In\+File (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Define a forma como o texto do Anfíbio será armazenada no banco, se altera dependendo da classe derivada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Id do objeto (utilizará o do auto incremento no momento de sua chamada). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string String formatada de como o objeto será armazenado no banco.. 
+\end{DoxyReturn}
+
+
+Implementa \hyperlink{classAnimal_ac75406040726a6339932d70164cc7242}{Animal}.
+
+
+
+Implementado por \hyperlink{classAnfibioExotico_a08d9debec54258a0f43c8c503dfb23d0}{Anfibio\+Exotico} e \hyperlink{classAnfibioNativo_a7926e1af44542ee268e27dd3d862f583}{Anfibio\+Nativo}.
+
+
+
+\subsection{Atributos}
+\mbox{\Hypertarget{classAnfibio_a994200134b0d314e3db0ac5c781bb7e7}\label{classAnfibio_a994200134b0d314e3db0ac5c781bb7e7}} 
+\index{Anfibio@{Anfibio}!m\+\_\+total\+\_\+de\+\_\+mudas@{m\+\_\+total\+\_\+de\+\_\+mudas}}
+\index{m\+\_\+total\+\_\+de\+\_\+mudas@{m\+\_\+total\+\_\+de\+\_\+mudas}!Anfibio@{Anfibio}}
+\subsubsection{\texorpdfstring{m\+\_\+total\+\_\+de\+\_\+mudas}{m\_total\_de\_mudas}}
+{\footnotesize\ttfamily int Anfibio\+::m\+\_\+total\+\_\+de\+\_\+mudas\hspace{0.3cm}{\ttfamily [protected]}}
+
+Define o total de mudas de cada Anfíbio. O id é único. \mbox{\Hypertarget{classAnfibio_abc4969388066028d800dd134d3fc3ae9}\label{classAnfibio_abc4969388066028d800dd134d3fc3ae9}} 
+\index{Anfibio@{Anfibio}!m\+\_\+ultima\+\_\+muda@{m\+\_\+ultima\+\_\+muda}}
+\index{m\+\_\+ultima\+\_\+muda@{m\+\_\+ultima\+\_\+muda}!Anfibio@{Anfibio}}
+\subsubsection{\texorpdfstring{m\+\_\+ultima\+\_\+muda}{m\_ultima\_muda}}
+{\footnotesize\ttfamily \hyperlink{classDate}{Date}$\ast$ Anfibio\+::m\+\_\+ultima\+\_\+muda\hspace{0.3cm}{\ttfamily [protected]}}
+
+Define quando o Anfíbio teve sua última muda. new \hyperlink{classDate}{Date(0,0,0)} para nunca (default). 
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/Anfibio.\+h\item 
+src/classes/Anfibio.\+cpp\end{DoxyCompactItemize}

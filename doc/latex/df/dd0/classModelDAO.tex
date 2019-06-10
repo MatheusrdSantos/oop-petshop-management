@@ -1,0 +1,93 @@
+\hypertarget{classModelDAO}{}\section{Referência da Template de Classe Model\+D\+AO$<$ T $>$}
+\label{classModelDAO}\index{Model\+D\+A\+O$<$ T $>$@{Model\+D\+A\+O$<$ T $>$}}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModelDAO_a25e5429057e7735f387fc7e7180be741}\label{classModelDAO_a25e5429057e7735f387fc7e7180be741}} 
+\hyperlink{classModelDAO}{Model\+D\+AO} {\bfseries find} (int id)
+\item 
+std\+::list$<$ \hyperlink{classModelDAO}{Model\+D\+AO} $>$ \hyperlink{classModelDAO_a241c58f7a4fcdbd60ded4cc65a77befd}{where} (std\+::string expression)
+\begin{DoxyCompactList}\small\item\em Retorna uma lista dos objetos de uma tabela. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classModelDAO_a6dac34cd99166100f3c5b5b048b967b3}\label{classModelDAO_a6dac34cd99166100f3c5b5b048b967b3}} 
+bool {\bfseries update} (std\+::string expression)
+\item 
+\mbox{\Hypertarget{classModelDAO_adb72057c110a91a3015794a8ec4aa5e9}\label{classModelDAO_adb72057c110a91a3015794a8ec4aa5e9}} 
+bool {\bfseries remove} (std\+::string expression)
+\item 
+int \hyperlink{classModelDAO_a24cf7f88d833dba6424271767403cbda}{get\+Table\+Increment\+Id} (std\+::string table\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Retorna o id de incremento dada um nome de tabela por parâmetro. \end{DoxyCompactList}\item 
+bool \hyperlink{classModelDAO_af524ba9765af94ca633587d3ecf8964b}{update\+Auto\+Increment} (std\+::string table\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Incrementa e atualiza o id na tabela de auto incremento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModelDAO_ad34aa526be65334b13793a79f3f6fea9}\label{classModelDAO_ad34aa526be65334b13793a79f3f6fea9}} 
+static \hyperlink{classcsv_1_1Parser}{csv\+::\+Parser} {\bfseries read\+Table} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Métodos}
+\mbox{\Hypertarget{classModelDAO_a24cf7f88d833dba6424271767403cbda}\label{classModelDAO_a24cf7f88d833dba6424271767403cbda}} 
+\index{Model\+D\+AO@{Model\+D\+AO}!get\+Table\+Increment\+Id@{get\+Table\+Increment\+Id}}
+\index{get\+Table\+Increment\+Id@{get\+Table\+Increment\+Id}!Model\+D\+AO@{Model\+D\+AO}}
+\subsubsection{\texorpdfstring{get\+Table\+Increment\+Id()}{getTableIncrementId()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+int \hyperlink{classModelDAO}{Model\+D\+AO}$<$ T $>$\+::get\+Table\+Increment\+Id (\begin{DoxyParamCaption}\item[{std\+::string}]{table\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o id de incremento dada um nome de tabela por parâmetro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em table\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelDAO_af524ba9765af94ca633587d3ecf8964b}\label{classModelDAO_af524ba9765af94ca633587d3ecf8964b}} 
+\index{Model\+D\+AO@{Model\+D\+AO}!update\+Auto\+Increment@{update\+Auto\+Increment}}
+\index{update\+Auto\+Increment@{update\+Auto\+Increment}!Model\+D\+AO@{Model\+D\+AO}}
+\subsubsection{\texorpdfstring{update\+Auto\+Increment()}{updateAutoIncrement()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \hyperlink{classModelDAO}{Model\+D\+AO}$<$ T $>$\+::update\+Auto\+Increment (\begin{DoxyParamCaption}\item[{std\+::string}]{table\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Incrementa e atualiza o id na tabela de auto incremento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em table\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModelDAO_a241c58f7a4fcdbd60ded4cc65a77befd}\label{classModelDAO_a241c58f7a4fcdbd60ded4cc65a77befd}} 
+\index{Model\+D\+AO@{Model\+D\+AO}!where@{where}}
+\index{where@{where}!Model\+D\+AO@{Model\+D\+AO}}
+\subsubsection{\texorpdfstring{where()}{where()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+std\+::list$<$\hyperlink{classModelDAO}{Model\+D\+AO}$>$ \hyperlink{classModelDAO}{Model\+D\+AO}$<$ T $>$\+::where (\begin{DoxyParamCaption}\item[{std\+::string}]{expression }\end{DoxyParamCaption})}
+
+
+
+Retorna uma lista dos objetos de uma tabela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em expression} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::list$<$\+Model\+D\+A\+O$>$ 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/Model\+D\+A\+O.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classcsv_1_1Parser}{}\section{Referência da Classe csv\+:\+:Parser}
+\label{classcsv_1_1Parser}\index{csv\+::\+Parser@{csv\+::\+Parser}}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_a071974187e0ac4496713458a66794194}\label{classcsv_1_1Parser_a071974187e0ac4496713458a66794194}} 
+{\bfseries Parser} (const std\+::string \&, const Data\+Type \&type=e\+F\+I\+LE, char sep=\textquotesingle{},\textquotesingle{})
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_a583d39d5370197d910bbd6374ac44528}\label{classcsv_1_1Parser_a583d39d5370197d910bbd6374ac44528}} 
+\hyperlink{classcsv_1_1Row}{Row} \& {\bfseries get\+Row} (unsigned int row) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_ac37f144d86cc564c73563a6188981c1a}\label{classcsv_1_1Parser_ac37f144d86cc564c73563a6188981c1a}} 
+unsigned int {\bfseries row\+Count} (void) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_abb8dbe6330c227b4f072fdf122694c61}\label{classcsv_1_1Parser_abb8dbe6330c227b4f072fdf122694c61}} 
+unsigned int {\bfseries column\+Count} (void) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_a4da6b8c64ed0eea017856b0f27b449bd}\label{classcsv_1_1Parser_a4da6b8c64ed0eea017856b0f27b449bd}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries get\+Header} (void) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_ad970f42fbdce0dd594ed4e0170bbf7a8}\label{classcsv_1_1Parser_ad970f42fbdce0dd594ed4e0170bbf7a8}} 
+const std\+::string {\bfseries get\+Header\+Element} (unsigned int pos) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_a71f328f9a2393fa05c616602384890d0}\label{classcsv_1_1Parser_a71f328f9a2393fa05c616602384890d0}} 
+const std\+::string \& {\bfseries get\+File\+Name} (void) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_aeab2365b2a5479563be5b0ab93355d3c}\label{classcsv_1_1Parser_aeab2365b2a5479563be5b0ab93355d3c}} 
+bool {\bfseries delete\+Row} (unsigned int row)
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_ae7a0f306922cc4b2b0821051c964fb58}\label{classcsv_1_1Parser_ae7a0f306922cc4b2b0821051c964fb58}} 
+bool {\bfseries add\+Row} (unsigned int pos, const std\+::vector$<$ std\+::string $>$ \&)
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_aae4f2ef5f35a4e24e017e4c89cfd924b}\label{classcsv_1_1Parser_aae4f2ef5f35a4e24e017e4c89cfd924b}} 
+void {\bfseries sync} (void) const
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_a64d7144f88ba0d2dad602ef836aa3338}\label{classcsv_1_1Parser_a64d7144f88ba0d2dad602ef836aa3338}} 
+\hyperlink{classcsv_1_1Row}{Row} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (unsigned int row) const
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_a886ff444126f46270a6d5cf7a8d582ca}\label{classcsv_1_1Parser_a886ff444126f46270a6d5cf7a8d582ca}} 
+void {\bfseries parse\+Header} (void)
+\item 
+\mbox{\Hypertarget{classcsv_1_1Parser_ae384e4f89bfbd12871da9f4ddc3e6e0c}\label{classcsv_1_1Parser_ae384e4f89bfbd12871da9f4ddc3e6e0c}} 
+void {\bfseries parse\+Content} (void)
+\end{DoxyCompactItemize}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/C\+S\+Vparser.\+hpp\item 
+src/classes/C\+S\+Vparser.\+cpp\end{DoxyCompactItemize}
