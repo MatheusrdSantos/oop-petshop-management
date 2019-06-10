@@ -20,36 +20,10 @@ class ModelDAO{
     protected:
 
     public:
-        /*
-        *   Create
-        */
-
-        /*
-        *   Read
-        */
-        ModelDAO find(int id);
-
-        /**
-         * @brief Retorna uma lista dos objetos de uma tabela.
-         * 
-         * @param expression 
-         * @return std::list<ModelDAO> 
-         */
-        std::list<ModelDAO> where(std::string expression); 
         static csv::Parser readTable(){
             csv::Parser file = csv::Parser(T::filePath, csv::DataType(0), ';');
             return file;
         };
- 
-        /*
-        *   Update
-        */
-       bool update(std::string expression);
-
-        /*
-        *   Delete
-        */
-       bool remove(std::string expression);
 
        /**
         * @brief Retorna o id de incremento dada um nome de tabela por parâmetro.
