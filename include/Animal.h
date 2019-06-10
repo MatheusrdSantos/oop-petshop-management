@@ -230,6 +230,28 @@ class Animal : public ModelDAO<Animal>{
          * @return false 
          */
         bool remove();
+
+        /**
+         * @brief Seleciona os animais com base em um filtro especificado
+         * 
+         * @param column
+         * @param symbol
+         * @param value
+         * 
+         * @return std::multimap<std::string, Animal*>  
+         */
+        static std::multimap<std::string, Animal*> where(std::string* column, std::string* symbol, std::string* value);
+        
+        /**
+         * @brief Seleciona os animais com base em um filtro especificado
+         * 
+         * @param column
+         * @param symbol
+         * @param value
+         * 
+         * @return std::multimap<std::string, Animal*>  
+         */
+        static std::multimap<std::string, Animal*> where(std::string* column, std::string* symbol, int value);
         
 };
 

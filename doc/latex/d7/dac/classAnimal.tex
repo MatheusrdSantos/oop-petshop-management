@@ -69,7 +69,11 @@ static std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ 
 static \hyperlink{classAnimal}{Animal} $\ast$ \hyperlink{classAnimal_a8b0e3217c72fa8de0316828c6385dd99}{build\+Animal\+From\+File} (\hyperlink{classcsv_1_1Row}{csv\+::\+Row} $\ast$file)
 \begin{DoxyCompactList}\small\item\em Constrói um único animal de uma linha do arquivo. \end{DoxyCompactList}\item 
 static \hyperlink{classAnimal}{Animal} $\ast$ \hyperlink{classAnimal_aac52a938d9c55280467c9f6e9564df95}{find} (int id)
-\begin{DoxyCompactList}\small\item\em Retorna um animal passado o id por parâmetro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retorna um animal passado o id por parâmetro. \end{DoxyCompactList}\item 
+static std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ \hyperlink{classAnimal_a42e0c72ec2c9881cbf5d1be57c418cc5}{where} (std\+::string $\ast$column, std\+::string $\ast$symbol, std\+::string $\ast$value)
+\begin{DoxyCompactList}\small\item\em Seleciona os animais com base em um filtro especificado. \end{DoxyCompactList}\item 
+static std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ \hyperlink{classAnimal_a82f0fbbdb2064d8235e9037e48f706b3}{where} (std\+::string $\ast$column, std\+::string $\ast$symbol, int value)
+\begin{DoxyCompactList}\small\item\em Seleciona os animais com base em um filtro especificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Estáticos Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -509,6 +513,50 @@ Atualiza o animal no banco.
 true 
 
 false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a42e0c72ec2c9881cbf5d1be57c418cc5}\label{classAnimal_a42e0c72ec2c9881cbf5d1be57c418cc5}} 
+\index{Animal@{Animal}!where@{where}}
+\index{where@{where}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{where()}{where()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ Animal\+::where (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{column,  }\item[{std\+::string $\ast$}]{symbol,  }\item[{std\+::string $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Seleciona os animais com base em um filtro especificado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column} & \\
+\hline
+{\em symbol} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::multimap$<$std\+::string, Animal$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAnimal_a82f0fbbdb2064d8235e9037e48f706b3}\label{classAnimal_a82f0fbbdb2064d8235e9037e48f706b3}} 
+\index{Animal@{Animal}!where@{where}}
+\index{where@{where}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{where()}{where()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ Animal\+::where (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{column,  }\item[{std\+::string $\ast$}]{symbol,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Seleciona os animais com base em um filtro especificado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column} & \\
+\hline
+{\em symbol} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::multimap$<$std\+::string, Animal$\ast$$>$ 
 \end{DoxyReturn}
 
 

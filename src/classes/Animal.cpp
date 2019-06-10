@@ -42,6 +42,14 @@ void Animal::setId(int id){
     m_id = id;
 }
 
+std::string Animal::getClasse(){
+    return m_classe;
+}
+
+void Animal::setClasse(std::string classe){
+    m_classe = classe;
+}
+
 std::multimap<std::string, Animal*> Animal::all(){
 
     csv::Parser file = ModelDAO<Animal>::readTable();
@@ -249,4 +257,37 @@ bool Animal::remove(){
 
     write_file.close();
     return true;
+}
+
+std::multimap<std::string, Animal*> Animal::where(std::string* column, std::string* symbol, std::string* value){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    std::multimap<std::string,Animal*> animais;
+    int n_rows = file.rowCount();
+    for (int i = 0; i < n_rows; i++)
+    {
+        std::string val = file[i][(*column)];
+        if(compare(&val, value, symbol)){
+            Animal* animal = Animal::buildAnimalFromFile(&file[i]);
+            /* faz o downcasting para tratador ou veterinario */
+            animais.insert(std::pair<std::string, Animal*>(animal->getClasse(), animal));
+        }
+    }
+    return animais;
+}
+
+std::multimap<std::string, Animal*> Animal::where(std::string* column, std::string* symbol, int value){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    std::multimap<std::string,Animal*> animais;
+    int n_rows = file.rowCount();
+    std::vector<std::string> header = file.getHeader();
+    for (int i = 0; i < n_rows; i++)
+    {
+        int val = std::stoi(file[i][(*column)]);
+        if(compare(val, value, symbol)){
+            Animal* animal = Animal::buildAnimalFromFile(&file[i]);
+            /* faz o downcasting para tratador ou veterinario */
+            animais.insert(std::pair<std::string, Animal*>(animal->getClasse(), animal)); 
+        }
+    }
+    return animais;
 }

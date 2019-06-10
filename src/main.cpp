@@ -58,6 +58,15 @@ int main(int argc, char const *argv[])
     std::cout<<"Find test: "<<std::endl;
     std::cout<<Animal::find(4)->getNomeBatismo()<<std::endl;
     
+    std::string column = "veterinario_id";
+    std::string symbol = "==";
+    std::string value = "Piu-piu";
+    std::multimap<std::string,Animal*> animals_where = Animal::where(&column, &symbol, &value);
+    
+    std::cout << "select where contains:\n";
+    for (auto it=animals_where.begin(); it!=animals_where.end(); ++it){
+        std::cout << (*it).first << " => " << (*it).second->getNomeBatismo() << '\n';
+    }
     /* Animal* animal = Animal::find(4);
     animal->setNomeBatismo("Jurema");
     animal->update();
