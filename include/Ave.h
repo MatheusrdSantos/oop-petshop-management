@@ -12,6 +12,12 @@ class Ave : public Animal{
         double m_tamanho_do_bico_cm; /*< Define o tamanho do bico em cm da Ave. */
         double m_envergadura_das_asas; /*< Define a envergadura das asas da Ave. */
 
+        /**
+         * @brief Define a forma como o texto da Ave será armazenado no banco.
+         * 
+         * @param id 
+         * @return std::string 
+         */
         virtual std::string printInFile(int id) = 0;
     public:
         /**
