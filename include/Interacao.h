@@ -8,20 +8,43 @@
 #include "Tratador.h"
 #include "Veterinario.h"
 
-//Inicia o programa
+/**
+ * @brief Inicia o programa
+ * 
+ */
 void run();
 
-//Mostra o menu encaminhando o usuário para as funções do programa
+/**
+ * @brief Mostra o menu encaminhando o usuário para as funções do programa
+ * 
+ * @param escolha 
+ */
 void menu(int &escolha);
 
-//Modificadores de cor de texto
+/**
+ * @brief Modificadores da cor do texto para vermelho
+ * 
+ * @param texto 
+ */
 void textColor_red(std::string texto);
+
+/**
+ * @brief Modificadores da cor do texto para amarelo
+ * 
+ * @param texto 
+ */
 void textColor_yellow(std::string texto);
 
-//Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
+/**
+ * @brief Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
+ * 
+ */
 void listAll_Funcionarios();
 
-//Adiciona um novo funcionário no banco de dados
+/**
+ * @brief Adiciona um novo funcionário no banco de dados
+ * 
+ */
 void add_Funcionario();
 
 #endif
