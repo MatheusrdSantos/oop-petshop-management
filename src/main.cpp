@@ -61,7 +61,7 @@ int main(int argc, char const *argv[])
     std::cout<<"Find test: "<<std::endl;
     std::cout<<Animal::find(4)->getNomeBatismo()<<std::endl;
     
-    std::string column = "veterinario_id";
+    std::string column = "nome_batismo";
     std::string symbol = "==";
     std::string value = "Piu-piu";
     std::multimap<std::string,Animal*> animals_where = Animal::where(&column, &symbol, &value);

@@ -3,17 +3,6 @@
 \subsection*{Métodos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classModelDAO_a25e5429057e7735f387fc7e7180be741}\label{classModelDAO_a25e5429057e7735f387fc7e7180be741}} 
-\hyperlink{classModelDAO}{Model\+D\+AO} {\bfseries find} (int id)
-\item 
-std\+::list$<$ \hyperlink{classModelDAO}{Model\+D\+AO} $>$ \hyperlink{classModelDAO_a241c58f7a4fcdbd60ded4cc65a77befd}{where} (std\+::string expression)
-\begin{DoxyCompactList}\small\item\em Retorna uma lista dos objetos de uma tabela. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classModelDAO_a6dac34cd99166100f3c5b5b048b967b3}\label{classModelDAO_a6dac34cd99166100f3c5b5b048b967b3}} 
-bool {\bfseries update} (std\+::string expression)
-\item 
-\mbox{\Hypertarget{classModelDAO_adb72057c110a91a3015794a8ec4aa5e9}\label{classModelDAO_adb72057c110a91a3015794a8ec4aa5e9}} 
-bool {\bfseries remove} (std\+::string expression)
-\item 
 int \hyperlink{classModelDAO_a24cf7f88d833dba6424271767403cbda}{get\+Table\+Increment\+Id} (std\+::string table\+\_\+name)
 \begin{DoxyCompactList}\small\item\em Retorna o id de incremento dada um nome de tabela por parâmetro. \end{DoxyCompactList}\item 
 bool \hyperlink{classModelDAO_af524ba9765af94ca633587d3ecf8964b}{update\+Auto\+Increment} (std\+::string table\+\_\+name)
@@ -66,25 +55,6 @@ Incrementa e atualiza o id na tabela de auto incremento.
 true 
 
 false 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classModelDAO_a241c58f7a4fcdbd60ded4cc65a77befd}\label{classModelDAO_a241c58f7a4fcdbd60ded4cc65a77befd}} 
-\index{Model\+D\+AO@{Model\+D\+AO}!where@{where}}
-\index{where@{where}!Model\+D\+AO@{Model\+D\+AO}}
-\subsubsection{\texorpdfstring{where()}{where()}}
-{\footnotesize\ttfamily template$<$class T$>$ \\
-std\+::list$<$\hyperlink{classModelDAO}{Model\+D\+AO}$>$ \hyperlink{classModelDAO}{Model\+D\+AO}$<$ T $>$\+::where (\begin{DoxyParamCaption}\item[{std\+::string}]{expression }\end{DoxyParamCaption})}
-
-
-
-Retorna uma lista dos objetos de uma tabela. 
-
-
-\begin{DoxyParams}{Parâmetros}
-{\em expression} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Retorna}
-std\+::list$<$\+Model\+D\+A\+O$>$ 
 \end{DoxyReturn}
 
 
