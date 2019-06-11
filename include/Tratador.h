@@ -41,7 +41,7 @@ class Tratador : public Funcionario{
          * @param especialidade 
          * @param nivel_de_seguranca 
          */
-        Tratador(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
+        Tratador(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
         
         /**
          * @brief Constrói um novo objeto do tipo Tratador.
@@ -54,7 +54,7 @@ class Tratador : public Funcionario{
          * @param especialidade 
          * @param nivel_de_seguranca 
          */
-        Tratador(std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
+        Tratador(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca);
         
         /**
          * @brief Destrói o Tratador.

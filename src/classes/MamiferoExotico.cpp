@@ -96,8 +96,8 @@ std::ostream& MamiferoExotico::print(std::ostream& os) const{
             "Tratador =>"<<""<<std::endl<<
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Pais origem =>"<<m_pais_origem<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
             std::endl;
         }else{
@@ -113,8 +113,8 @@ std::ostream& MamiferoExotico::print(std::ostream& os) const{
             "Tratador =>"<<""<<std::endl<<
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Pais origem =>"<<m_pais_origem<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
             std::endl;
         }
@@ -132,8 +132,8 @@ std::ostream& MamiferoExotico::print(std::ostream& os) const{
             "Tratador =>"<<""<<std::endl<<
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Pais origem =>"<<m_pais_origem<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
             std::endl;
         }else{
@@ -149,8 +149,8 @@ std::ostream& MamiferoExotico::print(std::ostream& os) const{
             "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Pais origem =>"<<m_pais_origem<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
             std::endl;
         }
@@ -167,8 +167,8 @@ std::ostream& MamiferoExotico::print(std::ostream& os) const{
             "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Pais origem =>"<<m_pais_origem<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
             std::endl;
     }        

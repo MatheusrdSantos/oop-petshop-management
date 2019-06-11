@@ -1,6 +1,6 @@
 #include "../../include/Tratador.h"
 
-Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
+Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
     m_id = id;
     m_nome = nome;
     m_cpf = cpf;
@@ -11,7 +11,7 @@ Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, short
     m_nivel_de_seguranca = nivel_de_seguranca;
 
 }
-Tratador::Tratador(std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
+Tratador::Tratador(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
     m_nome = nome;
     m_cpf = cpf;
     m_idade = idade;

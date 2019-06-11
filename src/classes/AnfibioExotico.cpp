@@ -68,7 +68,7 @@ std::ostream& AnfibioExotico::print(std::ostream& os) const{
             "Pais origem =>"<<m_pais_origem<<std::endl<<
             "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
-            "Última muda =>"<<m_ultima_muda<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
             std::endl;
         }else{
             return os<<
@@ -86,7 +86,7 @@ std::ostream& AnfibioExotico::print(std::ostream& os) const{
             "Pais origem =>"<<m_pais_origem<<std::endl<<
             "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
-            "Última muda =>"<<m_ultima_muda<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
             std::endl;
         }
     }else if(m_veterinario == NULL){
@@ -106,7 +106,7 @@ std::ostream& AnfibioExotico::print(std::ostream& os) const{
             "Pais origem =>"<<m_pais_origem<<std::endl<<
             "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
-            "Última muda =>"<<m_ultima_muda<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
             std::endl;
         }else{
             return os<<
@@ -124,7 +124,7 @@ std::ostream& AnfibioExotico::print(std::ostream& os) const{
             "Pais origem =>"<<m_pais_origem<<std::endl<<
             "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
-            "Última muda =>"<<m_ultima_muda<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
             std::endl;
         }
     }else{
@@ -143,7 +143,7 @@ std::ostream& AnfibioExotico::print(std::ostream& os) const{
             "Pais origem =>"<<m_pais_origem<<std::endl<<
             "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
             "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
-            "Última muda =>"<<m_ultima_muda<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
             std::endl;
     }        
 }
