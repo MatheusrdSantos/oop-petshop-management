@@ -39,16 +39,14 @@ void Veterinario::setCnmv(std::string cnmv){
     m_cnmv = cnmv;
 }
 
-std::ostream& operator << (std::ostream& os, Veterinario& veterinario){
-    os<<std::endl
-        <<"Veterinário: "         <<veterinario.getNome()<<std::endl
-        <<"   => CPF: "           <<veterinario.getCpf()<<std::endl
-        <<"   => Idade: "         <<veterinario.getIdade()<<std::endl
-        <<"   => Típo Sanguíneo: "<<veterinario.getTipoSanguineo()<<std::endl
-        <<"   => Fator RH: "      <<veterinario.getFatorRh()<<std::endl
-        <<"   => Especialidade: " <<veterinario.getEspecialidade()<<std::endl
-        <<"   => CNMV: "          <<veterinario.getCnmv()<<std::endl
+std::ostream& Veterinario::print(std::ostream& os) const{
+    return os<<std::endl
+        <<"Veterinario: "             <<m_nome<<std::endl
+        <<"   => CPF: "               <<m_cpf<<std::endl
+        <<"   => Idade: "             <<m_idade<<std::endl
+        <<"   => Típo Sanguíneo: "    <<m_tipo_sanguineo<<std::endl
+        <<"   => Fator RH: "          <<m_fator_rh<<std::endl
+        <<"   => Especialidade: "     <<m_especialidade<<std::endl
+        <<"   => CNMV: "              <<m_cnmv<<std::endl
         <<std::endl;
-        
-    return os;
 }

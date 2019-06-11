@@ -22,6 +22,8 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @return Funcionario* 
          */
         static Funcionario* buildFuncionarioFromFile(csv::Row* file);
+
+        virtual std::ostream& print(std::ostream&) const = 0;
     protected:
         int m_id; /*< id do Funcionário. O id é único. */
         std::string m_nome; /*< Nome do Funcionário. */
@@ -75,7 +77,6 @@ class Funcionario : public ModelDAO<Funcionario>{
 
         static std::string filePath; /**< Define o caminho para a tabela que armazenará os Animais. */
         static std::string tableName; /**< Define o nome para a tabela que armazenará os Animais, tal valor é utilizado para os ids de autoincremento. */
-
 
         /**
          * @brief Retorna todos os funcionários armazenados no banco.
@@ -241,16 +242,8 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @param d 
          * @return std::ostream& 
          */
-        friend std::ostream& operator << (std::ostream& os, Funcionario& funcionario);
+        friend std::ostream& operator << (std::ostream& os, const Funcionario& f);
 
-        /**
-         * @brief Saída para print de um funcionário e suas classes filhas.
-         * 
-         * @param std::string
-         * @param Funcionario*
-         * @return void
-         */
-        //void printFuncionario(auto cargo, Funcionario* funcionario);
 };
     
 #endif

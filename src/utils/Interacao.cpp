@@ -64,14 +64,7 @@ void listAll_Funcionarios(){
         std::cout<<std::endl;
     }else{
         for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
-            //it->second->printFuncionario();
-            if(it->first == "tratador"){
-                Tratador *tratador = (Tratador *) (it->second);
-                std::cout<< *tratador;
-            }else{
-                Veterinario *veterinario = (Veterinario *) (it->second);
-                std::cout<< *veterinario;
-            }
+            std::cout<< *(it->second);
         }
     }
 }

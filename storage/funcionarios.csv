@@ -1,1 +1,5 @@
 id;funcao;nome;cpf;idade;tipo_sangue;fator_rh;especialidade;codigo_cnmv;nivel_seguranca
+0;Tratador;Jose;7033;32;2;H;limpar;;1
+1;Veterinario;Arnaldo;7013411;21;2;H;cura;aa;
+2;Tratador;Jose;7033;32;2;H;limpar;;1
+3;Veterinario;Arnaldo;7013411;21;2;H;cura;aa;

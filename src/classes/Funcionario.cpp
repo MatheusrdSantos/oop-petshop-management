@@ -274,18 +274,8 @@ bool Funcionario::remove(){
     return true;
 }
 
-std::ostream& operator << (std::ostream& os, Funcionario& funcionario){
-    os<<funcionario.getNome();
 
-    return os;
+
+std::ostream& operator << (std::ostream& os, const Funcionario& f){
+    return f.print(os);
 }
-
-/*void printFuncionario(auto cargo, Funcionario* funcionario){
-    if(cargo == "tratador"){
-        Tratador *tratador = (Tratador *) funcionario;
-        std::cout<< *tratador;
-    }else{
-        Veterinario *veterinario = (Veterinario *) funcionario;
-        std::cout<< *veterinario;
-    }
-}*/
