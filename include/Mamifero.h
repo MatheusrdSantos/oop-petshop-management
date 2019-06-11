@@ -8,6 +8,7 @@
 class Mamifero : public Animal{
     private:
 
+        virtual std::ostream& print(std::ostream&) const = 0;
     protected:
         std::string m_cor_do_pelo; /*< Define a cor do pelo de um mamifero*/
 
@@ -19,6 +20,7 @@ class Mamifero : public Animal{
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         virtual std::string printInFile(int id) = 0;
+
     public:
         /**     
          * @brief Constrói um novo objeto do tipo Mamífero
