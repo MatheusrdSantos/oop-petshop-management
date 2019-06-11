@@ -7,7 +7,7 @@
 
 class MamiferoNativo : public Mamifero, public AnimalNativo{
     private:
-
+        std::ostream& print(std::ostream& os) const;
     protected:
     
         /**
