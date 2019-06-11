@@ -74,6 +74,13 @@ class Tratador : public Funcionario{
          * @param nivel_de_seguranca 
          */
         void setNivelDeSeguranca(int nivel_de_seguranca);
+
+        /**
+         * @brief Define a forma como o texto do Tratador será impresso.
+         * 
+         * @return std::string String formatada de como o objeto será recebido para impressão.. 
+         */
+        friend std::ostream& operator << (std::ostream& os, Tratador& tratador);
 };
     
 #endif

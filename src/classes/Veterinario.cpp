@@ -27,7 +27,6 @@ std::string Veterinario::printInFile(int id){
     ss<<id<<';'<<"Veterinario"<<';'<<m_nome<<';'<<m_cpf<<';'<<m_idade<<';'<<m_tipo_sanguineo<<';'<<m_fator_rh<<';'<<m_especialidade<<";"<<m_cnmv<<";"<<std::endl;
     std::string s = ss.str();
     return s;
-
 }
 
 //getters
@@ -38,4 +37,18 @@ std::string Veterinario::getCnmv(){
 // setters
 void Veterinario::setCnmv(std::string cnmv){
     m_cnmv = cnmv;
+}
+
+std::ostream& operator << (std::ostream& os, Veterinario& veterinario){
+    os<<std::endl
+        <<"Veterinário: "         <<veterinario.getNome()<<std::endl
+        <<"   => CPF: "           <<veterinario.getCpf()<<std::endl
+        <<"   => Idade: "         <<veterinario.getIdade()<<std::endl
+        <<"   => Típo Sanguíneo: "<<veterinario.getTipoSanguineo()<<std::endl
+        <<"   => Fator RH: "      <<veterinario.getFatorRh()<<std::endl
+        <<"   => Especialidade: " <<veterinario.getEspecialidade()<<std::endl
+        <<"   => CNMV: "          <<veterinario.getCnmv()<<std::endl
+        <<std::endl;
+        
+    return os;
 }

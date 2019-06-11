@@ -62,27 +62,15 @@ void listAll_Funcionarios(){
         textColor_yellow("Não há funcionários cadastrados no sistema!"); 
         std::cout<<std::endl;
     }else{
-        bprinter::TablePrinter tp(&std::cout);
-        tp.AddColumn("Cargo", 15);
-        tp.AddColumn("Idade", 5);
-        tp.AddColumn("Nome", 30);
-        tp.AddColumn("CPF", 15);
-        tp.AddColumn("Tipo Sanguineo", 15);
-        tp.AddColumn("Fator RH", 10);
-        tp.AddColumn("Especialidade", 15);
-
-        tp.PrintHeader();
         for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
-            tp << (*it).first 
-               << (*it).second->getIdade() 
-               << (*it).second->getNome() 
-               << (*it).second->getCpf() 
-               << (*it).second->getTipoSanguineo() 
-               << (*it).second->getFatorRh() 
-               << (*it).second->getEspecialidade();
+            if(it->first == "tratador"){
+                Tratador *tratador = (Tratador *) (it->second);
+                std::cout<< *tratador;
+            }else{
+                Veterinario *veterinario = (Veterinario *) (it->second);
+                std::cout<< *veterinario;
+            }
         }
-
-        tp.PrintFooter();
     }
 }
 

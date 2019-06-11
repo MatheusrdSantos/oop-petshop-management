@@ -273,3 +273,9 @@ bool Funcionario::remove(){
     write_file.close();
     return true;
 }
+
+std::ostream& operator << (std::ostream& os, Funcionario& funcionario){
+    os<<funcionario.getNome();
+
+    return os;
+}

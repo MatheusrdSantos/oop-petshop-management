@@ -38,6 +38,13 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         virtual std::string printInFile(int id) = 0;
+
+        /**
+         * @brief Define a forma como o texto do funcionário será imprimida, se altera dependendo da classe derivada.
+         * 
+         * @return std::string String formatada de como o objeto será recebido para impressão.. 
+         */
+        //virtual std::string oPrint() = 0;
     public:
 
         /**
@@ -226,6 +233,15 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @return false 
          */
         bool remove();
+
+        /**
+         * @brief Saída para print de um funcionário.
+         * 
+         * @param os 
+         * @param d 
+         * @return std::ostream& 
+         */
+        friend std::ostream& operator << (std::ostream& os, Funcionario& funcionario);
 };
     
 #endif

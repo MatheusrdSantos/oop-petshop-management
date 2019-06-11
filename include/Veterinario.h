@@ -76,6 +76,13 @@ class Veterinario : public Funcionario{
          */
         void setCnmv(std::string cnmv);
 
+        /**
+         * @brief Define a forma como o texto do Veterinário será impresso.
+         * 
+         * @return std::string String formatada de como o objeto será recebido para impressão.. 
+         */
+        friend std::ostream& operator << (std::ostream& os, Veterinario& veterinario);
+
 };
     
 #endif
