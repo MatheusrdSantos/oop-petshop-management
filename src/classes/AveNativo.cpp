@@ -76,3 +76,97 @@ std::string AveNativo::printInFile(int id){
     std::string s = ss.str();
     return s;
 }
+
+
+std::ostream& AveNativo::print(std::ostream& os) const{
+    if(m_tratador == NULL){
+        if(m_veterinario==NULL){
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<std::endl<<
+            "Tratador =>"<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Tamanho do bico em cm =>"<<m_tamanho_do_bico_cm<<std::endl<<
+            "Envergadura das Asas =>"<<m_envergadura_das_asas<<
+            std::endl;
+        }else{
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
+            "Tratador =>"<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Tamanho do bico em cm =>"<<m_tamanho_do_bico_cm<<std::endl<<
+            "Envergadura das Asas =>"<<m_envergadura_das_asas<<
+            std::endl;
+        }
+    }else if(m_veterinario == NULL){
+        if(m_tratador==NULL){
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<std::endl<<
+            "Tratador =>"<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Tamanho do bico em cm =>"<<m_tamanho_do_bico_cm<<std::endl<<
+            "Envergadura das Asas =>"<<m_envergadura_das_asas<<
+            std::endl;
+        }else{
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<std::endl<<
+            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<m_tamanho<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Tamanho do bico em cm =>"<<m_tamanho_do_bico_cm<<std::endl<<
+            "Envergadura das Asas =>"<<m_envergadura_das_asas<<
+            std::endl;
+        }
+    }else{
+        return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
+            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Tamanho do bico em cm =>"<<m_tamanho_do_bico_cm<<std::endl<<
+            "Envergadura das Asas =>"<<m_envergadura_das_asas<<
+            std::endl;
+    }
+}

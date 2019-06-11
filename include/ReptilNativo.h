@@ -7,7 +7,7 @@
 
 class ReptilNativo : public Reptil, public AnimalNativo{
     private:
-
+        std::ostream& print(std::ostream&) const;
     protected:
         /**
          * @brief Define a forma como o texto do Réptil Exótico será armazenado no banco.

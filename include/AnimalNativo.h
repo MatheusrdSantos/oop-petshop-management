@@ -7,7 +7,7 @@
 
 class AnimalNativo : public AnimalSilvestre{
     private:
-
+        
     protected:
         std::string m_uf_origem; /**< União Federativa da qual o animal foi coletado. */
         std::string m_cidade_origem; /**< Cidade da qual o animal foi coletado. */
