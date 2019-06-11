@@ -12,6 +12,14 @@
 #include "Ave.h"
 #include "Mamifero.h"
 #include "Reptil.h"
+#include "AnfibioNativo.h"
+#include "AnfibioExotico.h"
+#include "ReptilExotico.h"
+#include "ReptilNativo.h"
+#include "MamiferoExotico.h"
+#include "MamiferoNativo.h"
+#include "AveExotico.h"
+#include "AveNativo.h"
 
 /**
  * @brief Inicia o programa

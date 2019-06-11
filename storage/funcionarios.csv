@@ -3,5 +3,7 @@ id;funcao;nome;cpf;idade;tipo_sangue;fator_rh;especialidade;codigo_cnmv;nivel_se
 1;Veterinario;Arnaldo;7013411;21;A;H;cura;aa;
 2;Tratador;Jose;7033;32;A;H;limpar;;1
 3;Veterinario;Arnaldo;7013411;21;A;H;cura;aa;
-4;Tratador;Arnaldo Souza;1454123218;21;A;-;Nao;;2
-5;Veterinario;Silvia Carliane;1454112;21;A;-;Animais em Gabriel;014124;
+4;Tratador;Jose;7033;32;A;H;limpar;;1
+5;Veterinario;Arnaldo;7013411;21;A;H;cura;aa;
+6;Tratador;Jose;7033;32;A;H;limpar;;1
+7;Veterinario;Arnaldo;7013411;21;A;H;cura;aa;
