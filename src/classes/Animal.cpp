@@ -315,3 +315,7 @@ std::multimap<std::string, Animal*> Animal::where(std::string* column, std::stri
     }
     return animais;
 }
+
+std::ostream& operator << (std::ostream& os, const Animal& a){
+    return a.print(os);
+}

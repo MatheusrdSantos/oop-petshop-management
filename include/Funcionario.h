@@ -239,7 +239,7 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @brief Saída para print de um funcionário.
          * 
          * @param os 
-         * @param d 
+         * @param f 
          * @return std::ostream& 
          */
         friend std::ostream& operator << (std::ostream& os, const Funcionario& f);

@@ -9,6 +9,8 @@
 class Animal : public ModelDAO<Animal>{
     private:
 
+        virtual std::ostream& print(std::ostream&) const = 0;
+
     protected:
         int m_id; /**< Define o id de cada Animal. Um id é único. */
         std::string m_classe; /**< Define o nome da classe de cada Animal. Podem ser Amphibia, Aves, Mammalia e Reptilia.*/
@@ -21,6 +23,7 @@ class Animal : public ModelDAO<Animal>{
         Tratador* m_tratador; /**< Define que tratador é responsável por cada Animal.*/
         std::string m_nome_batismo; /**< Define o nome de batismo de cada Animal. Ex: Simba.*/
 
+       
         /**
          * @brief Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada.
          * 
@@ -253,6 +256,14 @@ class Animal : public ModelDAO<Animal>{
          */
         static std::multimap<std::string, Animal*> where(std::string* column, std::string* symbol, int value);
         
+        /**
+         * @brief Saída para print de um Animal.
+         * 
+         * @param os 
+         * @param a 
+         * @return std::ostream& 
+         */
+        friend std::ostream& operator << (std::ostream& os, const Animal& a);
 };
 
 #endif
