@@ -7,7 +7,7 @@
 
 class Ave : public Animal{
     private:
-
+        std::ostream& print(std::ostream&) const;
     protected:
         double m_tamanho_do_bico_cm; /*< Define o tamanho do bico em cm da Ave. */
         double m_envergadura_das_asas; /*< Define a envergadura das asas da Ave. */

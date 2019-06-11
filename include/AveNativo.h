@@ -7,7 +7,7 @@
 
 class AveNativo : public Ave, public AnimalNativo{
     private:
-
+        std::ostream& print(std::ostream&) const;
     protected:
         /**
          * @brief Define a forma como o texto da Ave Nativa será armazenado no banco.
