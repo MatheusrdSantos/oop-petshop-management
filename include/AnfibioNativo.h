@@ -7,7 +7,8 @@
 
 class AnfibioNativo : public Anfibio, public AnimalNativo{
     private:
-
+    
+        std::ostream& print(std::ostream& os) const;
     protected:
         /**
          * @brief Define a forma como o texto do Anfíbio Nativo será armazenado no banco.
@@ -16,6 +17,8 @@ class AnfibioNativo : public Anfibio, public AnimalNativo{
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         std::string printInFile(int id);
+
+
     public:
 
         /**
