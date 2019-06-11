@@ -17,8 +17,8 @@ int main(int argc, char const *argv[])
     //int escolha = 0;
     //menu(escolha);
     
-    Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
-    Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, 2, 'H', "cura", "aa");
+    Tratador *t1 = new Tratador(1, "Jose", "7033", 32, "A", 'H', "limpar", 1);
+    Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, "A", 'H', "cura", "aa");
     
     t1->save();
     v1->save();

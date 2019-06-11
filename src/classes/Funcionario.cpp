@@ -5,7 +5,7 @@
 
 std::string Funcionario::filePath = "./storage/funcionarios.csv";
 std::string Funcionario::tableName = "funcionarios";
-Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade){
+Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade){
     m_id = id;
     m_nome = nome;
     m_cpf = cpf;
@@ -44,7 +44,7 @@ Funcionario* Funcionario::buildFuncionarioFromFile(csv::Row* file){
     std::string nome = (*file)["nome"];
     std::string cpf = (*file)["cpf"];
     short idade = std::stoi((*file)["idade"]);
-    short tipo_sanguineo = std::stoi((*file)["tipo_sangue"]);
+    std::string tipo_sanguineo = (*file)["tipo_sangue"];
     char fator_rh = (*file)["fator_rh"][0];
     std::string especialidade = (*file)["especialidade"];
     /* Estancia dinamicamente um novo funcionario */
@@ -150,7 +150,7 @@ short Funcionario::getIdade(){
     return m_idade;
 }
 
-short Funcionario::getTipoSanguineo(){
+std::string Funcionario::getTipoSanguineo(){
     return m_tipo_sanguineo;
 }
 

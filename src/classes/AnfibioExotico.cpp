@@ -49,6 +49,104 @@ std::string AnfibioExotico::printInFile(int id){
     return s;
 }
 
+
+std::ostream& AnfibioExotico::print(std::ostream& os) const{
+    if(m_tratador == NULL){
+        if(m_veterinario==NULL){
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<""<<std::endl<<
+            "Tratador =>"<<""<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
+            std::endl;
+        }else{
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
+            "Tratador =>"<<""<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
+            std::endl;
+        }
+    }else if(m_veterinario == NULL){
+        if(m_tratador==NULL){
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<""<<std::endl<<
+            "Tratador =>"<<""<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
+            std::endl;
+        }else{
+            return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<""<<std::endl<<
+            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
+            std::endl;
+        }
+    }else{
+        return os<<
+            "id =>"<<m_id<<std::endl<< 
+            "Classe =>"<<m_classe<<std::endl<<
+            "Nome =>"<<m_nome<<std::endl<<
+            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
+            "Sexo =>"<<m_sexo<<std::endl<<
+            "Tamanho =>"<<m_tamanho<<std::endl<<
+            "Dieta =>"<<m_dieta<<std::endl<<
+            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
+            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
+            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
+            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
+            "Pais origem =>"<<m_pais_origem<<std::endl<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
+            "Última muda =>"<<*(m_ultima_muda)<<std::endl<<
+            std::endl;
+    }        
+}
 /*
 generic print:
 ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<m_pais_origem<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<m_cor_do_pelo<<";"<<m_venenoso<<";"<<m_tipo_veneno<<";"<<m_tamanho_do_bico_cm<<";"<<m_envergadura_das_asas<<std::endl;

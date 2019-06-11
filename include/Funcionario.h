@@ -29,7 +29,7 @@ class Funcionario : public ModelDAO<Funcionario>{
         std::string m_nome; /*< Nome do Funcionário. */
         std::string m_cpf; /*< CPF do Funcionário.*/
         short m_idade; /*< Idade do Funcionário. */
-        short m_tipo_sanguineo; /*< Tipo sanguíneo do Funcionário.*/
+        std::string m_tipo_sanguineo; /*< Tipo sanguíneo do Funcionário.*/
         char m_fator_rh; /*< Fato RH do sangue do Funcionário.*/
         std::string m_especialidade; /*< Especialidade do Funcionário.*/
 
@@ -66,7 +66,7 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @param fator_rh 
          * @param especialidade 
          */
-        Funcionario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade);
+        Funcionario(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade);
         
         /**
          * @brief Destrói o Funcionario
@@ -144,9 +144,9 @@ class Funcionario : public ModelDAO<Funcionario>{
         /**
          * @brief Retorna o Tipo Sanguineo do Funcionário
          * 
-         * @return short 
+         * @return std::string 
          */
-        short getTipoSanguineo();
+        std::string getTipoSanguineo();
 
         /**
          * @brief Retorna o Fator Rh do Funcionário 

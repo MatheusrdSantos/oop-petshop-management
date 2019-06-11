@@ -41,7 +41,7 @@ class Veterinario : public Funcionario{
          * @param especialidade 
          * @param cnmv 
          */
-        Veterinario(int id, std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
+        Veterinario(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
         
         /**
          * @brief Constrói um novo objeto do tipo Veterinário.
@@ -54,7 +54,7 @@ class Veterinario : public Funcionario{
          * @param especialidade 
          * @param cnmv 
          */
-        Veterinario(std::string nome, std::string cpf, short idade, short tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
+        Veterinario(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv);
         
         /**
          * @brief Destrói o Veterinário.

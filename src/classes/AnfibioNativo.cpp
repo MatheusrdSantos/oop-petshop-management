@@ -94,8 +94,8 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Uf Origem =>"<<m_uf_origem<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
-            "Total de mudas =>"<<m_total_de_mudas<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
             "Última muda =>"<<m_ultima_muda<<std::endl<<
             std::endl;
         }else{
@@ -112,8 +112,8 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Uf Origem =>"<<m_uf_origem<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
-            "Total de mudas =>"<<m_total_de_mudas<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
             "Última muda =>"<<m_ultima_muda<<std::endl<<
             std::endl;
         }
@@ -132,8 +132,8 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Uf Origem =>"<<m_uf_origem<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
-            "Total de mudas =>"<<m_total_de_mudas<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
             "Última muda =>"<<m_ultima_muda<<std::endl<<
             std::endl;
         }else{
@@ -150,8 +150,8 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Uf Origem =>"<<m_uf_origem<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
-            "Total de mudas =>"<<m_total_de_mudas<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
             "Última muda =>"<<m_ultima_muda<<std::endl<<
             std::endl;
         }
@@ -169,8 +169,8 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
             "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
             "Uf Origem =>"<<m_uf_origem<<std::endl<<
             "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<
-            "Total de mudas =>"<<m_total_de_mudas<<
+            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
+            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
             "Última muda =>"<<m_ultima_muda<<std::endl<<
             std::endl;
     }        

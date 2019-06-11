@@ -77,7 +77,7 @@ void add_Funcionario(){
     std::string nome;
     std::string cpf;
     short idade;
-    short tipo_sanguineo;
+    std::string tipo_sanguineo;
     char fator_rh;
     std::string especialidade;
 
@@ -88,11 +88,13 @@ void add_Funcionario(){
         add_Funcionario();
     }else{
         std::cout << "======= Dados do(a) "<< (cargo == 't' ? "Tratador(a)" : "Veterinário(a)") <<"======="<< std::endl;
-        std::cout << "Nome: ";
-        std::cin >> nome;
+        std::cout << "Nome: "<<std::endl;
+        std::cin.ignore();
+        std::getline (std::cin,nome, '\n');
         
         std::cout << "CPF: ";
-        std::cin >> cpf;
+        std::cin.ignore();
+        std::getline (std::cin,cpf, '\n');
 
         std::cout << "Idade: ";
         std::cin >> idade;
@@ -104,7 +106,9 @@ void add_Funcionario(){
         std::cin >> fator_rh;
 
         std::cout << "Especialidade: ";
-        std::cin >> especialidade;
+        // std::cin >> especialidade;
+        std::cin.ignore();
+        std::getline (std::cin,especialidade);
 
         if(cargo == 't'){
             int nivel_de_seguranca;
@@ -118,8 +122,9 @@ void add_Funcionario(){
             std::cout << "Tratador adicionado!" << std::endl;        
         }else if(cargo == 'v'){
             std::string cnmv;
-            std::cout << "Nível de Segurança: ";
-            std::cin >> cnmv;
+            std::cout << "CNMV: ";
+            // std::cin >> cnmv;
+            std::getline (std::cin,cnmv);
 
             Veterinario vet(nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade, cnmv);
             vet.save();
@@ -131,34 +136,14 @@ void add_Funcionario(){
 
 void listAll_Animais(){
     std::multimap<std::string,Animal*> animais = Animal::all();
-    
+
     std::cout<<std::endl;
     if(animais.size() == 0){
         textColor_yellow("Não há animais cadastrados no sistema!"); 
         std::cout<<std::endl;
     }else{
-        bprinter::TablePrinter tp(&std::cout);
-        tp.AddColumn("Classe", 10);
-        tp.AddColumn("Nome", 15);
-        tp.AddColumn("Nome Cientifico", 30);
-        tp.AddColumn("Dieta", 15);
-        tp.AddColumn("Sexo", 5);
-        //tp.AddColumn("Tamanho", 15);
-        tp.AddColumn("Tratador", 15);
-        tp.AddColumn("Veterinario", 15);
-
-        tp.PrintHeader();
         for (auto it=animais.begin(); it!=animais.end(); ++it){
-            tp << (*it).second->getClasse()
-               << (*it).second->getNomeBatismo()
-               << (*it).second->getNomeCientifico()
-               << (*it).second->getDieta()
-               << (*it).second->getSexo()
-               //<< (*it).second->getTamanho()
-               << (*it).second->getTratador()->getNome()
-               << (*it).second->getVeterinario()->getNome();
+            std::cout<< *(it->second);
         }
-
-        tp.PrintFooter();
     }
 }
