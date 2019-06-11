@@ -3,10 +3,15 @@
 
 #include <iostream>
 #include <string>
-#include "Funcionario.h"
 #include "bprinter/table_printer.h"
+#include "Funcionario.h"
 #include "Tratador.h"
 #include "Veterinario.h"
+#include "Animal.h"
+#include "Anfibio.h"
+#include "Ave.h"
+#include "Mamifero.h"
+#include "Reptil.h"
 
 /**
  * @brief Inicia o programa
@@ -46,5 +51,11 @@ void listAll_Funcionarios();
  * 
  */
 void add_Funcionario();
+
+/**
+ * @brief Imprime na tela todos os animais cadastrados e todas informações sobre eles
+ * 
+ */
+void listAll_Animais();
 
 #endif

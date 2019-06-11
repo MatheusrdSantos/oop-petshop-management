@@ -1,5 +1,5 @@
-#ifndef BPRINTER_TABLE_PRINTER_H_
-#define BPRINTER_TABLE_PRINTER_H_
+#ifndef _TABLE_PRINTER_H_
+#define _TABLE_PRINTER_H_
 
 #include <iostream>
 #include <iomanip>

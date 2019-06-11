@@ -39,3 +39,30 @@ int Tratador::getNivelDeSeguranca(){
 void Tratador::setNivelDeSeguranca(int nivel_de_seguranca){
     m_nivel_de_seguranca = nivel_de_seguranca;
 }
+
+std::ostream& Tratador::print(std::ostream& os) const{
+    return os<<std::endl
+        <<"Tratador: "                <<m_nome<<std::endl
+        <<"   => CPF: "               <<m_cpf<<std::endl
+        <<"   => Idade: "             <<m_idade<<std::endl
+        <<"   => Típo Sanguíneo: "    <<m_tipo_sanguineo<<std::endl
+        <<"   => Fator RH: "          <<m_fator_rh<<std::endl
+        <<"   => Especialidade: "     <<m_especialidade<<std::endl
+        <<"   => Nível de Segurança: "<<m_nivel_de_seguranca<<std::endl
+        <<std::endl;
+}
+
+// std::ostream& operator << (std::ostream& os, Tratador& tratador){
+    // os<<std::endl
+    //     <<"Tratador: "                <<tratador.getNome()<<std::endl
+    //     <<"   => CPF: "               <<tratador.getCpf()<<std::endl
+    //     <<"   => Idade: "             <<tratador.getIdade()<<std::endl
+    //     <<"   => Típo Sanguíneo: "    <<tratador.getIdade()<<std::endl
+    //     <<"   => Fator RH: "          <<tratador.getFatorRh()<<std::endl
+    //     <<"   => Especialidade: "     <<tratador.getEspecialidade()<<std::endl
+    //     <<"   => Nível de Segurança: "<<tratador.getNivelDeSeguranca()<<std::endl
+    //     <<std::endl;
+        
+//     return os;
+// }
+

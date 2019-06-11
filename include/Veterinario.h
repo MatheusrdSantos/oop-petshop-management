@@ -21,7 +21,7 @@ class Veterinario : public Funcionario{
         std::string printInFile(int id);
     private:
         std::string m_cnmv; /*< Define o CNMV do veterinario.*/
-    
+        std::ostream& print(std::ostream& os) const;
     public:
         /**
          * @brief Constrói um novo objeto do tipo Veterinário.

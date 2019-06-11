@@ -19,10 +19,13 @@ int main(int argc, char const *argv[])
     
     Tratador *t1 = new Tratador(1, "Jose", "7033", 32, 2, 'H', "limpar", 1);
     Veterinario* v1 = new Veterinario(4, "Arnaldo", "7013411", 21, 2, 'H', "cura", "aa");
+    
+    t1->save();
+    v1->save();
+    
+    /*
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
     AnfibioExotico a2("Lagartixa", "Amphibia Lartichia", 'F', 6.61, "Herbivoro", NULL, NULL, "Iago");
-
-
 
     AnfibioNativo anfibioNativo("Sapo", "Amphibia Nautilus", 'M', 10.5, "Onívoro", v1, t1, "Sapo Frog", 2, new Date(12,12,2018), "RN", "Natal", "1054512-51");
     anfibioNativo.save();
@@ -66,7 +69,7 @@ int main(int argc, char const *argv[])
     std::cout << "select where contains:\n";
     for (auto it=animals_where.begin(); it!=animals_where.end(); ++it){
         std::cout << (*it).first << " => " << (*it).second->getNomeBatismo() << '\n';
-    }
+    }*/
     /* Animal* animal = Animal::find(4);
     animal->setNomeBatismo("Jurema");
     animal->update();
@@ -76,7 +79,7 @@ int main(int argc, char const *argv[])
 
     Animal::find(4)->remove(); */
     
-    //run();
+    run();
 
     /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");

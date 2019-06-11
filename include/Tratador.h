@@ -21,6 +21,7 @@ class Tratador : public Funcionario{
         std::string printInFile(int id);
     private:
         int m_nivel_de_seguranca; /*< Define o nível de segurança do Tratador.*/
+        std::ostream& print(std::ostream& os) const;
     public:
         /**
          * @brief Constrói um novo objeto do tipo Tratador.
@@ -74,6 +75,13 @@ class Tratador : public Funcionario{
          * @param nivel_de_seguranca 
          */
         void setNivelDeSeguranca(int nivel_de_seguranca);
+
+        /**
+         * @brief Define a forma como o texto do Tratador será impresso.
+         * 
+         * @return std::string String formatada de como o objeto será recebido para impressão.. 
+         */
+        friend std::ostream& operator << (std::ostream& os, Tratador& tratador);
 };
     
 #endif

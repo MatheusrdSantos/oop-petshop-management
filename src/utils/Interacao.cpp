@@ -1,11 +1,11 @@
-#include "Interacao.h"
+#include "../../include/Interacao.h"
 
 void run(){
     int escolha = 0;
     menu(escolha);
 
     //Loop para o menu sempre permanecer na tela até que o input seja 0
-    while(escolha > 0){ 
+    while(escolha > 0){
         menu(escolha);
     }
 }
@@ -18,17 +18,18 @@ void menu(int &escolha){
     textColor_red("============================================");
     std::cout << std::endl;
     
-    std::cout << "Escolha uma opção e divirta-se: " << std::endl;
-    std::cout << "    1 -> Adicionar Funcionário " << std::endl;
-    std::cout << "    2 -> Listar Funcionários " << std::endl;
-    //std::cout << "    3 -> Adicionar Animal " << std::endl;
+    std::cout << "# Menu #" << std::endl;
+    std::cout << "    1 -> Adicionar funcionário " << std::endl;
+    std::cout << "    2 -> Listar todos funcionários " << std::endl;
+    std::cout << "    3 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 
     switch (escolha)
     {
         case 0:
-            std::cout << "Tchau! Volte sempre" << std::endl;
+            textColor_red("========== Tchau! PetFera 2019.1  ==========");
+            std::cout << std::endl;
             break;
         case 1:
             add_Funcionario();
@@ -36,7 +37,10 @@ void menu(int &escolha){
         case 2:
             listAll_Funcionarios();
             break;
-        
+        case 3:
+            listAll_Animais();
+            break;
+
         default:
             std::cout << "Essa opção não existe, man" << std::endl;
             break;
@@ -59,27 +63,9 @@ void listAll_Funcionarios(){
         textColor_yellow("Não há funcionários cadastrados no sistema!"); 
         std::cout<<std::endl;
     }else{
-        bprinter::TablePrinter tp(&std::cout);
-        tp.AddColumn("Cargo", 15);
-        tp.AddColumn("Idade", 5);
-        tp.AddColumn("Nome", 30);
-        tp.AddColumn("CPF", 15);
-        tp.AddColumn("Tipo Sanguineo", 15);
-        tp.AddColumn("Fator RH", 5);
-        tp.AddColumn("Especialidade", 15);
-
-        tp.PrintHeader();
         for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
-            tp << (*it).first 
-               << (*it).second->getIdade() 
-               << (*it).second->getNome() 
-               << (*it).second->getCpf() 
-               << (*it).second->getTipoSanguineo() 
-               << (*it).second->getFatorRh() 
-               << (*it).second->getEspecialidade();
+            std::cout<< *(it->second);
         }
-
-        tp.PrintFooter();
     }
 }
 
@@ -94,12 +80,6 @@ void add_Funcionario(){
     short tipo_sanguineo;
     char fator_rh;
     std::string especialidade;
-
-    if (cargo == 't'){
-        
-    }else if(cargo == 'v'){
-        
-    }
 
     if(cargo == 's'){
         return;
@@ -146,5 +126,39 @@ void add_Funcionario(){
 
             std::cout << "Veterinário adicionado!" << std::endl;
         }
+    }
+}
+
+void listAll_Animais(){
+    std::multimap<std::string,Animal*> animais = Animal::all();
+    
+    std::cout<<std::endl;
+    if(animais.size() == 0){
+        textColor_yellow("Não há animais cadastrados no sistema!"); 
+        std::cout<<std::endl;
+    }else{
+        bprinter::TablePrinter tp(&std::cout);
+        tp.AddColumn("Classe", 10);
+        tp.AddColumn("Nome", 15);
+        tp.AddColumn("Nome Cientifico", 30);
+        tp.AddColumn("Dieta", 15);
+        tp.AddColumn("Sexo", 5);
+        //tp.AddColumn("Tamanho", 15);
+        tp.AddColumn("Tratador", 15);
+        tp.AddColumn("Veterinario", 15);
+
+        tp.PrintHeader();
+        for (auto it=animais.begin(); it!=animais.end(); ++it){
+            tp << (*it).second->getClasse()
+               << (*it).second->getNomeBatismo()
+               << (*it).second->getNomeCientifico()
+               << (*it).second->getDieta()
+               << (*it).second->getSexo()
+               //<< (*it).second->getTamanho()
+               << (*it).second->getTratador()->getNome()
+               << (*it).second->getVeterinario()->getNome();
+        }
+
+        tp.PrintFooter();
     }
 }
