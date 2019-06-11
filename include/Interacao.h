@@ -8,6 +8,10 @@
 #include "Tratador.h"
 #include "Veterinario.h"
 #include "Animal.h"
+#include "Anfibio.h"
+#include "Ave.h"
+#include "Mamifero.h"
+#include "Reptil.h"
 
 /**
  * @brief Inicia o programa

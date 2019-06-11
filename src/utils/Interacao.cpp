@@ -5,7 +5,7 @@ void run(){
     menu(escolha);
 
     //Loop para o menu sempre permanecer na tela até que o input seja 0
-    while(escolha > 0){ 
+    while(escolha > 0){
         menu(escolha);
     }
 }
@@ -28,7 +28,8 @@ void menu(int &escolha){
     switch (escolha)
     {
         case 0:
-            std::cout << "========== Tchau! PetFera 2019.1  ==========" << std::endl;
+            textColor_red("========== Tchau! PetFera 2019.1  ==========");
+            std::cout << std::endl;
             break;
         case 1:
             add_Funcionario();
@@ -63,6 +64,7 @@ void listAll_Funcionarios(){
         std::cout<<std::endl;
     }else{
         for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
+            //it->second->printFuncionario();
             if(it->first == "tratador"){
                 Tratador *tratador = (Tratador *) (it->second);
                 std::cout<< *tratador;
@@ -143,25 +145,23 @@ void listAll_Animais(){
         std::cout<<std::endl;
     }else{
         bprinter::TablePrinter tp(&std::cout);
-        tp.AddColumn("Tipo", 10);
         tp.AddColumn("Classe", 10);
         tp.AddColumn("Nome", 15);
         tp.AddColumn("Nome Cientifico", 30);
         tp.AddColumn("Dieta", 15);
         tp.AddColumn("Sexo", 5);
-        tp.AddColumn("Tamanho", 15);
+        //tp.AddColumn("Tamanho", 15);
         tp.AddColumn("Tratador", 15);
         tp.AddColumn("Veterinario", 15);
 
         tp.PrintHeader();
         for (auto it=animais.begin(); it!=animais.end(); ++it){
-            tp << (*it).first 
-               << (*it).second->getClasse()
+            tp << (*it).second->getClasse()
                << (*it).second->getNomeBatismo()
                << (*it).second->getNomeCientifico()
                << (*it).second->getDieta()
                << (*it).second->getSexo()
-               << (*it).second->getTamanho()
+               //<< (*it).second->getTamanho()
                << (*it).second->getTratador()->getNome()
                << (*it).second->getVeterinario()->getNome();
         }

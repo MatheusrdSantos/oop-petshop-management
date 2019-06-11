@@ -242,6 +242,15 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @return std::ostream& 
          */
         friend std::ostream& operator << (std::ostream& os, Funcionario& funcionario);
+
+        /**
+         * @brief Saída para print de um funcionário e suas classes filhas.
+         * 
+         * @param std::string
+         * @param Funcionario*
+         * @return void
+         */
+        //void printFuncionario(auto cargo, Funcionario* funcionario);
 };
     
 #endif

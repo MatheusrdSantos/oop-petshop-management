@@ -279,3 +279,13 @@ std::ostream& operator << (std::ostream& os, Funcionario& funcionario){
 
     return os;
 }
+
+/*void printFuncionario(auto cargo, Funcionario* funcionario){
+    if(cargo == "tratador"){
+        Tratador *tratador = (Tratador *) funcionario;
+        std::cout<< *tratador;
+    }else{
+        Veterinario *veterinario = (Veterinario *) funcionario;
+        std::cout<< *veterinario;
+    }
+}*/
