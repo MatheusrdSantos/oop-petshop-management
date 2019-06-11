@@ -7,7 +7,7 @@
 
 class ReptilExotico : public Reptil, public AnimalExotico{
     private:
-
+        std::ostream& print(std::ostream&) const;
     protected:
 
         /**

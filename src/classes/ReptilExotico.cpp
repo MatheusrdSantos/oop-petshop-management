@@ -87,4 +87,27 @@ std::string ReptilExotico::printInFile(int id){
     return s;
 }
 
+std::ostream& ReptilExotico::print(std::ostream& os) const{
+    return os<<std::endl
+        <<"Réptil Exótico: "           <<m_nome<<std::endl
+        <<"   => id: "                 <<m_id<<std::endl
+        <<"   => Classe: "             <<m_classe<<std::endl
+        <<"   => Nome: "               <<m_nome_batismo<<std::endl
+        <<"   => Nome Científico: "    <<m_nome_cientifico<<std::endl
+        <<"   => Sexo: "               <<m_sexo<<std::endl
+        <<"   => Tamanho: "            <<m_tamanho<<std::endl
+        <<"   => Dieta: "              <<m_dieta<<std::endl
+        <<"   => Veterinário: "        <<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl
+        <<"   => Veterinário: "        <<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl
+        <<std::endl;
 
+
+        /* <<"Tratador: "                <<m_nome<<std::endl
+        <<"   => CPF: "               <<m_cpf<<std::endl
+        <<"   => Idade: "             <<m_idade<<std::endl
+        <<"   => Típo Sanguíneo: "    <<m_tipo_sanguineo<<std::endl
+        <<"   => Fator RH: "          <<m_fator_rh<<std::endl
+        <<"   => Especialidade: "     <<m_especialidade<<std::endl
+        <<"   => Nível de Segurança: "<<m_nivel_de_seguranca<<std::endl
+        <<std::endl; */
+}
