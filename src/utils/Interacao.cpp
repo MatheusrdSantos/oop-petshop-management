@@ -283,6 +283,7 @@ void listAll_Funcionarios(){
     }else{
         for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
             std::cout<< *(it->second);
+            delete it->second;
         }
     }
 }
@@ -363,6 +364,7 @@ void listAll_Animais(){
     }else{
         for (auto it=animais.begin(); it!=animais.end(); ++it){
             std::cout<< *(it->second);
+            delete it->second;
         }
     }
 }

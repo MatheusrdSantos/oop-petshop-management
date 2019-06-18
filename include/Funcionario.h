@@ -72,7 +72,7 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @brief Destrói o Funcionario
          * 
          */
-        ~Funcionario(){};
+        virtual ~Funcionario(){};
 
 
         static std::string filePath; /**< Define o caminho para a tabela que armazenará os Animais. */

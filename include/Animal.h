@@ -52,14 +52,12 @@ class Animal : public ModelDAO<Animal>{
          * @param nome_batismo 
          */
         Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
-        
+
         /**
          * @brief Destrói o objeto do tipo Animal.
          * 
          */
-        ~Animal(){};
-
-
+        virtual ~Animal(){};
 
         static std::string filePath; /**< Define o caminho para a tabela que armazenará os Animais. */
         static std::string tableName; /**< Define o nome para a tabela que armazenará os Animais, tal valor é utilizado para os ids de autoincremento. */
