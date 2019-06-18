@@ -26,6 +26,14 @@ Animal::Animal(int id, std::string classe, std::string nome_cientifico, char sex
     m_nome_batismo = nome_batismo;
 }
 
+Animal::~Animal(){
+    if(m_tratador!=NULL){
+        delete m_tratador;
+    }else if(m_veterinario!=NULL){
+        delete  m_veterinario;
+    }
+}
+
 std::string Animal::getNomeBatismo(){
     return m_nome_batismo;
 }
