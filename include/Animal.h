@@ -262,6 +262,15 @@ class Animal : public ModelDAO<Animal>{
          * @return std::ostream& 
          */
         friend std::ostream& operator << (std::ostream& os, const Animal& a);
+
+        /**
+         * @brief Leitura das informações de um Animal a partir do terminal.
+         * 
+         * @param in
+         * @param a
+         * @return std::istream&
+         */
+        friend std::istream& operator >> (std::istream &in, Animal *a);
 };
 
 #endif

@@ -63,7 +63,7 @@ class ModelDAO{
             for (int i = 0; i<n_rows;i++){
                 if(file[i][0] == table_name){
                     int n = std::stoi(file[i][1])+1;
-                    std::cout<<file[i][0]<<"->"<<n<<std::endl;
+                    //std::cout<<file[i][0]<<"->"<<n<<std::endl;
                     write_file<<file[i][0]<<';'<<n<<std::endl;
                 }else{
                     write_file<<file[i][0]<<';'<<file[i][1]<<std::endl;
