@@ -175,22 +175,20 @@ std::ostream& AveNativo::print(std::ostream& os) const{
 
 std::istream& AveNativo::read(std::istream& is){
 
-    //double tamanho_do_bico_cm;
     std::cout<<"Digite o tamanho do bico da ave (em cm): "<<std::endl;
     is>>m_tamanho_do_bico_cm;
-    //double envergadura_das_asas;
+
     std::cout<<"Digite a envergadura das asas: "<<std::endl;
     is>>m_envergadura_das_asas;
-    //std::string autorizacao_ibama;
+
     std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
     is>>m_autorizacao_ibama;
-    //std::string uf_origem;
+
     std::cout<<"Digite a uf de origem:"<<std::endl;
     is>>m_uf_origem;
-    //std::string cidade_origem;
+
     std::cout<<"Digite a cidade de origem:"<<std::endl;
     is>>m_cidade_origem;
 
-    //AveNativo ave(nome, nome_cientifico, sexo, tamanho, dieta, NULL, NULL, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, uf_origem, cidade_origem, autorizacao_ibama);
     return is;
 }

@@ -184,3 +184,22 @@ std::ostream& ReptilExotico::print(std::ostream& os) const{
             std::endl;
     }
 }
+
+std::istream& ReptilExotico::read(std::istream& is){
+
+    std::cout<<"Digite se o animal é venenoso (0/1): "<<std::endl;
+    is>>m_venenoso;
+    std::cout<<"Digite o tipo do veneno: "<<std::endl;
+    is>>m_tipo_veneno;
+    
+    std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+    is>>m_autorizacao_ibama;
+    
+    std::cout<<"Digite o pais de origem:"<<std::endl;
+    is>>m_pais_origem;
+
+    std::cout<<"Digite a cidade de origem:"<<std::endl;
+    is>>m_cidade_origem;
+    
+    return is;
+}

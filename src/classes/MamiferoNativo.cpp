@@ -174,6 +174,22 @@ std::ostream& MamiferoNativo::print(std::ostream& os) const{
     }        
 }
 
+std::istream& MamiferoNativo::read(std::istream& is){
+
+    std::cout<<"Digite a cor do pelo: "<<std::endl;
+    std::cin>>m_cor_do_pelo;
+    
+    std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+    is>>m_autorizacao_ibama;
+    
+    std::cout<<"Digite a uf de origem:"<<std::endl;
+    is>>m_uf_origem;
+    
+    std::cout<<"Digite a cidade de origem:"<<std::endl;
+    is>>m_cidade_origem;
+    
+    return is;
+}
 
 /*
             return os<<
