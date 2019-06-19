@@ -8,6 +8,7 @@
 class Reptil : public Animal{
     private:
         virtual std::ostream& print(std::ostream&) const = 0;
+        virtual std::istream& read(std::istream&) = 0;
     protected:
         bool m_venenoso; /*< Define se um Réptil é ou não venenoso. True para sim False para não.*/
         std::string m_tipo_veneno; /*< Define o tipo de veneno para cada Réptil.*/

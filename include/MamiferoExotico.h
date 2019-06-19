@@ -8,6 +8,7 @@
 class MamiferoExotico : public Mamifero, public AnimalExotico{
     private:
         std::ostream& print(std::ostream& os) const;
+        std::istream& read(std::istream&);
     protected:
 
         /**

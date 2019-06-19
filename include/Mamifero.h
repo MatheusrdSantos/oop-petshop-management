@@ -9,6 +9,7 @@ class Mamifero : public Animal{
     private:
 
         virtual std::ostream& print(std::ostream&) const = 0;
+        virtual std::istream& read(std::istream&) = 0;
     protected:
         std::string m_cor_do_pelo; /*< Define a cor do pelo de um mamifero*/
 

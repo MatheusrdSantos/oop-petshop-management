@@ -10,6 +10,7 @@ class Anfibio : public Animal{
     private:
 
         virtual std::ostream& print(std::ostream&) const = 0;
+        virtual std::istream& read(std::istream&) = 0;
     protected:
         int m_total_de_mudas; /**< Define o total de mudas de cada Anfíbio. O id é único. */
         Date* m_ultima_muda; /**< Define quando o Anfíbio teve sua última muda. new Date(0,0,0) para nunca (default).*/

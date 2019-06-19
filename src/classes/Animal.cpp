@@ -328,51 +328,7 @@ std::ostream& operator << (std::ostream& os, const Animal& a){
     return a.print(os);
 }
 
-std::istream & operator >> (std::istream &in, Animal *a)
+std::istream & operator >> (std::istream &in, Animal& a)
 {
-    /* cout << "Enter Real Part ";
-    in >> c.real;
-    cout << "Enter Imagenory Part ";
-    in >> c.imag; */
-    /* std::string nome; 
-    std::string nome_cientifico; 
-    char sexo; 
-    double tamanho; 
-    std::string dieta; 
-    std::string nome_batismo;
-
-    std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
-    in.ignore();
-    std::getline(in, nome, '\n');
-    std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
-    in.ignore();
-    std::getline(in, nome_cientifico, '\n');
-    std::cout<<"Digite o sexo do Animal: "<<std::endl;
-    in>>sexo;
-    std::cout<<"Digite o tamanho do Animal: "<<std::endl;
-    in>>tamanho;
-    std::cout<<"Digite a dieta do Animal: "<<std::endl;
-    in.ignore();
-    std::getline(in, dieta, '\n');
-    std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
-    in.ignore();
-    std::getline(in, nome_batismo, '\n');
-
-    std::string opt = "0";
-    while((std::stoi(opt)!=1) && (std::stoi(opt)!=2)  && (std::stoi(opt)!=3) && (std::stoi(opt)!=4)){
-        std::cout << "Qual a classe do Animal?" << std::endl;
-        std::cout << "1 => Amphibia"<<std::endl;
-        std::cout << "2 => Mammalia"<<std::endl;
-        std::cout << "3 => Reptlia"<<std::endl;
-        std::cout << "4 => Aves"<<std::endl;
-        std::cout << "0 => Sair"<<std::endl;
-
-        std::cin>>opt; 
-    } */
-    
-    //AveNativo *av = new AveNativo(nome, nome_cientifico, sexo, tamanho, dieta, NULL, NULL, nome_batismo, 10, 5, "RN", "Natal", "asdasd");
-    AveNativo *av = new AveNativo("nomee", "cientifico", 'M', 10, "dietaa", NULL, NULL, "nom_bat", 10, 5, "RN", "Natal", "asdasd");
-    a = av;
-    //a->save();
-    return in;
+    return a.read(in);
 }

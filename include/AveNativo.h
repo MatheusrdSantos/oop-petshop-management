@@ -8,6 +8,7 @@
 class AveNativo : public Ave, public AnimalNativo{
     private:
         std::ostream& print(std::ostream&) const;
+        std::istream& read(std::istream&);
     protected:
         /**
          * @brief Define a forma como o texto da Ave Nativa será armazenado no banco.

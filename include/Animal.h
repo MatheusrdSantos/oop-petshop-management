@@ -10,6 +10,7 @@ class Animal : public ModelDAO<Animal>{
     private:
 
         virtual std::ostream& print(std::ostream&) const = 0;
+        virtual std::istream& read(std::istream&) = 0;
 
     protected:
         int m_id; /**< Define o id de cada Animal. Um id é único. */
@@ -270,7 +271,7 @@ class Animal : public ModelDAO<Animal>{
          * @param a
          * @return std::istream&
          */
-        friend std::istream& operator >> (std::istream &in, Animal *a);
+        friend std::istream& operator >> (std::istream &in, Animal& a);
 };
 
 #endif

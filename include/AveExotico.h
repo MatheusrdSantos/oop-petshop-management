@@ -9,6 +9,7 @@
 class AveExotico : public Ave, public AnimalExotico{
     private:
         std::ostream& print(std::ostream&) const;
+        std::istream& read(std::istream&);
     protected:
         /**
          * @brief Define a forma como o texto da Ave Exótica será armazenado no banco.

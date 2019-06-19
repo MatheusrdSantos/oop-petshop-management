@@ -11,6 +11,7 @@
 class AnfibioExotico : public Anfibio, public AnimalExotico{
     private:
         std::ostream& print(std::ostream& os) const;
+        std::istream& read(std::istream&);
     protected:
         /**
          * @brief Define a forma como o texto do Anfíbio Exótico será armazenado no banco.
