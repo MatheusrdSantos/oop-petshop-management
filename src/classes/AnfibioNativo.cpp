@@ -176,6 +176,28 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
     }        
 }
 
+std::istream& AnfibioNativo::read(std::istream& is){
+
+    std::cout<<"Digite o total de mudas: "<<std::endl;
+    is>>m_total_de_mudas;
+
+    std::cout<<"Digite a data da ultima muda(dd/mm/yyyy): "<<std::endl;
+    std::string date_stg;
+    is>>date_stg;
+    Date ultima_muda(date_stg, "/");
+
+    std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+    is>>m_autorizacao_ibama;
+
+    std::cout<<"Digite a uf de origem:"<<std::endl;
+    is>>m_uf_origem;
+
+    std::cout<<"Digite a cidade de origem:"<<std::endl;
+    is>>m_cidade_origem;
+    
+    return is;
+}
+
 /*
 ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<m_pais_origem<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<m_cor_do_pelo<<";"<<m_venenoso<<";"<<m_tipo_veneno<<";"<<m_tamanho_do_bico_cm<<";"<<m_envergadura_das_asas<<std::endl;
 
