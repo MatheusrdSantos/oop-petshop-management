@@ -328,7 +328,23 @@ std::ostream& operator << (std::ostream& os, const Animal& a){
     return a.print(os);
 }
 
-std::istream & operator >> (std::istream &in, Animal& a)
+std::istream & operator >> (std::istream &is, Animal& a)
 {
-    return a.read(in);
+    std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
+    is.ignore();
+    std::getline(is, a.m_nome, '\n');
+    std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
+    is.ignore();
+    std::getline(is, a.m_nome_cientifico, '\n');
+    std::cout<<"Digite o sexo do Animal: "<<std::endl;
+    is>>a.m_sexo;
+    std::cout<<"Digite o tamanho do Animal: "<<std::endl;
+    is>>a.m_tamanho;
+    std::cout<<"Digite a dieta do Animal: "<<std::endl;
+    is.ignore();
+    std::getline(is, a.m_dieta, '\n');
+    std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
+    is.ignore();
+    std::getline(is, a.m_nome_batismo, '\n');
+    return a.read(is);
 }

@@ -22,9 +22,9 @@ int main(int argc, char const *argv[])
     
     t1->save();
     v1->save(); */
-
-    Animal *a = NULL;
-    std::cin>>a;
+    AveNativo *avn = new AveNativo();
+    Animal *a = avn;
+    std::cin>>(*a);
     //a->save();
 
     

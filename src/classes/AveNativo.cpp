@@ -53,7 +53,9 @@ AveNativo::AveNativo(std::string nome, std::string nome_cientifico, char sexo, d
     m_autorizacao_ibama=autorizacao_ibama;
 }
 
+AveNativo::AveNativo(){
 
+}
 
 
 std::string AveNativo::printInFile(int id){
@@ -172,22 +174,6 @@ std::ostream& AveNativo::print(std::ostream& os) const{
 }
 
 std::istream& AveNativo::read(std::istream& is){
-    std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
-    is.ignore();
-    std::getline(is, m_nome, '\n');
-    std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
-    is.ignore();
-    std::getline(is, m_nome_cientifico, '\n');
-    std::cout<<"Digite o sexo do Animal: "<<std::endl;
-    is>>m_sexo;
-    std::cout<<"Digite o tamanho do Animal: "<<std::endl;
-    is>>m_tamanho;
-    std::cout<<"Digite a dieta do Animal: "<<std::endl;
-    is.ignore();
-    std::getline(is, m_dieta, '\n');
-    std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
-    is.ignore();
-    std::getline(is, m_nome_batismo, '\n');
 
     //double tamanho_do_bico_cm;
     std::cout<<"Digite o tamanho do bico da ave (em cm): "<<std::endl;
