@@ -11,15 +11,8 @@ Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, std::
     m_nivel_de_seguranca = nivel_de_seguranca;
 
 }
-Tratador::Tratador(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
-    m_nome = nome;
-    m_cpf = cpf;
-    m_idade = idade;
-    m_tipo_sanguineo = tipo_sanguineo;
-    m_fator_rh = fator_rh;
-    m_especialidade = especialidade;
+Tratador::Tratador(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca): Funcionario(nome, cpf, idade, tipo_sanguineo, fator_rh, especialidade){
     m_nivel_de_seguranca = nivel_de_seguranca;
-
 }
 
 //DAO

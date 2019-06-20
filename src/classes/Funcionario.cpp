@@ -14,6 +14,14 @@ Funcionario::Funcionario(int id, std::string nome, std::string cpf, short idade,
     m_fator_rh = fator_rh;
     m_especialidade = especialidade;
 }
+Funcionario::Funcionario(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade){
+    m_nome = nome;
+    m_cpf = cpf;
+    m_idade = idade;
+    m_tipo_sanguineo = tipo_sanguineo;
+    m_fator_rh = fator_rh;
+    m_especialidade = especialidade;
+}
 
 // DAO
 std::multimap<std::string,Funcionario*> Funcionario::all(){
