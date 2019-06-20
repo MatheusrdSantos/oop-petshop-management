@@ -8,6 +8,8 @@
 #include "../include/ReptilNativo.h"
 #include "../include/AveExotico.h"
 #include "../include/AveNativo.h"
+#include "../include/Tratador.h"
+#include "../include/Funcionario.h"
 #include <string>
 #include <iostream>
 #include <map>
@@ -31,8 +33,12 @@ int main(int argc, char const *argv[])
     Animal *a = avn;
     std::cin>>(*a);
     a->save(); */
-    //a->save();
 
+    /* Tratador *t = new Tratador();
+    Funcionario *f = t;
+    std::cin>>(*f);
+    f->save();
+    */
     
     /*
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");

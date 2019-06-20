@@ -66,6 +66,7 @@ $(function() {
 <a href="#pub-static-attribs">Atributos Estáticos Públicos</a> &#124;
 <a href="#pro-methods">Métodos Protegidos</a> &#124;
 <a href="#pro-attribs">Atributos Protegidos</a> &#124;
+<a href="#friends">Amigas</a> &#124;
 <a href="../../df/dfe/classAnimal-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência da Classe Animal<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -93,8 +94,11 @@ Métodos Públicos</h2></td></tr>
 <tr class="memitem:ab045099aad905de0d8c7fbbab296cad6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#ab045099aad905de0d8c7fbbab296cad6">Animal</a> (int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, <a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> *veterinario, <a class="el" href="../../d1/dce/classTratador.html">Tratador</a> *tratador, std::string nome_batismo)</td></tr>
 <tr class="memdesc:ab045099aad905de0d8c7fbbab296cad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrói um novo objeto do tipo <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#ab045099aad905de0d8c7fbbab296cad6">Mais...</a><br /></td></tr>
 <tr class="separator:ab045099aad905de0d8c7fbbab296cad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e5bbdaad6febb7b024d889dc78c1889"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a4e5bbdaad6febb7b024d889dc78c1889">Animal</a> (std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, <a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> *veterinario, <a class="el" href="../../d1/dce/classTratador.html">Tratador</a> *tratador, std::string nome_batismo)</td></tr>
+<tr class="memdesc:a4e5bbdaad6febb7b024d889dc78c1889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrói um novo objeto do tipo <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#a4e5bbdaad6febb7b024d889dc78c1889">Mais...</a><br /></td></tr>
+<tr class="separator:a4e5bbdaad6febb7b024d889dc78c1889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a476af25adde5f0dfa688129c8f86fa5c"><td class="memItemLeft" align="right" valign="top"><a id="a476af25adde5f0dfa688129c8f86fa5c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a476af25adde5f0dfa688129c8f86fa5c">~Animal</a> ()</td></tr>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a476af25adde5f0dfa688129c8f86fa5c">~Animal</a> ()</td></tr>
 <tr class="memdesc:a476af25adde5f0dfa688129c8f86fa5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrói o objeto do tipo <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>. <br /></td></tr>
 <tr class="separator:a476af25adde5f0dfa688129c8f86fa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c27e56355bc2b40d65250da2bb8a102"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a2c27e56355bc2b40d65250da2bb8a102">getId</a> ()</td></tr>
@@ -139,15 +143,15 @@ Métodos Públicos</h2></td></tr>
 <tr class="memitem:a53daf7711c6b6430c723647b2cec7c36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a53daf7711c6b6430c723647b2cec7c36">setTamanho</a> (double tamanho)</td></tr>
 <tr class="memdesc:a53daf7711c6b6430c723647b2cec7c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define um(a) novo(a) Tamanho para o <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#a53daf7711c6b6430c723647b2cec7c36">Mais...</a><br /></td></tr>
 <tr class="separator:a53daf7711c6b6430c723647b2cec7c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bdff52128e0ae23bbcac796b68a4d05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a9bdff52128e0ae23bbcac796b68a4d05">getVeterinario</a> ()</td></tr>
-<tr class="memdesc:a9bdff52128e0ae23bbcac796b68a4d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> do <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#a9bdff52128e0ae23bbcac796b68a4d05">Mais...</a><br /></td></tr>
-<tr class="separator:a9bdff52128e0ae23bbcac796b68a4d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c8aacd4e6709ae559c4b17d6856a3df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a2c8aacd4e6709ae559c4b17d6856a3df">getVeterinario</a> ()</td></tr>
+<tr class="memdesc:a2c8aacd4e6709ae559c4b17d6856a3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> do <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#a2c8aacd4e6709ae559c4b17d6856a3df">Mais...</a><br /></td></tr>
+<tr class="separator:a2c8aacd4e6709ae559c4b17d6856a3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace9b58ea47057261292ce42a4edd2870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#ace9b58ea47057261292ce42a4edd2870">setVeterinario</a> (<a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> *veterinario)</td></tr>
 <tr class="memdesc:ace9b58ea47057261292ce42a4edd2870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define um(a) novo(a) <a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> para o <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#ace9b58ea47057261292ce42a4edd2870">Mais...</a><br /></td></tr>
 <tr class="separator:ace9b58ea47057261292ce42a4edd2870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac238dd4fa3762c7bc97f7baebac2d828"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dce/classTratador.html">Tratador</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#ac238dd4fa3762c7bc97f7baebac2d828">getTratador</a> ()</td></tr>
-<tr class="memdesc:ac238dd4fa3762c7bc97f7baebac2d828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="../../d1/dce/classTratador.html">Tratador</a> do <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#ac238dd4fa3762c7bc97f7baebac2d828">Mais...</a><br /></td></tr>
-<tr class="separator:ac238dd4fa3762c7bc97f7baebac2d828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386807706a0ba203fe84b68cd10c38aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dce/classTratador.html">Tratador</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a386807706a0ba203fe84b68cd10c38aa">getTratador</a> ()</td></tr>
+<tr class="memdesc:a386807706a0ba203fe84b68cd10c38aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="../../d1/dce/classTratador.html">Tratador</a> do <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#a386807706a0ba203fe84b68cd10c38aa">Mais...</a><br /></td></tr>
+<tr class="separator:a386807706a0ba203fe84b68cd10c38aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8cd2eec7a0c833074e303f389c8f9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#aec8cd2eec7a0c833074e303f389c8f9f">setTratador</a> (<a class="el" href="../../d1/dce/classTratador.html">Tratador</a> *tratador)</td></tr>
 <tr class="memdesc:aec8cd2eec7a0c833074e303f389c8f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define um(a) novo(a) <a class="el" href="../../d1/dce/classTratador.html">Tratador</a> para o <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#aec8cd2eec7a0c833074e303f389c8f9f">Mais...</a><br /></td></tr>
 <tr class="separator:aec8cd2eec7a0c833074e303f389c8f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,10 +229,19 @@ Atributos Protegidos</h2></td></tr>
 <tr class="separator:a1d9b76d126f6d72374f94d4d359e0ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9717b7e2de07af7118050ca1c10d0b5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#aa9717b7e2de07af7118050ca1c10d0b5">m_nome_batismo</a></td></tr>
 <tr class="separator:aa9717b7e2de07af7118050ca1c10d0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:a73976e856798b5e0d87bce71edb0f009"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a73976e856798b5e0d87bce71edb0f009">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> &amp;a)</td></tr>
+<tr class="memdesc:a73976e856798b5e0d87bce71edb0f009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saída para print de um <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>.  <a href="#a73976e856798b5e0d87bce71edb0f009">Mais...</a><br /></td></tr>
+<tr class="separator:a73976e856798b5e0d87bce71edb0f009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45423c605b4cd1ff547d3927f025ad49"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#a45423c605b4cd1ff547d3927f025ad49">operator&gt;&gt;</a> (std::istream &amp;in, <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> &amp;a)</td></tr>
+<tr class="memdesc:a45423c605b4cd1ff547d3927f025ad49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leitura das informações de um <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> a partir do terminal.  <a href="#a45423c605b4cd1ff547d3927f025ad49">Mais...</a><br /></td></tr>
+<tr class="separator:a45423c605b4cd1ff547d3927f025ad49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Construtores &amp; Destrutores</h2>
 <a id="ab045099aad905de0d8c7fbbab296cad6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab045099aad905de0d8c7fbbab296cad6">&#9670;&nbsp;</a></span>Animal()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab045099aad905de0d8c7fbbab296cad6">&#9670;&nbsp;</a></span>Animal() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,6 +313,85 @@ Atributos Protegidos</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">id</td><td></td></tr>
     <tr><td class="paramname">classe</td><td></td></tr>
+    <tr><td class="paramname">nome_cientifico</td><td></td></tr>
+    <tr><td class="paramname">sexo</td><td></td></tr>
+    <tr><td class="paramname">tamanho</td><td></td></tr>
+    <tr><td class="paramname">dieta</td><td></td></tr>
+    <tr><td class="paramname">veterinario</td><td></td></tr>
+    <tr><td class="paramname">tratador</td><td></td></tr>
+    <tr><td class="paramname">nome_batismo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e5bbdaad6febb7b024d889dc78c1889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5bbdaad6febb7b024d889dc78c1889">&#9670;&nbsp;</a></span>Animal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animal::Animal </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome_cientifico</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sexo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tamanho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>dieta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> *&#160;</td>
+          <td class="paramname"><em>veterinario</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/dce/classTratador.html">Tratador</a> *&#160;</td>
+          <td class="paramname"><em>tratador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nome_batismo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constrói um novo objeto do tipo <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td></td></tr>
     <tr><td class="paramname">nome_cientifico</td><td></td></tr>
     <tr><td class="paramname">sexo</td><td></td></tr>
     <tr><td class="paramname">tamanho</td><td></td></tr>
@@ -552,14 +644,14 @@ Atributos Protegidos</h2></td></tr>
 
 </div>
 </div>
-<a id="ac238dd4fa3762c7bc97f7baebac2d828"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac238dd4fa3762c7bc97f7baebac2d828">&#9670;&nbsp;</a></span>getTratador()</h2>
+<a id="a386807706a0ba203fe84b68cd10c38aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386807706a0ba203fe84b68cd10c38aa">&#9670;&nbsp;</a></span>getTratador()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/dce/classTratador.html">Tratador</a>* Animal::getTratador </td>
+          <td class="memname"><a class="el" href="../../d1/dce/classTratador.html">Tratador</a> * Animal::getTratador </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -572,14 +664,14 @@ Atributos Protegidos</h2></td></tr>
 
 </div>
 </div>
-<a id="a9bdff52128e0ae23bbcac796b68a4d05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bdff52128e0ae23bbcac796b68a4d05">&#9670;&nbsp;</a></span>getVeterinario()</h2>
+<a id="a2c8aacd4e6709ae559c4b17d6856a3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8aacd4e6709ae559c4b17d6856a3df">&#9670;&nbsp;</a></span>getVeterinario()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a>* Animal::getVeterinario </td>
+          <td class="memname"><a class="el" href="../../df/d71/classVeterinario.html">Veterinario</a> * Animal::getVeterinario </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -625,7 +717,7 @@ Atributos Protegidos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>std::string String formatada de como o objeto será armazenado no banco.. </dd></dl>
 
-<p>Implementado por <a class="el" href="../../d4/d13/classAnfibio.html#ab866ca21fb00c2d4d571aadd271eadec">Anfibio</a>, <a class="el" href="../../d9/de6/classAnfibioExotico.html#a08d9debec54258a0f43c8c503dfb23d0">AnfibioExotico</a>, <a class="el" href="../../d6/def/classAve.html#ab858405e18c56876e331ad943885ee53">Ave</a>, <a class="el" href="../../dc/d80/classMamifero.html#ae91b67a8f0f508793a801aadcaa18570">Mamifero</a>, <a class="el" href="../../d4/d70/classReptil.html#a53fd59f3aed9c2d463722a8e97401406">Reptil</a>, <a class="el" href="../../d6/d8f/classAveExotico.html#a4ba81def12131f047b3800e5f10a983b">AveExotico</a>, <a class="el" href="../../dc/d41/classMamiferoExotico.html#a4ee6f5f4a2917cfdf54304525add0c4a">MamiferoExotico</a>, <a class="el" href="../../df/d52/classMamiferoNativo.html#ae2f2b00cb6720cea2780ebef78be52ea">MamiferoNativo</a>, <a class="el" href="../../d7/dd5/classReptilExotico.html#a71312f425b92e04d8f29a856abd83f26">ReptilExotico</a>, <a class="el" href="../../d9/d17/classAnfibioNativo.html#a7926e1af44542ee268e27dd3d862f583">AnfibioNativo</a>, <a class="el" href="../../d4/df0/classAveNativo.html#ab95679ed20354b2183706db24899d316">AveNativo</a> e <a class="el" href="../../de/dd6/classReptilNativo.html#ac801a11c87a2847fb4b46488aa6bb789">ReptilNativo</a>.</p>
+<p>Implementado por <a class="el" href="../../d4/d13/classAnfibio.html#ab866ca21fb00c2d4d571aadd271eadec">Anfibio</a>, <a class="el" href="../../dc/d80/classMamifero.html#ae91b67a8f0f508793a801aadcaa18570">Mamifero</a>, <a class="el" href="../../d9/de6/classAnfibioExotico.html#a08d9debec54258a0f43c8c503dfb23d0">AnfibioExotico</a>, <a class="el" href="../../d6/def/classAve.html#ab858405e18c56876e331ad943885ee53">Ave</a>, <a class="el" href="../../d4/d70/classReptil.html#a53fd59f3aed9c2d463722a8e97401406">Reptil</a>, <a class="el" href="../../d9/d17/classAnfibioNativo.html#a7926e1af44542ee268e27dd3d862f583">AnfibioNativo</a>, <a class="el" href="../../d6/d8f/classAveExotico.html#a4ba81def12131f047b3800e5f10a983b">AveExotico</a>, <a class="el" href="../../dc/d41/classMamiferoExotico.html#a4ee6f5f4a2917cfdf54304525add0c4a">MamiferoExotico</a>, <a class="el" href="../../df/d52/classMamiferoNativo.html#ae2f2b00cb6720cea2780ebef78be52ea">MamiferoNativo</a>, <a class="el" href="../../d7/dd5/classReptilExotico.html#a71312f425b92e04d8f29a856abd83f26">ReptilExotico</a>, <a class="el" href="../../d4/df0/classAveNativo.html#ab95679ed20354b2183706db24899d316">AveNativo</a> e <a class="el" href="../../de/dd6/classReptilNativo.html#ac801a11c87a2847fb4b46488aa6bb789">ReptilNativo</a>.</p>
 
 </div>
 </div>
@@ -1032,6 +1124,99 @@ false </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>std::multimap&lt;std::string, Animal*&gt; </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="a73976e856798b5e0d87bce71edb0f009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73976e856798b5e0d87bce71edb0f009">&#9670;&nbsp;</a></span>operator<<</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saída para print de um <a class="el" href="../../d7/dac/classAnimal.html">Animal</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td></td></tr>
+    <tr><td class="paramname">a</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>std::ostream&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a45423c605b4cd1ff547d3927f025ad49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45423c605b4cd1ff547d3927f025ad49">&#9670;&nbsp;</a></span>operator>></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/dac/classAnimal.html">Animal</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Leitura das informações de um <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> a partir do terminal. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td></td></tr>
+    <tr><td class="paramname">a</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>std::istream&amp; </dd></dl>
 
 </div>
 </div>

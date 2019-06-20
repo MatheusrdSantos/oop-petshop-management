@@ -45,6 +45,12 @@ std::ostream& Tratador::print(std::ostream& os) const{
         <<std::endl;
 }
 
+std::istream& Tratador::read(std::istream& is){
+    std::cout << "Nível de Segurança: ";
+    is>>m_nivel_de_seguranca;
+    return is;
+}
+
 // std::ostream& operator << (std::ostream& os, Tratador& tratador){
     // os<<std::endl
     //     <<"Tratador: "                <<tratador.getNome()<<std::endl

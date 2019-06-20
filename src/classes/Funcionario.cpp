@@ -287,3 +287,29 @@ bool Funcionario::remove(){
 std::ostream& operator << (std::ostream& os, const Funcionario& f){
     return f.print(os);
 }
+
+std::istream & operator >> (std::istream &is, Funcionario& f)
+{
+    std::cout << "Nome: "<<std::endl;
+    is.ignore();
+    std::getline (is, f.m_nome);
+    
+    std::cout << "CPF: ";
+    is.ignore();
+    std::getline (is, f.m_cpf, '\n');
+
+    std::cout << "Idade: ";
+    is >> f.m_idade;
+
+    std::cout << "Tipo Sanguínio: ";
+    is >> f.m_tipo_sanguineo;
+
+    std::cout << "Fator RH: ";
+    is >> f.m_fator_rh;
+
+    std::cout << "Especialidade: ";
+    is.ignore();
+    std::getline (is, f.m_especialidade);
+
+    return f.read(is);
+}

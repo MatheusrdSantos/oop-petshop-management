@@ -11,13 +11,14 @@ Diagrama de colaboração para Funcionario\+:
 \subsection*{Métodos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}\label{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}} 
 \hyperlink{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}{Funcionario} ()
+\begin{DoxyCompactList}\small\item\em Define a forma como o texto do funcionário será imprimida, se altera dependendo da classe derivada. \end{DoxyCompactList}\item 
+\hyperlink{classFuncionario_acc3a59366c68a3a56a4d4114931a11c9}{Funcionario} (int id, std\+::string nome, std\+::string cpf, short idade, std\+::string tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade)
 \begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
-\hyperlink{classFuncionario_a28e5fd647179d37e3b93e50b7c03401a}{Funcionario} (int id, std\+::string nome, std\+::string cpf, short idade, short tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade)
+\hyperlink{classFuncionario_a0405143b26bf96766afca475fabf8c63}{Funcionario} (std\+::string nome, std\+::string cpf, short idade, std\+::string tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade)
 \begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classFuncionario_a800273bd909dc88f821a414abebc442c}\label{classFuncionario_a800273bd909dc88f821a414abebc442c}} 
-\hyperlink{classFuncionario_a800273bd909dc88f821a414abebc442c}{$\sim$\+Funcionario} ()
+\mbox{\Hypertarget{classFuncionario_a31cffbde6168ea93e5eee484b4221f52}\label{classFuncionario_a31cffbde6168ea93e5eee484b4221f52}} 
+virtual \hyperlink{classFuncionario_a31cffbde6168ea93e5eee484b4221f52}{$\sim$\+Funcionario} ()
 \begin{DoxyCompactList}\small\item\em Destrói o \hyperlink{classFuncionario}{Funcionario}. \end{DoxyCompactList}\item 
 int \hyperlink{classFuncionario_a0288286a907e587b7ab75d6c23354a06}{get\+Id} ()
 \begin{DoxyCompactList}\small\item\em Retorna o Id do Funcionário. \end{DoxyCompactList}\item 
@@ -27,7 +28,7 @@ std\+::string \hyperlink{classFuncionario_aad99a1c5373c00bf5ad161aad1b18a4f}{get
 \begin{DoxyCompactList}\small\item\em Retorna o Cpf do Funcionário. \end{DoxyCompactList}\item 
 short \hyperlink{classFuncionario_ac8b1947b4cb1c1216291c4750670fba2}{get\+Idade} ()
 \begin{DoxyCompactList}\small\item\em Retorna a Idade do Funcionário. \end{DoxyCompactList}\item 
-short \hyperlink{classFuncionario_aa25f7aa3d2da9cda7081f262793ecad7}{get\+Tipo\+Sanguineo} ()
+std\+::string \hyperlink{classFuncionario_a871dfd5403d3d3c026c35b62ee2bb6a9}{get\+Tipo\+Sanguineo} ()
 \begin{DoxyCompactList}\small\item\em Retorna o Tipo Sanguineo do Funcionário. \end{DoxyCompactList}\item 
 char \hyperlink{classFuncionario_a87dc4304683c4a4492a5ecd516d29f44}{get\+Fator\+Rh} ()
 \begin{DoxyCompactList}\small\item\em Retorna o Fator Rh do Funcionário. \end{DoxyCompactList}\item 
@@ -91,8 +92,8 @@ std\+::string {\bfseries m\+\_\+cpf}
 \mbox{\Hypertarget{classFuncionario_a2bc5a68aebcf1a792812430ce5c8bdca}\label{classFuncionario_a2bc5a68aebcf1a792812430ce5c8bdca}} 
 short {\bfseries m\+\_\+idade}
 \item 
-\mbox{\Hypertarget{classFuncionario_aecf4c525d6ac81601db0e7a034c82321}\label{classFuncionario_aecf4c525d6ac81601db0e7a034c82321}} 
-short {\bfseries m\+\_\+tipo\+\_\+sanguineo}
+\mbox{\Hypertarget{classFuncionario_aa09cfc8a989b1a292cd21380a5fcb8bc}\label{classFuncionario_aa09cfc8a989b1a292cd21380a5fcb8bc}} 
+std\+::string {\bfseries m\+\_\+tipo\+\_\+sanguineo}
 \item 
 \mbox{\Hypertarget{classFuncionario_ab8b1fa2c4d830ea6a03c5d1db8ee1002}\label{classFuncionario_ab8b1fa2c4d830ea6a03c5d1db8ee1002}} 
 char {\bfseries m\+\_\+fator\+\_\+rh}
@@ -100,14 +101,34 @@ char {\bfseries m\+\_\+fator\+\_\+rh}
 \mbox{\Hypertarget{classFuncionario_ac9ccf61efca75f4130e79ef06b7278a2}\label{classFuncionario_ac9ccf61efca75f4130e79ef06b7278a2}} 
 std\+::string {\bfseries m\+\_\+especialidade}
 \end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classFuncionario_ab7a9c1544d954fd29f3c821781334a54}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classFuncionario}{Funcionario} \&f)
+\begin{DoxyCompactList}\small\item\em Saída para print de um funcionário. \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{classFuncionario_ab45a99ce14b2d5eb5b0b147b6ed39382}{operator$>$$>$} (std\+::istream \&in, \hyperlink{classFuncionario}{Funcionario} \&f)
+\begin{DoxyCompactList}\small\item\em Leitura das informações de um \hyperlink{classFuncionario}{Funcionario} a partir do terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Construtores \& Destrutores}
-\mbox{\Hypertarget{classFuncionario_a28e5fd647179d37e3b93e50b7c03401a}\label{classFuncionario_a28e5fd647179d37e3b93e50b7c03401a}} 
+\mbox{\Hypertarget{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}\label{classFuncionario_a7cd39b2c6cd2449162481a8c0e7a2429}} 
 \index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
 \index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
-\subsubsection{\texorpdfstring{Funcionario()}{Funcionario()}}
-{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{short}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{Funcionario()}{Funcionario()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define a forma como o texto do funcionário será imprimida, se altera dependendo da classe derivada. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string String formatada de como o objeto será recebido para impressão.. Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_acc3a59366c68a3a56a4d4114931a11c9}\label{classFuncionario_acc3a59366c68a3a56a4d4114931a11c9}} 
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{Funcionario()}{Funcionario()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{std\+::string}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade }\end{DoxyParamCaption})}
 
 
 
@@ -117,6 +138,31 @@ Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}.
 \begin{DoxyParams}{Parâmetros}
 {\em id} & \\
 \hline
+{\em nome} & \\
+\hline
+{\em cpf} & \\
+\hline
+{\em idade} & \\
+\hline
+{\em tipo\+\_\+sanguineo} & \\
+\hline
+{\em fator\+\_\+rh} & \\
+\hline
+{\em especialidade} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFuncionario_a0405143b26bf96766afca475fabf8c63}\label{classFuncionario_a0405143b26bf96766afca475fabf8c63}} 
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\index{Funcionario@{Funcionario}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{Funcionario()}{Funcionario()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Funcionario\+::\+Funcionario (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{std\+::string}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade }\end{DoxyParamCaption})}
+
+
+
+Constrói um novo objeto do tipo \hyperlink{classFuncionario}{Funcionario}. 
+
+
+\begin{DoxyParams}{Parâmetros}
 {\em nome} & \\
 \hline
 {\em cpf} & \\
@@ -242,18 +288,18 @@ Retorna o Nome do Funcionário.
 \begin{DoxyReturn}{Retorna}
 std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classFuncionario_aa25f7aa3d2da9cda7081f262793ecad7}\label{classFuncionario_aa25f7aa3d2da9cda7081f262793ecad7}} 
+\mbox{\Hypertarget{classFuncionario_a871dfd5403d3d3c026c35b62ee2bb6a9}\label{classFuncionario_a871dfd5403d3d3c026c35b62ee2bb6a9}} 
 \index{Funcionario@{Funcionario}!get\+Tipo\+Sanguineo@{get\+Tipo\+Sanguineo}}
 \index{get\+Tipo\+Sanguineo@{get\+Tipo\+Sanguineo}!Funcionario@{Funcionario}}
 \subsubsection{\texorpdfstring{get\+Tipo\+Sanguineo()}{getTipoSanguineo()}}
-{\footnotesize\ttfamily short Funcionario\+::get\+Tipo\+Sanguineo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string Funcionario\+::get\+Tipo\+Sanguineo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Retorna o Tipo Sanguineo do Funcionário. 
 
 \begin{DoxyReturn}{Retorna}
-short 
+std\+::string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classFuncionario_a696332cf5ccde3a31f84e5af687e7ec2}\label{classFuncionario_a696332cf5ccde3a31f84e5af687e7ec2}} 
 \index{Funcionario@{Funcionario}!print\+In\+File@{print\+In\+File}}
@@ -458,6 +504,49 @@ Faz uma query para a seleção de um ou mais funcionários passado uma coluna, u
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
 std\+::multimap$<$std\+::string, Funcionario$\ast$$>$ 
+\end{DoxyReturn}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classFuncionario_ab7a9c1544d954fd29f3c821781334a54}\label{classFuncionario_ab7a9c1544d954fd29f3c821781334a54}} 
+\index{Funcionario@{Funcionario}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classFuncionario}{Funcionario} \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Saída para print de um funcionário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em os} & \\
+\hline
+{\em f} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::ostream\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFuncionario_ab45a99ce14b2d5eb5b0b147b6ed39382}\label{classFuncionario_ab45a99ce14b2d5eb5b0b147b6ed39382}} 
+\index{Funcionario@{Funcionario}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Funcionario@{Funcionario}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\hyperlink{classFuncionario}{Funcionario} \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Leitura das informações de um \hyperlink{classFuncionario}{Funcionario} a partir do terminal. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em in} & \\
+\hline
+{\em f} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::istream\& 
 \end{DoxyReturn}
 
 
