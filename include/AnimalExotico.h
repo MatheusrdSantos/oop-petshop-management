@@ -19,6 +19,14 @@ class AnimalExotico : public AnimalSilvestre{
          * 
          */
         AnimalExotico(){};
+        
+        /**
+         * @brief Constrói um novo Animal Exótico.
+         * @param pais_origem
+         * @param cidade_origem
+         * @param 
+         */
+        AnimalExotico(std::string pais_origem, std::string cidade_origem, std::string autorizacao_ibama);
 
         /**
          * @brief Destrói um Animal Exótico.

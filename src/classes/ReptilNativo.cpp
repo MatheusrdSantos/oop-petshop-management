@@ -41,24 +41,8 @@ ReptilNativo::ReptilNativo(std::string classe, std::string nome, std::string nom
     m_autorizacao_ibama=autorizacao_ibama;  
 }
 
-ReptilNativo::ReptilNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, bool venenoso, std::string tipo_veneno, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
-    m_classe="Reptilia";
-    m_nome=nome;
-    m_nome_cientifico=nome_cientifico;
-    m_sexo=sexo;
-    m_tamanho=tamanho;
-    m_dieta=dieta;
-    m_veterinario=veterinario;
-    m_tratador=tratador;
-    m_nome_batismo=nome_batismo;
-    
-    m_venenoso=venenoso;
-    m_tipo_veneno=tipo_veneno;
-
-
-    m_uf_origem=uf_origem;
-    m_cidade_origem=cidade_origem;
-    m_autorizacao_ibama=autorizacao_ibama;  
+ReptilNativo::ReptilNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, bool venenoso, std::string tipo_veneno, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama): Reptil(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, venenoso,tipo_veneno), AnimalNativo(uf_origem, cidade_origem, autorizacao_ibama){
+    m_classe="Reptilia"; 
 }
 
 ReptilNativo::ReptilNativo(){

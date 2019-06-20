@@ -24,8 +24,9 @@ class AnimalNativo : public AnimalSilvestre{
          * 
          * @param uf_origem 
          * @param cidade_origem 
+         * @param autorizacao_ibama
          */
-        AnimalNativo(std::string uf_origem, std::string cidade_origem);
+        AnimalNativo(std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama);
         
         /**
          * @brief Destrói o Animal Nativo 

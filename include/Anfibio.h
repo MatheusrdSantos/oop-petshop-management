@@ -32,6 +32,28 @@ class Anfibio : public Animal{
         Anfibio();
 
         /**
+         * @brief Constrói um novo objeto do tipo Anfíbio com base em parametros.
+         * @param total_de_mudas
+         * @param ultima_muda 
+         */
+        Anfibio(int total_de_mudas, Date *ultima_muda);
+        
+        /**
+         * @brief Constrói um novo objeto do tipo Anfíbio com base em parametros.
+         * @param nome
+         * @param nome_cientifico
+         * @param sexo
+         * @param tamanho
+         * @param dieta
+         * @param veterinario
+         * @param tratador
+         * @param nome_batismo
+         * @param total_de_mudas
+         * @param ultima_muda
+         */
+        Anfibio(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo,int total_de_mudas, Date* ultima_muda);
+
+        /**
          * @brief Destrói o objeto do tipo Animal.
          * 
          */

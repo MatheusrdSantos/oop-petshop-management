@@ -39,23 +39,8 @@ MamiferoNativo::MamiferoNativo(std::string classe, std::string nome, std::string
     m_autorizacao_ibama=autorizacao_ibama;
 }
 
-MamiferoNativo::MamiferoNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, std::string cor_do_pelo, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
+MamiferoNativo::MamiferoNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, std::string cor_do_pelo, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama): Mamifero(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, cor_do_pelo), AnimalNativo(uf_origem, cidade_origem, autorizacao_ibama){
     m_classe="Mammalia";
-    m_nome=nome;
-    m_nome_cientifico=nome_cientifico;
-    m_sexo=sexo;
-    m_tamanho=tamanho;
-    m_dieta=dieta;
-    m_veterinario=veterinario;
-    m_tratador=tratador;
-    m_nome_batismo=nome_batismo;
-    
-    m_cor_do_pelo=cor_do_pelo;
-    
-
-    m_uf_origem=uf_origem;
-    m_cidade_origem=cidade_origem;
-    m_autorizacao_ibama=autorizacao_ibama;
 }
 
 MamiferoNativo::MamiferoNativo(){

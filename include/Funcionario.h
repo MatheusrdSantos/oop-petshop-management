@@ -69,6 +69,18 @@ class Funcionario : public ModelDAO<Funcionario>{
         Funcionario(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade);
         
         /**
+         * @brief Constrói um novo objeto do tipo Funcionario
+         * 
+         * @param nome 
+         * @param cpf 
+         * @param idade 
+         * @param tipo_sanguineo 
+         * @param fator_rh 
+         * @param especialidade 
+         */
+        Funcionario(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade);
+        
+        /**
          * @brief Destrói o Funcionario
          * 
          */

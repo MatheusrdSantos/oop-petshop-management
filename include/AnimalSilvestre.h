@@ -17,6 +17,12 @@ class AnimalSilvestre{
          * 
          */
         AnimalSilvestre(){};
+        
+        /**
+         * @brief Constrói um novo objeto do tipo Animal Silvestre
+         * @param autorizacao_ibama
+         */
+        AnimalSilvestre(std::string autorizacao_ibama);
 
         /**
          * @brief Destrói um objeto do tipo Animal Silvestre.
