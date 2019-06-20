@@ -36,21 +36,8 @@ AveNativo::AveNativo(std::string classe, std::string nome, std::string nome_cien
 }
 
 
-AveNativo::AveNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, double tamanho_do_bico_cm, double envergadura_das_asas, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama){
+AveNativo::AveNativo(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, double tamanho_do_bico_cm, double envergadura_das_asas, std::string uf_origem, std::string cidade_origem, std::string autorizacao_ibama): Ave(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas), AnimalNativo(uf_origem, cidade_origem, autorizacao_ibama){
     m_classe="Aves";
-    m_nome=nome;
-    m_nome_cientifico=nome_cientifico;
-    m_sexo=sexo;
-    m_tamanho=tamanho;
-    m_dieta=dieta;
-    m_veterinario=veterinario;
-    m_tratador=tratador;
-    m_nome_batismo=nome_batismo;
-    m_tamanho_do_bico_cm=tamanho_do_bico_cm;
-    m_envergadura_das_asas=envergadura_das_asas;
-    m_uf_origem=uf_origem;
-    m_cidade_origem=cidade_origem;
-    m_autorizacao_ibama=autorizacao_ibama;
 }
 
 AveNativo::AveNativo(){
