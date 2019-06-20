@@ -19,9 +19,9 @@ var searchData=
   ['getsexo',['getSexo',['../d7/dac/classAnimal.html#a7349027418d900a9cd7cfc32001b6f7d',1,'Animal']]],
   ['gettableincrementid',['getTableIncrementId',['../df/dd0/classModelDAO.html#a24cf7f88d833dba6424271767403cbda',1,'ModelDAO']]],
   ['gettamanho',['getTamanho',['../d7/dac/classAnimal.html#a3936ff4ad07fee3173db2a9dff52c706',1,'Animal']]],
-  ['gettiposanguineo',['getTipoSanguineo',['../d2/de9/classFuncionario.html#aa25f7aa3d2da9cda7081f262793ecad7',1,'Funcionario']]],
+  ['gettiposanguineo',['getTipoSanguineo',['../d2/de9/classFuncionario.html#a871dfd5403d3d3c026c35b62ee2bb6a9',1,'Funcionario']]],
   ['gettipoveneno',['getTipoVeneno',['../d4/d70/classReptil.html#aa5e4cd3fa2d94916a3ba5cc20299d3cf',1,'Reptil']]],
-  ['gettratador',['getTratador',['../d7/dac/classAnimal.html#ac238dd4fa3762c7bc97f7baebac2d828',1,'Animal']]],
+  ['gettratador',['getTratador',['../d7/dac/classAnimal.html#a386807706a0ba203fe84b68cd10c38aa',1,'Animal']]],
   ['getuforigem',['getUfOrigem',['../d3/dfa/classAnimalNativo.html#a4adb947e6542cdb4ac9be98cbe2450d7',1,'AnimalNativo']]],
-  ['getveterinario',['getVeterinario',['../d7/dac/classAnimal.html#a9bdff52128e0ae23bbcac796b68a4d05',1,'Animal']]]
+  ['getveterinario',['getVeterinario',['../d7/dac/classAnimal.html#a2c8aacd4e6709ae559c4b17d6856a3df',1,'Animal']]]
 ];

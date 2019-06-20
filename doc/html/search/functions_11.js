@@ -10,7 +10,7 @@ var searchData=
   ['_7eave',['~Ave',['../d6/def/classAve.html#ad290be8d6fb95f1cfd24b5f55def7741',1,'Ave']]],
   ['_7eaveexotico',['~AveExotico',['../d6/d8f/classAveExotico.html#a5fe9190a5ec320d8d05bab3dc3cc2b5c',1,'AveExotico']]],
   ['_7eavenativo',['~AveNativo',['../d4/df0/classAveNativo.html#a3a1ebe2fd7ce2d879953868bc50f89a5',1,'AveNativo']]],
-  ['_7efuncionario',['~Funcionario',['../d2/de9/classFuncionario.html#a800273bd909dc88f821a414abebc442c',1,'Funcionario']]],
+  ['_7efuncionario',['~Funcionario',['../d2/de9/classFuncionario.html#a31cffbde6168ea93e5eee484b4221f52',1,'Funcionario']]],
   ['_7emamifero',['~Mamifero',['../dc/d80/classMamifero.html#a56eb196d45222e754eb6f19000667d5d',1,'Mamifero']]],
   ['_7emamiferoexotico',['~MamiferoExotico',['../dc/d41/classMamiferoExotico.html#a2ab6c04adde874cc40aa55b5f586c15a',1,'MamiferoExotico']]],
   ['_7emamiferonativo',['~MamiferoNativo',['../df/d52/classMamiferoNativo.html#aa08f523498d6713873a29747024e5717',1,'MamiferoNativo']]],

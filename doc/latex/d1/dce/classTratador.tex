@@ -14,9 +14,9 @@ Diagrama de colaboração para Tratador\+:
 \mbox{\Hypertarget{classTratador_a4339bfc1e32968609401440338eeba20}\label{classTratador_a4339bfc1e32968609401440338eeba20}} 
 \hyperlink{classTratador_a4339bfc1e32968609401440338eeba20}{Tratador} ()
 \begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classTratador}{Tratador}. \end{DoxyCompactList}\item 
-\hyperlink{classTratador_ac77f42836921173475b8e5f98807505e}{Tratador} (int id, std\+::string nome, std\+::string cpf, short idade, short tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade, int nivel\+\_\+de\+\_\+seguranca)
+\hyperlink{classTratador_ae7448911b01efadf4b7e0a1a34a47bdc}{Tratador} (int id, std\+::string nome, std\+::string cpf, short idade, std\+::string tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade, int nivel\+\_\+de\+\_\+seguranca)
 \begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classTratador}{Tratador}. \end{DoxyCompactList}\item 
-\hyperlink{classTratador_af4d95e52e508d7204fc8c93b3ec5e637}{Tratador} (std\+::string nome, std\+::string cpf, short idade, short tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade, int nivel\+\_\+de\+\_\+seguranca)
+\hyperlink{classTratador_a6b4883b6a6fe42fd6f502fd2a655d435}{Tratador} (std\+::string nome, std\+::string cpf, short idade, std\+::string tipo\+\_\+sanguineo, char fator\+\_\+rh, std\+::string especialidade, int nivel\+\_\+de\+\_\+seguranca)
 \begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classTratador}{Tratador}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTratador_a8750ed6960e786da5d6f87e05b491093}\label{classTratador_a8750ed6960e786da5d6f87e05b491093}} 
 \hyperlink{classTratador_a8750ed6960e786da5d6f87e05b491093}{$\sim$\+Tratador} ()
@@ -30,15 +30,20 @@ void \hyperlink{classTratador_a508aa328b9235c262c74064c95357976}{set\+Nivel\+De\
 \item 
 std\+::string \hyperlink{classTratador_af2efc58696c20320f51741d01a958ef7}{print\+In\+File} (int id)
 \begin{DoxyCompactList}\small\item\em Define a forma como o texto do \hyperlink{classTratador}{Tratador} será armazenado no banco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classTratador_af761ac4dd4aeeeddd1bcb83bdef6a4dd}{operator$<$$<$} (std\+::ostream \&os, \hyperlink{classTratador}{Tratador} \&tratador)
+\begin{DoxyCompactList}\small\item\em Define a forma como o texto do \hyperlink{classTratador}{Tratador} será impresso. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Outros membros herdados}
 
 
 \subsection{Construtores \& Destrutores}
-\mbox{\Hypertarget{classTratador_ac77f42836921173475b8e5f98807505e}\label{classTratador_ac77f42836921173475b8e5f98807505e}} 
+\mbox{\Hypertarget{classTratador_ae7448911b01efadf4b7e0a1a34a47bdc}\label{classTratador_ae7448911b01efadf4b7e0a1a34a47bdc}} 
 \index{Tratador@{Tratador}!Tratador@{Tratador}}
 \index{Tratador@{Tratador}!Tratador@{Tratador}}
 \subsubsection{\texorpdfstring{Tratador()}{Tratador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Tratador\+::\+Tratador (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{short}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade,  }\item[{int}]{nivel\+\_\+de\+\_\+seguranca }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Tratador\+::\+Tratador (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{std\+::string}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade,  }\item[{int}]{nivel\+\_\+de\+\_\+seguranca }\end{DoxyParamCaption})}
 
 
 
@@ -63,11 +68,11 @@ Constrói um novo objeto do tipo \hyperlink{classTratador}{Tratador}.
 {\em nivel\+\_\+de\+\_\+seguranca} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classTratador_af4d95e52e508d7204fc8c93b3ec5e637}\label{classTratador_af4d95e52e508d7204fc8c93b3ec5e637}} 
+\mbox{\Hypertarget{classTratador_a6b4883b6a6fe42fd6f502fd2a655d435}\label{classTratador_a6b4883b6a6fe42fd6f502fd2a655d435}} 
 \index{Tratador@{Tratador}!Tratador@{Tratador}}
 \index{Tratador@{Tratador}!Tratador@{Tratador}}
 \subsubsection{\texorpdfstring{Tratador()}{Tratador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Tratador\+::\+Tratador (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{short}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade,  }\item[{int}]{nivel\+\_\+de\+\_\+seguranca }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Tratador\+::\+Tratador (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{cpf,  }\item[{short}]{idade,  }\item[{std\+::string}]{tipo\+\_\+sanguineo,  }\item[{char}]{fator\+\_\+rh,  }\item[{std\+::string}]{especialidade,  }\item[{int}]{nivel\+\_\+de\+\_\+seguranca }\end{DoxyParamCaption})}
 
 
 
@@ -143,6 +148,22 @@ Define o Nivel De Seguranca do \hyperlink{classTratador}{Tratador}.
 {\em nivel\+\_\+de\+\_\+seguranca} & \\
 \hline
 \end{DoxyParams}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classTratador_af761ac4dd4aeeeddd1bcb83bdef6a4dd}\label{classTratador_af761ac4dd4aeeeddd1bcb83bdef6a4dd}} 
+\index{Tratador@{Tratador}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Tratador@{Tratador}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{\hyperlink{classTratador}{Tratador} \&}]{tratador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Define a forma como o texto do \hyperlink{classTratador}{Tratador} será impresso. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string String formatada de como o objeto será recebido para impressão.. 
+\end{DoxyReturn}
 
 
 A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

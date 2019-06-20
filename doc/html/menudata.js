@@ -42,7 +42,8 @@ var menudata={children:[
 {text:"w",url:"functions_func.html#index_w"},
 {text:"y",url:"functions_func.html#index_y"},
 {text:"~",url:"functions_func.html#index_0x7e"}]},
-{text:"Variáveis",url:"functions_vars.html"}]}]},
+{text:"Variáveis",url:"functions_vars.html"},
+{text:"Funções Relacionadas",url:"functions_rela.html"}]}]},
 {text:"Arquivos",url:"files.html",children:[
 {text:"Lista de Arquivos",url:"files.html"},
 {text:"Membros dos Arquivos",url:"globals.html",children:[
