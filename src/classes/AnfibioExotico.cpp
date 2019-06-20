@@ -13,19 +13,7 @@ AnfibioExotico::AnfibioExotico(std::string nome, std::string nome_cientifico, ch
 }
 
 AnfibioExotico::AnfibioExotico(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, int total_de_mudas = 0, Date* ultima_muda = new Date(0,0,0), std::string autorizacao_ibama = NULL, std::string pais_origem = NULL, std::string cidade_origem = NULL): Anfibio(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, total_de_mudas, ultima_muda), AnimalExotico(pais_origem, cidade_origem, autorizacao_ibama){
-    m_classe = "Amphibia" ;
-    m_nome_cientifico = nome_cientifico;
-    m_sexo = sexo ;
-    m_tamanho = tamanho ;
-    m_dieta = dieta ;
-    m_veterinario = veterinario ;
-    m_tratador = tratador ;
-    m_nome_batismo = nome_batismo;
-    m_total_de_mudas = total_de_mudas;
-    m_ultima_muda = ultima_muda;
-    m_autorizacao_ibama = autorizacao_ibama;
-    m_pais_origem = pais_origem;
-    m_cidade_origem = cidade_origem;
+
 }
 
 std::string AnfibioExotico::printInFile(int id){
