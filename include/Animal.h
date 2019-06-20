@@ -58,7 +58,7 @@ class Animal : public ModelDAO<Animal>{
         /**
          * @brief Constrói um novo objeto do tipo Animal
          * 
-         * @param classe 
+         * @param nome 
          * @param nome_cientifico 
          * @param sexo 
          * @param tamanho 
@@ -67,7 +67,7 @@ class Animal : public ModelDAO<Animal>{
          * @param tratador 
          * @param nome_batismo 
          */
-        Animal(std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
+        Animal(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
 
         /**
          * @brief Destrói o objeto do tipo Animal.
