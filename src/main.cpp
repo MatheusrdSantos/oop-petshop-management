@@ -27,10 +27,10 @@ int main(int argc, char const *argv[])
     
     // realizar abaixo de acordo com a resposta dada acima
     // esse é um exemplo para AveNativo
-    AveNativo *avn = new AveNativo();
+    /* AveNativo *avn = new AveNativo();
     Animal *a = avn;
     std::cin>>(*a);
-    a->save();
+    a->save(); */
     //a->save();
 
     
@@ -90,7 +90,7 @@ int main(int argc, char const *argv[])
 
     Animal::find(4)->remove(); */
     
-    //run();
+    run();
 
     /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");

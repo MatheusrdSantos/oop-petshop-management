@@ -49,6 +49,13 @@ void textColor_red(std::string texto);
 void textColor_yellow(std::string texto);
 
 /**
+ * @brief Modificadores da cor do texto para green
+ * 
+ * @param texto 
+ */
+void textColor_green(std::string texto);
+
+/**
  * @brief Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
  * 
  */
@@ -61,9 +68,38 @@ void listAll_Funcionarios();
 void add_Funcionario();
 
 /**
+ * @brief Identiica, por meio do usuário, quais as características do animal a ser cadastrado
+ * 
+ */
+void identify_Animal();
+
+/**
  * @brief Imprime na tela todos os animais cadastrados e todas informações sobre eles
  * 
  */
 void listAll_Animais();
+
+/**
+ * @brief Imprime na tela as classes dos animais para o usuário selecionar
+ * 
+ * @return std::string
+ */
+std::string chooseClass_Animal();
+
+/**
+ * @brief Imprime na tela as naturezas dos animais para o usuário selecionar
+ * 
+ * @return std::string
+ */
+std::string chooseNature_Animal();
+
+/**
+ * @brief Recebe os dados um animal e os adicionas ao banco de dados
+ * 
+ * @param animal_class
+ * @param animal_nature
+ */
+
+void add_Animal(int animal_class, int animal_nature);
 
 #endif

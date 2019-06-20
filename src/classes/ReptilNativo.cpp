@@ -61,6 +61,9 @@ ReptilNativo::ReptilNativo(std::string nome, std::string nome_cientifico, char s
     m_autorizacao_ibama=autorizacao_ibama;  
 }
 
+ReptilNativo::ReptilNativo(){
+
+}
 
 std::string ReptilNativo::printInFile(int id){
     std::stringstream ss;

@@ -58,6 +58,10 @@ MamiferoNativo::MamiferoNativo(std::string nome, std::string nome_cientifico, ch
     m_autorizacao_ibama=autorizacao_ibama;
 }
 
+MamiferoNativo::MamiferoNativo(){
+
+}
+
 std::string MamiferoNativo::printInFile(int id){
     std::stringstream ss;
     if(m_tratador == NULL){

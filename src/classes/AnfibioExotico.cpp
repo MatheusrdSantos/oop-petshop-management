@@ -28,6 +28,10 @@ AnfibioExotico::AnfibioExotico(std::string nome, std::string nome_cientifico, ch
     m_cidade_origem = cidade_origem;
 }
 
+AnfibioExotico::AnfibioExotico(){
+
+}
+
 std::string AnfibioExotico::printInFile(int id){
     std::stringstream ss;
     if(m_tratador == NULL){

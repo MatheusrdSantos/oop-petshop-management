@@ -63,6 +63,10 @@ AveExotico::AveExotico(std::string nome, std::string nome_cientifico, char sexo,
 
 }
 
+AveExotico::AveExotico(){
+
+}
+
 
 std::string AveExotico::printInFile(int id){
     std::stringstream ss;

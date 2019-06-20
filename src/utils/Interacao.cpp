@@ -121,106 +121,27 @@ void add_Reptil(std::string nome, std::string nome_cientifico, char sexo, double
     }
 }
 
-void add_Ave(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, std::string nome_batismo){
-    double tamanho_do_bico_cm;
-    std::cout<<"Digite o tamanho do bico da ave (em cm): "<<std::endl;
-    std::cin>>tamanho_do_bico_cm;
-    double envergadura_das_asas;
-    std::cout<<"Digite a envergadura das asas: "<<std::endl;
-    std::cin>>envergadura_das_asas;
-    std::string autorizacao_ibama;
-    std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
-    std::cin>>autorizacao_ibama;
-    int tipo_origem = getOrigem();
-    if(tipo_origem == 1){
-        std::string uf_origem;
-        std::cout<<"Digite a uf de origem:"<<std::endl;
-        std::cin>>uf_origem;
-        std::string cidade_origem;
-        std::cout<<"Digite a cidade de origem:"<<std::endl;
-        std::cin>>cidade_origem;
+void identify_Animal(){
+    std::string opt_animal_class = chooseClass_Animal();
 
-        AveNativo ave(nome, nome_cientifico, sexo, tamanho, dieta, NULL, NULL, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, uf_origem, cidade_origem, autorizacao_ibama);
-        ave.save();
-    }else if (tipo_origem == 2){
-        std::string pais_origem;
-        std::cout<<"Digite o pais de origem:"<<std::endl;
-        std::cin>>pais_origem;
-        std::string cidade_origem;
-        std::cout<<"Digite a cidade de origem:"<<std::endl;
-        std::cin>>cidade_origem;
-
-        AveExotico ave(nome, nome_cientifico, sexo, tamanho, dieta, NULL, NULL, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, pais_origem, cidade_origem, autorizacao_ibama);
-        ave.save();
-    }
-}
-
-void add_Animal(){
-    std::string nome; 
-    std::string nome_cientifico; 
-    char sexo; 
-    double tamanho; 
-    std::string dieta; 
-
-    std::string nome_batismo; 
-
-    std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
-    std::cin.ignore();
-    std::getline(std::cin, nome, '\n');
-    std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
-    std::cin.ignore();
-    std::getline(std::cin, nome_cientifico, '\n');
-    std::cout<<"Digite o sexo do Animal: "<<std::endl;
-    std::cin>>sexo;
-    std::cout<<"Digite o tamanho do Animal: "<<std::endl;
-    std::cin>>tamanho;
-    std::cout<<"Digite a dieta do Animal: "<<std::endl;
-    std::cin.ignore();
-    std::getline(std::cin, dieta, '\n');
-    std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
-    std::cin.ignore();
-    std::getline(std::cin, nome_batismo, '\n');
-    
-    std::cout << "Qual a classe do Animal?" << std::endl;
-    std::cout << "1 => Amphibia"<<std::endl;
-    std::cout << "2 => Mammalia"<<std::endl;
-    std::cout << "3 => Reptlia"<<std::endl;
-    std::cout << "4 => Aves"<<std::endl;
-    std::cout << "0 => Sair"<<std::endl;
-    std::string opt;
-    std::cin>>opt;
-    while((std::stoi(opt)!=1) && (std::stoi(opt)!=2)  && (std::stoi(opt)!=3) && (std::stoi(opt)!=4)){
-        std::cout << "Qual a classe do Animal?" << std::endl;
-        std::cout << "1 => Amphibia"<<std::endl;
-        std::cout << "2 => Mammalia"<<std::endl;
-        std::cout << "3 => Reptlia"<<std::endl;
-        std::cout << "4 => Aves"<<std::endl;
-        std::cout << "0 => Sair"<<std::endl;
-
-        std::cin>>opt; 
-    }
-
-    switch (std::stoi(opt))
-    {
-        case 0:
+    if(std::stoi(opt_animal_class) == 0){
+        std::cout << std::endl;
+        //run();
+    }else if(std::stoi(opt_animal_class) > 0 && std::stoi(opt_animal_class) < 5){
+        std::string opt_animal_nature = chooseNature_Animal();
+        
+        if(std::stoi(opt_animal_nature) == 0){
             std::cout << std::endl;
-            run();
-        case 1:
-            add_Anfibio(nome, nome_cientifico, sexo, tamanho, dieta, nome_batismo);
-            break;
-        case 2:
-            add_Mamifero(nome, nome_cientifico, sexo, tamanho, dieta, nome_batismo);
-            break;
-        case 3:
-            add_Reptil(nome, nome_cientifico, sexo, tamanho, dieta, nome_batismo);
-            break;
-        case 4:
-            add_Ave(nome, nome_cientifico, sexo, tamanho, dieta, nome_batismo);
-            break;
-
-        default:
-            std::cout << "Essa opção não existe, man" << std::endl;
-            run();
+            //run();
+        }else if(std::stoi(opt_animal_nature) == 1 || std::stoi(opt_animal_nature) == 2){
+            add_Animal(std::stoi(opt_animal_class), std::stoi(opt_animal_nature));
+        }else{
+            std::cout << "Essa opção não existe!" << std::endl;
+            //run();
+        }
+    }else{
+        std::cout << "Essa opção não existe!" << std::endl;
+        //run();
     }
     
 }
@@ -250,7 +171,7 @@ void menu(int &escolha){
             add_Funcionario();
             break;
         case 2:
-            add_Animal();
+            identify_Animal();
             break;
         case 3:
             listAll_Funcionarios();
@@ -260,7 +181,7 @@ void menu(int &escolha){
             break;
 
         default:
-            std::cout << "Essa opção não existe, man" << std::endl;
+            std::cout << "Essa opção não existe!" << std::endl;
             break;
     }
 }
@@ -271,6 +192,10 @@ void textColor_red(std::string texto){
 
 void textColor_yellow(std::string texto){
     std::cout << "\033[1;33m" << texto << "\033[0m";
+}
+
+void textColor_green(std::string texto){
+    std::cout << "\033[1;32m" << texto << "\033[0m";
 }
 
 void listAll_Funcionarios(){
@@ -367,4 +292,146 @@ void listAll_Animais(){
             delete it->second;
         }
     }
+}
+
+std::string chooseClass_Animal(){
+    std::cout << "Qual a classe do Animal?" << std::endl;
+    std::cout << "  1 => Anfibio"<<std::endl;
+    std::cout << "  2 => Mamifero"<<std::endl;
+    std::cout << "  3 => Reptil"<<std::endl;
+    std::cout << "  4 => Ave"<<std::endl;
+    std::cout << "  0 => Voltar"<<std::endl;
+
+    std::string opt;
+    std::cin>>opt;
+
+    while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)  && (std::stoi(opt)!=3) && (std::stoi(opt)!=4)){
+        std::cout << "Qual a classe do Animal?" << std::endl;
+        std::cout << "  1 => Anfibio"<<std::endl;
+        std::cout << "  2 => Mamifero"<<std::endl;
+        std::cout << "  3 => Reptil"<<std::endl;
+        std::cout << "  4 => Ave"<<std::endl;
+        std::cout << "  0 => Voltar"<<std::endl;
+
+        std::cin>>opt;
+    }
+
+    return opt;
+}
+
+std::string chooseNature_Animal(){
+    std::cout << "Qual a natureza do Animal?" << std::endl;
+    std::cout << "  1 => Exotico"<<std::endl;
+    std::cout << "  2 => Nativo"<<std::endl;
+    std::cout << "  0 => Voltar"<<std::endl;
+
+    std::string opt;
+    std::cin>>opt;
+
+    while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)){
+        std::cout << "Qual a natureza do Animal?" << std::endl;
+        std::cout << "  1 => Exotico"<<std::endl;
+        std::cout << "  2 => Nativo"<<std::endl;
+        std::cout << "  0 => Voltar"<<std::endl;
+
+        std::cin>>opt;
+    }
+
+    return opt;
+}
+
+void add_Animal(int animal_class, int animal_nature){
+    std::string choosed_animal;
+
+    if(animal_class == 1){
+        //Classe: Anfíbio
+
+        if(animal_nature == 1){
+            //Natureza: Exótico
+
+            AnfibioExotico *anfibio_exotico = new AnfibioExotico();
+            Animal *animal = anfibio_exotico;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Anfibio Exotico";
+        }else if(animal_nature == 2){
+            //Natureza: Nativo
+
+            AnfibioNativo *anfibio_nativo = new AnfibioNativo();
+            Animal *animal = anfibio_nativo;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Anfibio Nativo";
+        }
+    }else if(animal_class == 2){
+        //Classe: Mamifero
+
+        if(animal_nature == 1){
+            //Natureza: Exótico
+
+            MamiferoExotico *mamifero_exotico = new MamiferoExotico();
+            Animal *animal = mamifero_exotico;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Mamifero Exotico";
+        }else if(animal_nature == 2){
+            //Natureza: Nativo
+
+            MamiferoNativo *mamifero_nativo = new MamiferoNativo();
+            Animal *animal = mamifero_nativo;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Mamifero Nativo";
+        }
+    }else if(animal_class == 3){
+        //Classe: Réptil
+
+        if(animal_nature == 1){
+            //Natureza: Exótico
+
+            ReptilExotico *reptil_exotico = new ReptilExotico();
+            Animal *animal = reptil_exotico;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Reptil Exotico";
+        }else if(animal_nature == 2){
+            //Natureza: Nativo
+
+            ReptilNativo *reptil_nativo = new ReptilNativo();
+            Animal *animal = reptil_nativo;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Reptil Nativo";
+        }
+    }else if(animal_class == 4){
+        //Classe: Ave
+
+        if(animal_nature == 1){
+            //Natureza: Exótico
+
+            AveExotico *ave_exotico = new AveExotico();
+            Animal *animal = ave_exotico;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Ave Exotica";
+        }else if(animal_nature == 2){
+            //Natureza: Nativo
+
+            AveNativo *ave_nativo = new AveNativo();
+            Animal *animal = ave_nativo;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Ave Nativa";
+        }
+    }
+
+    textColor_green("Animal, "+ choosed_animal +", adicionado com sucesso!");
 }

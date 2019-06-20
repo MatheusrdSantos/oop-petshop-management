@@ -63,8 +63,9 @@ ReptilExotico::ReptilExotico(std::string nome, std::string nome_cientifico, char
     m_autorizacao_ibama=autorizacao_ibama;
 }
         
+ReptilExotico::ReptilExotico(){
 
-
+}
 
 std::string ReptilExotico::printInFile(int id){
     std::stringstream ss;

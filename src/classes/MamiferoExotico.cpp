@@ -58,6 +58,10 @@ MamiferoExotico::MamiferoExotico(std::string nome, std::string nome_cientifico, 
     m_autorizacao_ibama=autorizacao_ibama;
 }
 
+MamiferoExotico::MamiferoExotico(){
+
+}
+
 std::string MamiferoExotico::printInFile(int id){
     std::stringstream ss;
     if(m_tratador == NULL){
