@@ -44,3 +44,9 @@ std::ostream& Veterinario::print(std::ostream& os) const{
         <<"   => CNMV: "              <<m_cnmv<<std::endl
         <<std::endl;
 }
+
+std::istream& Veterinario::read(std::istream& is){
+    std::cout << "CNMV: ";
+    std::getline (is, m_cnmv);
+    return is;
+}

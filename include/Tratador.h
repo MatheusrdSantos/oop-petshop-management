@@ -22,12 +22,13 @@ class Tratador : public Funcionario{
     private:
         int m_nivel_de_seguranca; /*< Define o nível de segurança do Tratador.*/
         std::ostream& print(std::ostream& os) const;
+        std::istream& read(std::istream&);
     public:
         /**
          * @brief Constrói um novo objeto do tipo Tratador.
          * 
          */
-        Tratador();
+        Tratador(){};
 
         /**
          * @brief Constrói um novo objeto do tipo Tratador.

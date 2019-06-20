@@ -24,6 +24,8 @@ class Funcionario : public ModelDAO<Funcionario>{
         static Funcionario* buildFuncionarioFromFile(csv::Row* file);
 
         virtual std::ostream& print(std::ostream&) const = 0;
+
+        virtual std::istream& read(std::istream&) = 0;
     protected:
         int m_id; /*< id do Funcionário. O id é único. */
         std::string m_nome; /*< Nome do Funcionário. */
@@ -255,7 +257,15 @@ class Funcionario : public ModelDAO<Funcionario>{
          * @return std::ostream& 
          */
         friend std::ostream& operator << (std::ostream& os, const Funcionario& f);
-
+        
+         /**
+         * @brief Leitura das informações de um Funcionario a partir do terminal.
+         * 
+         * @param in
+         * @param f
+         * @return std::istream&
+         */
+        friend std::istream& operator >> (std::istream &in, Funcionario& f);
 };
     
 #endif
