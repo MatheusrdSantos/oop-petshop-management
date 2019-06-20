@@ -1,3 +1,5 @@
 id;funcao;nome;cpf;idade;tipo_sangue;fator_rh;especialidade;codigo_cnmv;nivel_seguranca
 0;Tratador;Jose;7033;32;A;H;limpar;;1
 1;Veterinario;Arnaldo;7013411;21;A;H;cura;aa;
+2;Veterinario;Victor;1082777362;23;O+;+;Orelha de peixe;3424;
+3;Tratador;Davis;292929;23;A;-;Pata de dromedario;;3

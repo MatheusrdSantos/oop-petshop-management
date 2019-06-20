@@ -56,16 +56,30 @@ void textColor_yellow(std::string texto);
 void textColor_green(std::string texto);
 
 /**
+ * @brief Identiica, por meio do usuário, quais as características do funcionário a ser cadastrado
+ * 
+ */
+void identify_Funcionario();
+
+/**
  * @brief Imprime na tela todos os funcionários cadastrados e todas informações sobre eles
  * 
  */
 void listAll_Funcionarios();
 
 /**
+ * @brief Imprime na tela os cargos possíveis para um funcionário para o usuário selecionar
+ * 
+ * @return std::string
+ */
+std::string chooseRole_Funcionario();
+
+/**
  * @brief Adiciona um novo funcionário no banco de dados
  * 
+ * @param emp_role
  */
-void add_Funcionario();
+void add_Funcionario(int emp_role);
 
 /**
  * @brief Identiica, por meio do usuário, quais as características do animal a ser cadastrado
