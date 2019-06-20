@@ -39,6 +39,7 @@ class Animal : public ModelDAO<Animal>{
          * 
          */
         Animal(){};
+
         /**
          * @brief Constrói um novo objeto do tipo Animal
          * 
@@ -53,6 +54,20 @@ class Animal : public ModelDAO<Animal>{
          * @param nome_batismo 
          */
         Animal(int id, std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
+       
+        /**
+         * @brief Constrói um novo objeto do tipo Animal
+         * 
+         * @param classe 
+         * @param nome_cientifico 
+         * @param sexo 
+         * @param tamanho 
+         * @param dieta 
+         * @param veterinario 
+         * @param tratador 
+         * @param nome_batismo 
+         */
+        Animal(std::string classe, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo);
 
         /**
          * @brief Destrói o objeto do tipo Animal.
