@@ -1,8 +1,8 @@
 OBJS_DIR	:= build
-OBJS	= $(addprefix $(OBJS_DIR)/, main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o Interacao.o table_printer.o)
+OBJS	= $(addprefix $(OBJS_DIR)/, main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o Interacao.o table_printer.o InvalidBloodType.o NonIntegerArgument.o InvalidSecurityLevel.o)
 ANIMALS_OBJS = main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o 
 SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/utils/table_printer.cpp src/utils/Interacao.cpp
-HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h include/bprinter/table_printer.h include/bprinter/impl/table_printer.tpp.h
+HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h include/bprinter/table_printer.h include/bprinter/impl/table_printer.tpp.h include/exceptions/InvalidBloodType.h include/exceptions/NonIntegerArgument.h include/exceptions/InvalidSecurityLevel.h
 OUT	= $(OBJS_DIR)/exec.o
 CC	 = g++
 FLAGS	 = -g3 -c -Wall
@@ -14,6 +14,15 @@ all: $(OBJS)
 animals: $(ANIMALS_OBJS)
 	$(CC) -g $(ANIMALS_OBJS) -o $(OUT) $(LFLAGS)
 	make clean
+
+build/InvalidBloodType.o: src/exceptions/InvalidBloodType.cpp
+	$(CC) $(FLAGS) src/exceptions/InvalidBloodType.cpp -std=c++11 -o build/InvalidBloodType.o
+
+build/NonIntegerArgument.o: src/exceptions/NonIntegerArgument.cpp
+	$(CC) $(FLAGS) src/exceptions/NonIntegerArgument.cpp -std=c++11 -o build/NonIntegerArgument.o
+
+build/InvalidSecurityLevel.o: src/exceptions/InvalidSecurityLevel.cpp
+	$(CC) $(FLAGS) src/exceptions/InvalidSecurityLevel.cpp -std=c++11 -o build/InvalidSecurityLevel.o
 
 build/main.o: src/main.cpp
 	$(CC) $(FLAGS) src/main.cpp -std=c++11 -o build/main.o
