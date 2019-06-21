@@ -91,8 +91,7 @@ std::ostream& ReptilExotico::print(std::ostream& os) const{
                      <<"Pais de Origem        | "<<m_pais_origem<<std::endl
                      <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
                      <<"Venenoso              | "<<m_venenoso<<std::endl
-                     <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl
-                     <<std::endl;
+                     <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
         }else{
             return os<<std::endl
                      <<"============== Reptil Exotico =============="<<std::endl
@@ -110,8 +109,7 @@ std::ostream& ReptilExotico::print(std::ostream& os) const{
                      <<"Pais de Origem        | "<<m_pais_origem<<std::endl
                      <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
                      <<"Venenoso              | "<<m_venenoso<<std::endl
-                     <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl
-                     <<std::endl;
+                     <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
@@ -130,8 +128,7 @@ std::ostream& ReptilExotico::print(std::ostream& os) const{
                  <<"Pais de Origem        | "<<m_pais_origem<<std::endl
                  <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
                  <<"Venenoso              | "<<m_venenoso<<std::endl
-                 <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl
-                 <<std::endl;
+                 <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
     }else{
         return os<<std::endl
                  <<"============== Reptil Exotico =============="<<std::endl
@@ -149,8 +146,7 @@ std::ostream& ReptilExotico::print(std::ostream& os) const{
                  <<"Pais de Origem        | "<<m_pais_origem<<std::endl
                  <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
                  <<"Venenoso              | "<<m_venenoso<<std::endl
-                 <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl
-                 <<std::endl;
+                 <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
     }
 }
 

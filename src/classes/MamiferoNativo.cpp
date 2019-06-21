@@ -88,8 +88,7 @@ std::ostream& MamiferoNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"UF de Origem          | "<<m_uf_origem<<std::endl
                      <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
-                     <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
-                     <<std::endl;
+                     <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl;
         }else{
             return os<<std::endl
                      <<"============== Mamifero Nativo =============="<<std::endl
@@ -106,8 +105,7 @@ std::ostream& MamiferoNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"UF de Origem          | "<<m_uf_origem<<std::endl
                      <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
-                     <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
-                     <<std::endl;
+                     <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl;
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
@@ -125,8 +123,7 @@ std::ostream& MamiferoNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"UF de Origem          | "<<m_uf_origem<<std::endl
                  <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
-                 <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
-                 <<std::endl;
+                 <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl;
     }else{
         return os<<std::endl
                  <<"============== Mamifero Nativo =============="<<std::endl
@@ -143,8 +140,7 @@ std::ostream& MamiferoNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"UF de Origem          | "<<m_uf_origem<<std::endl
                  <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
-                 <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
-                 <<std::endl;
+                 <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl;
     }        
 }
 

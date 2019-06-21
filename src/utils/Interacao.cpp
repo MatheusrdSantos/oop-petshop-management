@@ -113,10 +113,14 @@ void listAll_Funcionarios(){
         textColor_yellow("Não há funcionários cadastrados no sistema!"); 
         std::cout<<std::endl;
     }else{
+        int counter = 1;
         for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
             std::cout<< *(it->second);
             delete it->second;
+
+            std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
         }
+        std::cout<<std::endl<<"####### Há "<< funcionarios.size() <<" funcionarios cadastrados #######"<<std::endl;
     }
 }
 
@@ -128,11 +132,14 @@ void listAll_Animais(){
         textColor_yellow("Não há animais cadastrados no sistema!"); 
         std::cout<<std::endl;
     }else{
+        int counter = 1;
         for (auto it=animais.begin(); it!=animais.end(); ++it){
             std::cout<< *(it->second);
             delete it->second;
+
+            std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
         }
-        std::cout<<std::endl<<"######## Há "<< animais.size() <<" animais cadastrados ########"<<std::endl;
+        std::cout<<std::endl<<"######### Há "<< animais.size() <<" animais cadastrados #########"<<std::endl;
     }
 }
 

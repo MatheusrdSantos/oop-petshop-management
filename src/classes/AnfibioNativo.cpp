@@ -86,8 +86,7 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                      <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                     <<"Última Muda           | "<<m_ultima_muda<<std::endl
-                     <<std::endl;
+                     <<"Última Muda           | "<<m_ultima_muda<<std::endl;
         }else{
             return os<<std::endl
                      <<"=============== Anfibio Nativo =============="<<std::endl
@@ -105,8 +104,7 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                      <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                     <<"Última Muda           | "<<m_ultima_muda<<std::endl
-                     <<std::endl;
+                     <<"Última Muda           | "<<m_ultima_muda<<std::endl;
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
@@ -125,27 +123,25 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                  <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                 <<"Última Muda           | "<<m_ultima_muda<<std::endl
-                 <<std::endl;
+                 <<"Última Muda           | "<<m_ultima_muda<<std::endl;
     }else{
         return os<<std::endl
-                    <<"=============== Anfibio Nativo =============="<<std::endl
-                    <<"ID                    | "<<m_id<<std::endl
-                    <<"Classe                | "<<m_classe<<std::endl
-                    <<"Nome                  | "<<m_nome<<std::endl
-                    <<"Nome Cientifico       | "<<m_nome_cientifico<<std::endl
-                    <<"Sexo                  | "<<m_sexo<<std::endl
-                    <<"Tamanho               | "<<m_tamanho<<std::endl
-                    <<"Dieta                 | "<<m_dieta<<std::endl
-                    <<"Veterinario           | "<<m_veterinario->getNome()<<" [ "<<m_veterinario->getId()<<" ]"<<std::endl
-                    <<"Tratador              | "<<m_tratador->getNome()<<" [ "<<m_tratador->getId()<<" ]"<<std::endl
-                    <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
-                    <<"UF Origem             | "<<m_uf_origem<<std::endl
-                    <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
-                    <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
-                    <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                    <<"Última Muda           | "<<m_ultima_muda<<std::endl
-                    <<std::endl;
+                 <<"=============== Anfibio Nativo =============="<<std::endl
+                 <<"ID                    | "<<m_id<<std::endl
+                 <<"Classe                | "<<m_classe<<std::endl
+                 <<"Nome                  | "<<m_nome<<std::endl
+                 <<"Nome Cientifico       | "<<m_nome_cientifico<<std::endl
+                 <<"Sexo                  | "<<m_sexo<<std::endl
+                 <<"Tamanho               | "<<m_tamanho<<std::endl
+                 <<"Dieta                 | "<<m_dieta<<std::endl
+                 <<"Veterinario           | "<<m_veterinario->getNome()<<" [ "<<m_veterinario->getId()<<" ]"<<std::endl
+                 <<"Tratador              | "<<m_tratador->getNome()<<" [ "<<m_tratador->getId()<<" ]"<<std::endl
+                 <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
+                 <<"UF Origem             | "<<m_uf_origem<<std::endl
+                 <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
+                 <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
+                 <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
+                 <<"Última Muda           | "<<m_ultima_muda<<std::endl;
     }        
 }
 

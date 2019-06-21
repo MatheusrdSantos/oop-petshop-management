@@ -86,8 +86,7 @@ std::ostream& AveNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                      <<"Tamanho do Bico (cm)  | "<<m_tamanho_do_bico_cm<<std::endl
-                     <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl
-                     <<std::endl;
+                     <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl;
         }else{
             return os<<std::endl
                      <<"================= Ave Nativa ================"<<std::endl
@@ -105,8 +104,7 @@ std::ostream& AveNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                      <<"Tamanho do Bico (cm)  | "<<m_tamanho_do_bico_cm<<std::endl
-                     <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl
-                     <<std::endl;
+                     <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl;
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
@@ -125,8 +123,7 @@ std::ostream& AveNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                  <<"Tamanho do Bico (cm)  | "<<m_tamanho_do_bico_cm<<std::endl
-                 <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl
-                 <<std::endl;
+                 <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl;
     }else{
         return os<<std::endl
                  <<"================= Ave Nativa ================"<<std::endl
@@ -144,8 +141,7 @@ std::ostream& AveNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                  <<"Tamanho do Bico (cm)  | "<<m_tamanho_do_bico_cm<<std::endl
-                 <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl
-                 <<std::endl;
+                 <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl;
     }
 }
 
