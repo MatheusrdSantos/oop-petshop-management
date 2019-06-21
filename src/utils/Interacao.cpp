@@ -132,6 +132,7 @@ void listAll_Animais(){
             std::cout<< *(it->second);
             delete it->second;
         }
+        std::cout<<std::endl<<"######## Há "<< animais.size() <<" animais cadastrados ########"<<std::endl;
     }
 }
 

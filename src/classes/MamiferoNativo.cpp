@@ -73,93 +73,78 @@ std::string MamiferoNativo::printInFile(int id){
 std::ostream& MamiferoNativo::print(std::ostream& os) const{
     if(m_tratador == NULL){
         if(m_veterinario==NULL){
-            return os<<
-            "id =>"<<m_id<<std::endl<< 
-            "Classe =>"<<m_classe<<std::endl<<
-            "Nome =>"<<m_nome<<std::endl<<
-            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
-            "Sexo =>"<<m_sexo<<std::endl<<
-            "Tamanho =>"<<m_tamanho<<std::endl<<
-            "Dieta =>"<<m_dieta<<std::endl<<
-            "Veterinario =>"<<""<<std::endl<<
-            "Tratador =>"<<""<<std::endl<<
-            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
-            "Uf Origem =>"<<m_uf_origem<<std::endl<<
-            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
-            "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
-            std::endl;
+            return os<<std::endl
+                     <<"============== Mamifero Nativo =============="<<std::endl
+                     <<"ID                    | "<<m_id<<std::endl
+                     <<"Classe                | "<<m_classe<<std::endl
+                     <<"Nome                  | "<<m_nome<<std::endl
+                     <<"Nome Cientifico       | "<<m_nome_cientifico<<std::endl
+                     <<"Sexo                  | "<<m_sexo<<std::endl
+                     <<"Tamanho               | "<<m_tamanho<<std::endl
+                     <<"Dieta                 | "<<m_dieta<<std::endl
+                     <<"Veterinario           | "<<""<<std::endl
+                     <<"Tratador              | "<<""<<std::endl
+                     <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
+                     <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
+                     <<"UF de Origem          | "<<m_uf_origem<<std::endl
+                     <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
+                     <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
+                     <<std::endl;
         }else{
-            return os<<
-            "id =>"<<m_id<<std::endl<< 
-            "Classe =>"<<m_classe<<std::endl<<
-            "Nome =>"<<m_nome<<std::endl<<
-            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
-            "Sexo =>"<<m_sexo<<std::endl<<
-            "Tamanho =>"<<m_tamanho<<std::endl<<
-            "Dieta =>"<<m_dieta<<std::endl<<
-            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
-            "Tratador =>"<<""<<std::endl<<
-            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
-            "Uf Origem =>"<<m_uf_origem<<std::endl<<
-            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
-            "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
-            std::endl;
+            return os<<std::endl
+                     <<"============== Mamifero Nativo =============="<<std::endl
+                     <<"ID                    | "<<m_id<<std::endl
+                     <<"Classe                | "<<m_classe<<std::endl
+                     <<"Nome                  | "<<m_nome<<std::endl
+                     <<"Nome Cientifico       | "<<m_nome_cientifico<<std::endl
+                     <<"Sexo                  | "<<m_sexo<<std::endl
+                     <<"Tamanho               | "<<m_tamanho<<std::endl
+                     <<"Dieta                 | "<<m_dieta<<std::endl
+                     <<"Veterinario           | "<<m_veterinario->getNome()<<" [ "<<m_veterinario->getId()<<" ]"<<std::endl
+                     <<"Tratador              | "<<""<<std::endl
+                     <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
+                     <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
+                     <<"UF de Origem          | "<<m_uf_origem<<std::endl
+                     <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
+                     <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
+                     <<std::endl;
         }
     }else if(m_veterinario == NULL){
-        if(m_tratador==NULL){
-            return os<<
-            "id =>"<<m_id<<std::endl<< 
-            "Classe =>"<<m_classe<<std::endl<<
-            "Nome =>"<<m_nome<<std::endl<<
-            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
-            "Sexo =>"<<m_sexo<<std::endl<<
-            "Tamanho =>"<<m_tamanho<<std::endl<<
-            "Dieta =>"<<m_dieta<<std::endl<<
-            "Veterinario =>"<<""<<std::endl<<
-            "Tratador =>"<<""<<std::endl<<
-            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
-            "Uf Origem =>"<<m_uf_origem<<std::endl<<
-            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
-            "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
-            std::endl;
-        }else{
-            return os<<
-            "id =>"<<m_id<<std::endl<< 
-            "Classe =>"<<m_classe<<std::endl<<
-            "Nome =>"<<m_nome<<std::endl<<
-            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
-            "Sexo =>"<<m_sexo<<std::endl<<
-            "Tamanho =>"<<m_tamanho<<std::endl<<
-            "Dieta =>"<<m_dieta<<std::endl<<
-            "Veterinario =>"<<""<<std::endl<<
-            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
-            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
-            "Uf Origem =>"<<m_uf_origem<<std::endl<<
-            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
-            "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
-            std::endl;
-        }
+        return os<<std::endl
+                 <<"============== Mamifero Nativo =============="<<std::endl
+                 <<"ID                    | "<<m_id<<std::endl
+                 <<"Classe                | "<<m_classe<<std::endl
+                 <<"Nome                  | "<<m_nome<<std::endl
+                 <<"Nome Cientifico       | "<<m_nome_cientifico<<std::endl
+                 <<"Sexo                  | "<<m_sexo<<std::endl
+                 <<"Tamanho               | "<<m_tamanho<<std::endl
+                 <<"Dieta                 | "<<m_dieta<<std::endl
+                 <<"Veterinario           | "<<""<<std::endl
+                 <<"Tratador              | "<<m_tratador->getNome()<<" [ "<<m_tratador->getId()<<" ]"<<std::endl
+                 <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
+                 <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
+                 <<"UF de Origem          | "<<m_uf_origem<<std::endl
+                 <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
+                 <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
+                 <<std::endl;
     }else{
-        return os<<
-            "id =>"<<m_id<<std::endl<< 
-            "Classe =>"<<m_classe<<std::endl<<
-            "Nome =>"<<m_nome<<std::endl<<
-            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
-            "Sexo =>"<<m_sexo<<std::endl<<
-            "Tamanho =>"<<m_tamanho<<std::endl<<
-            "Dieta =>"<<m_dieta<<std::endl<<
-            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
-            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
-            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
-            "Uf Origem =>"<<m_uf_origem<<std::endl<<
-            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
-            "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
-            std::endl;
+        return os<<std::endl
+                 <<"============== Mamifero Nativo =============="<<std::endl
+                 <<"ID                    | "<<m_id<<std::endl
+                 <<"Classe                | "<<m_classe<<std::endl
+                 <<"Nome                  | "<<m_nome<<std::endl
+                 <<"Nome Cientifico       | "<<m_nome_cientifico<<std::endl
+                 <<"Sexo                  | "<<m_sexo<<std::endl
+                 <<"Tamanho               | "<<m_tamanho<<std::endl
+                 <<"Dieta                 | "<<m_dieta<<std::endl
+                 <<"Veterinario           | "<<m_veterinario->getNome()<<" [ "<<m_veterinario->getId()<<" ]"<<std::endl
+                 <<"Tratador              | "<<m_tratador->getNome()<<" [ "<<m_tratador->getId()<<" ]"<<std::endl
+                 <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
+                 <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
+                 <<"UF de Origem          | "<<m_uf_origem<<std::endl
+                 <<"Autorizacao IBAMA     | "<<m_autorizacao_ibama<<std::endl
+                 <<"Cor do Pelo           | "<<m_cor_do_pelo<<std::endl
+                 <<std::endl;
     }        
 }
 
@@ -171,7 +156,7 @@ std::istream& MamiferoNativo::read(std::istream& is){
     std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
     is>>m_autorizacao_ibama;
     
-    std::cout<<"Digite a uf de origem:"<<std::endl;
+    std::cout<<"Digite a UF de origem:"<<std::endl;
     is>>m_uf_origem;
     
     std::cout<<"Digite a cidade de origem:"<<std::endl;
