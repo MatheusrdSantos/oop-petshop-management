@@ -120,7 +120,6 @@ void listAll_Funcionarios(){
 
             std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
         }
-        std::cout<<std::endl<<"####### Há "<< funcionarios.size() <<" funcionarios cadastrados #######"<<std::endl;
     }
 }
 
@@ -139,7 +138,6 @@ void listAll_Animais(){
 
             std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
         }
-        std::cout<<std::endl<<"######### Há "<< animais.size() <<" animais cadastrados #########"<<std::endl;
     }
 }
 
