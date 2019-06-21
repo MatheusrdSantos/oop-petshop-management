@@ -1,3 +1,5 @@
 id;classe;nome;nome_cientifico;sexo;tamanho;dieta;veterinario_id;tratador_id;nome_batismo;uf_origem;cidade_origem;pais_origem;autorizacao_ibama;total_de_mudas;ultima_muda;cor_do_pelo;venenoso;tipo_veneno;tamanho_do_bico_cm;envergadura_das_asas
 0;Mammalia;Dog;achourrous;M;4.23;Carne;1;0;imba;RN;Natal;;Autorizado;;;Azul;;;;
 1;Mammalia;Belino;elinus Minus;M;2.21;Carnivero;;;atista;;do;Africa;Sim;;;Marrom;;;;
+2;Aves;Passarinho;assaroleaoloes;M;0.2;Semente de girassol;;;unin;RN;Natal;;Sim;;;;;;3;20
+3;Mammalia;Cachorro;acheurroeus;M;5.32;Racao;;;ax;RN;Natal;;Claro;;;Marrom;;;;

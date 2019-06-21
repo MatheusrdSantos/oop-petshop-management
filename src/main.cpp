@@ -34,10 +34,11 @@ int main(int argc, char const *argv[])
     std::cin>>(*a);
     a->save(); */
 
-    Tratador *t = new Tratador();
+    /* Tratador *t = new Tratador();
     Funcionario *f = t;
     std::cin>>(*f);
     f->save();
+    */
     
     /*
     AnfibioExotico a1("Camaleao", "Amphibia Nautilia", 'M', 2.42, "Herbivoro", v1, t1, "Rango");
@@ -95,7 +96,7 @@ int main(int argc, char const *argv[])
 
     Animal::find(4)->remove(); */
     
-    //run();
+    run();
 
     /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");

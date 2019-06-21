@@ -35,14 +35,15 @@ void Tratador::setNivelDeSeguranca(int nivel_de_seguranca){
 
 std::ostream& Tratador::print(std::ostream& os) const{
     return os<<std::endl
-        <<"Tratador: "                <<m_nome<<std::endl
-        <<"   => CPF: "               <<m_cpf<<std::endl
-        <<"   => Idade: "             <<m_idade<<std::endl
-        <<"   => Típo Sanguíneo: "    <<m_tipo_sanguineo<<std::endl
-        <<"   => Fator RH: "          <<m_fator_rh<<std::endl
-        <<"   => Especialidade: "     <<m_especialidade<<std::endl
-        <<"   => Nível de Segurança: "<<m_nivel_de_seguranca<<std::endl
-        <<std::endl;
+        <<"================= Tratador ==================="<<std::endl
+        <<"ID                    | "<<m_id<<std::endl
+        <<"Nome                  | "<<m_nome<<std::endl
+        <<"CPF                   | "<<m_cpf<<std::endl
+        <<"Idade                 | "<<m_idade<<std::endl
+        <<"Típo Sanguíneo        | "<<m_tipo_sanguineo<<std::endl
+        <<"Fator RH              | "<<m_fator_rh<<std::endl
+        <<"Especialidade         | "<<m_especialidade<<std::endl
+        <<"Nível de Segurança    | "<<m_nivel_de_seguranca<<std::endl;
 }
 
 std::istream& Tratador::read(std::istream& is){
