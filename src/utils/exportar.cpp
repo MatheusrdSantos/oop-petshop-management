@@ -43,11 +43,13 @@ namespace exportar
         return match;
     }
 
-    std::multimap<std::string, Animal*> getAnimalByFilters(std::vector<Filter> *filters){
+    std::multimap<std::string, Animal*> getAnimalByFilters(std::vector<Filter> *filters = NULL){
         std::multimap<std::string, Animal*> animals = Animal::all();
-        for (auto it=animals.begin(); it!=animals.end(); ++it){
-            if(!matchFilter(filters, it->second)){
-                animals.erase(it);
+        if(filters !=NULL){
+            for (auto it=animals.begin(); it!=animals.end(); ++it){
+                if(!matchFilter(filters, it->second)){
+                    animals.erase(it);
+                }
             }
         }
         return animals;
