@@ -9,8 +9,8 @@
 class Anfibio : public Animal{
     private:
 
-        virtual std::ostream& print(std::ostream&) const = 0;
-        virtual std::istream& read(std::istream&) = 0;
+        virtual std::ostream& print(std::ostream&) const;
+        virtual std::istream& read(std::istream&);
     protected:
         int m_total_de_mudas; /**< Define o total de mudas de cada Anfíbio. O id é único. */
         Date* m_ultima_muda; /**< Define quando o Anfíbio teve sua última muda. new Date(0,0,0) para nunca (default).*/
@@ -21,7 +21,7 @@ class Anfibio : public Animal{
          * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
-        virtual std::string printInFile(int id) = 0;
+        virtual std::string printInFile(int id);
 
     public:
 
