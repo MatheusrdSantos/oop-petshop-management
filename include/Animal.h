@@ -25,6 +25,8 @@ class Animal : public ModelDAO<Animal>{
         std::string m_nome_batismo; /**< Define o nome de batismo de cada Animal. Ex: Simba.*/
 
        
+
+    public:
         /**
          * @brief Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada.
          * 
@@ -32,8 +34,6 @@ class Animal : public ModelDAO<Animal>{
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
         virtual std::string printInFile(int id) = 0;
-
-    public:
         /**
          * @brief Constrói um novo objeto do tipo Animal
          * 
@@ -287,6 +287,8 @@ class Animal : public ModelDAO<Animal>{
          * @return std::istream&
          */
         friend std::istream& operator >> (std::istream &in, Animal& a);
+
+        static std::string getTableHeaderString();
 };
 
 #endif

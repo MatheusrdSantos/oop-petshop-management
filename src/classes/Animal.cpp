@@ -359,3 +359,9 @@ std::istream & operator >> (std::istream &is, Animal& a)
     std::getline(is, a.m_nome_batismo, '\n');
     return a.read(is);
 }
+
+std::string Animal::getTableHeaderString(){
+    csv::Parser file = ModelDAO<Animal>::readTable();
+    std::vector<std::string> header = file.getHeader(); 
+    return buildHeaderString(&header);
+}
