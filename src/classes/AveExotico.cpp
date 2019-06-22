@@ -48,7 +48,7 @@ AveExotico::AveExotico(std::string nome, std::string nome_cientifico, char sexo,
 }
 
 AveExotico::AveExotico(){
-
+    m_classe="Aves";
 }
 
 

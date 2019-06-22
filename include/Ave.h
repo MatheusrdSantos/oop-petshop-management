@@ -7,8 +7,8 @@
 
 class Ave : public Animal{
     private:
-        virtual std::ostream& print(std::ostream&) const = 0;
-        virtual std::istream& read(std::istream&) = 0;
+        virtual std::ostream& print(std::ostream&) const;
+        virtual std::istream& read(std::istream&);
     protected:
         double m_tamanho_do_bico_cm; /*< Define o tamanho do bico em cm da Ave. */
         double m_envergadura_das_asas; /*< Define a envergadura das asas da Ave. */
@@ -19,7 +19,7 @@ class Ave : public Animal{
          * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
-        virtual std::string printInFile(int id) = 0;
+        virtual std::string printInFile(int id);
     public:
         /**
          * @brief Constrói um novo objeto do tipo Ave
