@@ -43,7 +43,7 @@ namespace exportar
         return match;
     }
 
-    std::multimap<std::string, Animal*> getAnimalByFilters(std::vector<Filter> *filters = NULL){
+    std::multimap<std::string, Animal*> getAnimalByFilters(std::vector<Filter> *filters){
         std::multimap<std::string, Animal*> animals = Animal::all();
         if(filters !=NULL && filters->size()>0){
             for (auto it=animals.begin(); it!=animals.end(); ++it){
@@ -73,13 +73,14 @@ namespace exportar
         //o primeiro e o último parametro não fazem parte do filtro
         // são respectivamente o nome do executavel e o nome do arquivo de exportação
         for(int i = 1; i<argc-1; i++){
-            if(argv[i] == "-c"){
+            std::string flag(argv[i]);
+            if(flag.compare("-c") == 0){
                 Filter f("classe", argv[i+1]);
                 filters.push_back(f);
-            }else if(argv[i] == "-v"){
+            }else if(flag.compare("-v") == 0){
                 Filter f("veterinario", argv[i+1]);
                 filters.push_back(f);
-            }else if(argv[i] == "-t"){
+            }else if(flag.compare("-t") == 0){
                 Filter f("tratador", argv[i+1]);
                 filters.push_back(f);
             }
