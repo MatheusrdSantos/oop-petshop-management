@@ -10,6 +10,7 @@
 #include "../include/AveNativo.h"
 #include "../include/Tratador.h"
 #include "../include/Funcionario.h"
+#include "../include/Mamifero.h"
 #include <string>
 #include <iostream>
 #include <map>
@@ -26,7 +27,10 @@ int main(int argc, char const *argv[])
     v1->save(); */
     // perguntar o tipo do animal: mamifero, ave, reptil ou anfibio
     // perguntar se o animal é exótico ou se é nativo
-    
+    Mamifero *mami = new Mamifero();
+    Animal *a = mami;
+    std::cin>>(*a);
+    a->save();
     // realizar abaixo de acordo com a resposta dada acima
     // esse é um exemplo para AveNativo
     /* AveNativo *avn = new AveNativo();

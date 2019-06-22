@@ -8,8 +8,8 @@
 class Mamifero : public Animal{
     private:
 
-        virtual std::ostream& print(std::ostream&) const = 0;
-        virtual std::istream& read(std::istream&) = 0;
+        virtual std::ostream& print(std::ostream&) const;
+        virtual std::istream& read(std::istream&);
     protected:
         std::string m_cor_do_pelo; /*< Define a cor do pelo de um mamifero*/
 
@@ -20,7 +20,7 @@ class Mamifero : public Animal{
          * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
-        virtual std::string printInFile(int id) = 0;
+        virtual std::string printInFile(int id);
 
     public:
         /**     
