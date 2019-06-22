@@ -14,6 +14,8 @@ namespace exportar
         ~Filter(){};
     };
 
+    std::vector<Filter> buildFilters(int argc, char const *argv[]);
+
     std::multimap<std::string, Animal*> getAnimalByFilters(std::vector<Filter> *filters = NULL);
 
     bool matchFilter(std::vector<Filter> *filters, Animal *Animal);
