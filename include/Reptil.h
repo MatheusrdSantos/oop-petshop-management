@@ -7,8 +7,8 @@
 
 class Reptil : public Animal{
     private:
-        virtual std::ostream& print(std::ostream&) const = 0;
-        virtual std::istream& read(std::istream&) = 0;
+        virtual std::ostream& print(std::ostream&) const;
+        virtual std::istream& read(std::istream&);
     protected:
         bool m_venenoso; /*< Define se um Réptil é ou não venenoso. True para sim False para não.*/
         std::string m_tipo_veneno; /*< Define o tipo de veneno para cada Réptil.*/
@@ -19,7 +19,7 @@ class Reptil : public Animal{
          * @param id Id do objeto (utilizará o do auto incremento no momento de sua chamada).
          * @return std::string String formatada de como o objeto será armazenado no banco.. 
          */
-        virtual std::string printInFile(int id) = 0;
+        virtual std::string printInFile(int id);
     public:
 
         /**

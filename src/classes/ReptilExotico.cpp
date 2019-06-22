@@ -48,7 +48,7 @@ ReptilExotico::ReptilExotico(std::string nome, std::string nome_cientifico, char
 }
         
 ReptilExotico::ReptilExotico(){
-
+    m_classe="Reptilia";
 }
 
 std::string ReptilExotico::printInFile(int id){
