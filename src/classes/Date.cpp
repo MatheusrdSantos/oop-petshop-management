@@ -44,13 +44,13 @@ int Date::year() const{
 
 void Date::set_day(const int& day){
     Date::day_ = day;
-};
+}
 void Date::set_month(const int& month){
     Date::month_=month;
-};
+}
 void Date::set_year(const int& year){
     Date::year_ = year;
-};
+}
 
 bool Date::valid() const{
 
@@ -67,7 +67,7 @@ bool Date::valid() const{
         if((day_==29 && month_==2) && !((year_-2000)%4==0))return false;
     };
     return true;
-};
+}
 
 bool operator == (const Date& d1, const Date& d2){
     //check for equality
@@ -113,7 +113,7 @@ bool operator > (const Date& d1, const Date& d2){
 bool operator <= (const Date& d1, const Date& d2){
     if(d1==d2){return true;};
     return (d1>d2);
-};
+}
 
 inline Date next_date(const Date& d){
     Date ndat;
@@ -121,7 +121,7 @@ inline Date next_date(const Date& d){
     ndat = Date((d.day()+1), d.month(), d.year()); if (ndat.valid()) return ndat;
     ndat = Date(1, (d.month()+1), d.year()); if (ndat.valid()) return ndat;
     ndat = Date(1,1,(d.year()+1)); return ndat;
-};
+}
 
 inline Date previous_date(const Date& d){
     Date ndat;
@@ -132,7 +132,7 @@ inline Date previous_date(const Date& d){
     ndat = Date(29, (d.month()-1), d.year()); if (ndat.valid())return ndat;
     ndat = Date(28, (d.month()-1), d.year()); if (ndat.valid())return ndat;
     ndat = Date(31,12,(d.year()-1));    return ndat;
-};
+}
 
 /*
     Implemented by Arnaldo Barbosa over Bernt A Oedegaard. Dates` library

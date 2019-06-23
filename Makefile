@@ -1,14 +1,20 @@
 OBJS_DIR	:= build
+LIB_DIR := lib
 OBJS	= $(addprefix $(OBJS_DIR)/, main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o Interacao.o table_printer.o InvalidBloodType.o NonIntegerArgument.o InvalidSecurityLevel.o)
+
+OBJS_LIB	= $(addprefix $(OBJS_DIR)/$(LIB_DIR)/, Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o exportar.o main_export.o)
+
 ANIMALS_OBJS = main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o 
 SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/utils/table_printer.cpp src/utils/Interacao.cpp
-HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h include/bprinter/table_printer.h include/bprinter/impl/table_printer.tpp.h include/exceptions/InvalidBloodType.h include/exceptions/NonIntegerArgument.h include/exceptions/InvalidSecurityLevel.h
+LIB_SOURCE	= src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/utils/exportar.cpp src/utils/main_export.cpp
+HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h include/bprinter/table_printer.h include/bprinter/impl/table_printer.tpp.h include/exceptions/InvalidBloodType.h include/exceptions/NonIntegerArgument.h include/exceptions/InvalidSecurityLevel.h include/exportar.h
 OUT	= $(OBJS_DIR)/exec.o
 CC	 = g++
 FLAGS	 = -g3 -c -Wall
-LFLAGS	 = -I include/ -O0
+LFLAGS	 = -pedantic -I include/ -O0 -ansi
+CC_11 = -std=c++11
 
-all: $(OBJS)
+all: $(OBJS) linux
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
 	make clean
 animals: $(ANIMALS_OBJS)
@@ -103,8 +109,49 @@ build/Veterinario.o: src/classes/Veterinario.cpp
 	$(CC) $(FLAGS) src/classes/Veterinario.cpp -std=c++11 -o build/Veterinario.o
 
 
+linux: exportar.so exportar
+
+windows: exportar.dll exportar.exe
+
+# linux
+exportar.so:  $(LIB_SOURCE)
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Anfibio.cpp -o build/lib/Anfibio.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AnfibioExotico.cpp -o build/lib/AnfibioExotico.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AnfibioNativo.cpp -o build/lib/AnfibioNativo.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Animal.cpp -o build/lib/Animal.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AnimalExotico.cpp -o build/lib/AnimalExotico.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AnimalNativo.cpp -o build/lib/AnimalNativo.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AnimalSilvestre.cpp -o build/lib/AnimalSilvestre.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Ave.cpp -o build/lib/Ave.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AveExotico.cpp -o build/lib/AveExotico.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/AveNativo.cpp  -o build/lib/AveNativo.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/CSVparser.cpp -o build/lib/CSVparser.o
+	
+	
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Date.cpp -o build/lib/Date.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Funcionario.cpp -o build/lib/Funcionario.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Mamifero.cpp -o build/lib/Mamifero.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/MamiferoExotico.cpp -o build/lib/MamiferoExotico.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/MamiferoNativo.cpp -o build/lib/MamiferoNativo.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/ModelDAO.cpp -o build/lib/ModelDAO.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Reptil.cpp -o build/lib/Reptil.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/ReptilExotico.cpp -o build/lib/ReptilExotico.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/ReptilNativo.cpp -o build/lib/ReptilNativo.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Tratador.cpp -o build/lib/Tratador.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Veterinario.cpp -o build/lib/Veterinario.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/utils/utils.cpp -o build/lib/utils.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/utils/exportar.cpp -o build/lib/exportar.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/utils/main_export.cpp -o build/lib/main_export.o
+
+	$(CC) $(CC_11) -shared -fPIC -o $(LIB_DIR)/$@ $(OBJS_LIB)
+	@echo "biblioteca dinamica criada"
+
+exportar: 
+	$(CC) -Wall $(LFLAGS) $(CC_11) src/utils/main_export.cpp -g $(LIB_DIR)/exportar.so -o $(OBJS_DIR)/$@ 
+
 clean:
 	rm -f $(OBJS)
+	rm -f $(OBJS_LIB)
 run:
 	./build/exec.o
 debug: $(OUT)
