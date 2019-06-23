@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tableprinter',['TablePrinter',['../dc/d63/classbprinter_1_1TablePrinter.html',1,'bprinter']]],
-  ['tratador',['Tratador',['../d1/dce/classTratador.html',1,'']]]
+  ['parser',['Parser',['../d3/d5c/classcsv_1_1Parser.html',1,'csv']]]
 ];

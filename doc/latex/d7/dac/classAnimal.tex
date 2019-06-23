@@ -11,6 +11,8 @@ Diagrama de colaboração para Animal\+:
 \subsection*{Métodos Públicos}
 \begin{DoxyCompactItemize}
 \item 
+virtual std\+::string \hyperlink{classAnimal_ac75406040726a6339932d70164cc7242}{print\+In\+File} (int id)=0
+\begin{DoxyCompactList}\small\item\em Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAnimal_a1e726a49ec952443190ac62dad22353c}\label{classAnimal_a1e726a49ec952443190ac62dad22353c}} 
 \hyperlink{classAnimal_a1e726a49ec952443190ac62dad22353c}{Animal} ()
 \begin{DoxyCompactList}\small\item\em Constrói um novo objeto do tipo \hyperlink{classAnimal}{Animal}. \end{DoxyCompactList}\item 
@@ -75,7 +77,10 @@ static \hyperlink{classAnimal}{Animal} $\ast$ \hyperlink{classAnimal_aac52a938d9
 static std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ \hyperlink{classAnimal_a42e0c72ec2c9881cbf5d1be57c418cc5}{where} (std\+::string $\ast$column, std\+::string $\ast$symbol, std\+::string $\ast$value)
 \begin{DoxyCompactList}\small\item\em Seleciona os animais com base em um filtro especificado. \end{DoxyCompactList}\item 
 static std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ \hyperlink{classAnimal_a82f0fbbdb2064d8235e9037e48f706b3}{where} (std\+::string $\ast$column, std\+::string $\ast$symbol, int value)
-\begin{DoxyCompactList}\small\item\em Seleciona os animais com base em um filtro especificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Seleciona os animais com base em um filtro especificado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAnimal_a2f13aabfb0786caf442098b1614ae58d}\label{classAnimal_a2f13aabfb0786caf442098b1614ae58d}} 
+static std\+::string {\bfseries get\+Table\+Header\+String} ()
+\end{DoxyCompactItemize}
 \subsection*{Atributos Estáticos Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,11 +88,6 @@ static std\+::string \hyperlink{classAnimal_a1e487e8b5e047f764f192a423e4d21ae}{f
 \item 
 static std\+::string \hyperlink{classAnimal_a09d2d66762ed1fea5c6858d092b6ccb9}{table\+Name} = \char`\"{}animais\char`\"{}
 \end{DoxyCompactItemize}
-\subsection*{Métodos Protegidos}
-\begin{DoxyCompactItemize}
-\item 
-virtual std\+::string \hyperlink{classAnimal_ac75406040726a6339932d70164cc7242}{print\+In\+File} (int id)=0
-\begin{DoxyCompactList}\small\item\em Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
@@ -354,7 +354,7 @@ Veterinario$\ast$
 \index{Animal@{Animal}!print\+In\+File@{print\+In\+File}}
 \index{print\+In\+File@{print\+In\+File}!Animal@{Animal}}
 \subsubsection{\texorpdfstring{print\+In\+File()}{printInFile()}}
-{\footnotesize\ttfamily virtual std\+::string Animal\+::print\+In\+File (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual std\+::string Animal\+::print\+In\+File (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -370,7 +370,7 @@ std\+::string String formatada de como o objeto será armazenado no banco..
 \end{DoxyReturn}
 
 
-Implementado por \hyperlink{classAnfibio_ab866ca21fb00c2d4d571aadd271eadec}{Anfibio}, \hyperlink{classMamifero_ae91b67a8f0f508793a801aadcaa18570}{Mamifero}, \hyperlink{classAnfibioExotico_a08d9debec54258a0f43c8c503dfb23d0}{Anfibio\+Exotico}, \hyperlink{classAve_ab858405e18c56876e331ad943885ee53}{Ave}, \hyperlink{classReptil_a53fd59f3aed9c2d463722a8e97401406}{Reptil}, \hyperlink{classAnfibioNativo_a7926e1af44542ee268e27dd3d862f583}{Anfibio\+Nativo}, \hyperlink{classAveExotico_a4ba81def12131f047b3800e5f10a983b}{Ave\+Exotico}, \hyperlink{classMamiferoExotico_a4ee6f5f4a2917cfdf54304525add0c4a}{Mamifero\+Exotico}, \hyperlink{classMamiferoNativo_ae2f2b00cb6720cea2780ebef78be52ea}{Mamifero\+Nativo}, \hyperlink{classReptilExotico_a71312f425b92e04d8f29a856abd83f26}{Reptil\+Exotico}, \hyperlink{classAveNativo_ab95679ed20354b2183706db24899d316}{Ave\+Nativo} e \hyperlink{classReptilNativo_ac801a11c87a2847fb4b46488aa6bb789}{Reptil\+Nativo}.
+Implementado por \hyperlink{classAnfibio_a46f3f30c89af05bcdd39abbe692d854f}{Anfibio}, \hyperlink{classMamifero_a88e6c2efe9180611486f82d4dbf308ba}{Mamifero}, \hyperlink{classAnfibioExotico_a08d9debec54258a0f43c8c503dfb23d0}{Anfibio\+Exotico}, \hyperlink{classAve_a41d6ba4bf7e4823274211a9ae908ff1f}{Ave}, \hyperlink{classReptil_af0fc1ff345f15480da9830e38111d181}{Reptil}, \hyperlink{classAnfibioNativo_a7926e1af44542ee268e27dd3d862f583}{Anfibio\+Nativo}, \hyperlink{classAveExotico_a4ba81def12131f047b3800e5f10a983b}{Ave\+Exotico}, \hyperlink{classMamiferoExotico_a4ee6f5f4a2917cfdf54304525add0c4a}{Mamifero\+Exotico}, \hyperlink{classMamiferoNativo_ae2f2b00cb6720cea2780ebef78be52ea}{Mamifero\+Nativo}, \hyperlink{classReptilExotico_a71312f425b92e04d8f29a856abd83f26}{Reptil\+Exotico}, \hyperlink{classAveNativo_ab95679ed20354b2183706db24899d316}{Ave\+Nativo} e \hyperlink{classReptilNativo_ac801a11c87a2847fb4b46488aa6bb789}{Reptil\+Nativo}.
 
 \mbox{\Hypertarget{classAnimal_a0aea60eaeb4d8f1d68d2c37e279d2d20}\label{classAnimal_a0aea60eaeb4d8f1d68d2c37e279d2d20}} 
 \index{Animal@{Animal}!remove@{remove}}

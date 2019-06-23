@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AMD&#39;s Petfera: Código-Fonte de include/exportar.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AMD&#39;s Petfera
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">UmsistemacapazdegerirumPetShopcomseusanimaiseseusfuncionários.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">exportar.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d04/exportar_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef _EXPORTARLIB_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define _EXPORTARLIB_H_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Animal.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../dd/d6a/namespaceexportar.html">exportar</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d3/d9b/classexportar_1_1Filter.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d3/d9b/classexportar_1_1Filter.html">Filter</a>{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">public</span>:</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            std::string m_key; <span class="comment">/*&lt; Chave que se refere à coluna na tabela de consulta*/</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            std::string m_value; <span class="comment">/*&lt; Valor referente ao registro da coluna representada pelo campo m_key*/</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../d3/d9b/classexportar_1_1Filter.html">Filter</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="../../d3/d9b/classexportar_1_1Filter.html">Filter</a>(std::string key, std::string value);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ~<a class="code" href="../../d3/d9b/classexportar_1_1Filter.html">Filter</a>(){};</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    };</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector&lt;Filter&gt; <a class="code" href="../../dc/d04/exportar_8h.html#a49f452fa2ffaae1cfc5c232401517c09">buildFilters</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> <span class="keyword">const</span> *argv[]);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::multimap&lt;std::string, Animal*&gt; <a class="code" href="../../dc/d04/exportar_8h.html#a94e3ea6bf914595965c9b9984b3d2ace">getAnimalByFilters</a>(std::vector&lt;Filter&gt; *filters = NULL);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../dc/d04/exportar_8h.html#a76a087f45e0c074f6775455c8e846bb0">matchFilter</a>(std::vector&lt;Filter&gt; *filters, <a class="code" href="../../d7/dac/classAnimal.html">Animal</a> *animal);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d04/exportar_8h.html#a71bc81c806081dc1ba7cfbb73ff3f1c3">saveAnimals</a>(std::multimap&lt;std::string, Animal*&gt; animals, std::string filename);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} <span class="comment">// namespace exportar</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="exportar_8h_html_a94e3ea6bf914595965c9b9984b3d2ace"><div class="ttname"><a href="../../dc/d04/exportar_8h.html#a94e3ea6bf914595965c9b9984b3d2ace">exportar::getAnimalByFilters</a></div><div class="ttdeci">std::multimap&lt; std::string, Animal * &gt; getAnimalByFilters(std::vector&lt; Filter &gt; *filters=NULL)</div><div class="ttdoc">Recupera objetos da classe Animal com base em um vetor de Filtro passado. </div><div class="ttdef"><b>Definition:</b> exportar.cpp:46</div></div>
+<div class="ttc" id="namespaceexportar_html"><div class="ttname"><a href="../../dd/d6a/namespaceexportar.html">exportar</a></div><div class="ttdef"><b>Definition:</b> exportar.h:13</div></div>
+<div class="ttc" id="exportar_8h_html_a71bc81c806081dc1ba7cfbb73ff3f1c3"><div class="ttname"><a href="../../dc/d04/exportar_8h.html#a71bc81c806081dc1ba7cfbb73ff3f1c3">exportar::saveAnimals</a></div><div class="ttdeci">void saveAnimals(std::multimap&lt; std::string, Animal *&gt; animals, std::string filename)</div><div class="ttdoc">Escreve todos os animais de um multimap em um arquivo. </div><div class="ttdef"><b>Definition:</b> exportar.cpp:58</div></div>
+<div class="ttc" id="classAnimal_html"><div class="ttname"><a href="../../d7/dac/classAnimal.html">Animal</a></div><div class="ttdef"><b>Definition:</b> Animal.h:9</div></div>
+<div class="ttc" id="exportar_8h_html_a49f452fa2ffaae1cfc5c232401517c09"><div class="ttname"><a href="../../dc/d04/exportar_8h.html#a49f452fa2ffaae1cfc5c232401517c09">exportar::buildFilters</a></div><div class="ttdeci">std::vector&lt; Filter &gt; buildFilters(int argc, char const *argv[])</div><div class="ttdoc">Constroi um vetor de filtros com base nos argumentos passados por linha de comando. </div><div class="ttdef"><b>Definition:</b> exportar.cpp:71</div></div>
+<div class="ttc" id="exportar_8h_html_a76a087f45e0c074f6775455c8e846bb0"><div class="ttname"><a href="../../dc/d04/exportar_8h.html#a76a087f45e0c074f6775455c8e846bb0">exportar::matchFilter</a></div><div class="ttdeci">bool matchFilter(std::vector&lt; Filter &gt; *filters, Animal *animal)</div><div class="ttdoc">Verifica se um dado Animal está tem as propriedades do filtro passado. </div><div class="ttdef"><b>Definition:</b> exportar.cpp:14</div></div>
+<div class="ttc" id="classexportar_1_1Filter_html"><div class="ttname"><a href="../../d3/d9b/classexportar_1_1Filter.html">exportar::Filter</a></div><div class="ttdef"><b>Definition:</b> exportar.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

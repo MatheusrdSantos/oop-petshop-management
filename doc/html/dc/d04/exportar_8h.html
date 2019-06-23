@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AMD&#39;s Petfera: Referência do Arquivo include/exportar.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AMD&#39;s Petfera
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">UmsistemacapazdegerirumPetShopcomseusanimaiseseusfuncionários.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo exportar.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Define o namespace 'exportar' e um conjunto de funções para permitir a exportação dos dados do projeto.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;Animal.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para exportar.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d33/exportar_8h__incl.png" border="0" usemap="#include_2exportar_8h" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="../../dc/d04/exportar_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d9b/classexportar_1_1Filter.html">exportar::Filter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a49f452fa2ffaae1cfc5c232401517c09"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Filter &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/exportar_8h.html#a49f452fa2ffaae1cfc5c232401517c09">exportar::buildFilters</a> (int argc, char const *argv[])</td></tr>
+<tr class="memdesc:a49f452fa2ffaae1cfc5c232401517c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constroi um vetor de filtros com base nos argumentos passados por linha de comando.  <a href="../../dc/d04/exportar_8h.html#a49f452fa2ffaae1cfc5c232401517c09">Mais...</a><br /></td></tr>
+<tr class="separator:a49f452fa2ffaae1cfc5c232401517c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e3ea6bf914595965c9b9984b3d2ace"><td class="memItemLeft" align="right" valign="top">std::multimap&lt; std::string, <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/exportar_8h.html#a94e3ea6bf914595965c9b9984b3d2ace">exportar::getAnimalByFilters</a> (std::vector&lt; Filter &gt; *filters=NULL)</td></tr>
+<tr class="memdesc:a94e3ea6bf914595965c9b9984b3d2ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recupera objetos da classe <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> com base em um vetor de Filtro passado.  <a href="../../dc/d04/exportar_8h.html#a94e3ea6bf914595965c9b9984b3d2ace">Mais...</a><br /></td></tr>
+<tr class="separator:a94e3ea6bf914595965c9b9984b3d2ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a087f45e0c074f6775455c8e846bb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/exportar_8h.html#a76a087f45e0c074f6775455c8e846bb0">exportar::matchFilter</a> (std::vector&lt; Filter &gt; *filters, <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> *animal)</td></tr>
+<tr class="memdesc:a76a087f45e0c074f6775455c8e846bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um dado <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> está tem as propriedades do filtro passado.  <a href="../../dc/d04/exportar_8h.html#a76a087f45e0c074f6775455c8e846bb0">Mais...</a><br /></td></tr>
+<tr class="separator:a76a087f45e0c074f6775455c8e846bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71bc81c806081dc1ba7cfbb73ff3f1c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/exportar_8h.html#a71bc81c806081dc1ba7cfbb73ff3f1c3">exportar::saveAnimals</a> (std::multimap&lt; std::string, <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> *&gt; animals, std::string filename)</td></tr>
+<tr class="memdesc:a71bc81c806081dc1ba7cfbb73ff3f1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve todos os animais de um multimap em um arquivo.  <a href="../../dc/d04/exportar_8h.html#a71bc81c806081dc1ba7cfbb73ff3f1c3">Mais...</a><br /></td></tr>
+<tr class="separator:a71bc81c806081dc1ba7cfbb73ff3f1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Define o namespace 'exportar' e um conjunto de funções para permitir a exportação dos dados do projeto. </p>
+<dl class="section author"><dt>Autor</dt><dd>Matheus Santos </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Atualizado por Matheus Santos em 22/06/2019 </dd></dl>
+<dl class="section see"><dt>Veja também</dt><dd><a href="https://github.com/MatheusrdSantos/oop-petshop-management/blob/master/include/exportar.h">https://github.com/MatheusrdSantos/oop-petshop-management/blob/master/include/exportar.h</a> </dd></dl>
+</div><h2 class="groupheader">Funções</h2>
+<a id="file_a49f452fa2ffaae1cfc5c232401517c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a49f452fa2ffaae1cfc5c232401517c09">&#9670;&nbsp;</a></span>buildFilters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Filter &gt; exportar::buildFilters </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constroi um vetor de filtros com base nos argumentos passados por linha de comando. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>contador de parametros </td></tr>
+    <tr><td class="paramname">argv</td><td>vetor de parametros </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>std::vector&lt;Filter&gt; </dd></dl>
+
+</div>
+</div>
+<a id="file_a94e3ea6bf914595965c9b9984b3d2ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a94e3ea6bf914595965c9b9984b3d2ace">&#9670;&nbsp;</a></span>getAnimalByFilters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::multimap&lt; std::string, <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> * &gt; exportar::getAnimalByFilters </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d3/d9b/classexportar_1_1Filter.html">Filter</a> &gt; *&#160;</td>
+          <td class="paramname"><em>filters</em> = <code>NULL</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recupera objetos da classe <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> com base em um vetor de Filtro passado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filters</td><td>Ponteiro para um std::vector de Filtro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>std::multimap&lt;std::string, Animal*&gt; Multimap contendo os animais </dd></dl>
+
+</div>
+</div>
+<a id="file_a76a087f45e0c074f6775455c8e846bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a76a087f45e0c074f6775455c8e846bb0">&#9670;&nbsp;</a></span>matchFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool exportar::matchFilter </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d3/d9b/classexportar_1_1Filter.html">Filter</a> &gt; *&#160;</td>
+          <td class="paramname"><em>filters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/dac/classAnimal.html">Animal</a> *&#160;</td>
+          <td class="paramname"><em>animal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um dado <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> está tem as propriedades do filtro passado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filters</td><td>Ponteiro para um std::vector de Filtro </td></tr>
+    <tr><td class="paramname">animal</td><td>Ponteiro para um <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>bool Retorna true caso o animal tenha as propriedades do filtro e false caso contrário </dd></dl>
+
+</div>
+</div>
+<a id="file_a71bc81c806081dc1ba7cfbb73ff3f1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a71bc81c806081dc1ba7cfbb73ff3f1c3">&#9670;&nbsp;</a></span>saveAnimals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exportar::saveAnimals </td>
+          <td>(</td>
+          <td class="paramtype">std::multimap&lt; std::string, <a class="el" href="../../d7/dac/classAnimal.html">Animal</a> *&gt;&#160;</td>
+          <td class="paramname"><em>animals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve todos os animais de um multimap em um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animals</td><td>Multimap contendo os animais </td></tr>
+    <tr><td class="paramname">filename</td><td>O nome do arquivo de escrita </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

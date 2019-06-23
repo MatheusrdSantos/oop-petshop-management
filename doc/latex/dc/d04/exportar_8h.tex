@@ -1,0 +1,123 @@
+\hypertarget{exportar_8h}{}\section{Referência do Arquivo include/exportar.h}
+\label{exportar_8h}\index{include/exportar.\+h@{include/exportar.\+h}}
+
+
+Define o namespace \textquotesingle{}exportar\textquotesingle{} e um conjunto de funções para permitir a exportação dos dados do projeto.  
+
+
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Animal.\+h\char`\"{}}\newline
+Gráfico de dependência de inclusões para exportar.\+h\+:
+% FIG 0
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classexportar_1_1Filter}{exportar\+::\+Filter}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Filter $>$ \hyperlink{exportar_8h_a49f452fa2ffaae1cfc5c232401517c09}{exportar\+::build\+Filters} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constroi um vetor de filtros com base nos argumentos passados por linha de comando. \end{DoxyCompactList}\item 
+std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ \hyperlink{exportar_8h_a94e3ea6bf914595965c9b9984b3d2ace}{exportar\+::get\+Animal\+By\+Filters} (std\+::vector$<$ Filter $>$ $\ast$filters=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Recupera objetos da classe \hyperlink{classAnimal}{Animal} com base em um vetor de Filtro passado. \end{DoxyCompactList}\item 
+bool \hyperlink{exportar_8h_a76a087f45e0c074f6775455c8e846bb0}{exportar\+::match\+Filter} (std\+::vector$<$ Filter $>$ $\ast$filters, \hyperlink{classAnimal}{Animal} $\ast$animal)
+\begin{DoxyCompactList}\small\item\em Verifica se um dado \hyperlink{classAnimal}{Animal} está tem as propriedades do filtro passado. \end{DoxyCompactList}\item 
+void \hyperlink{exportar_8h_a71bc81c806081dc1ba7cfbb73ff3f1c3}{exportar\+::save\+Animals} (std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$$>$ animals, std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Escreve todos os animais de um multimap em um arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Define o namespace \textquotesingle{}exportar\textquotesingle{} e um conjunto de funções para permitir a exportação dos dados do projeto. 
+
+\begin{DoxyAuthor}{Autor}
+Matheus Santos 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Atualizado por Matheus Santos em 22/06/2019 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{Veja também}
+\href{https://github.com/MatheusrdSantos/oop-petshop-management/blob/master/include/exportar.h}{\tt https\+://github.\+com/\+Matheusrd\+Santos/oop-\/petshop-\/management/blob/master/include/exportar.\+h} 
+\end{DoxySeeAlso}
+
+
+\subsection{Funções}
+\mbox{\Hypertarget{exportar_8h_file_a49f452fa2ffaae1cfc5c232401517c09}\label{exportar_8h_file_a49f452fa2ffaae1cfc5c232401517c09}} 
+\index{exportar.\+h@{exportar.\+h}!build\+Filters@{build\+Filters}}
+\index{build\+Filters@{build\+Filters}!exportar.\+h@{exportar.\+h}}
+\subsubsection{\texorpdfstring{build\+Filters()}{buildFilters()}}
+{\footnotesize\ttfamily std\+::vector$<$ Filter $>$ exportar\+::build\+Filters (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Constroi um vetor de filtros com base nos argumentos passados por linha de comando. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argc} & contador de parametros \\
+\hline
+{\em argv} & vetor de parametros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+Filter$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{exportar_8h_file_a94e3ea6bf914595965c9b9984b3d2ace}\label{exportar_8h_file_a94e3ea6bf914595965c9b9984b3d2ace}} 
+\index{exportar.\+h@{exportar.\+h}!get\+Animal\+By\+Filters@{get\+Animal\+By\+Filters}}
+\index{get\+Animal\+By\+Filters@{get\+Animal\+By\+Filters}!exportar.\+h@{exportar.\+h}}
+\subsubsection{\texorpdfstring{get\+Animal\+By\+Filters()}{getAnimalByFilters()}}
+{\footnotesize\ttfamily std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$ $>$ exportar\+::get\+Animal\+By\+Filters (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classexportar_1_1Filter}{Filter} $>$ $\ast$}]{filters = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Recupera objetos da classe \hyperlink{classAnimal}{Animal} com base em um vetor de Filtro passado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filters} & Ponteiro para um std\+::vector de Filtro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::multimap$<$std\+::string, Animal$\ast$$>$ Multimap contendo os animais 
+\end{DoxyReturn}
+\mbox{\Hypertarget{exportar_8h_file_a76a087f45e0c074f6775455c8e846bb0}\label{exportar_8h_file_a76a087f45e0c074f6775455c8e846bb0}} 
+\index{exportar.\+h@{exportar.\+h}!match\+Filter@{match\+Filter}}
+\index{match\+Filter@{match\+Filter}!exportar.\+h@{exportar.\+h}}
+\subsubsection{\texorpdfstring{match\+Filter()}{matchFilter()}}
+{\footnotesize\ttfamily bool exportar\+::match\+Filter (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classexportar_1_1Filter}{Filter} $>$ $\ast$}]{filters,  }\item[{\hyperlink{classAnimal}{Animal} $\ast$}]{animal }\end{DoxyParamCaption})}
+
+
+
+Verifica se um dado \hyperlink{classAnimal}{Animal} está tem as propriedades do filtro passado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filters} & Ponteiro para um std\+::vector de Filtro \\
+\hline
+{\em animal} & Ponteiro para um \hyperlink{classAnimal}{Animal} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+bool Retorna true caso o animal tenha as propriedades do filtro e false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{exportar_8h_file_a71bc81c806081dc1ba7cfbb73ff3f1c3}\label{exportar_8h_file_a71bc81c806081dc1ba7cfbb73ff3f1c3}} 
+\index{exportar.\+h@{exportar.\+h}!save\+Animals@{save\+Animals}}
+\index{save\+Animals@{save\+Animals}!exportar.\+h@{exportar.\+h}}
+\subsubsection{\texorpdfstring{save\+Animals()}{saveAnimals()}}
+{\footnotesize\ttfamily void exportar\+::save\+Animals (\begin{DoxyParamCaption}\item[{std\+::multimap$<$ std\+::string, \hyperlink{classAnimal}{Animal} $\ast$$>$}]{animals,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Escreve todos os animais de um multimap em um arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em animals} & Multimap contendo os animais \\
+\hline
+{\em filename} & O nome do arquivo de escrita \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void 
+\end{DoxyReturn}

@@ -1,6 +1,9 @@
-/*
-namespace: exportar
-Author: Matheus Santos
+/**
+* @file exportar.h
+* @brief Define o namespace 'exportar' e um conjunto de funções para permitir a exportação dos dados do projeto
+* @author Matheus Santos
+* @date Atualizado por Matheus Santos em 22/06/2019
+* @sa https://github.com/MatheusrdSantos/oop-petshop-management/blob/master/include/exportar.h
 */
 #ifndef _EXPORTARLIB_H_
 #define _EXPORTARLIB_H_

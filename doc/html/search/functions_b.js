@@ -1,6 +1,7 @@
 var searchData=
 [
   ['save',['save',['../d7/dac/classAnimal.html#a0733e9c19d226749195ebe9e64df8964',1,'Animal::save()'],['../d2/de9/classFuncionario.html#acb246ecc22f9135f2adad51a131ea45c',1,'Funcionario::save()']]],
+  ['saveanimals',['saveAnimals',['../dc/d04/exportar_8h.html#a71bc81c806081dc1ba7cfbb73ff3f1c3',1,'exportar']]],
   ['set_5fday',['set_day',['../de/d4a/classDate.html#a7bd9d8f2f53cb54c151aff444fd3b4a6',1,'Date']]],
   ['set_5fmonth',['set_month',['../de/d4a/classDate.html#ab264919c7dfd3ea017fb5dc08af64796',1,'Date']]],
   ['set_5fyear',['set_year',['../de/d4a/classDate.html#a275c629c60d6f8d29440b1a89273b091',1,'Date']]],

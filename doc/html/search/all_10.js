@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['valid',['valid',['../de/d4a/classDate.html#a03bd622b075b79a9c4e3a80552f8428e',1,'Date']]],
-  ['veterinario',['Veterinario',['../df/d71/classVeterinario.html',1,'Veterinario'],['../df/d71/classVeterinario.html#af8dc5f6f77bf8c70dd94d54766764134',1,'Veterinario::Veterinario()'],['../df/d71/classVeterinario.html#af54146873ef36b6ba8efb1258e153b3c',1,'Veterinario::Veterinario(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv)'],['../df/d71/classVeterinario.html#a78f08e93a153ac898a900c1701623903',1,'Veterinario::Veterinario(std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, std::string cnmv)']]]
+  ['update',['update',['../d7/dac/classAnimal.html#a2b9de87e4f753fc9f92aeb012bf098c5',1,'Animal::update()'],['../d2/de9/classFuncionario.html#a72916b5b2b096630ebc93e4301ee7437',1,'Funcionario::update()']]],
+  ['updateautoincrement',['updateAutoIncrement',['../df/dd0/classModelDAO.html#af524ba9765af94ca633587d3ecf8964b',1,'ModelDAO']]],
+  ['utils_2eh',['utils.h',['../d5/d60/utils_8h.html',1,'']]]
 ];

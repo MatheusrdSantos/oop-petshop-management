@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getanimalbyfilters',['getAnimalByFilters',['../dc/d04/exportar_8h.html#a94e3ea6bf914595965c9b9984b3d2ace',1,'exportar']]],
   ['getautorizacaoibama',['getAutorizacaoIbama',['../de/d8e/classAnimalSilvestre.html#a040b1391d175d7572d11deddc7b3e8cb',1,'AnimalSilvestre']]],
   ['getcidadeorigem',['getCidadeOrigem',['../dd/dc7/classAnimalExotico.html#a3b9a4a0366f253bf06befa65754d38a3',1,'AnimalExotico::getCidadeOrigem()'],['../d3/dfa/classAnimalNativo.html#a7f4d471d82fc83b9d76d2bea01127022',1,'AnimalNativo::getCidadeOrigem()']]],
   ['getclasse',['getClasse',['../d7/dac/classAnimal.html#a22e54ff48117237f9a201f5eca0eea81',1,'Animal']]],
