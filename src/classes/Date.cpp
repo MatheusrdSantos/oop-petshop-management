@@ -29,6 +29,7 @@ Date::Date(std::string date, std::string separator){
     day_ = dates->at(0);
     month_ = dates->at(1);
     year_ = dates->at(2);
+    delete dates;
 }
 
 

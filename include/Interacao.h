@@ -20,6 +20,7 @@
 #include "MamiferoNativo.h"
 #include "AveExotico.h"
 #include "AveNativo.h"
+#include "exceptions/NonIntegerArgument.h"
 
 /**
  * @brief Inicia o programa
@@ -56,7 +57,7 @@ void textColor_yellow(std::string texto);
 void textColor_green(std::string texto);
 
 /**
- * @brief Identiica, por meio do usuário, quais as características do funcionário a ser cadastrado
+ * @brief Identifica, por meio do usuário, quais as características do funcionário a ser cadastrado
  * 
  */
 void identify_Funcionario();
@@ -82,7 +83,19 @@ std::string chooseRole_Funcionario();
 void add_Funcionario(int emp_role);
 
 /**
- * @brief Identiica, por meio do usuário, quais as características do animal a ser cadastrado
+ * @brief Remove um funcionário que já foi comercializado
+ * 
+ */
+void remove_Funcionario();
+
+/**
+ * @brief Lista todos os funcionários de um(a) determinado(a) cargo/funcao
+ * 
+ */
+void listByRole_Funcionario();
+
+/**
+ * @brief Identifica, por meio do usuário, quais as características do animal a ser cadastrado
  * 
  */
 void identify_Animal();
@@ -115,5 +128,23 @@ std::string chooseNature_Animal();
  */
 
 void add_Animal(int animal_class, int animal_nature);
+
+/**
+ * @brief Remove um animal que já foi comercializado
+ * 
+ */
+void remove_Animal();
+
+/**
+ * @brief Lista todos os animais de uma determinada classe
+ * 
+ */
+void listByClass_Animal();
+
+/**
+ * @brief Lista todos os animais sob responsabilidade de um determinado funcionário
+ * 
+ */
+void listByFunc_Animal();
 
 #endif
