@@ -1,13 +1,13 @@
 OBJS_DIR	:= build
 LIB_DIR := lib
-OBJS	= $(addprefix $(OBJS_DIR)/, main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o Interacao.o table_printer.o InvalidBloodType.o NonIntegerArgument.o InvalidSecurityLevel.o)
+OBJS	= $(addprefix $(OBJS_DIR)/, main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o PetFera.o InvalidBloodType.o NonIntegerArgument.o InvalidSecurityLevel.o)
 
 OBJS_LIB	= $(addprefix $(OBJS_DIR)/$(LIB_DIR)/, Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o exportar.o main_export.o)
 
 ANIMALS_OBJS = main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o 
-SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/utils/table_printer.cpp src/utils/Interacao.cpp
+SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/classes/PetFera.cpp
 LIB_SOURCE	= src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/utils/exportar.cpp src/utils/main_export.cpp
-HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/Interacao.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h include/bprinter/table_printer.h include/bprinter/impl/table_printer.tpp.h include/exceptions/InvalidBloodType.h include/exceptions/NonIntegerArgument.h include/exceptions/InvalidSecurityLevel.h include/exportar.h
+HEADER	= include/Anfibio.h include/AnfibioExotico.h include/AnfibioNativo.h include/Animal.h include/AnimalExotico.h include/AnimalNativo.h include/AnimalSilvestre.h include/Ave.h include/AveExotico.h include/AveNativo.h include/CRUD.h include/CSVparser.hpp include/Date.h include/Funcionario.h include/PetFera.h include/Mamifero.h include/MamiferoExotico.h include/MamiferoNativo.h include/ModelDAO.h include/Reptil.h include/ReptilExotico.h include/ReptilNativo.h include/Tratador.h include/utils.h include/Veterinario.h include/exceptions/InvalidBloodType.h include/exceptions/NonIntegerArgument.h include/exceptions/InvalidSecurityLevel.h include/exportar.h
 OUT	= $(OBJS_DIR)/exec.o
 CC	 = g++
 FLAGS	 = -g3 -c -Wall
@@ -36,11 +36,8 @@ build/main.o: src/main.cpp
 build/utils.o: src/utils/utils.cpp
 	$(CC) $(FLAGS) src/utils/utils.cpp -std=c++11 -o build/utils.o
 
-build/table_printer.o: src/utils/table_printer.cpp
-	$(CC) $(FLAGS) src/utils/table_printer.cpp -std=c++11 -o build/table_printer.o
-
-build/Interacao.o: src/utils/Interacao.cpp
-	$(CC) $(FLAGS) src/utils/Interacao.cpp -std=c++11 -o build/Interacao.o
+build/PetFera.o: src/classes/PetFera.cpp
+	$(CC) $(FLAGS) src/classes/PetFera.cpp -std=c++11 -o build/PetFera.o
 
 build/Anfibio.o: src/classes/Anfibio.cpp
 	$(CC) $(FLAGS) src/classes/Anfibio.cpp -std=c++11 -o build/Anfibio.o

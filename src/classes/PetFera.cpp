@@ -1,6 +1,9 @@
-#include "../../include/Interacao.h"
+#include "../../include/PetFera.h"
 
-void run(){
+PetFera::PetFera(){
+}
+
+void PetFera::run(){
     int escolha = 0;
     menu(escolha);
 
@@ -10,16 +13,17 @@ void run(){
     }
 }
 
-int getOrigem(){
+int PetFera::getOrigem(){
     int option = 0;
     std::cout<<"Qual o tipo do animal?"<<std::endl;
     std::cout<<"1 -> Nativo"<<std::endl;
     std::cout<<"2 -> Exótico"<<std::endl;
+    std::cout<<"3 -> Doméstico"<<std::endl;
     std::cin>>option;
     return option;
 }
 
-void identify_Animal(){
+void PetFera::identify_Animal(){
     std::string opt_animal_class = chooseClass_Animal();
 
     if(std::stoi(opt_animal_class) == 0){
@@ -40,7 +44,7 @@ void identify_Animal(){
     
 }
 
-void identify_Funcionario(){
+void PetFera::identify_Funcionario(){
     std::string opt_func = chooseRole_Funcionario();
 
     if(std::stoi(opt_func) == 0){
@@ -52,7 +56,7 @@ void identify_Funcionario(){
     }   
 }
 
-void remove_Animal(){
+void PetFera::remove_Animal(){
     std::string id_animal;
 
     std::cout << "ID do animal a ser removido: ";
@@ -90,7 +94,7 @@ void remove_Animal(){
     }*/
 }
 
-void remove_Funcionario(){
+void PetFera::remove_Funcionario(){
     std::string id_funcionario;
 
     std::cout << "ID do funcionario a ser removido: ";
@@ -128,7 +132,7 @@ void remove_Funcionario(){
     }*/
 }
 
-void listByClass_Animal(){
+void PetFera::listByClass_Animal(){
     std::string opt_classe = chooseClass_Animal();
 
     if(std::stoi(opt_classe) == 0){
@@ -167,7 +171,7 @@ void listByClass_Animal(){
     }
 }
 
-void listByRole_Funcionario(){
+void PetFera::listByRole_Funcionario(){
     std::string opt_funcao = chooseRole_Funcionario();
 
     if(std::stoi(opt_funcao) == 0){
@@ -202,7 +206,7 @@ void listByRole_Funcionario(){
     }
 }
 
-void listByFunc_Animal(){
+void PetFera::listByFunc_Animal(){
     std::string id_funcionario;
         
     std::cout << "ID do funcionario: ";
@@ -241,12 +245,12 @@ void listByFunc_Animal(){
     }
 }
 
-void menu(int &escolha){
+void PetFera::menu(int &escolha){
     std::cout << std::endl;
     
     textColor_red("PetFera 2019.1 | AMD - All Rights Reserved ©");
     std::cout << std::endl;
-    textColor_red("============================================");
+    textColor_red("===============||=============================");
     std::cout << std::endl;
     
     std::cout << "# Menu #" << std::endl;
@@ -303,19 +307,19 @@ void menu(int &escolha){
     }
 }
 
-void textColor_red(std::string text){
+void PetFera::textColor_red(std::string text){
     std::cout << "\033[1;31m" << text << "\033[0m";
 }
 
-void textColor_yellow(std::string text){
+void PetFera::textColor_yellow(std::string text){
     std::cout << "\033[1;33m" << text << "\033[0m";
 }
 
-void textColor_green(std::string text){
+void PetFera::textColor_green(std::string text){
     std::cout << "\033[1;32m" << text << "\033[0m";
 }
 
-void listAll_Funcionarios(){
+void PetFera::listAll_Funcionarios(){
     std::multimap<std::string,Funcionario*> funcionarios = Funcionario::all();
 
     std::cout<<std::endl;
@@ -333,7 +337,7 @@ void listAll_Funcionarios(){
     }
 }
 
-void listAll_Animais(){
+void PetFera::listAll_Animais(){
     std::multimap<std::string,Animal*> animais = Animal::all();
 
     std::cout<<std::endl;
@@ -351,7 +355,7 @@ void listAll_Animais(){
     }
 }
 
-std::string chooseClass_Animal(){
+std::string PetFera::chooseClass_Animal(){
     std::cout << "Escolha a classe:" << std::endl;
     std::cout << "  1 -> Anfibio"<<std::endl;
     std::cout << "  2 -> Mamifero"<<std::endl;
@@ -376,7 +380,7 @@ std::string chooseClass_Animal(){
     return opt;
 }
 
-std::string chooseNature_Animal(){
+std::string PetFera::chooseNature_Animal(){
     std::cout << "Qual a natureza do Animal?" << std::endl;
     std::cout << "  1 -> Exotico"<<std::endl;
     std::cout << "  2 -> Nativo"<<std::endl;
@@ -397,7 +401,7 @@ std::string chooseNature_Animal(){
     return opt;
 }
 
-void add_Animal(int animal_class, int animal_nature){
+void PetFera::add_Animal(int animal_class, int animal_nature){
     std::string choosed_animal;
 
     if(animal_class == 1){
@@ -494,7 +498,7 @@ void add_Animal(int animal_class, int animal_nature){
 }
 
 
-std::string chooseRole_Funcionario(){
+std::string PetFera::chooseRole_Funcionario(){
     std::cout << "Escolha o cargo:" << std::endl;
     std::cout << "  1 -> Tratador"<<std::endl;
     std::cout << "  2 -> Veterinario"<<std::endl;
@@ -515,7 +519,7 @@ std::string chooseRole_Funcionario(){
     return opt;
 }
 
-void add_Funcionario(int emp_role){
+void PetFera::add_Funcionario(int emp_role){
     std::string choosed_role;
 
     if(emp_role == 1){
