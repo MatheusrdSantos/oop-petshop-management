@@ -43,25 +43,25 @@ AnfibioNativo::AnfibioNativo(std::string nome, std::string nome_cientifico, char
 }
 
 AnfibioNativo::AnfibioNativo(){
-
+    m_classe="Amphibia";
 }
 
 std::string AnfibioNativo::printInFile(int id){
     std::stringstream ss;
     if(m_tratador == NULL){
         if(m_veterinario==NULL){
-            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<""<<";"<<""<<";"<<m_nome_batismo<<";"<<";"<<m_cidade_origem<<";"<<";"<<""<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
+            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<""<<";"<<""<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
         }else{
-            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<""<<";"<<m_nome_batismo<<";"<<";"<<m_cidade_origem<<";"<<";"<<""<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
+            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<""<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
         }
     }else if(m_veterinario == NULL){
         if(m_tratador==NULL){
-            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<""<<";"<<""<<";"<<m_nome_batismo<<";"<<";"<<m_cidade_origem<<";"<<";"<<""<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
+            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<""<<";"<<""<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
         }else{
-            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<""<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<";"<<m_cidade_origem<<";"<<""<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
+            ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<""<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
         }
     }else{
-        ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<""<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
+        ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<";"<<""<<std::endl;
     }
     std::string s = ss.str();
     return s;
@@ -86,7 +86,7 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                      <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                     <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                     <<"Última Muda           | "<<(*m_ultima_muda)<<std::endl;
         }else{
             return os<<std::endl
                      <<"=============== Anfibio Nativo =============="<<std::endl
@@ -104,7 +104,7 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                      <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                      <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                      <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                     <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                     <<"Última Muda           | "<<(*m_ultima_muda)<<std::endl;
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
@@ -123,7 +123,7 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                  <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                 <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                 <<"Última Muda           | "<<(*m_ultima_muda)<<std::endl;
     }else{
         return os<<std::endl
                  <<"=============== Anfibio Nativo =============="<<std::endl
@@ -141,7 +141,7 @@ std::ostream& AnfibioNativo::print(std::ostream& os) const{
                  <<"Cidade de Origem      | "<<m_cidade_origem<<std::endl
                  <<"Autorizacao Ibama     | "<<m_autorizacao_ibama<<std::endl
                  <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                 <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                 <<"Última Muda           | "<<(*m_ultima_muda)<<std::endl;
     }        
 }
 
@@ -153,7 +153,7 @@ std::istream& AnfibioNativo::read(std::istream& is){
     std::cout<<"Digite a data da ultima muda(dd/mm/yyyy): "<<std::endl;
     std::string date_stg;
     is>>date_stg;
-    Date ultima_muda(date_stg, "/");
+    m_ultima_muda = new Date(date_stg, "/");
 
     std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
     is>>m_autorizacao_ibama;

@@ -2,4 +2,4 @@ id;classe;nome;nome_cientifico;sexo;tamanho;dieta;veterinario_id;tratador_id;nom
 0;Mammalia;Dog;achourrous;M;4.23;Carne;1;0;imba;RN;Natal;;Autorizado;;;Azul;;;;
 1;Mammalia;Belino;elinus Minus;M;2.21;Carnivero;2;3;atista;;do;Africa;Sim;;;Marrom;;;;
 3;Mammalia;Cachorro;acheurroeus;M;5.32;Racao;;;ax;RN;Natal;;Claro;;;Marrom;;;;
-4;;Sapo;apialolas;M;0.5;Moscas;;;apao;;Natal;;;Sim;3;0/0/0;;;;;
+4;Amphibia;Sapo;apolsion;M;0.4;Moscas;;;apao;RN;Natal;;3209338;3;4/6/2019;;;;;
