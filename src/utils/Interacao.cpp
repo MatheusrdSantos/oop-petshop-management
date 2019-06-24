@@ -172,18 +172,18 @@ void listByRole_Funcionario(){
 
     if(std::stoi(opt_funcao) == 0){
         std::cout << std::endl;
-    }else if(std::stoi(opt_funcao) > 0 && std::stoi(opt_funcao) < 5){
-        std::string choosed_class;
+    }else if(std::stoi(opt_funcao) > 0 && std::stoi(opt_funcao) < 3){
+        std::string choosed_role;
         std::string str_funcao = "funcao";
         std::string str_equal = "==";
 
         if(std::stoi(opt_funcao) == 1){
-            choosed_class = "Tratador";
+            choosed_role = "Tratador";
         }else if(std::stoi(opt_funcao) == 2){
-            choosed_class = "Veterinario";
+            choosed_role = "Veterinario";
         }
 
-        std::multimap<std::string,Funcionario*> funcionarios = Funcionario::where(&str_funcao, &str_equal, &choosed_class);
+        std::multimap<std::string,Funcionario*> funcionarios = Funcionario::where(&str_funcao, &str_equal, &choosed_role);
         std::cout<<std::endl;
         if(funcionarios.size() == 0){
             textColor_yellow("Não há funcionário deste cargo no sistema!"); 
@@ -202,6 +202,45 @@ void listByRole_Funcionario(){
     }
 }
 
+void listByFunc_Animal(){
+    std::string id_funcionario;
+        
+    std::cout << "ID do funcionario: ";
+    std::cin >> id_funcionario;
+
+    std::string choosed_role = "tratador_id";
+    std::string str_equal = "==";
+
+    std::multimap<std::string,Animal*> animais = Animal::where(&choosed_role, &str_equal, &id_funcionario);
+    std::cout<<std::endl;
+    if(animais.size() == 0){
+        choosed_role = "veterinario_id";
+
+        std::multimap<std::string,Animal*> animais = Animal::where(&choosed_role, &str_equal, &id_funcionario);
+        std::cout<<std::endl;
+        if(animais.size() == 0){
+            textColor_yellow("Não há animais sob responsabilidade deste funcionario!"); 
+            std::cout<<std::endl;
+        }else{
+            int counter = 1;
+            for (auto it=animais.begin(); it!=animais.end(); ++it){
+                std::cout<< *(it->second);
+                delete it->second;
+
+                std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
+            }
+        }
+    }else{
+        int counter = 1;
+        for (auto it=animais.begin(); it!=animais.end(); ++it){
+            std::cout<< *(it->second);
+            delete it->second;
+
+            std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
+        }
+    }
+}
+
 void menu(int &escolha){
     std::cout << std::endl;
     
@@ -215,9 +254,11 @@ void menu(int &escolha){
     std::cout << "    2 -> Adicionar animal " << std::endl;
     std::cout << "    3 -> Remover animal " << std::endl;
     std::cout << "    4 -> Remover funcionario " << std::endl;
-    std::cout << "    5 -> Listar animais por classe " << std::endl;
-    std::cout << "    6 -> Listar todos funcionarios " << std::endl;
-    std::cout << "    7 -> Listar todos animais " << std::endl;
+    std::cout << "    5 -> Listar animais por funcionario " << std::endl;
+    std::cout << "    6 -> Listar animais por classe " << std::endl;
+    std::cout << "    7 -> Listar funcionários por cargo " << std::endl;
+    std::cout << "    8 -> Listar todos funcionarios " << std::endl;
+    std::cout << "    9 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 
@@ -240,12 +281,19 @@ void menu(int &escolha){
             remove_Funcionario();
             break;
         case 5:
-            listByClass_Animal();
+            listByFunc_Animal();
             break;
         case 6:
-            listAll_Funcionarios();
+            listByClass_Animal();
             break;
         case 7:
+            listByRole_Funcionario();
+            //update animais
+            break;
+        case 8:
+            listAll_Funcionarios();
+            break;
+        case 9:
             listAll_Animais();
             break;
 

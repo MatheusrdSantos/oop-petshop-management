@@ -141,4 +141,10 @@ void remove_Animal();
  */
 void listByClass_Animal();
 
+/**
+ * @brief Lista todos os animais sob responsabilidade de um determinado funcionário
+ * 
+ */
+void listByFunc_Animal();
+
 #endif
