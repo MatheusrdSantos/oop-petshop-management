@@ -33,7 +33,7 @@ void PetFera::identify_Animal(){
         
         if(std::stoi(opt_animal_nature) == 0){
             std::cout << std::endl;
-        }else if(std::stoi(opt_animal_nature) == 1 || std::stoi(opt_animal_nature) == 2){
+        }else if(std::stoi(opt_animal_nature) == 1 || std::stoi(opt_animal_nature) == 2 || std::stoi(opt_animal_nature) == 3){
             add_Animal(std::stoi(opt_animal_class), std::stoi(opt_animal_nature));
         }else{
             textColor_yellow("Essa opção não existe!");
@@ -273,7 +273,11 @@ void PetFera::menu(int &escolha){
             std::cout << std::endl;
             break;
         case 1:
-            identify_Funcionario();
+            try{
+                identify_Funcionario();
+            }catch(...){
+                std::cout<<"Não foi possível cadastrar o funcionário.";
+            }
             break;
         case 2:
             identify_Animal();
@@ -384,15 +388,17 @@ std::string PetFera::chooseNature_Animal(){
     std::cout << "Qual a natureza do Animal?" << std::endl;
     std::cout << "  1 -> Exotico"<<std::endl;
     std::cout << "  2 -> Nativo"<<std::endl;
+    std::cout << "  3 -> Doméstico"<<std::endl;
     std::cout << "  0 -> Voltar"<<std::endl;
 
     std::string opt;
     std::cin>>opt;
 
-    while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)){
+    while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2) && (std::stoi(opt)!=3)){
         std::cout << "Qual a natureza do Animal?" << std::endl;
         std::cout << "  1 -> Exotico"<<std::endl;
         std::cout << "  2 -> Nativo"<<std::endl;
+        std::cout << "  3 -> Doméstico"<<std::endl;
         std::cout << "  0 -> Voltar"<<std::endl;
 
         std::cin>>opt;
@@ -425,6 +431,16 @@ void PetFera::add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Anfibio Nativo";
+
+        }else if(animal_nature == 3){
+            //Natureza: Doméstico
+
+            Anfibio *anfibio = new Anfibio();
+            Animal *animal = anfibio;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Anfibio Doméstico";
         }
     }else if(animal_class == 2){
         //Classe: Mamifero
@@ -447,6 +463,15 @@ void PetFera::add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Mamifero Nativo";
+        }else if(animal_nature == 3){
+            //Natureza: Doméstico
+
+            Mamifero *mamifero = new Mamifero();
+            Animal *animal = mamifero;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Mamifero Doméstico";
         }
     }else if(animal_class == 3){
         //Classe: Réptil
@@ -469,6 +494,15 @@ void PetFera::add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Reptil Nativo";
+        }else if(animal_nature == 2){
+            //Natureza: Doméstico
+
+            Reptil *reptil = new Reptil();
+            Animal *animal = reptil;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Reptil Doméstico";
         }
     }else if(animal_class == 4){
         //Classe: Ave
@@ -491,6 +525,15 @@ void PetFera::add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Ave Nativa";
+        }else if(animal_nature == 2){
+            //Natureza: Doméstico
+
+            Ave *ave = new Ave();
+            Animal *animal = ave;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Ave Doméstica";
         }
     }
 
