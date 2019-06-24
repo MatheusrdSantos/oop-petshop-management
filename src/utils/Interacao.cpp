@@ -90,6 +90,44 @@ void remove_Animal(){
     }*/
 }
 
+void remove_Funcionario(){
+    std::string id_funcionario;
+
+    std::cout << "ID do funcionario a ser removido: ";
+    std::cin >> id_funcionario;
+
+    Funcionario* funcionario = Funcionario::find(std::stoi(id_funcionario));
+
+    if(funcionario == NULL){
+        textColor_yellow("O funcionario buscado não está cadastrado.");
+        std::cout << std::endl;
+    }else{
+        std::string remove_funcionario;
+
+        std::cout << "Realmente deseja remover o seguinte funcionario?" << std::endl;
+        std::cout << (*funcionario)  << std::endl;
+        std::cout << "1 -> Sim" << std::endl;
+        std::cout << "2 -> Não" << std::endl;
+        std::cin >> remove_funcionario;
+
+        if(std::stoi(remove_funcionario) == 1){
+            funcionario->remove();
+            textColor_green("Funcionario removido com sucesso!");
+        }else if(std::stoi(remove_funcionario) == 2){
+
+        }else{
+            textColor_yellow("Essa opção não existe!");   
+        }
+    }
+    
+    /* try{
+        std::cin >> id_funcionario;
+        if(!std::cin) throw NonIntegerArgument(id_funcionario);
+    }catch(NonIntegerArgument& exception){
+        exception.what();
+    }*/
+}
+
 void menu(int &escolha){
     std::cout << std::endl;
     
@@ -99,11 +137,12 @@ void menu(int &escolha){
     std::cout << std::endl;
     
     std::cout << "# Menu #" << std::endl;
-    std::cout << "    1 -> Adicionar funcionário " << std::endl;
+    std::cout << "    1 -> Adicionar funcionario " << std::endl;
     std::cout << "    2 -> Adicionar animal " << std::endl;
     std::cout << "    3 -> Remover animal " << std::endl;
-    std::cout << "    4 -> Listar todos funcionários " << std::endl;
-    std::cout << "    5 -> Listar todos animais " << std::endl;
+    std::cout << "    4 -> Remover funcionario " << std::endl;
+    std::cout << "    5 -> Listar todos funcionarios " << std::endl;
+    std::cout << "    6 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 
@@ -123,9 +162,12 @@ void menu(int &escolha){
             remove_Animal();
             break;
         case 4:
-            listAll_Funcionarios();
+            remove_Funcionario();
             break;
         case 5:
+            listAll_Funcionarios();
+            break;
+        case 6:
             listAll_Animais();
             break;
 
