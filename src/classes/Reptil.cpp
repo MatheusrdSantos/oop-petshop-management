@@ -35,6 +35,7 @@ Reptil::Reptil(std::string classe,std::string nome,std::string nome_cientifico,c
 }
 
 Reptil::Reptil(std::string nome,std::string nome_cientifico,char sexo,double tamanho,std::string dieta,Veterinario* veterinario,Tratador* tratador,std::string nome_batismo,bool venenoso,std::string tipo_veneno): Animal(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo){
+    m_classe="Reptilia";
     m_venenoso=venenoso;
     m_tipo_veneno=tipo_veneno;
 }

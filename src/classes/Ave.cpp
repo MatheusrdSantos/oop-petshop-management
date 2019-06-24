@@ -34,6 +34,7 @@ Ave::Ave(std::string classe, std::string nome, std::string nome_cientifico, char
 }
 
 Ave::Ave(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo, double tamanho_do_bico_cm, double envergadura_das_asas): Animal(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo){
+    m_classe="Aves";
     m_tamanho_do_bico_cm=tamanho_do_bico_cm;
     m_envergadura_das_asas=envergadura_das_asas;
 }
