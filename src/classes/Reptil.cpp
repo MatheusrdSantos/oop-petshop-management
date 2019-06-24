@@ -35,6 +35,7 @@ Reptil::Reptil(std::string classe,std::string nome,std::string nome_cientifico,c
 }
 
 Reptil::Reptil(std::string nome,std::string nome_cientifico,char sexo,double tamanho,std::string dieta,Veterinario* veterinario,Tratador* tratador,std::string nome_batismo,bool venenoso,std::string tipo_veneno): Animal(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo){
+    m_classe="Reptilia";
     m_venenoso=venenoso;
     m_tipo_veneno=tipo_veneno;
 }
@@ -64,7 +65,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
     if(m_tratador == NULL){
         if(m_veterinario==NULL){
             return os<<std::endl
-                     <<"============== Reptil =============="<<std::endl
+                     <<"============== Reptil Doméstico ==========="<<std::endl
                      <<"ID                    | "<<m_id<<std::endl
                      <<"Classe                | "<<m_classe<<std::endl
                      <<"Nome                  | "<<m_nome<<std::endl
@@ -79,7 +80,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
                      <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
         }else{
             return os<<std::endl
-                     <<"============== Reptil =============="<<std::endl
+                     <<"============== Reptil Doméstico ==========="<<std::endl
                      <<"ID                    | "<<m_id<<std::endl
                      <<"Classe                | "<<m_classe<<std::endl
                      <<"Nome                  | "<<m_nome<<std::endl
@@ -95,7 +96,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
-                 <<"============== Reptil =============="<<std::endl
+                 <<"============== Reptil Doméstico ==========="<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
@@ -110,7 +111,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
                  <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
     }else{
         return os<<std::endl
-                 <<"============== Reptil =============="<<std::endl
+                 <<"============== Reptil Doméstico ==========="<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl

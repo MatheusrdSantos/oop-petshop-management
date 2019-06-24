@@ -1,6 +1,9 @@
-#include "../../include/Interacao.h"
+#include "../../include/PetFera.h"
 
-void run(){
+PetFera::PetFera(){
+}
+
+void PetFera::run(){
     int escolha = 0;
     menu(escolha);
 
@@ -10,16 +13,17 @@ void run(){
     }
 }
 
-int getOrigem(){
+int PetFera::getOrigem(){
     int option = 0;
     std::cout<<"Qual o tipo do animal?"<<std::endl;
     std::cout<<"1 -> Nativo"<<std::endl;
     std::cout<<"2 -> Exótico"<<std::endl;
+    std::cout<<"3 -> Doméstico"<<std::endl;
     std::cin>>option;
     return option;
 }
 
-void identify_Animal(){
+void PetFera::identify_Animal(){
     std::string opt_animal_class = chooseClass_Animal();
 
     if(std::stoi(opt_animal_class) == 0){
@@ -29,7 +33,7 @@ void identify_Animal(){
         
         if(std::stoi(opt_animal_nature) == 0){
             std::cout << std::endl;
-        }else if(std::stoi(opt_animal_nature) == 1 || std::stoi(opt_animal_nature) == 2){
+        }else if(std::stoi(opt_animal_nature) == 1 || std::stoi(opt_animal_nature) == 2 || std::stoi(opt_animal_nature) == 3){
             add_Animal(std::stoi(opt_animal_class), std::stoi(opt_animal_nature));
         }else{
             textColor_yellow("Essa opção não existe!");
@@ -40,7 +44,7 @@ void identify_Animal(){
     
 }
 
-void identify_Funcionario(){
+void PetFera::identify_Funcionario(){
     std::string opt_func = chooseRole_Funcionario();
 
     if(std::stoi(opt_func) == 0){
@@ -52,7 +56,7 @@ void identify_Funcionario(){
     }   
 }
 
-void remove_Animal(){
+void PetFera::remove_Animal(){
     std::string id_animal;
 
     std::cout << "ID do animal a ser removido: ";
@@ -90,7 +94,7 @@ void remove_Animal(){
     }*/
 }
 
-void remove_Funcionario(){
+void PetFera::remove_Funcionario(){
     std::string id_funcionario;
 
     std::cout << "ID do funcionario a ser removido: ";
@@ -128,7 +132,7 @@ void remove_Funcionario(){
     }*/
 }
 
-void listByClass_Animal(){
+void PetFera::listByClass_Animal(){
     std::string opt_classe = chooseClass_Animal();
 
     if(std::stoi(opt_classe) == 0){
@@ -167,7 +171,7 @@ void listByClass_Animal(){
     }
 }
 
-void listByRole_Funcionario(){
+void PetFera::listByRole_Funcionario(){
     std::string opt_funcao = chooseRole_Funcionario();
 
     if(std::stoi(opt_funcao) == 0){
@@ -202,7 +206,7 @@ void listByRole_Funcionario(){
     }
 }
 
-void listByFunc_Animal(){
+void PetFera::listByFunc_Animal(){
     std::string id_funcionario;
         
     std::cout << "ID do funcionario: ";
@@ -241,12 +245,12 @@ void listByFunc_Animal(){
     }
 }
 
-void menu(int &escolha){
+void PetFera::menu(int &escolha){
     std::cout << std::endl;
     
     textColor_red("PetFera 2019.1 | AMD - All Rights Reserved ©");
     std::cout << std::endl;
-    textColor_red("============================================");
+    textColor_red("===============||=============================");
     std::cout << std::endl;
     
     std::cout << "# Menu #" << std::endl;
@@ -269,7 +273,11 @@ void menu(int &escolha){
             std::cout << std::endl;
             break;
         case 1:
-            identify_Funcionario();
+            try{
+                identify_Funcionario();
+            }catch(...){
+                std::cout<<"Não foi possível cadastrar o funcionário.";
+            }
             break;
         case 2:
             identify_Animal();
@@ -303,19 +311,19 @@ void menu(int &escolha){
     }
 }
 
-void textColor_red(std::string text){
+void PetFera::textColor_red(std::string text){
     std::cout << "\033[1;31m" << text << "\033[0m";
 }
 
-void textColor_yellow(std::string text){
+void PetFera::textColor_yellow(std::string text){
     std::cout << "\033[1;33m" << text << "\033[0m";
 }
 
-void textColor_green(std::string text){
+void PetFera::textColor_green(std::string text){
     std::cout << "\033[1;32m" << text << "\033[0m";
 }
 
-void listAll_Funcionarios(){
+void PetFera::listAll_Funcionarios(){
     std::multimap<std::string,Funcionario*> funcionarios = Funcionario::all();
 
     std::cout<<std::endl;
@@ -333,7 +341,7 @@ void listAll_Funcionarios(){
     }
 }
 
-void listAll_Animais(){
+void PetFera::listAll_Animais(){
     std::multimap<std::string,Animal*> animais = Animal::all();
 
     std::cout<<std::endl;
@@ -351,7 +359,7 @@ void listAll_Animais(){
     }
 }
 
-std::string chooseClass_Animal(){
+std::string PetFera::chooseClass_Animal(){
     std::cout << "Escolha a classe:" << std::endl;
     std::cout << "  1 -> Anfibio"<<std::endl;
     std::cout << "  2 -> Mamifero"<<std::endl;
@@ -376,19 +384,21 @@ std::string chooseClass_Animal(){
     return opt;
 }
 
-std::string chooseNature_Animal(){
+std::string PetFera::chooseNature_Animal(){
     std::cout << "Qual a natureza do Animal?" << std::endl;
     std::cout << "  1 -> Exotico"<<std::endl;
     std::cout << "  2 -> Nativo"<<std::endl;
+    std::cout << "  3 -> Doméstico"<<std::endl;
     std::cout << "  0 -> Voltar"<<std::endl;
 
     std::string opt;
     std::cin>>opt;
 
-    while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)){
+    while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2) && (std::stoi(opt)!=3)){
         std::cout << "Qual a natureza do Animal?" << std::endl;
         std::cout << "  1 -> Exotico"<<std::endl;
         std::cout << "  2 -> Nativo"<<std::endl;
+        std::cout << "  3 -> Doméstico"<<std::endl;
         std::cout << "  0 -> Voltar"<<std::endl;
 
         std::cin>>opt;
@@ -397,7 +407,7 @@ std::string chooseNature_Animal(){
     return opt;
 }
 
-void add_Animal(int animal_class, int animal_nature){
+void PetFera::add_Animal(int animal_class, int animal_nature){
     std::string choosed_animal;
 
     if(animal_class == 1){
@@ -421,6 +431,16 @@ void add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Anfibio Nativo";
+
+        }else if(animal_nature == 3){
+            //Natureza: Doméstico
+
+            Anfibio *anfibio = new Anfibio();
+            Animal *animal = anfibio;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Anfibio Doméstico";
         }
     }else if(animal_class == 2){
         //Classe: Mamifero
@@ -443,6 +463,15 @@ void add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Mamifero Nativo";
+        }else if(animal_nature == 3){
+            //Natureza: Doméstico
+
+            Mamifero *mamifero = new Mamifero();
+            Animal *animal = mamifero;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Mamifero Doméstico";
         }
     }else if(animal_class == 3){
         //Classe: Réptil
@@ -465,6 +494,15 @@ void add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Reptil Nativo";
+        }else if(animal_nature == 3){
+            //Natureza: Doméstico
+
+            Reptil *reptil = new Reptil();
+            Animal *animal = reptil;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Reptil Doméstico";
         }
     }else if(animal_class == 4){
         //Classe: Ave
@@ -487,6 +525,15 @@ void add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Ave Nativa";
+        }else if(animal_nature == 3){
+            //Natureza: Doméstico
+
+            Ave *ave = new Ave();
+            Animal *animal = ave;
+            std::cin>>(*animal);
+            animal->save();
+
+            choosed_animal = "Ave Doméstica";
         }
     }
 
@@ -494,7 +541,7 @@ void add_Animal(int animal_class, int animal_nature){
 }
 
 
-std::string chooseRole_Funcionario(){
+std::string PetFera::chooseRole_Funcionario(){
     std::cout << "Escolha o cargo:" << std::endl;
     std::cout << "  1 -> Tratador"<<std::endl;
     std::cout << "  2 -> Veterinario"<<std::endl;
@@ -515,7 +562,7 @@ std::string chooseRole_Funcionario(){
     return opt;
 }
 
-void add_Funcionario(int emp_role){
+void PetFera::add_Funcionario(int emp_role){
     std::string choosed_role;
 
     if(emp_role == 1){

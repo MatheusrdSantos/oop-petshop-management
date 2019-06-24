@@ -150,56 +150,76 @@ Animal* Animal::buildAnimalFromFile(csv::Row* file){
         Date* ultima_muda = new Date((*file)["ultima_muda"], "/"); 
         int total_de_mudas = std::stoi((*file)["total_de_mudas"]);
         
-        if(uf_origem.empty()){
+        if(uf_origem.empty() && !pais_origem.empty()){
             AnfibioExotico* anfibioExotico = new AnfibioExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, total_de_mudas, ultima_muda, autorizacao_ibama, pais_origem, cidade_origem);
             anfibioExotico->setId(id);
             animal = anfibioExotico;
             return animal;
-        }else{
+        }else if(!uf_origem.empty()){
             AnfibioNativo* anfibioNativo = new AnfibioNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, total_de_mudas, ultima_muda, uf_origem, cidade_origem, autorizacao_ibama);
             anfibioNativo->setId(id);
             animal = anfibioNativo;
             return animal;
+        }else{
+            Anfibio* anfibio = new Anfibio(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, total_de_mudas, ultima_muda);
+            anfibio->setId(id);
+            animal = anfibio;
+            return animal;
         }
     }else if(classe == "Mammalia"){
         std::string cor_do_pelo = (*file)["cor_do_pelo"];
-        if(uf_origem.empty()){
+        if(uf_origem.empty() && !pais_origem.empty()){
             MamiferoExotico* mamiferoExotico = new MamiferoExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, cor_do_pelo, pais_origem, cidade_origem, autorizacao_ibama);
             mamiferoExotico->setId(id);
             animal = mamiferoExotico;
             return animal;
-        }else{
+        }else if(!uf_origem.empty()){
             MamiferoNativo* mamiferoNativo = new MamiferoNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, cor_do_pelo, uf_origem, cidade_origem, autorizacao_ibama);
             mamiferoNativo->setId(id);
             animal = mamiferoNativo;
+            return animal;
+        }else{
+            Mamifero* mamifero = new Mamifero(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, cor_do_pelo);
+            mamifero->setId(id);
+            animal = mamifero;
             return animal;
         }
     }else if(classe == "Reptilia"){
         bool venenoso = std::stoi((*file)["venenoso"]);
         std::string tipo_veneno = (*file)["tipo_veneno"];
-        if(uf_origem.empty()){
+        if(uf_origem.empty() && !pais_origem.empty()){
             ReptilExotico* reptilExotico = new ReptilExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, venenoso, tipo_veneno, pais_origem, cidade_origem, autorizacao_ibama);
             reptilExotico->setId(id);
             animal = reptilExotico;
             return animal;
-        }else{
+        }else if(!uf_origem.empty()){
             ReptilNativo* reptilNativo = new ReptilNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, venenoso, tipo_veneno, uf_origem, cidade_origem, autorizacao_ibama);
             reptilNativo->setId(id);
             animal = reptilNativo;
+            return animal;
+        }else{
+            Reptil* reptil = new Reptil(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, venenoso, tipo_veneno);
+            reptil->setId(id);
+            animal = reptil;
             return animal;
         }
     }else if(classe == "Aves"){
         double tamanho_do_bico_cm = std::stod((*file)["tamanho_do_bico_cm"]);
         double envergadura_das_asas = std::stod((*file)["envergadura_das_asas"]);
-        if(uf_origem.empty()){
+        if(uf_origem.empty() && !pais_origem.empty()){
             AveExotico* aveExotico = new AveExotico(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, pais_origem, cidade_origem, autorizacao_ibama);
             aveExotico->setId(id);
             animal = aveExotico;
             return animal;
-        }else{
+        }else if(!uf_origem.empty()){
             AveNativo* aveNativo = new AveNativo(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas, uf_origem, cidade_origem, autorizacao_ibama);
             aveNativo->setId(id);
             animal = aveNativo;
+            return animal;
+        }else{
+            Ave* ave = new Ave(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo, tamanho_do_bico_cm, envergadura_das_asas);
+            ave->setId(id);
+            animal = ave;
             return animal;
         } 
     }
@@ -343,20 +363,18 @@ std::istream & operator >> (std::istream &is, Animal& a)
 {
     std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
     is.ignore();
-    std::getline(is, a.m_nome, '\n');
+    std::getline(is, a.m_nome);
     std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
-    is.ignore();
-    std::getline(is, a.m_nome_cientifico, '\n');
+    std::getline(is, a.m_nome_cientifico);
     std::cout<<"Digite o sexo do Animal: "<<std::endl;
     is>>a.m_sexo;
     std::cout<<"Digite o tamanho do Animal: "<<std::endl;
     is>>a.m_tamanho;
     std::cout<<"Digite a dieta do Animal: "<<std::endl;
     is.ignore();
-    std::getline(is, a.m_dieta, '\n');
+    std::getline(is, a.m_dieta);
     std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
-    is.ignore();
-    std::getline(is, a.m_nome_batismo, '\n');
+    std::getline(is, a.m_nome_batismo);
     return a.read(is);
 }
 

@@ -1,4 +1,4 @@
-#include "../include/Interacao.h"
+#include "../include/PetFera.h"
 #include "../include/Animal.h"
 #include "../include/AnfibioExotico.h"
 #include "../include/AnfibioNativo.h"
@@ -97,7 +97,8 @@ int main(int argc, char const *argv[])
 
     Animal::find(4)->remove(); */
     
-    run();
+    PetFera* app = new PetFera();
+    app->run();
 
     /*
     AnfibioExotico a3("Lagarto da Calda verde", "Amphibia Verdinis", 'M', 20.61, "Carnívoro", NULL, t1, "Sekto");

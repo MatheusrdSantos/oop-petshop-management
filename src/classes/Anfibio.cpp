@@ -1,16 +1,19 @@
 #include "../../include/Anfibio.h"
 
 Anfibio::Anfibio(){
+    m_classe = "Amphibia";
     m_total_de_mudas = 0;
     m_ultima_muda = new Date(0, 0, 0);
 }
 
 Anfibio::Anfibio(int total_de_mudas, Date *ultima_muda){
+    m_classe = "Amphibia";
     m_total_de_mudas = total_de_mudas;
     m_ultima_muda = ultima_muda;
 }
 
 Anfibio::Anfibio(std::string nome, std::string nome_cientifico, char sexo, double tamanho, std::string dieta, Veterinario* veterinario, Tratador* tratador, std::string nome_batismo,int total_de_mudas, Date* ultima_muda):Animal(nome, nome_cientifico, sexo, tamanho, dieta, veterinario, tratador, nome_batismo){
+    m_classe = "Amphibia";
     m_total_de_mudas = total_de_mudas;
     m_ultima_muda = ultima_muda;
 }
@@ -40,7 +43,7 @@ std::ostream& Anfibio::print(std::ostream& os) const{
     if(m_tratador == NULL){
         if(m_veterinario==NULL){
             return os<<std::endl
-                     <<"============== Anfibio =============="<<std::endl
+                     <<"============== Anfibio Doméstico ============"<<std::endl
                      <<"ID                    | "<<m_id<<std::endl
                      <<"Classe                | "<<m_classe<<std::endl
                      <<"Nome                  | "<<m_nome<<std::endl
@@ -52,10 +55,10 @@ std::ostream& Anfibio::print(std::ostream& os) const{
                      <<"Tratador              | "<<""<<std::endl
                      <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
                      <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                     <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                     <<"Última Muda           | "<<*(m_ultima_muda)<<std::endl;
         }else{
             return os<<std::endl
-                     <<"============== Anfibio =============="<<std::endl
+                     <<"============== Anfibio Doméstico ============"<<std::endl
                      <<"ID                    | "<<m_id<<std::endl
                      <<"Classe                | "<<m_classe<<std::endl
                      <<"Nome                  | "<<m_nome<<std::endl
@@ -67,11 +70,11 @@ std::ostream& Anfibio::print(std::ostream& os) const{
                      <<"Tratador              | "<<""<<std::endl
                      <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
                      <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                     <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                     <<"Última Muda           | "<<*(m_ultima_muda)<<std::endl;
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
-                 <<"============== Anfibio =============="<<std::endl
+                 <<"============== Anfibio Doméstico ============"<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
@@ -83,10 +86,10 @@ std::ostream& Anfibio::print(std::ostream& os) const{
                  <<"Tratador              | "<<m_tratador->getNome()<<" [ "<<m_tratador->getId()<<" ]"<<std::endl
                  <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
                  <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                 <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                 <<"Última Muda           | "<<*(m_ultima_muda)<<std::endl;
     }else{
         return os<<std::endl
-                 <<"============== Anfibio =============="<<std::endl
+                 <<"============== Anfibio Doméstico ============"<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
@@ -98,7 +101,7 @@ std::ostream& Anfibio::print(std::ostream& os) const{
                  <<"Tratador              | "<<m_tratador->getNome()<<" [ "<<m_tratador->getId()<<" ]"<<std::endl
                  <<"Nome de Batismo       | "<<m_nome_batismo<<std::endl
                  <<"Total de Mudas        | "<<m_total_de_mudas<<std::endl
-                 <<"Última Muda           | "<<m_ultima_muda<<std::endl;
+                 <<"Última Muda           | "<<*(m_ultima_muda)<<std::endl;
     }
 }
 
@@ -110,7 +113,7 @@ std::istream& Anfibio::read(std::istream& is){
     std::cout<<"Digite a data da ultima muda(dd/mm/yyyy): "<<std::endl;
     std::string date_stg;
     is>>date_stg;
-    Date ultima_muda(date_stg, "/");
+    m_ultima_muda = new Date(date_stg, "/");
     
     return is;
 }
