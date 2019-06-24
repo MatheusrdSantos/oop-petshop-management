@@ -128,6 +128,80 @@ void remove_Funcionario(){
     }*/
 }
 
+void listByClass_Animal(){
+    std::string opt_classe = chooseClass_Animal();
+
+    if(std::stoi(opt_classe) == 0){
+        std::cout << std::endl;
+    }else if(std::stoi(opt_classe) > 0 && std::stoi(opt_classe) < 5){
+        std::string choosed_class;
+        std::string str_classe = "classe";
+        std::string str_equal = "==";
+
+        if(std::stoi(opt_classe) == 1){
+            choosed_class = "Amphibia";
+        }else if(std::stoi(opt_classe) == 2){
+            choosed_class = "Mammalia";
+        }else if(std::stoi(opt_classe) == 3){
+            choosed_class = "Reptilia";
+        }else if(std::stoi(opt_classe) == 4){
+            choosed_class = "Aves";
+        }
+
+        std::multimap<std::string,Animal*> animais = Animal::where(&str_classe, &str_equal, &choosed_class);
+        std::cout<<std::endl;
+        if(animais.size() == 0){
+            textColor_yellow("Não há animais desta classe no sistema!"); 
+            std::cout<<std::endl;
+        }else{
+            int counter = 1;
+            for (auto it=animais.begin(); it!=animais.end(); ++it){
+                std::cout<< *(it->second);
+                delete it->second;
+
+                std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
+            }
+        }
+    }else{
+        textColor_yellow("Essa opção não existe!");
+    }
+}
+
+void listByRole_Funcionario(){
+    std::string opt_funcao = chooseRole_Funcionario();
+
+    if(std::stoi(opt_funcao) == 0){
+        std::cout << std::endl;
+    }else if(std::stoi(opt_funcao) > 0 && std::stoi(opt_funcao) < 5){
+        std::string choosed_class;
+        std::string str_funcao = "funcao";
+        std::string str_equal = "==";
+
+        if(std::stoi(opt_funcao) == 1){
+            choosed_class = "Tratador";
+        }else if(std::stoi(opt_funcao) == 2){
+            choosed_class = "Veterinario";
+        }
+
+        std::multimap<std::string,Funcionario*> funcionarios = Funcionario::where(&str_funcao, &str_equal, &choosed_class);
+        std::cout<<std::endl;
+        if(funcionarios.size() == 0){
+            textColor_yellow("Não há funcionário deste cargo no sistema!"); 
+            std::cout<<std::endl;
+        }else{
+            int counter = 1;
+            for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
+                std::cout<< *(it->second);
+                delete it->second;
+
+                std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
+            }
+        }
+    }else{
+        textColor_yellow("Essa opção não existe!");
+    }
+}
+
 void menu(int &escolha){
     std::cout << std::endl;
     
@@ -141,8 +215,9 @@ void menu(int &escolha){
     std::cout << "    2 -> Adicionar animal " << std::endl;
     std::cout << "    3 -> Remover animal " << std::endl;
     std::cout << "    4 -> Remover funcionario " << std::endl;
-    std::cout << "    5 -> Listar todos funcionarios " << std::endl;
-    std::cout << "    6 -> Listar todos animais " << std::endl;
+    std::cout << "    5 -> Listar animais por classe " << std::endl;
+    std::cout << "    6 -> Listar todos funcionarios " << std::endl;
+    std::cout << "    7 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 
@@ -165,9 +240,12 @@ void menu(int &escolha){
             remove_Funcionario();
             break;
         case 5:
-            listAll_Funcionarios();
+            listByClass_Animal();
             break;
         case 6:
+            listAll_Funcionarios();
+            break;
+        case 7:
             listAll_Animais();
             break;
 
@@ -226,7 +304,7 @@ void listAll_Animais(){
 }
 
 std::string chooseClass_Animal(){
-    std::cout << "Qual a classe do Animal?" << std::endl;
+    std::cout << "Escolha a classe:" << std::endl;
     std::cout << "  1 -> Anfibio"<<std::endl;
     std::cout << "  2 -> Mamifero"<<std::endl;
     std::cout << "  3 -> Reptil"<<std::endl;
@@ -237,7 +315,7 @@ std::string chooseClass_Animal(){
     std::cin>>opt;
 
     while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)  && (std::stoi(opt)!=3) && (std::stoi(opt)!=4)){
-        std::cout << "Qual a classe do Animal?" << std::endl;
+        std::cout << "Escolha a classe:" << std::endl;
         std::cout << "  1 -> Anfibio"<<std::endl;
         std::cout << "  2 -> Mamifero"<<std::endl;
         std::cout << "  3 -> Reptil"<<std::endl;
@@ -369,7 +447,7 @@ void add_Animal(int animal_class, int animal_nature){
 
 
 std::string chooseRole_Funcionario(){
-    std::cout << "Qual o cargo do Funcionario?" << std::endl;
+    std::cout << "Escolha o cargo:" << std::endl;
     std::cout << "  1 -> Tratador"<<std::endl;
     std::cout << "  2 -> Veterinario"<<std::endl;
     std::cout << "  0 -> Voltar"<<std::endl;
@@ -378,7 +456,7 @@ std::string chooseRole_Funcionario(){
     std::cin>>opt;
 
     while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)){
-    std::cout << "Qual o cargo do Funcionario?" << std::endl;
+    std::cout << "Escolha o cargo:" << std::endl;
     std::cout << "  1 -> Tratador"<<std::endl;
     std::cout << "  2 -> Veterinario"<<std::endl;
     std::cout << "  0 -> Voltar"<<std::endl;

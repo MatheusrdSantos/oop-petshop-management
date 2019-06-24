@@ -83,6 +83,18 @@ std::string chooseRole_Funcionario();
 void add_Funcionario(int emp_role);
 
 /**
+ * @brief Remove um funcionário que já foi comercializado
+ * 
+ */
+void remove_Funcionario();
+
+/**
+ * @brief Lista todos os funcionários de um(a) determinado(a) cargo/funcao
+ * 
+ */
+void listByRole_Funcionario();
+
+/**
  * @brief Identifica, por meio do usuário, quais as características do animal a ser cadastrado
  * 
  */
@@ -122,5 +134,11 @@ void add_Animal(int animal_class, int animal_nature);
  * 
  */
 void remove_Animal();
+
+/**
+ * @brief Lista todos os animais de uma determinada classe
+ * 
+ */
+void listByClass_Animal();
 
 #endif
