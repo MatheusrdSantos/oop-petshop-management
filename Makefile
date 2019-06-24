@@ -14,7 +14,7 @@ FLAGS	 = -g3 -c -Wall
 LFLAGS	 = -pedantic -I include/ -O0 -ansi
 CC_11 = -std=c++11
 
-all: $(OBJS) linux
+all: $(OBJS) 
 	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
 	make clean
 animals: $(ANIMALS_OBJS)
@@ -109,7 +109,7 @@ build/Veterinario.o: src/classes/Veterinario.cpp
 	$(CC) $(FLAGS) src/classes/Veterinario.cpp -std=c++11 -o build/Veterinario.o
 
 
-linux: exportar.so exportar
+#linux: exportar.so exportar
 
 windows: exportar.dll exportar.exe
 

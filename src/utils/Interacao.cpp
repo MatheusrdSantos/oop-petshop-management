@@ -52,6 +52,44 @@ void identify_Funcionario(){
     }   
 }
 
+void remove_Animal(){
+    std::string id_animal;
+
+    std::cout << "ID do animal a ser removido: ";
+    std::cin >> id_animal;
+
+    Animal* animal = Animal::find(std::stoi(id_animal));
+
+    if(animal == NULL){
+        textColor_yellow("O animal buscado não está cadastrado.");
+        std::cout << std::endl;
+    }else{
+        std::string remove_animal;
+
+        std::cout << "Realmente deseja remover o seguinte animal?" << std::endl;
+        std::cout << (*animal)  << std::endl;
+        std::cout << "1 -> Sim" << std::endl;
+        std::cout << "2 -> Não" << std::endl;
+        std::cin >> remove_animal;
+
+        if(std::stoi(remove_animal) == 1){
+            animal->remove();
+            textColor_green("Animal removido com sucesso!");
+        }else if(std::stoi(remove_animal) == 2){
+
+        }else{
+            textColor_yellow("Essa opção não existe!");   
+        }
+    }
+    
+    /* try{
+        std::cin >> id_animal;
+        if(!std::cin) throw NonIntegerArgument(id_animal);
+    }catch(NonIntegerArgument& exception){
+        exception.what();
+    }*/
+}
+
 void menu(int &escolha){
     std::cout << std::endl;
     
@@ -63,8 +101,9 @@ void menu(int &escolha){
     std::cout << "# Menu #" << std::endl;
     std::cout << "    1 -> Adicionar funcionário " << std::endl;
     std::cout << "    2 -> Adicionar animal " << std::endl;
-    std::cout << "    3 -> Listar todos funcionários " << std::endl;
-    std::cout << "    4 -> Listar todos animais " << std::endl;
+    std::cout << "    3 -> Remover animal " << std::endl;
+    std::cout << "    4 -> Listar todos funcionários " << std::endl;
+    std::cout << "    5 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
     std::cin >> escolha;
 
@@ -81,9 +120,12 @@ void menu(int &escolha){
             identify_Animal();
             break;
         case 3:
-            listAll_Funcionarios();
+            remove_Animal();
             break;
         case 4:
+            listAll_Funcionarios();
+            break;
+        case 5:
             listAll_Animais();
             break;
 
