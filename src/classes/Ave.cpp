@@ -64,7 +64,7 @@ std::ostream& Ave::print(std::ostream& os) const{
     if(m_tratador == NULL){
         if(m_veterinario==NULL){
             return os<<std::endl
-                    <<"================ Ave ================"<<std::endl
+                    <<"================ Ave Doméstica ============="<<std::endl
                     <<"ID                    | "<<m_id<<std::endl
                     <<"Classe                | "<<m_classe<<std::endl
                     <<"Nome                  | "<<m_nome<<std::endl
@@ -79,7 +79,7 @@ std::ostream& Ave::print(std::ostream& os) const{
                     <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl;
         }else{
             return os<<std::endl
-                    <<"================ Ave ================"<<std::endl
+                    <<"================ Ave Doméstica ============="<<std::endl
                     <<"ID                    | "<<m_id<<std::endl
                     <<"Classe                | "<<m_classe<<std::endl
                     <<"Nome                  | "<<m_nome<<std::endl
@@ -95,7 +95,7 @@ std::ostream& Ave::print(std::ostream& os) const{
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
-                 <<"================ Ave ================"<<std::endl
+                 <<"================ Ave Doméstica ============="<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
@@ -110,7 +110,7 @@ std::ostream& Ave::print(std::ostream& os) const{
                  <<"Envergadura das Asas  | "<<m_envergadura_das_asas<<std::endl;
     }else{
         return os<<std::endl
-                 <<"================ Ave ================"<<std::endl
+                 <<"================ Ave Doméstica ============="<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
@@ -128,7 +128,7 @@ std::ostream& Ave::print(std::ostream& os) const{
 
 std::istream& Ave::read(std::istream& is){
 
-    std::cout<<"Digite o tamanho do bico da ave (em cm): "<<std::endl;
+    std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
     is>>m_tamanho_do_bico_cm;
 
     std::cout<<"Digite a envergadura das asas: "<<std::endl;

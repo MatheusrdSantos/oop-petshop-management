@@ -494,7 +494,7 @@ void PetFera::add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Reptil Nativo";
-        }else if(animal_nature == 2){
+        }else if(animal_nature == 3){
             //Natureza: Doméstico
 
             Reptil *reptil = new Reptil();
@@ -525,7 +525,7 @@ void PetFera::add_Animal(int animal_class, int animal_nature){
             animal->save();
 
             choosed_animal = "Ave Nativa";
-        }else if(animal_nature == 2){
+        }else if(animal_nature == 3){
             //Natureza: Doméstico
 
             Ave *ave = new Ave();

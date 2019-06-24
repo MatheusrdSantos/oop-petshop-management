@@ -65,7 +65,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
     if(m_tratador == NULL){
         if(m_veterinario==NULL){
             return os<<std::endl
-                     <<"============== Reptil =============="<<std::endl
+                     <<"============== Reptil Doméstico ==========="<<std::endl
                      <<"ID                    | "<<m_id<<std::endl
                      <<"Classe                | "<<m_classe<<std::endl
                      <<"Nome                  | "<<m_nome<<std::endl
@@ -80,7 +80,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
                      <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
         }else{
             return os<<std::endl
-                     <<"============== Reptil =============="<<std::endl
+                     <<"============== Reptil Doméstico ==========="<<std::endl
                      <<"ID                    | "<<m_id<<std::endl
                      <<"Classe                | "<<m_classe<<std::endl
                      <<"Nome                  | "<<m_nome<<std::endl
@@ -96,7 +96,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
         }
     }else if(m_veterinario == NULL){
         return os<<std::endl
-                 <<"============== Reptil =============="<<std::endl
+                 <<"============== Reptil Doméstico ==========="<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
@@ -111,7 +111,7 @@ std::ostream& Reptil::print(std::ostream& os) const{
                  <<"Tipo de veneno        | "<<m_tipo_veneno<<std::endl;
     }else{
         return os<<std::endl
-                 <<"============== Reptil =============="<<std::endl
+                 <<"============== Reptil Doméstico ==========="<<std::endl
                  <<"ID                    | "<<m_id<<std::endl
                  <<"Classe                | "<<m_classe<<std::endl
                  <<"Nome                  | "<<m_nome<<std::endl
