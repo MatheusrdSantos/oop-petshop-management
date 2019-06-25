@@ -136,3 +136,8 @@ std::istream& Ave::read(std::istream& is){
     
     return is;
 }
+
+void Ave::printDerivatedOption(){
+    std::cout<<"9 - Tamanho do bico da ave (cm);"<<std::endl;
+    std::cout<<"10 - Envergadura das asas;"<<std::endl;
+}

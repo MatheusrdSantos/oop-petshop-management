@@ -19,6 +19,8 @@ class MamiferoNativo : public Mamifero, public AnimalNativo{
          */
         std::string printInFile(int id);
     public:
+
+        void printDerivatedOption(); 
         /**
          * @brief Constrói um novo objeto do tipo Mamífero Nativo
          * 

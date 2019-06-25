@@ -167,6 +167,14 @@ std::istream& AnfibioNativo::read(std::istream& is){
     return is;
 }
 
+void AnfibioNativo::printDerivatedOption(){
+    std::cout<<"9 - Total de mudas;"<<std::endl;
+    std::cout<<"10 - Data da ultima muda;"<<std::endl;
+    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"12 - UF origem;"<<std::endl;
+    std::cout<<"13 - Cidade origem;"<<std::endl;
+}
+
 /*
 ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<m_pais_origem<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<m_cor_do_pelo<<";"<<m_venenoso<<";"<<m_tipo_veneno<<";"<<m_tamanho_do_bico_cm<<";"<<m_envergadura_das_asas<<std::endl;
 

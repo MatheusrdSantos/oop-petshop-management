@@ -391,3 +391,15 @@ std::string Animal::getTableHeaderString(){
     std::vector<std::string> header = file.getHeader(); 
     return buildHeaderString(&header);
 }
+
+void Animal::printOptions(){
+    std::cout<<"1 - Nome;"<<std::endl;
+    std::cout<<"2 - Nome científico;"<<std::endl;
+    std::cout<<"3 - Sexo;"<<std::endl;
+    std::cout<<"4 - Tamanho;"<<std::endl;
+    std::cout<<"5 - Dieta;"<<std::endl;
+    std::cout<<"6 - Veterinário;"<<std::endl;
+    std::cout<<"7 - Tratador;"<<std::endl;
+    std::cout<<"8 - Nome Batismo;"<<std::endl;
+    printDerivatedOption();
+}

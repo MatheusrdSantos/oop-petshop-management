@@ -161,6 +161,13 @@ std::istream& MamiferoNativo::read(std::istream& is){
     return is;
 }
 
+void MamiferoNativo::printDerivatedOption(){
+    std::cout<<"9 - Cor do pelo;"<<std::endl;
+    std::cout<<"10 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"11 - UF origem;"<<std::endl;
+    std::cout<<"12 - Cidade origem;"<<std::endl;
+}
+
 /*
             return os<<
             "id =>"<<m_id<<std::endl<< 

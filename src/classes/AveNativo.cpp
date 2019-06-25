@@ -164,3 +164,11 @@ std::istream& AveNativo::read(std::istream& is){
 
     return is;
 }
+
+void AveNativo::printDerivatedOption(){
+    std::cout<<"9 - Tamanho do bico da ave (cm);"<<std::endl;
+    std::cout<<"10 - Envergadura das asas;"<<std::endl;
+    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"12 - UF origem;"<<std::endl;
+    std::cout<<"13 - Cidade origem;"<<std::endl;
+}

@@ -170,3 +170,11 @@ std::istream& ReptilNativo::read(std::istream& is){
     
     return is;
 }
+
+void ReptilNativo::printDerivatedOption(){
+    std::cout<<"9 - Venenoso?;"<<std::endl;
+    std::cout<<"10 - Tipo do veneno;"<<std::endl;
+    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"12 - UF origem;"<<std::endl;
+    std::cout<<"13 - Cidade origem;"<<std::endl;
+}

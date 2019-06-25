@@ -160,3 +160,10 @@ std::istream& MamiferoExotico::read(std::istream& is){
     
     return is;
 }
+
+void MamiferoExotico::printDerivatedOption(){
+    std::cout<<"9 - Cor do pelo;"<<std::endl;
+    std::cout<<"10 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"11 - País origem;"<<std::endl;
+    std::cout<<"12 - Cidade origem;"<<std::endl;
+}

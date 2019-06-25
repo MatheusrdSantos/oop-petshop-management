@@ -170,3 +170,11 @@ std::istream& AveExotico::read(std::istream& is){
     
     return is;
 }
+
+void AveExotico::printDerivatedOption(){
+    std::cout<<"9 - Tamanho do bico da ave (cm);"<<std::endl;
+    std::cout<<"10 - Envergadura das asas;"<<std::endl;
+    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"12 - País origem;"<<std::endl;
+    std::cout<<"13 - Cidade origem;"<<std::endl;
+}

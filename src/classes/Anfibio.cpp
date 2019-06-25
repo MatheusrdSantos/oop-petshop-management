@@ -117,3 +117,8 @@ std::istream& Anfibio::read(std::istream& is){
     
     return is;
 }
+
+void Anfibio::printDerivatedOption(){
+    std::cout<<"9 - Total de mudas;"<<std::endl;
+    std::cout<<"10 - Data da ultima muda;"<<std::endl;
+}

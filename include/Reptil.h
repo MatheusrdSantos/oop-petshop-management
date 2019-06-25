@@ -21,7 +21,7 @@ class Reptil : public Animal{
          */
         virtual std::string printInFile(int id);
     public:
-
+        void printDerivatedOption(); 
         /**
          * @brief Constrói um novo objeto do tipo Réptil
          * 

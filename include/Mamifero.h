@@ -23,6 +23,8 @@ class Mamifero : public Animal{
         virtual std::string printInFile(int id);
 
     public:
+
+        virtual void printDerivatedOption(); 
         /**     
          * @brief Constrói um novo objeto do tipo Mamífero
          * 

@@ -253,7 +253,7 @@ void PetFera::menu(int &escolha){
     textColor_red("===============||=============================");
     std::cout << std::endl;
     
-    std::cout << "# Menu " << std::endl;
+    std::cout << "# Menu # " << std::endl;
     std::cout << "    1 -> Adicionar funcionario " << std::endl;
     std::cout << "    2 -> Adicionar animal " << std::endl;
     std::cout << "    3 -> Remover animal " << std::endl;
@@ -602,10 +602,14 @@ void PetFera::update_Animal(){
     }else{
         std::cout << std::endl << "Dados atuais do animal buscado: " << std::endl;
         std::cout << (*animal)  << std::endl;
-        
+        animal->printOptions();
+        /*
         std::cout << "Atualize os dados do animal: " << std::endl;
+        //int opt;
+        //cin>>opt
+        //animal->updateByOption(opt);
         std::cin>>(*animal);
-        animal->update();
+        animal->update(); */
 
         textColor_green("Animal atualizado com sucesso!");
     }

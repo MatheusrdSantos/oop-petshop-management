@@ -136,3 +136,8 @@ std::istream& Reptil::read(std::istream& is){
     
     return is;
 }
+
+void Reptil::printDerivatedOption(){
+    std::cout<<"9 - Venenoso?;"<<std::endl;
+    std::cout<<"10 - Tipo do veneno;"<<std::endl;
+}

@@ -27,6 +27,8 @@ class Animal : public ModelDAO<Animal>{
        
 
     public:
+        virtual void printOptions();
+        virtual void printDerivatedOption() = 0;
         /**
          * @brief Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada.
          * 

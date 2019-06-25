@@ -18,6 +18,7 @@ class ReptilNativo : public Reptil, public AnimalNativo{
          */ 
         std::string printInFile(int id);
     public:
+        void printDerivatedOption();
         /**
          * @brief Constrói um novo Réptil Nativo
          * 

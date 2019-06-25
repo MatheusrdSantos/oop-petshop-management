@@ -19,7 +19,7 @@ class ReptilExotico : public Reptil, public AnimalExotico{
          */
         std::string printInFile(int id);
     public:
-
+        void printDerivatedOption();
         /**
          * @brief Constrói um novo Réptil Exotico
          * 

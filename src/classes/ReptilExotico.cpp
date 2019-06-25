@@ -168,3 +168,11 @@ std::istream& ReptilExotico::read(std::istream& is){
     
     return is;
 }
+
+void ReptilExotico::printDerivatedOption(){
+    std::cout<<"9 - Venenoso?;"<<std::endl;
+    std::cout<<"10 - Tipo do veneno;"<<std::endl;
+    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"12 - País origem;"<<std::endl;
+    std::cout<<"13 - Cidade origem;"<<std::endl;
+}
