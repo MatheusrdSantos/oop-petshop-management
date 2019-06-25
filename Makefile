@@ -144,7 +144,7 @@ exportar.so:  $(LIB_SOURCE)
 	@echo "biblioteca dinamica criada"
 
 exportar: 
-	$(CC) -Wall $(LFLAGS) $(CC_11) src/utils/main_export.cpp -g $(LIB_DIR)/exportar.so -o $(OBJS_DIR)/$@ 
+	$(CC) -Wall $(LFLAGS) $(CC_11) src/utils/main_export.cpp -g $(LIB_DIR)/exportar.so -o $(OBJS_DIR)/$(LIB_DIR)/$@ 
 
 clean:
 	rm -f $(OBJS)
