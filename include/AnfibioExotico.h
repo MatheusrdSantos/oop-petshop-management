@@ -22,7 +22,8 @@ class AnfibioExotico : public Anfibio, public AnimalExotico{
         std::string printInFile(int id);
         
     public:
-        void printDerivatedOption(); 
+        void printDerivatedOption();
+        void processDerivatedOption(int option);
         /**
          * @brief Constrói um novo Anfíbio Exótico.
          * 

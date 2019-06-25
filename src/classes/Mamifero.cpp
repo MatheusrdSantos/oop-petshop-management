@@ -128,6 +128,14 @@ std::istream& Mamifero::read(std::istream& is){
     
     return is;
 }
+
 void Mamifero::printDerivatedOption(){
     std::cout<<"9 - Cor do pelo;"<<std::endl;
+}
+
+void Mamifero::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite a cor do pelo: "<<std::endl;
+        std::cin>>m_cor_do_pelo;
+    }
 }

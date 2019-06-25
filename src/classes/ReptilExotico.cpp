@@ -176,3 +176,24 @@ void ReptilExotico::printDerivatedOption(){
     std::cout<<"12 - País origem;"<<std::endl;
     std::cout<<"13 - Cidade origem;"<<std::endl;
 }
+
+void ReptilExotico::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite se o animal é venenoso (0/1): "<<std::endl;
+        std::cin>>m_venenoso;
+    }else if(option == 10){
+        std::cout<<"Digite o tipo do veneno: "<<std::endl;
+        std::cin>>m_tipo_veneno;
+    }else if(option == 11){
+        std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+        std::cin>>m_autorizacao_ibama;
+    }else if(option == 12){
+        std::cout<<"Digite o pais de origem:"<<std::endl;
+        std::cin>>m_pais_origem;
+    }else if(option == 13){
+        std::cout<<"Digite a cidade de origem:"<<std::endl;
+        std::cin>>m_cidade_origem;
+    }else{
+        std::cout<<"Opção inválida"<<std::endl;
+    }
+}

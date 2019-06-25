@@ -403,3 +403,34 @@ void Animal::printOptions(){
     std::cout<<"8 - Nome Batismo;"<<std::endl;
     printDerivatedOption();
 }
+
+void Animal::processOptions(int option){
+    if(option == 1){
+        std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
+        std::cin.ignore();
+        std::getline(std::cin, m_nome);
+    }else if(option == 2){
+        std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
+        std::getline(std::cin, m_nome_cientifico);
+    }else if(option == 3){
+        std::cout<<"Digite o sexo do Animal: "<<std::endl;
+        std::cin>>m_sexo;
+    }else if(option == 4){
+        std::cout<<"Digite o tamanho do Animal: "<<std::endl;
+        std::cin>>m_tamanho;
+    }else if(option == 5){
+        std::cout<<"Digite a dieta do Animal: "<<std::endl;
+        std::cin.ignore();
+        std::getline(std::cin, m_dieta);
+    }else if(option == 6){
+        std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
+        std::getline(std::cin, m_nome_batismo);
+    }else if(option == 7){
+        std::cout<<"Não disponível"<<std::endl;
+    }else if (option == 8){
+        std::cout<<"Não disponível"<<std::endl;
+    }else{
+        processDerivatedOption(option);
+    }
+
+}

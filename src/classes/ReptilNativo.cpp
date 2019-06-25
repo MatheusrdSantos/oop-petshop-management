@@ -178,3 +178,24 @@ void ReptilNativo::printDerivatedOption(){
     std::cout<<"12 - UF origem;"<<std::endl;
     std::cout<<"13 - Cidade origem;"<<std::endl;
 }
+
+void ReptilNativo::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite se o animal é venenoso (0/1): "<<std::endl;
+        std::cin>>m_venenoso;
+    }else if(option == 10){
+        std::cout<<"Digite o tipo do veneno: "<<std::endl;
+        std::cin>>m_tipo_veneno;
+    }else if(option == 11){
+        std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+        std::cin>>m_autorizacao_ibama;
+    }else if(option == 12){
+        std::cout<<"Digite o uf de origem:"<<std::endl;
+        std::cin>>m_uf_origem;
+    }else if(option == 13){
+        std::cout<<"Digite a cidade de origem:"<<std::endl;
+        std::cin>>m_cidade_origem;
+    }else{
+        std::cout<<"Opção inválida"<<std::endl;
+    }
+}

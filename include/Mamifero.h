@@ -24,7 +24,8 @@ class Mamifero : public Animal{
 
     public:
 
-        virtual void printDerivatedOption(); 
+        virtual void printDerivatedOption();
+        virtual void processDerivatedOption(int option);
         /**     
          * @brief Constrói um novo objeto do tipo Mamífero
          * 

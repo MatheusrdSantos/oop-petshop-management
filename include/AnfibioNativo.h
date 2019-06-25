@@ -21,7 +21,8 @@ class AnfibioNativo : public Anfibio, public AnimalNativo{
 
 
     public:
-        void printDerivatedOption(); 
+        void printDerivatedOption();
+        void processDerivatedOption(int option);
         /**
          * @brief Constrói um novo objeto do tipo Anfíbio Nativo.
          * 

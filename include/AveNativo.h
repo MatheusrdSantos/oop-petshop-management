@@ -19,6 +19,7 @@ class AveNativo : public Ave, public AnimalNativo{
         std::string printInFile(int id);
     public:
         void printDerivatedOption(); 
+        void processDerivatedOption(int option);
         /**
          * @brief Constrói um novo objeto do tipo Ave Nativo 
          * 

@@ -603,13 +603,12 @@ void PetFera::update_Animal(){
         std::cout << std::endl << "Dados atuais do animal buscado: " << std::endl;
         std::cout << (*animal)  << std::endl;
         animal->printOptions();
-        /*
-        std::cout << "Atualize os dados do animal: " << std::endl;
-        //int opt;
-        //cin>>opt
-        //animal->updateByOption(opt);
-        std::cin>>(*animal);
-        animal->update(); */
+        
+        std::cout << "Escolha um dado para atualizar: " << std::endl;
+        int opt;
+        std::cin>>opt;
+        animal->processOptions(opt);
+        animal->update();
 
         textColor_green("Animal atualizado com sucesso!");
     }

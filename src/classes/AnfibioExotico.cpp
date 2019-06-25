@@ -150,6 +150,28 @@ void AnfibioExotico::printDerivatedOption(){
     std::cout<<"13 - Cidade origem;"<<std::endl;
 }
 
+void AnfibioExotico::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite o total de mudas: "<<std::endl;
+        std::cin>>m_total_de_mudas;
+    }else if(option == 10){
+        std::cout<<"Digite a data da ultima muda(dd/mm/yyyy): "<<std::endl;
+        std::string date_stg;
+        std::cin>>date_stg;
+        m_ultima_muda = new Date(date_stg, "/");
+    }else if(option == 11){
+        std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+        std::cin>>m_autorizacao_ibama;
+    }else if(option == 12){
+        std::cout<<"Digite o pais de origem:"<<std::endl;
+        std::cin>>m_pais_origem;
+    }else if(option == 13){
+        std::cout<<"Digite a cidade de origem:"<<std::endl;
+        std::cin>>m_cidade_origem;
+    }else{
+        std::cout<<"Opção inválida"<<std::endl;
+    }
+}
 /*
 generic print:
 ss<<id<<";"<<m_classe<<";"<<m_nome<<";"<<m_nome_cientifico<<";"<<m_sexo<<";"<<m_tamanho<<";"<<m_dieta<<";"<<m_veterinario->getId()<<";"<<m_tratador->getId()<<";"<<m_nome_batismo<<";"<<m_uf_origem<<";"<<m_cidade_origem<<";"<<m_pais_origem<<";"<<m_autorizacao_ibama<<";"<<m_total_de_mudas<<";"<<m_ultima_muda->day()<<"/"<<m_ultima_muda->month()<<"/"<<m_ultima_muda->year()<<";"<<m_cor_do_pelo<<";"<<m_venenoso<<";"<<m_tipo_veneno<<";"<<m_tamanho_do_bico_cm<<";"<<m_envergadura_das_asas<<std::endl;

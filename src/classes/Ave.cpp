@@ -141,3 +141,13 @@ void Ave::printDerivatedOption(){
     std::cout<<"9 - Tamanho do bico da ave (cm);"<<std::endl;
     std::cout<<"10 - Envergadura das asas;"<<std::endl;
 }
+
+void Ave::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+        std::cin>>m_tamanho_do_bico_cm;
+    }else if(option == 10){
+        std::cout<<"Digite a envergadura das asas: "<<std::endl;
+        std::cin>>m_envergadura_das_asas;
+    }
+}

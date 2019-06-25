@@ -167,3 +167,21 @@ void MamiferoExotico::printDerivatedOption(){
     std::cout<<"11 - País origem;"<<std::endl;
     std::cout<<"12 - Cidade origem;"<<std::endl;
 }
+
+void MamiferoExotico::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite a cor do pelo: "<<std::endl;
+        std::cin>>m_cor_do_pelo;
+    }else if(option == 10){
+        std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+        std::cin>>m_autorizacao_ibama;
+    }else if(option == 11){
+        std::cout<<"Digite o pais de origem:"<<std::endl;
+        std::cin>>m_pais_origem;
+    }else if(option == 12){
+        std::cout<<"Digite a cidade de origem:"<<std::endl;
+        std::cin>>m_cidade_origem;
+    }else{
+        std::cout<<"Opção inválida"<<std::endl;
+    }
+}

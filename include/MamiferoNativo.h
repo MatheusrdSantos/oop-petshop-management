@@ -21,6 +21,7 @@ class MamiferoNativo : public Mamifero, public AnimalNativo{
     public:
 
         void printDerivatedOption(); 
+        void processDerivatedOption(int option);
         /**
          * @brief Constrói um novo objeto do tipo Mamífero Nativo
          * 

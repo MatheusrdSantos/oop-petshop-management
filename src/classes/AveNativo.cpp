@@ -172,3 +172,13 @@ void AveNativo::printDerivatedOption(){
     std::cout<<"12 - UF origem;"<<std::endl;
     std::cout<<"13 - Cidade origem;"<<std::endl;
 }
+
+void AveNativo::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+        std::cin>>m_tamanho_do_bico_cm;
+    }else if(option == 10){
+        std::cout<<"Digite a envergadura das asas: "<<std::endl;
+        std::cin>>m_envergadura_das_asas;
+    }
+}

@@ -21,7 +21,8 @@ class Ave : public Animal{
          */
         virtual std::string printInFile(int id);
     public:
-        void printDerivatedOption(); 
+        virtual void printDerivatedOption();
+        virtual void processDerivatedOption(int option);
         /**
          * @brief Constrói um novo objeto do tipo Ave
          * 

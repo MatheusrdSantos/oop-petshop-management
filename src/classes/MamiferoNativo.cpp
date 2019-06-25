@@ -168,6 +168,24 @@ void MamiferoNativo::printDerivatedOption(){
     std::cout<<"12 - Cidade origem;"<<std::endl;
 }
 
+void MamiferoNativo::processDerivatedOption(int option){
+    if(option == 9){
+        std::cout<<"Digite a cor do pelo: "<<std::endl;
+        std::cin>>m_cor_do_pelo;
+    }else if(option == 10){
+        std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+        std::cin>>m_autorizacao_ibama;
+    }else if(option == 11){
+        std::cout<<"Digite o uf de origem:"<<std::endl;
+        std::cin>>m_uf_origem;
+    }else if(option == 12){
+        std::cout<<"Digite a cidade de origem:"<<std::endl;
+        std::cin>>m_cidade_origem;
+    }else{
+        std::cout<<"Opção inválida"<<std::endl;
+    }
+}
+
 /*
             return os<<
             "id =>"<<m_id<<std::endl<< 
