@@ -93,6 +93,14 @@ void Animal::setClasse(std::string classe){
     m_classe = classe;
 }
 
+void Animal::setTratador(Tratador* tratador){
+    m_tratador = tratador;
+}
+
+void Animal::setVeterinario(Veterinario* veterinario){
+    m_veterinario = veterinario;
+}
+
 std::multimap<std::string, Animal*> Animal::all(){
 
     csv::Parser file = ModelDAO<Animal>::readTable();

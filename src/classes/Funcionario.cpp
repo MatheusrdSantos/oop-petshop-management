@@ -1,6 +1,7 @@
 #include "../../include/Funcionario.h"
 #include "../../include/Tratador.h"
 #include "../../include/Veterinario.h"
+#include "../../include/Animal.h"
 #include "../../include/CSVparser.hpp"
 
 std::string Funcionario::filePath = "./storage/funcionarios.csv";
@@ -254,6 +255,22 @@ bool Funcionario::update(){
 }
 
 bool Funcionario::remove(){
+
+    // remove a chave estrangeira em animal
+    std::multimap<std::string, Animal*> animais = Animal::all();
+    for (auto it=animais.begin(); it!=animais.end(); ++it){
+        if(it->second->getTratador()!=NULL && it->second->getTratador()->getId() == m_id){
+            Tratador *tratador = NULL;
+            it->second->setTratador(tratador);
+            it->second->update();
+        }else if(it->second->getVeterinario()!=NULL && it->second->getVeterinario()->getId() == m_id){
+            Veterinario *veterinario = NULL;
+            it->second->setVeterinario(veterinario);
+            it->second->update();
+        }
+        delete it->second;
+    }
+
     // recupera os dados do csv
     csv::Parser file = ModelDAO<Funcionario>::readTable();
     unsigned n_rows = file.rowCount();
