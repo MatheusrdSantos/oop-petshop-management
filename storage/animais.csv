@@ -5,3 +5,7 @@ id;classe;nome;nome_cientifico;sexo;tamanho;dieta;veterinario_id;tratador_id;nom
 4;Amphibia;Anfibio Domestico;Anfibius Domesticus;M;1.21;Carne;6;10;TEM QUE SER DOMESTICO;;;;;2;12/12/2018;;;;;
 5;Mammalia;Gato;Gatus Felinus;F;10.3;Carne e vegetais;;;Pantera;;;;;;;Preto;;;;
 6;Reptilia;Jambuthi;Jabutis Maricus;M;100.29;Ervas Doces ao molho barbecue, por favor;;;Bautista;;;;;;;;0;0;;
+7;Mammalia;Mamão;Unos mammalis;M;2.12;Sim;;;Roberto;;;;;;;Marrom;;;;
+8;Mammalia;Sapo spo;anr na;M;2.1;Carne;;;As;;;;;;;Marrom;;;;
+9;Mammalia;SA am;Asdm dasm;M;2.123;Sim;;;Nome de Basitm;;;;;;;Mabrue;;;;
+10;Mammalia;Burro mula;Burrus Mulus;M;2.134;Sim;15;;Burrus Teixeira;;;;;;;Cinza;;;;
