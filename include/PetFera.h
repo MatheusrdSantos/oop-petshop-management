@@ -133,6 +133,12 @@ class PetFera{
         void remove_Animal();
 
         /**
+         * @brief Atualiza os dados cadastrais de um animal
+         * 
+         */
+        void update_Animal();
+
+        /**
          * @brief Lista todos os animais de uma determinada classe
          * 
          */
