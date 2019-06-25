@@ -253,14 +253,14 @@ void PetFera::menu(int &escolha){
     textColor_red("===============||=============================");
     std::cout << std::endl;
     
-    std::cout << "# Menu #" << std::endl;
+    std::cout << "# Menu " << std::endl;
     std::cout << "    1 -> Adicionar funcionario " << std::endl;
     std::cout << "    2 -> Adicionar animal " << std::endl;
     std::cout << "    3 -> Remover animal " << std::endl;
     std::cout << "    4 -> Remover funcionario " << std::endl;
-    std::cout << "    5 -> Listar animais por funcionario " << std::endl;
-    std::cout << "    6 -> Listar animais por classe " << std::endl;
-    std::cout << "    7 -> Listar funcionários por cargo " << std::endl;
+    std::cout << "    5 -> Atualizar dados de um animal " << std::endl;
+    std::cout << "    6 -> Listar animais por funcionario " << std::endl;
+    std::cout << "    7 -> Listar animais por classe " << std::endl;
     std::cout << "    8 -> Listar todos funcionarios " << std::endl;
     std::cout << "    9 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
@@ -289,14 +289,14 @@ void PetFera::menu(int &escolha){
             remove_Funcionario();
             break;
         case 5:
-            listByFunc_Animal();
+            update_Animal();
+            //update animais
             break;
         case 6:
-            listByClass_Animal();
+            listByFunc_Animal();
             break;
         case 7:
-            listByRole_Funcionario();
-            //update animais
+            listByClass_Animal();
             break;
         case 8:
             listAll_Funcionarios();
@@ -586,4 +586,27 @@ void PetFera::add_Funcionario(int emp_role){
     }
 
     textColor_green(choosed_role +" adicionado(a) com sucesso!");
+}
+
+void PetFera::update_Animal(){
+    std::string id_animal;
+
+    std::cout << "ID do animal a ser atualizado: ";
+    std::cin >> id_animal;
+
+    Animal* animal = Animal::find(std::stoi(id_animal));
+
+    if(animal == NULL){
+        textColor_yellow("O animal buscado não está cadastrado.");
+        std::cout << std::endl;
+    }else{
+        std::cout << std::endl << "Dados atuais do animal buscado: " << std::endl;
+        std::cout << (*animal)  << std::endl;
+        
+        std::cout << "Atualize os dados do animal: " << std::endl;
+        std::cin>>(*animal);
+        animal->update();
+
+        textColor_green("Animal atualizado com sucesso!");
+    }
 }
