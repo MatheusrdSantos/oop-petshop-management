@@ -14,6 +14,13 @@ Author: Arnaldo Barbosa
 
 class Funcionario : public ModelDAO<Funcionario>{
     private:
+        /**
+         * @brief Recupera o valor de m_idade com os devidos tratamentos
+         * 
+         * @param is std::istream que irá realizar a leitura do campo
+         * @return void 
+         */
+        void requestAge(std::istream&);
 
         /**
          * @brief Constrói um funcionário passada uma linha do CSV por parametro.

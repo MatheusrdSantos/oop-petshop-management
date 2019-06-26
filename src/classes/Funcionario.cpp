@@ -305,6 +305,22 @@ std::ostream& operator << (std::ostream& os, const Funcionario& f){
     return f.print(os);
 }
 
+void Funcionario::requestAge(std::istream& is){
+    try
+    {
+        std::string idade_std;
+        std::cout << "Idade: ";
+        is>>idade_std;
+        int idade = std::stoi(idade_std);
+
+        m_idade = idade;
+    }catch(std::invalid_argument& e)
+    {
+        std::cerr <<"Valor digitador não é inteiro!"<<std::endl;
+        requestAge(is);
+    }
+}
+
 std::istream & operator >> (std::istream &is, Funcionario& f)
 {
     std::cout << "Nome: "<<std::endl;
@@ -315,8 +331,7 @@ std::istream & operator >> (std::istream &is, Funcionario& f)
     is.ignore();
     std::getline (is, f.m_cpf, '\n');
 
-    std::cout << "Idade: ";
-    is >> f.m_idade;
+    f.requestAge(is);
 
     std::cout << "Tipo Sanguínio: ";
     is >> f.m_tipo_sanguineo;
