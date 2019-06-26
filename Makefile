@@ -2,7 +2,7 @@ OBJS_DIR	:= build
 LIB_DIR := lib
 OBJS	= $(addprefix $(OBJS_DIR)/, main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o PetFera.o InvalidBloodType.o NonIntegerArgument.o InvalidSecurityLevel.o)
 
-OBJS_LIB	= $(addprefix $(OBJS_DIR)/$(LIB_DIR)/, Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o exportar.o main_export.o)
+OBJS_LIB	= $(addprefix $(OBJS_DIR)/$(LIB_DIR)/, Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Date.o Funcionario.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o Tratador.o Veterinario.o utils.o exportar.o main_export.o InvalidBloodType.o NonIntegerArgument.o InvalidSecurityLevel.o)
 
 ANIMALS_OBJS = main.o Anfibio.o AnfibioExotico.o AnfibioNativo.o Animal.o AnimalExotico.o AnimalNativo.o AnimalSilvestre.o Ave.o AveExotico.o AveNativo.o CSVparser.o Mamifero.o MamiferoExotico.o MamiferoNativo.o ModelDAO.o Reptil.o ReptilExotico.o ReptilNativo.o 
 SOURCE	= src/main.cpp src/classes/Anfibio.cpp src/classes/AnfibioExotico.cpp src/classes/AnfibioNativo.cpp src/classes/Animal.cpp src/classes/AnimalExotico.cpp src/classes/AnimalNativo.cpp src/classes/AnimalSilvestre.cpp src/classes/Ave.cpp src/classes/AveExotico.cpp src/classes/AveNativo.cpp src/classes/CSVparser.cpp src/classes/Date.cpp src/classes/Funcionario.cpp src/classes/Mamifero.cpp src/classes/MamiferoExotico.cpp src/classes/MamiferoNativo.cpp src/classes/ModelDAO.cpp src/classes/Reptil.cpp src/classes/ReptilExotico.cpp src/classes/ReptilNativo.cpp src/classes/Tratador.cpp src/classes/Veterinario.cpp src/utils/utils.cpp src/classes/PetFera.cpp
@@ -137,6 +137,9 @@ exportar.so:  $(LIB_SOURCE)
 	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Tratador.cpp -o build/lib/Tratador.o
 	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/classes/Veterinario.cpp -o build/lib/Veterinario.o
 	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/utils/utils.cpp -o build/lib/utils.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/exceptions/InvalidBloodType.cpp -o build/lib/InvalidBloodType.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/exceptions/InvalidSecurityLevel.cpp -o build/lib/InvalidSecurityLevel.o
+	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/exceptions/NonIntegerArgument.cpp -o build/lib/NonIntegerArgument.o
 	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/utils/exportar.cpp -o build/lib/exportar.o
 	$(CC) $(LFLAGS) $(CC_11) -Wall -fPIC -c src/utils/main_export.cpp -o build/lib/main_export.o
 
