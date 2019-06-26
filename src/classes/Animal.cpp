@@ -367,6 +367,72 @@ std::ostream& operator << (std::ostream& os, const Animal& a){
     return a.print(os);
 }
 
+std::istream& Animal::askForEmployee(std::istream& is){
+
+    std::string opt;
+    std::cout<<"Deseja associar um funcionário ao animal agora? [S/n]";
+    std::cin>>opt;
+
+    char cadastroFuncionario = opt[0];
+
+    bool valid=false;    
+    while(!valid){
+        if(cadastroFuncionario == 's' || cadastroFuncionario == 'S'){
+            valid=true;
+            
+            std::multimap<std::string,Funcionario*> funcionarios = Funcionario::all();
+
+            std::cout<<std::endl;
+            if(funcionarios.size() == 0){
+                std::cout<<"Não há funcionários cadastrados no sistema! Cadastre um funcionario novo."<<std::endl; 
+                std::cout<<std::endl;
+            }else{
+                int counter = 1;
+                for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
+                    std::cout<< *(it->second);
+                    delete it->second;
+
+                    std::cout<<"===================== "<< counter++ <<" ====================="<<std::endl<<std::endl;
+                }
+                std::cout<<"Digite o id do Funcionário a ser associado:"<<std::endl;
+                int id;
+                std::cin>>id;
+
+                funcionarios = Funcionario::all();
+                for (auto it=funcionarios.begin(); it!=funcionarios.end(); ++it){
+                    if(it->second->getId() == id){
+                        if(it->first == "tratador"){
+                            this->m_tratador = (Tratador*)(it->second);
+                        }
+                        else if(it->first == "veterinario"){
+                            this->m_veterinario = (Veterinario*)(it->second);
+                        }
+                    }else{
+                        delete it->second;
+                    }
+                }
+
+            }
+            
+
+
+            
+            
+        }else if(cadastroFuncionario == 'n' || cadastroFuncionario == 'N'){
+            valid=true;
+            std::cout<<"Ok."<<std::endl;
+        }else{
+            std::cout<<"Digite 'S/s' ou 'n/N'."<<std::endl;
+            
+            std::cout<<"Deseja associar um funcionário ao animal agora? [S/n]"<<std::endl;
+            std::cin>>opt;
+            cadastroFuncionario = opt[0];
+        }
+    }
+
+    return is;
+}
+
 std::istream & operator >> (std::istream &is, Animal& a)
 {
     std::cout<<"Digite o nome coloquial do Animal: "<<std::endl;
@@ -383,7 +449,8 @@ std::istream & operator >> (std::istream &is, Animal& a)
     std::getline(is, a.m_dieta);
     std::cout<<"Digite o nome de batismo do Animal: "<<std::endl;
     std::getline(is, a.m_nome_batismo);
-    return a.read(is);
+    a.read(is);
+    return a.askForEmployee(is);
 }
 
 std::string Animal::getTableHeaderString(){
@@ -434,3 +501,4 @@ void Animal::processOptions(int option){
     }
 
 }
+
