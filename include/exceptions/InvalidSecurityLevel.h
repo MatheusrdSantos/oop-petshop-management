@@ -1,3 +1,5 @@
+#ifndef _INVALID_SECURITY_LEVEL_H
+#define _INVALID_SECURITY_LEVEL_H
 #include <stdexcept>
 using std::invalid_argument;
 class InvalidSecurityLevel : public  invalid_argument{
@@ -6,3 +8,4 @@ class InvalidSecurityLevel : public  invalid_argument{
     public:
     InvalidSecurityLevel(std::string value);
 };
+#endif

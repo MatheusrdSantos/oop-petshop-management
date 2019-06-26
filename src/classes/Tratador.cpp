@@ -1,5 +1,5 @@
 #include "../../include/Tratador.h"
-
+#include "../../include/exceptions/InvalidSecurityLevel.h"
 Tratador::Tratador(int id, std::string nome, std::string cpf, short idade, std::string tipo_sanguineo, char fator_rh, std::string especialidade, int nivel_de_seguranca){
     m_id = id;
     m_nome = nome;
@@ -45,10 +45,31 @@ std::ostream& Tratador::print(std::ostream& os) const{
         <<"Especialidade         | "<<m_especialidade<<std::endl
         <<"Nível de Segurança    | "<<m_nivel_de_seguranca<<std::endl;
 }
-
+void Tratador::requestSecurityLevel(std::istream& is){
+    try
+    {
+        std::string security_std;
+        std::cout << "Nível de Segurança: ";
+        is>>security_std;
+        int security_level = std::stoi(security_std);
+        if(security_level!=0 && security_level!=1 && security_level!=2){
+            throw InvalidSecurityLevel(security_std);
+        }
+        m_nivel_de_seguranca = security_level;
+    }catch(InvalidSecurityLevel& e){
+        //std::cerr<<e.what()<<std::endl;
+        std::cerr<<"O valor deve estar entre 0 e 2."<<std::endl;
+        requestSecurityLevel(is);
+    }
+    catch(std::invalid_argument& e)
+    {
+        std::cerr <<"Valor digitador não é inteiro!"<<std::endl;
+        requestSecurityLevel(is);
+    }
+}
 std::istream& Tratador::read(std::istream& is){
-    std::cout << "Nível de Segurança: ";
-    is>>m_nivel_de_seguranca;
+    
+    requestSecurityLevel(is);
     return is;
 }
 

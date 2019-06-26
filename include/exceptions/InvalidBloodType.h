@@ -1,3 +1,5 @@
+#ifndef _INVALID_BLOOD_TYPE_H
+#define _INVALID_BLOOD_TYPE_H
 #include <stdexcept>
 using std::invalid_argument;
 class InvalidBloodType : public invalid_argument {
@@ -6,3 +8,4 @@ class InvalidBloodType : public invalid_argument {
     public:
     InvalidBloodType(std::string value);
 };
+#endif

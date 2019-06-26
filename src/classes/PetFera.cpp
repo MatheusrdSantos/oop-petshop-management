@@ -1,4 +1,5 @@
 #include "../../include/PetFera.h"
+#include "../../include/exceptions/NonIntegerArgument.h"
 
 PetFera::PetFera(){
 }
@@ -264,7 +265,9 @@ void PetFera::menu(int &escolha){
     std::cout << "    8 -> Listar todos funcionarios " << std::endl;
     std::cout << "    9 -> Listar todos animais " << std::endl;
     std::cout << "    0 -> Sair " << std::endl;
+
     std::cin >> escolha;
+    
 
     switch (escolha)
     {
@@ -368,7 +371,13 @@ std::string PetFera::chooseClass_Animal(){
     std::cout << "  0 -> Voltar"<<std::endl;
 
     std::string opt;
-    std::cin>>opt;
+    try{
+        std::cin>>opt;
+        std::stoi(opt);
+    }catch(std::invalid_argument& e){
+        std::cout<<"Opção não numérica: "<<opt<<std::endl;
+        return "0";
+    }   
 
     while((std::stoi(opt)!=0) && (std::stoi(opt)!=1) && (std::stoi(opt)!=2)  && (std::stoi(opt)!=3) && (std::stoi(opt)!=4)){
         std::cout << "Escolha a classe:" << std::endl;
@@ -378,7 +387,14 @@ std::string PetFera::chooseClass_Animal(){
         std::cout << "  4 -> Ave"<<std::endl;
         std::cout << "  0 -> Voltar"<<std::endl;
 
-        std::cin>>opt;
+        try{
+            std::cin>>opt;
+            std::stoi(opt);
+        }catch(std::invalid_argument& e){
+            std::cout<<"Opção não numérica: "<<opt<<std::endl;
+            return "0";
+        }
+
     }
 
     return opt;

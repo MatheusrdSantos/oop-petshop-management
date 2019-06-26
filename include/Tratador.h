@@ -20,6 +20,7 @@ class Tratador : public Funcionario{
          */
         std::string printInFile(int id);
     private:
+        void requestSecurityLevel(std::istream&);
         int m_nivel_de_seguranca; /*< Define o nível de segurança do Tratador.*/
         std::ostream& print(std::ostream& os) const;
         std::istream& read(std::istream&);
