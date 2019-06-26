@@ -20,6 +20,12 @@ class Tratador : public Funcionario{
          */
         std::string printInFile(int id);
     private:
+        /**
+         * @brief Recupera o valor de m_security_level com os devidos tratamentos
+         * 
+         * @param is std::istream que irá realizar a leitura do campo
+         * @return void 
+         */
         void requestSecurityLevel(std::istream&);
         int m_nivel_de_seguranca; /*< Define o nível de segurança do Tratador.*/
         std::ostream& print(std::ostream& os) const;
