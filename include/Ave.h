@@ -10,6 +10,7 @@ class Ave : public Animal{
         virtual std::ostream& print(std::ostream&) const;
         virtual std::istream& read(std::istream&);
     protected:
+        void getParams();
         double m_tamanho_do_bico_cm; /*< Define o tamanho do bico em cm da Ave. */
         double m_envergadura_das_asas; /*< Define a envergadura das asas da Ave. */
 

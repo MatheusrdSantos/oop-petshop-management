@@ -152,12 +152,20 @@ std::ostream& AveExotico::print(std::ostream& os) const{
 }
 
 std::istream& AveExotico::read(std::istream& is){
+    getParams();
+    /* try{
+        std::string tamanho_std;
+        std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+        std::cin>>tamanho_std;
+        m_tamanho_do_bico_cm = std::stod(tamanho_std);
 
-    std::cout<<"Digite o tamanho do bico da ave (em cm): "<<std::endl;
-    is>>m_tamanho_do_bico_cm;
-
-    std::cout<<"Digite a envergadura das asas: "<<std::endl;
-    is>>m_envergadura_das_asas;
+        std::string envergadura_std;
+        std::cout<<"Digite a envergadura das asas: "<<std::endl;
+        std::cin>>envergadura_std;
+        m_envergadura_das_asas = std::stod(envergadura_std);
+    }catch(std::invalid_argument& e){
+        std::cerr<<"O valor digitado não é numérico!";
+    } */
 
     std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
     is>>m_autorizacao_ibama;
@@ -181,11 +189,23 @@ void AveExotico::printDerivatedOption(){
 
 void AveExotico::processDerivatedOption(int option){
     if(option == 10){
-        std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
-        std::cin>>m_tamanho_do_bico_cm;
+        try{
+            std::string tamanho_std;
+            std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+            std::cin>>tamanho_std;
+            m_tamanho_do_bico_cm = std::stod(tamanho_std);
+        }catch(std::invalid_argument& e){
+            std::cerr<<"O valor digitado não é numérico!";
+        }
     }else if(option == 11){
-        std::cout<<"Digite a envergadura das asas: "<<std::endl;
-        std::cin>>m_envergadura_das_asas;
+        try{
+            std::string envergadura_std;
+            std::cout<<"Digite a envergadura das asas: "<<std::endl;
+            std::cin>>envergadura_std;
+            m_envergadura_das_asas = std::stod(envergadura_std);
+        }catch(std::invalid_argument& e){
+            std::cerr<<"O valor digitado não é numérico!";
+        }
     }else if(option == 12){
         std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
         std::cin>>m_autorizacao_ibama;

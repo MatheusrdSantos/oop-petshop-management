@@ -126,7 +126,7 @@ std::ostream& Ave::print(std::ostream& os) const{
     }
 }
 
-std::istream& Ave::read(std::istream& is){
+void Ave::getParams(){
     try{
         std::string tamanho_std;
         std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
@@ -139,7 +139,13 @@ std::istream& Ave::read(std::istream& is){
         m_envergadura_das_asas = std::stod(envergadura_std);
     }catch(std::invalid_argument& e){
         std::cerr<<"O valor digitado não é numérico!";
+        getParams();
     }
+}
+
+std::istream& Ave::read(std::istream& is){
+
+    getParams();
     /* std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
     is>>m_tamanho_do_bico_cm;
 
