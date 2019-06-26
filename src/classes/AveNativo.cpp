@@ -189,7 +189,7 @@ void AveNativo::processDerivatedOption(int option){
             std::cin>>tamanho_std;
             m_tamanho_do_bico_cm = std::stod(tamanho_std);
         }catch(std::invalid_argument& e){
-            std::cerr<<"O valor digitado não é numérico!";
+            std::cerr<<"O valor digitado não é numérico!"<<std::endl;
         }
     }else if(option == 11){
         try{
@@ -198,7 +198,7 @@ void AveNativo::processDerivatedOption(int option){
             std::cin>>envergadura_std;
             m_envergadura_das_asas = std::stod(envergadura_std);
         }catch(std::invalid_argument& e){
-            std::cerr<<"O valor digitado não é numérico!";
+            std::cerr<<"O valor digitado não é numérico!"<<std::endl;
         }
     }else if(option == 12){
         std::cout<<"Digite a autorização do IBAMA:"<<std::endl;

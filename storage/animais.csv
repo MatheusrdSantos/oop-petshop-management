@@ -6,3 +6,5 @@ id;classe;nome;nome_cientifico;sexo;tamanho;dieta;veterinario_id;tratador_id;nom
 5;Mammalia;Gato;Gatus Felinus;F;10.3;Carne e vegetais;;;Pantera;;;;;;;Preto;;;;
 6;Reptilia;Tete;Jabutis Maricus;M;100.29;Ervas Doces;7;;Bautista;;;;;;;;0;-;;
 7;Reptilia;Largarto;largatus;F;22;folha;;;jurema;RN;Natal;;pode;;;;1;xarope;;
+8;Aves;Pardal;passarus;F;2;inseto;;;pardom;;;;;;;;;;10.2;11.5
+9;Aves;Galinha;Frangalhus;M;10;minhoca;20;;Julio;;xing;China;pode;;;;;;20;200
