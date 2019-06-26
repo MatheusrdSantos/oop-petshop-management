@@ -138,15 +138,15 @@ std::istream& Reptil::read(std::istream& is){
 }
 
 void Reptil::printDerivatedOption(){
-    std::cout<<"9 - Venenoso?;"<<std::endl;
-    std::cout<<"10 - Tipo do veneno;"<<std::endl;
+    std::cout<<"10 - Venenoso?;"<<std::endl;
+    std::cout<<"11 - Tipo do veneno;"<<std::endl;
 }
 
 void Reptil::processDerivatedOption(int option){
-    if(option == 9){
+    if(option == 10){
         std::cout<<"Digite se o animal é venenoso (0/1): "<<std::endl;
         std::cin>>m_venenoso;
-    }else if(option == 10){
+    }else if(option == 11){
         std::cout<<"Digite o tipo do veneno: "<<std::endl;
         std::cin>>m_tipo_veneno;
     }

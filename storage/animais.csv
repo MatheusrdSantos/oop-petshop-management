@@ -1,8 +1,8 @@
 id;classe;nome;nome_cientifico;sexo;tamanho;dieta;veterinario_id;tratador_id;nome_batismo;uf_origem;cidade_origem;pais_origem;autorizacao_ibama;total_de_mudas;ultima_muda;cor_do_pelo;venenoso;tipo_veneno;tamanho_do_bico_cm;envergadura_das_asas
 1;Amphibia;Sapo;Sapus Porcus;M;2.12;Folhas e pequenas plantas;6;10;Sá Pão;;;;;10;0/0/0;;;;;
-2;Amphibia;Sapo Coloquial;Coloquis com Cuidadis;M;10.2;Plantas;;10;Sao Joao;;Napolis;Italia;CSV-2139;12;10/10/2018;;;;;
+2;Amphibia;Sapo Coloquial;Coloquis com Cuidadis;M;10.2;Plantas;15;17;Sao Joao;;Napolis;Italia;CSV-2139;12;10/10/2018;;;;;
 3;Amphibia;Sapo com data certa;Data certas sapus;M;10.2;Carne;;;Nome De Batsi;;;;;9;10/10/2018;;;;;
 4;Amphibia;Anfibio Domestico;Anfibius Domesticus;M;1.21;Carne;6;10;TEM QUE SER DOMESTICO;;;;;2;12/12/2018;;;;;
 5;Mammalia;Gato;Gatus Felinus;F;10.3;Carne e vegetais;;;Pantera;;;;;;;Preto;;;;
-6;Reptilia;Tete;Jabutis Maricus;M;100.29;Ervas Doces;;;Bautista;;;;;;;;0;-;;
+6;Reptilia;Tete;Jabutis Maricus;M;100.29;Ervas Doces;7;;Bautista;;;;;;;;0;-;;
 7;Reptilia;Largarto;largatus;F;22;folha;;;jurema;RN;Natal;;pode;;;;1;xarope;;

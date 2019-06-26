@@ -20,7 +20,8 @@ class AveExotico : public Ave, public AnimalExotico{
         std::string printInFile(int id);
         
     public:
-        void printDerivatedOption(); 
+        void printDerivatedOption();
+        void processDerivatedOption(int option); 
         /**
          * @brief Constrói um novo objeto do tipo Ave Exotico
          * 

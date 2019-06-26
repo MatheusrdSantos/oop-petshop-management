@@ -166,19 +166,30 @@ std::istream& AveNativo::read(std::istream& is){
 }
 
 void AveNativo::printDerivatedOption(){
-    std::cout<<"9 - Tamanho do bico da ave (cm);"<<std::endl;
-    std::cout<<"10 - Envergadura das asas;"<<std::endl;
-    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
-    std::cout<<"12 - UF origem;"<<std::endl;
-    std::cout<<"13 - Cidade origem;"<<std::endl;
+    std::cout<<"10 - Tamanho do bico da ave (cm);"<<std::endl;
+    std::cout<<"11 - Envergadura das asas;"<<std::endl;
+    std::cout<<"12 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"13 - UF origem;"<<std::endl;
+    std::cout<<"14 - Cidade origem;"<<std::endl;
 }
 
 void AveNativo::processDerivatedOption(int option){
-    if(option == 9){
+    if(option == 10){
         std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
         std::cin>>m_tamanho_do_bico_cm;
-    }else if(option == 10){
+    }else if(option == 11){
         std::cout<<"Digite a envergadura das asas: "<<std::endl;
         std::cin>>m_envergadura_das_asas;
+    }else if(option == 12){
+        std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
+        std::cin>>m_autorizacao_ibama;
+    }else if(option == 13){
+        std::cout<<"Digite a UF de origem:"<<std::endl;
+        std::cin>>m_uf_origem;
+    }else if(option == 14){
+        std::cout<<"Digite a cidade de origem:"<<std::endl;
+        std::cin>>m_cidade_origem;
+    }else{
+        std::cout<<"Opção inválida"<<std::endl;
     }
 }

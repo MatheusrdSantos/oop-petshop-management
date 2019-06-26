@@ -168,29 +168,29 @@ std::istream& AnfibioNativo::read(std::istream& is){
 }
 
 void AnfibioNativo::printDerivatedOption(){
-    std::cout<<"9 - Total de mudas;"<<std::endl;
-    std::cout<<"10 - Data da ultima muda;"<<std::endl;
-    std::cout<<"11 - Autorização IBAMA;"<<std::endl;
-    std::cout<<"12 - UF origem;"<<std::endl;
-    std::cout<<"13 - Cidade origem;"<<std::endl;
+    std::cout<<"10 - Total de mudas;"<<std::endl;
+    std::cout<<"11 - Data da ultima muda;"<<std::endl;
+    std::cout<<"12 - Autorização IBAMA;"<<std::endl;
+    std::cout<<"13 - UF origem;"<<std::endl;
+    std::cout<<"14 - Cidade origem;"<<std::endl;
 }
 
 void AnfibioNativo::processDerivatedOption(int option){
-    if(option == 9){
+    if(option == 10){
         std::cout<<"Digite o total de mudas: "<<std::endl;
         std::cin>>m_total_de_mudas;
-    }else if(option == 10){
+    }else if(option == 11){
         std::cout<<"Digite a data da ultima muda(dd/mm/yyyy): "<<std::endl;
         std::string date_stg;
         std::cin>>date_stg;
         m_ultima_muda = new Date(date_stg, "/");
-    }else if(option == 11){
+    }else if(option == 12){
         std::cout<<"Digite a autorização do IBAMA:"<<std::endl;
         std::cin>>m_autorizacao_ibama;
-    }else if(option == 12){
+    }else if(option == 13){
         std::cout<<"Digite o uf de origem:"<<std::endl;
         std::cin>>m_uf_origem;
-    }else if(option == 13){
+    }else if(option == 14){
         std::cout<<"Digite a cidade de origem:"<<std::endl;
         std::cin>>m_cidade_origem;
     }else{

@@ -138,15 +138,15 @@ std::istream& Ave::read(std::istream& is){
 }
 
 void Ave::printDerivatedOption(){
-    std::cout<<"9 - Tamanho do bico da ave (cm);"<<std::endl;
-    std::cout<<"10 - Envergadura das asas;"<<std::endl;
+    std::cout<<"10 - Tamanho do bico da ave (cm);"<<std::endl;
+    std::cout<<"11 - Envergadura das asas;"<<std::endl;
 }
 
 void Ave::processDerivatedOption(int option){
-    if(option == 9){
+    if(option == 10){
         std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
         std::cin>>m_tamanho_do_bico_cm;
-    }else if(option == 10){
+    }else if(option == 11){
         std::cout<<"Digite a envergadura das asas: "<<std::endl;
         std::cin>>m_envergadura_das_asas;
     }

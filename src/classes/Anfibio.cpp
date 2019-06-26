@@ -119,15 +119,15 @@ std::istream& Anfibio::read(std::istream& is){
 }
 
 void Anfibio::printDerivatedOption(){
-    std::cout<<"9 - Total de mudas;"<<std::endl;
-    std::cout<<"10 - Data da ultima muda;"<<std::endl;
+    std::cout<<"10 - Total de mudas;"<<std::endl;
+    std::cout<<"11 - Data da ultima muda;"<<std::endl;
 }
 
 void Anfibio::processDerivatedOption(int option){
-    if(option == 9){
+    if(option == 10){
         std::cout<<"Digite o total de mudas: "<<std::endl;
         std::cin>>m_total_de_mudas;
-    }else if(option == 10){
+    }else if(option == 11){
         std::cout<<"Digite a data da ultima muda(dd/mm/yyyy): "<<std::endl;
         std::string date_stg;
         std::cin>>date_stg;

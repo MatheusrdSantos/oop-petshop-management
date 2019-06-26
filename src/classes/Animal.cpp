@@ -468,6 +468,7 @@ void Animal::printOptions(){
     std::cout<<"6 - Veterinário;"<<std::endl;
     std::cout<<"7 - Tratador;"<<std::endl;
     std::cout<<"8 - Nome Batismo;"<<std::endl;
+    std::cout<<"9 - Tratador/Veterinário;"<<std::endl;
     printDerivatedOption();
 }
 
@@ -496,6 +497,8 @@ void Animal::processOptions(int option){
         std::cout<<"Não disponível"<<std::endl;
     }else if (option == 8){
         std::cout<<"Não disponível"<<std::endl;
+    }else if(option == 9){
+        askForEmployee(std::cin);
     }else{
         processDerivatedOption(option);
     }
