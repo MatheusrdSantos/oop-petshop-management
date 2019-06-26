@@ -127,12 +127,24 @@ std::ostream& Ave::print(std::ostream& os) const{
 }
 
 std::istream& Ave::read(std::istream& is){
+    try{
+        std::string tamanho_std;
+        std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+        std::cin>>tamanho_std;
+        m_tamanho_do_bico_cm = std::stod(tamanho_std);
 
-    std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+        std::string envergadura_std;
+        std::cout<<"Digite a envergadura das asas: "<<std::endl;
+        std::cin>>envergadura_std;
+        m_envergadura_das_asas = std::stod(envergadura_std);
+    }catch(std::invalid_argument& e){
+        std::cerr<<"O valor digitado não é numérico!";
+    }
+    /* std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
     is>>m_tamanho_do_bico_cm;
 
     std::cout<<"Digite a envergadura das asas: "<<std::endl;
-    is>>m_envergadura_das_asas;
+    is>>m_envergadura_das_asas; */
     
     return is;
 }
@@ -144,10 +156,22 @@ void Ave::printDerivatedOption(){
 
 void Ave::processDerivatedOption(int option){
     if(option == 10){
-        std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
-        std::cin>>m_tamanho_do_bico_cm;
+        try{
+            std::string tamanho_std;
+            std::cout<<"Digite o tamanho do bico da ave (cm): "<<std::endl;
+            std::cin>>tamanho_std;
+            m_tamanho_do_bico_cm = std::stod(tamanho_std);
+        }catch(std::invalid_argument& e){
+            std::cerr<<"O valor digitado não é numérico!";
+        }
     }else if(option == 11){
-        std::cout<<"Digite a envergadura das asas: "<<std::endl;
-        std::cin>>m_envergadura_das_asas;
+        try{
+            std::string envergadura_std;
+            std::cout<<"Digite a envergadura das asas: "<<std::endl;
+            std::cin>>envergadura_std;
+            m_envergadura_das_asas = std::stod(envergadura_std);
+        }catch(std::invalid_argument& e){
+            std::cerr<<"O valor digitado não é numérico!";
+        }
     }
 }
