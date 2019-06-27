@@ -2,44 +2,30 @@
 
 O readme atual é apenas um modelo e será alterado depois.
 
-## Installation
+## Instalação
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Basta clonar o repositório e executar os comandos listados na seção seguinte.
 
-```bash
-pip install foobar
-```
-
-## Usage
+## Como usar?
 
 Na pasta raiz execute os seguintes comandos:
 
-Compilar
+Compilar o PetFera
 ```
 make
 
+```
+Compilar a biblioteca de exportação de dados
+```
+make linux
 ```
 Executar
 ```
 make run
 ```
 
-
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-## External libs
+## Bibliotecas de terceiros
 * [CSVparser](https://github.com/rsylvian/CSVparser)
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
