@@ -1,6 +1,7 @@
 # PetFera
 
 Este repositório consiste na implementação de um sistema de gerenciamento de PetShop em C++.
+O PetFera é um petshop que comercializa animais silvestres e domésticos, portanto, necessita de uma equipe de tratadores e veterinários para garantir o bem estar dos animais. Toda a parte de gerenciamento dos animais e funcionários é feita através deste sistema.
 
 ## Instalação
 
