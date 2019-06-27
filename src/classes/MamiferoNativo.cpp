@@ -185,30 +185,3 @@ void MamiferoNativo::processDerivatedOption(int option){
         std::cout<<"Opção inválida"<<std::endl;
     }
 }
-
-/*
-            return os<<
-            "id =>"<<m_id<<std::endl<< 
-            "Classe =>"<<m_classe<<std::endl<<
-            "Nome =>"<<m_nome<<std::endl<<
-            "Nome cientifico =>"<<m_nome_cientifico<<std::endl<<
-            "Sexo =>"<<m_sexo<<std::endl<<
-            "Tamanho =>"<<m_tamanho<<std::endl<<
-            "Dieta =>"<<m_dieta<<std::endl<<
-            "Veterinario =>"<<m_veterinario->getNome()<<" / "<<m_veterinario->getId()<<std::endl<<
-            "Tratador =>"<<m_tratador->getNome()<<" / "<<m_tratador->getId()<<std::endl<<
-            "Nome de batismo =>"<<m_nome_batismo<<std::endl<<
-            "Uf Origem =>"<<m_uf_origem<<std::endl<<
-            "Cidade de origem =>"<<m_cidade_origem<<std::endl<<
-            "Pais origem =>"<<m_pais_origem<<std::endl<<
-            "Autorizacao Ibama =>"<<m_autorizacao_ibama<<std::endl<<
-            "Total de mudas =>"<<m_total_de_mudas<<std::endl<<
-            "Última muda =>"<<m_ultima_muda<<std::endl<<
-            "Cor do pelo =>"<<m_cor_do_pelo<<std::endl<<
-            "Venenoso =>"<<m_venenoso<<std::endl<<
-            "Tipo de veneno =>"<<m_tipo_veneno<<std::endl<<
-            "Tamanho do bico em cm =>"<<m_tamanho_do_bico_cm<<std::endl<<
-            "Envergadura das Asas =>"<<m_envergadura_das_asas<<
-            std::endl;
-
-*/

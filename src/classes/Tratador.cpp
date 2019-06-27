@@ -72,18 +72,3 @@ std::istream& Tratador::read(std::istream& is){
     requestSecurityLevel(is);
     return is;
 }
-
-// std::ostream& operator << (std::ostream& os, Tratador& tratador){
-    // os<<std::endl
-    //     <<"Tratador: "                <<tratador.getNome()<<std::endl
-    //     <<"   => CPF: "               <<tratador.getCpf()<<std::endl
-    //     <<"   => Idade: "             <<tratador.getIdade()<<std::endl
-    //     <<"   => Típo Sanguíneo: "    <<tratador.getIdade()<<std::endl
-    //     <<"   => Fator RH: "          <<tratador.getFatorRh()<<std::endl
-    //     <<"   => Especialidade: "     <<tratador.getEspecialidade()<<std::endl
-    //     <<"   => Nível de Segurança: "<<tratador.getNivelDeSeguranca()<<std::endl
-    //     <<std::endl;
-        
-//     return os;
-// }
-
