@@ -479,6 +479,7 @@ void Animal::processOptions(int option){
         std::getline(std::cin, m_nome);
     }else if(option == 2){
         std::cout<<"Digite o nome cientifico do Animal: "<<std::endl;
+        std::cin.ignore();
         std::getline(std::cin, m_nome_cientifico);
     }else if(option == 3){
         std::cout<<"Digite o sexo do Animal: "<<std::endl;
