@@ -1,6 +1,6 @@
 # PetFera
 
-O readme atual é apenas um modelo e será alterado depois.
+Este repositório consiste na implementação de um sistema de gerenciamento de PetShop em C++.
 
 ## Instalação
 
@@ -23,6 +23,26 @@ Executar
 ```
 make run
 ```
+
+## Funcionalidades
+
+* Adicionar funcionário 
+* Adicionar animal 
+* Remover animal 
+* Remover funcionário 
+* Atualizar dados de um animal 
+* Listar animais por funcionario 
+* Listar animais por classe 
+* Listar todos funcionarios 
+* Listar todos animais
+
+## Exportação dos dados
+Para exportar os dados dos animais basta executar o arquivo `exportar` localizado em `build/lib`.
+Os comandos de exportação seguem o seguinte padrão:
+```
+./build/lib/exportar -c <classe> -v <nome_do_veterinario> -t <nome_do_tratador> nomedoarquivo.csv
+```
+Os filtros -c, -v e -t são opcionais. Caso não especificados, todos os animais serão exportados.
 
 ## Bibliotecas de terceiros
 * [CSVparser](https://github.com/rsylvian/CSVparser)
