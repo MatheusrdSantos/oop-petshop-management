@@ -3,5 +3,5 @@ digraph "Gráfico de Hierarquia de Classes"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="csv::Parser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d5c/classcsv_1_1Parser.html"];
+  Node0 [label="Date",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d4a/classDate.html"];
 }

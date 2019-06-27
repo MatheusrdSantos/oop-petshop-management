@@ -17,6 +17,7 @@ var searchData=
   ['getnomebatismo',['getNomeBatismo',['../d7/dac/classAnimal.html#aee0219bd596f0af49fa51fcdad29a1a7',1,'Animal']]],
   ['getnomecientifico',['getNomeCientifico',['../d7/dac/classAnimal.html#a9b316bf80a121cd5dc077158055c162f',1,'Animal']]],
   ['getpaisorigem',['getPaisOrigem',['../dd/dc7/classAnimalExotico.html#a656238e3c9891fb2f596fe2d022e1abf',1,'AnimalExotico']]],
+  ['getparams',['getParams',['../d6/def/classAve.html#aff21a20e02d245c9f233fa73a7062602',1,'Ave']]],
   ['getsexo',['getSexo',['../d7/dac/classAnimal.html#a7349027418d900a9cd7cfc32001b6f7d',1,'Animal']]],
   ['gettableincrementid',['getTableIncrementId',['../df/dd0/classModelDAO.html#a24cf7f88d833dba6424271767403cbda',1,'ModelDAO']]],
   ['gettamanho',['getTamanho',['../d7/dac/classAnimal.html#a3936ff4ad07fee3173db2a9dff52c706',1,'Animal']]],

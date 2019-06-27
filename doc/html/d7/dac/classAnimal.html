@@ -86,6 +86,18 @@ Diagrama de colaboração para Animal:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos Públicos</h2></td></tr>
+<tr class="memitem:ae1ee2e08e23f2cbd308300b80ba5c71c"><td class="memItemLeft" align="right" valign="top"><a id="ae1ee2e08e23f2cbd308300b80ba5c71c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>printOptions</b> ()</td></tr>
+<tr class="separator:ae1ee2e08e23f2cbd308300b80ba5c71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5083d76d5f9ffa1b5fbc91141d0a1cdf"><td class="memItemLeft" align="right" valign="top"><a id="a5083d76d5f9ffa1b5fbc91141d0a1cdf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>printDerivatedOption</b> ()=0</td></tr>
+<tr class="separator:a5083d76d5f9ffa1b5fbc91141d0a1cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3deb0e420f30f6cd49ac7568b1bdba71"><td class="memItemLeft" align="right" valign="top"><a id="a3deb0e420f30f6cd49ac7568b1bdba71"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processOptions</b> (int option)</td></tr>
+<tr class="separator:a3deb0e420f30f6cd49ac7568b1bdba71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf701446f3dd43630d3558a0c3d79a3"><td class="memItemLeft" align="right" valign="top"><a id="abcf701446f3dd43630d3558a0c3d79a3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>processDerivatedOption</b> (int option)=0</td></tr>
+<tr class="separator:abcf701446f3dd43630d3558a0c3d79a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac75406040726a6339932d70164cc7242"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classAnimal.html#ac75406040726a6339932d70164cc7242">printInFile</a> (int id)=0</td></tr>
 <tr class="memdesc:ac75406040726a6339932d70164cc7242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a forma como o texto do animal será armazenada no banco, se altera dependendo da classe derivada.  <a href="#ac75406040726a6339932d70164cc7242">Mais...</a><br /></td></tr>
 <tr class="separator:ac75406040726a6339932d70164cc7242"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -716,7 +728,7 @@ Amigas</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>std::string String formatada de como o objeto será armazenado no banco.. </dd></dl>
 
-<p>Implementado por <a class="el" href="../../d4/d13/classAnfibio.html#a46f3f30c89af05bcdd39abbe692d854f">Anfibio</a>, <a class="el" href="../../dc/d80/classMamifero.html#a88e6c2efe9180611486f82d4dbf308ba">Mamifero</a>, <a class="el" href="../../d9/de6/classAnfibioExotico.html#a08d9debec54258a0f43c8c503dfb23d0">AnfibioExotico</a>, <a class="el" href="../../d6/def/classAve.html#a41d6ba4bf7e4823274211a9ae908ff1f">Ave</a>, <a class="el" href="../../d4/d70/classReptil.html#af0fc1ff345f15480da9830e38111d181">Reptil</a>, <a class="el" href="../../d9/d17/classAnfibioNativo.html#a7926e1af44542ee268e27dd3d862f583">AnfibioNativo</a>, <a class="el" href="../../d6/d8f/classAveExotico.html#a4ba81def12131f047b3800e5f10a983b">AveExotico</a>, <a class="el" href="../../dc/d41/classMamiferoExotico.html#a4ee6f5f4a2917cfdf54304525add0c4a">MamiferoExotico</a>, <a class="el" href="../../df/d52/classMamiferoNativo.html#ae2f2b00cb6720cea2780ebef78be52ea">MamiferoNativo</a>, <a class="el" href="../../d7/dd5/classReptilExotico.html#a71312f425b92e04d8f29a856abd83f26">ReptilExotico</a>, <a class="el" href="../../d4/df0/classAveNativo.html#ab95679ed20354b2183706db24899d316">AveNativo</a> e <a class="el" href="../../de/dd6/classReptilNativo.html#ac801a11c87a2847fb4b46488aa6bb789">ReptilNativo</a>.</p>
+<p>Implementado por <a class="el" href="../../d6/def/classAve.html#a41d6ba4bf7e4823274211a9ae908ff1f">Ave</a>, <a class="el" href="../../d4/d13/classAnfibio.html#a46f3f30c89af05bcdd39abbe692d854f">Anfibio</a>, <a class="el" href="../../dc/d80/classMamifero.html#a88e6c2efe9180611486f82d4dbf308ba">Mamifero</a>, <a class="el" href="../../d9/de6/classAnfibioExotico.html#a08d9debec54258a0f43c8c503dfb23d0">AnfibioExotico</a>, <a class="el" href="../../d4/d70/classReptil.html#af0fc1ff345f15480da9830e38111d181">Reptil</a>, <a class="el" href="../../d9/d17/classAnfibioNativo.html#a7926e1af44542ee268e27dd3d862f583">AnfibioNativo</a>, <a class="el" href="../../d6/d8f/classAveExotico.html#a4ba81def12131f047b3800e5f10a983b">AveExotico</a>, <a class="el" href="../../dc/d41/classMamiferoExotico.html#a4ee6f5f4a2917cfdf54304525add0c4a">MamiferoExotico</a>, <a class="el" href="../../df/d52/classMamiferoNativo.html#ae2f2b00cb6720cea2780ebef78be52ea">MamiferoNativo</a>, <a class="el" href="../../d7/dd5/classReptilExotico.html#a71312f425b92e04d8f29a856abd83f26">ReptilExotico</a>, <a class="el" href="../../d4/df0/classAveNativo.html#ab95679ed20354b2183706db24899d316">AveNativo</a> e <a class="el" href="../../de/dd6/classReptilNativo.html#ac801a11c87a2847fb4b46488aa6bb789">ReptilNativo</a>.</p>
 
 </div>
 </div>

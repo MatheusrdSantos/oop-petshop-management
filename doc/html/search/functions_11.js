@@ -14,6 +14,7 @@ var searchData=
   ['_7emamifero',['~Mamifero',['../dc/d80/classMamifero.html#a56eb196d45222e754eb6f19000667d5d',1,'Mamifero']]],
   ['_7emamiferoexotico',['~MamiferoExotico',['../dc/d41/classMamiferoExotico.html#a2ab6c04adde874cc40aa55b5f586c15a',1,'MamiferoExotico']]],
   ['_7emamiferonativo',['~MamiferoNativo',['../df/d52/classMamiferoNativo.html#aa08f523498d6713873a29747024e5717',1,'MamiferoNativo']]],
+  ['_7epetfera',['~PetFera',['../d9/d2e/classPetFera.html#ab6d608548d1032f06571e0a4db8fd797',1,'PetFera']]],
   ['_7ereptil',['~Reptil',['../d4/d70/classReptil.html#a826ed679cc45f74fefecef7d4d40b409',1,'Reptil']]],
   ['_7ereptilexotico',['~ReptilExotico',['../d7/dd5/classReptilExotico.html#abddaff7d11fd31ce5fcd4a2c1b4ee6f1',1,'ReptilExotico']]],
   ['_7ereptilnativo',['~ReptilNativo',['../de/dd6/classReptilNativo.html#a6de5838fd62a1c61175e690110cd7dc0',1,'ReptilNativo']]],
